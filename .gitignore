@@ -1,5 +1,11 @@
-# npm
-node_modules
+# Dependencies directory
+node_modules/
 
-# next
+# Next.js build output
 .next
+
+# local environment that may have private keys
+.env.local
+
+# Es-lint cache
+.eslintcache
