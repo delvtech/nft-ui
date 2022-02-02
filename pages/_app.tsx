@@ -38,12 +38,12 @@ export default function App({ Component, pageProps, router }: AppProps) {
       </Head>
       <GlobalStyle />
       <DefaultSeo {...SEO} />
-      <Header />
-      <Transition location={router.pathname}>
-        <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
+      <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
+        <Header />
+        <Transition location={router.pathname}>
           <Component {...pageProps} />
-        </Web3ReactProvider>
-      </Transition>
+        </Transition>
+      </Web3ReactProvider>
       <Footer />
     </>
   );
