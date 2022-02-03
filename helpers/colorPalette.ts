@@ -10,7 +10,7 @@ export const COLOR_YELLOW = "#FFE66D";
 export const COLOR_INHERIT = "inherit";
 export const COLOR_TRANSPARENT = "transparent";
 
-export const colors = {
+export const COLORS = {
   black: COLOR_BLACK,
   blackDark: COLOR_BLACK_DARK,
   white: COLOR_WHITE,
@@ -24,4 +24,4 @@ export const colors = {
   transparent: COLOR_TRANSPARENT,
 } as const;
 
-export default colors;
+export type Color = keyof typeof COLORS;

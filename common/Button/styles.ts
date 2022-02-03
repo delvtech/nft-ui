@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import colors, {
+import {
+  COLORS,
   COLOR_GREEN_DARKEST,
   COLOR_GREEN_LIGHT,
 } from "helpers/colorPalette";
-import fontSizes from "helpers/fontSizes";
 
 export const ButtonsContainer = styled.div`
   margin: 2rem auto;
@@ -27,21 +27,80 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-interface ButtonProps {
-  bgColor?: keyof typeof colors;
-  borderColor?: keyof typeof colors;
-  color?: keyof typeof colors;
-  fontSize?: keyof typeof fontSizes;
+/**
+ * Variants and helpers
+ */
+export enum ButtonVariant {
+  PRIMARY = "primary",
 }
 
-export const Button = styled.button<ButtonProps>`
-  padding: 10px 20px;
+const getBackground = (variant: ButtonVariant) => {
+  switch (variant) {
+    case ButtonVariant.PRIMARY:
+      return COLORS.black;
+    default:
+      return COLORS.transparent;
+  }
+};
+
+const getBorder = (variant: ButtonVariant) => {
+  switch (variant) {
+    case ButtonVariant.PRIMARY:
+      return COLORS.greenLight;
+    default:
+      return COLORS.transparent;
+  }
+};
+
+/**
+ * Button sizes
+ */
+export enum ButtonSize {
+  SMALL = "SMALL",
+  MEDIUM = "MEDIUM",
+  LARGE = "LARGE",
+  AUTO = "AUTO",
+}
+
+// const buttonSizes: Record<ButtonSize, TTailwindString> = {
+//   [ButtonSize.SMALL]: height("h-8"),
+//   [ButtonSize.MEDIUM]: height("h-12"),
+//   [ButtonSize.LARGE]: height("h-16"),
+//   [ButtonSize.AUTO]: height("h-auto"),
+// };
+
+const buttonSizes: Record<ButtonSize, string> = {
+  [ButtonSize.SMALL]: "40px",
+  [ButtonSize.MEDIUM]: "40px",
+  [ButtonSize.LARGE]: "40px",
+  [ButtonSize.AUTO]: "40px",
+};
+
+export const getHeight = (size: ButtonSize) => buttonSizes[size];
+
+export interface ButtonStyles {
+  size?: ButtonSize;
+  variant?: ButtonVariant;
+}
+
+// TODO add more styles here for all buttons
+// export const getButtonClass = ({
+//   size = ButtonSize.MEDIUM,
+//   variant = ButtonVariant.PRIMARY,
+// }: ButtonStyles): TTailwindString => {
+//   console.log(variant, "here");
+//   return classNames(getHeight(size), getBackground(variant), width("w-max"));
+// };
+
+export const StyledButton = styled.button<ButtonStyles>`
+  padding: 0px 10px 0px 10px;
   width: max-content;
-
-  background-color: ${({ bgColor = "greenDarkest" }) => colors[bgColor]};
-  border: 1px solid ${({ borderColor = "greenLight" }) => colors[borderColor]};
-
-  font-family: "Rubik", sans-serif;
-  font-size: ${({ fontSize = "md" }) => fontSizes[fontSize]};
-  color: ${({ color = "white" }) => colors[color]};
+  height: ${({ size = ButtonSize.SMALL }) => getHeight(size)};
+  background-color: ${({ variant = ButtonVariant.PRIMARY }) =>
+    getBackground(variant)};
+  border: 1px solid
+    ${({ variant = ButtonVariant.PRIMARY }) => getBorder(variant)};
+  font-family: "Defcon Zero";
+  font-size: ${({}) => "14px"};
+  color: ${({}) => "white"};
 `;

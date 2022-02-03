@@ -12,6 +12,7 @@ import {
   MenuItemWrapper,
   SVGContainer,
 } from "components/Layout/Header/styles";
+import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
 
 export const MenuItem = ({ onClose }: any) => {
   return (
@@ -74,6 +75,9 @@ export const Header = () => {
             </MenuItemContainer>
             <MenuItemContainer>
               <SocialLinks />
+            </MenuItemContainer>
+            <MenuItemContainer>
+              <ConnectWalletButton />
             </MenuItemContainer>
             <MobileMenuContainer>
               <div />

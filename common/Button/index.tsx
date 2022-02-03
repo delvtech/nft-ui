@@ -1,6 +1,7 @@
-import { ButtonsContainer } from "common/Button/styles";
-import { Flex } from "common/Container/styles";
+import React, { MouseEventHandler } from "react";
+import { ButtonsContainer, ButtonStyles, StyledButton } from "./styles";
 import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
+import { Flex } from "common/Container/styles";
 import { StringProps } from "helpers/types";
 
 export const NavigationButtons = ({ slider }: StringProps) => {
@@ -54,3 +55,28 @@ export const NavigationButtons = ({ slider }: StringProps) => {
     </ButtonsContainer>
   );
 };
+
+interface ButtonProps extends ButtonStyles {
+  disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
+}
+
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  disabled,
+  onClick,
+  size,
+  variant,
+}) => (
+  <StyledButton
+    disabled={disabled}
+    onClick={onClick}
+    size={size}
+    type="button"
+    variant={variant}
+  >
+    {children}
+  </StyledButton>
+);
+
+export default Button;
