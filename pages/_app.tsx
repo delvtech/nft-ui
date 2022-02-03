@@ -7,6 +7,7 @@ import { Header } from "components/Layout/Header";
 import { Footer } from "components/Layout/Footer";
 import { Transition } from "components/Layout/Transition";
 
+import "styles/globals.css";
 import { GlobalStyle } from "styles/globalStyles";
 import "public/assets/fonts/style.css";
 import { Web3ReactProvider } from "@web3-react/core";
