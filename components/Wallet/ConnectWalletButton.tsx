@@ -13,7 +13,7 @@ export const ConnectWalletButton: React.FC = () => {
 
   return (
     <>
-      {active ? (
+      {active && account ? (
         <Button
           size={ButtonSize.SMALL}
           onClick={() => deactivateActiveConnector()}
