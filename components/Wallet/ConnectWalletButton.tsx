@@ -13,12 +13,12 @@ export const ConnectWalletButton: React.FC = () => {
 
   return (
     <>
-      {active && account ? (
+      {active ? (
         <Button
           size={ButtonSize.SMALL}
           onClick={() => deactivateActiveConnector()}
         >
-          {account?.slice(0, 6)}...{account?.slice(-6)}
+          {account?.slice(0, 6)}...{account?.slice(-4)}
         </Button>
       ) : (
         <Button
