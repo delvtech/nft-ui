@@ -66,6 +66,8 @@ export const SocialLinks = () => {
 export const Header = () => {
   const [sidebarVisibility, setSidebarVisibility] = useState<boolean>(false);
 
+  const connectWalletButton = <ConnectWalletButton />;
+
   return (
     <FixedHeader>
       <SectionContainer>
@@ -77,9 +79,7 @@ export const Header = () => {
             <MenuItemContainer>
               <SocialLinks />
             </MenuItemContainer>
-            <MenuItemContainer>
-              <ConnectWalletButton />
-            </MenuItemContainer>
+            <MenuItemContainer>{connectWalletButton}</MenuItemContainer>
             <MobileMenuContainer>
               <div />
               <BurgerMenu
@@ -89,6 +89,7 @@ export const Header = () => {
                   setSidebarVisibility(!sidebarVisibility)
                 }
               />
+              {connectWalletButton}
             </MobileMenuContainer>
           </Flex>
         </HeaderWrapper>

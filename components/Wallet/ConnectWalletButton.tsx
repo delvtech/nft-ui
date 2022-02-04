@@ -1,30 +1,27 @@
 import Button from "common/Button";
-import React, { useCallback } from "react";
+import React, { useState } from "react";
 import useWeb3 from "elf/useWeb3";
 import { ButtonSize } from "common/Button/styles";
-import { injectedConnector } from "wallets/connectors";
+import { ConnectWalletDialog } from "./ConnectWalletDialog";
 
 export const ConnectWalletButton: React.FC = () => {
-  const { account, active, activate, deactivate } = useWeb3();
+  const { account, active } = useWeb3();
 
-  const deactivateActiveConnector = useCallback(async () => {
-    await deactivate();
-  }, [deactivate]);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <>
+      <ConnectWalletDialog
+        isOpen={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
+
       {active ? (
-        <Button
-          size={ButtonSize.SMALL}
-          onClick={() => deactivateActiveConnector()}
-        >
+        <Button size={ButtonSize.SMALL} onClick={() => setModalOpen(true)}>
           {account?.slice(0, 6)}...{account?.slice(-4)}
         </Button>
       ) : (
-        <Button
-          size={ButtonSize.SMALL}
-          onClick={() => activate(injectedConnector, deactivateActiveConnector)}
-        >
+        <Button size={ButtonSize.SMALL} onClick={() => setModalOpen(true)}>
           Connect Wallet
         </Button>
       )}

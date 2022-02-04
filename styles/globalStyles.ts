@@ -133,6 +133,27 @@ export const AnimateSlideBurger = styled.div`
   }
 `;
 
+export const EaseInDialog = styled.div`
+  &.dialog-enter {
+    opacity: 0;
+    // transform: scale(0.9);
+  }
+  &.dialog-enter-active {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+    // opacity: 1;
+    // transform: translateX(0);
+    // transition: opacity 300ms, transform 300ms;
+  }
+  &.dialog-exit {
+    opacity: 1;
+  }
+  &.dialog-exit-active {
+    opacity: 0;
+    transition: opacity 400ms ease;
+  }
+`;
+
 export const PageHideOuterScroll = createGlobalStyle<StringProps>`
   @media ${devices.mobileM} {
     body {
