@@ -1,0 +1,11 @@
+# Dependencies directory
+node_modules/
+
+# Next.js build output
+.next
+
+# local environment that may have private keys
+.env.local
+
+# Es-lint cache
+.eslintcache

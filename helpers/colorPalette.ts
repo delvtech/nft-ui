@@ -9,3 +9,19 @@ export const COLOR_GREEN_DARKEST = "#1A535C";
 export const COLOR_YELLOW = "#FFE66D";
 export const COLOR_INHERIT = "inherit";
 export const COLOR_TRANSPARENT = "transparent";
+
+export const COLORS = {
+  black: COLOR_BLACK,
+  blackDark: COLOR_BLACK_DARK,
+  white: COLOR_WHITE,
+  whiteLight: COLOR_WHITE_LIGHT,
+  green: COLOR_GREEN,
+  greenLight: COLOR_GREEN_LIGHT,
+  greenDark: COLOR_GREEN_DARK,
+  greenDarkest: COLOR_GREEN_DARKEST,
+  yellow: COLOR_YELLOW,
+  inherit: COLOR_INHERIT,
+  transparent: COLOR_TRANSPARENT,
+} as const;
+
+export type Color = keyof typeof COLORS;
