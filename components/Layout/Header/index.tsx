@@ -17,8 +17,9 @@ import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
 export const MenuItem = ({ onClose }: any) => {
   return (
     <MenuItemWrapper onClick={onClose}>
-      <InternalLink href="/">Home</InternalLink>
-      <ExternalLink href="https://www.youtube.com/">How to Mint</ExternalLink>
+    <InternalLink href="/home">Home</InternalLink>
+      <InternalLink href="/formation">Formation</InternalLink>
+      <InternalLink href="/how-to-mint">Minting</InternalLink>
       <InternalLink href="/rollout-release">The Rollout Release</InternalLink>
       <ExternalLink href="https://www.youtube.com/">
         Element Governance System
