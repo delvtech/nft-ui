@@ -1,0 +1,18 @@
+import { SectionContainer } from "common/Container";
+import { First } from "components/Lore/First";
+import { Second } from "components/Lore/Second";
+import { Third } from "components/Lore/Third";
+import { GridContainer, LoreTitle } from "components/Lore/styles";
+
+export const Lore = () => {
+  return (
+    <SectionContainer padding="5rem 0">
+      <LoreTitle>The lore</LoreTitle>
+      <GridContainer>
+        <First />
+        <Second />
+        <Third />
+      </GridContainer>
+    </SectionContainer>
+  );
+};
