@@ -1,29 +1,27 @@
 import { Flex } from "common/Container/styles";
-import { COLOR_GREEN_DARK } from "helpers/colorPalette";
+import {
+  COLOR_GREEN_DARK,
+  COLOR_WHITE,
+  COLOR_WHITE_LIGHT,
+} from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import styled from "styled-components";
 
 export const CountdownDate = styled.div`
-  margin-top: 60px;
-  padding: 60px 70px;
-  font-family: "Defcon Zero Title";
-  font-size: 50px;
-  background-color: ${COLOR_GREEN_DARK};
+  font-family: "Rubik Medium";
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 54px;
+  margin: 30px 0;
+  text-shadow: 0px 0px 20px rgba(20, 223, 186, 0.8);
+  letter-spacing: 6px;
 
-  clip-path: polygon(
-    0% 20px,
-    /* top left */ 20px 0%,
-    /* top left */ calc(100% - 20px) 0%,
-    /* top right */ 100% 20px,
-    /* top right */ 100% calc(100% - 20px),
-    /* bottom right */ calc(100% - 20px) 100%,
-    /* bottom right */ 20px 100%,
-    /* bottom left */ 0 calc(100% - 20px) /* bottom left */
-  );
+  @media ${devices.tabletL} {
+    font-size: 3rem;
+  }
 
   @media ${devices.tabletM} {
-    font-size: 35px;
-    padding: 40px;
+    font-size: 2.5rem;
   }
 `;
 
@@ -40,8 +38,11 @@ export const StyledTimer = styled.div`
   font-weight: bold;
   letter-spacing: inherit;
   color: ${COLOR_GREEN_DARK};
-  text-shadow: 0px 0px rgba(0, 181, 192, 1);
-  text-shadow: 0px 0px rgba(0, 181, 192, 0.4);
+  text-shadow: 0px 0px 3px rgba(0, 181, 192, 0.8);
+
+  @media ${devices.mobileL} {
+    font-size: 50px;
+  }
 `;
 
 export const StyledSemiColon = styled.div`
@@ -50,6 +51,7 @@ export const StyledSemiColon = styled.div`
   font-weight: bold;
   color: ${COLOR_GREEN_DARK};
   margin: 0 10px;
+  text-shadow: 0px 0px 3px rgba(20, 223, 186, 0.8);
 
   @media ${devices.tabletM} {
     font-size: 30px;
@@ -59,6 +61,29 @@ export const StyledSemiColon = styled.div`
 export const TimerFlex = styled(Flex)`
   width: 100%;
   max-width: max-content;
-  margin: 50px auto 0 auto;
+  margin: 0 auto;
   overflow: hidden;
+`;
+
+export const ContentWrapper = styled.div`
+  padding: 100px 65px 90px 65px;
+  background-color: #09282d;
+  border: 5px solid ${COLOR_WHITE_LIGHT};
+
+  ${Flex} {
+    border: 1px solid ${COLOR_WHITE};
+    padding: 10px;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  @media ${devices.tabletM} {
+    padding: 100px 35px 90px 35px;
+  }
+
+  @media ${devices.mobileL} {
+    padding: 100px 1rem 90px 1rem;
+  }
 `;

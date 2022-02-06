@@ -17,7 +17,7 @@ export const Timer = () => {
       const now: any = moment();
       const then: any = moment("2020-01-09 00:00:00", "YYYY-MM-DD hh:mm:ss");
       const countdown = moment(then - now);
-      setDays(countdown.format("D"));
+      setDays(countdown.format("DD"));
       setHours(countdown.format("HH"));
       setMinutes(countdown.format("mm"));
       setSeconds(countdown.format("ss"));

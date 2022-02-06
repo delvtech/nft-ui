@@ -11,9 +11,8 @@ export const FixedHeader = styled.header<StringProps>`
   top: 0;
   left: 0;
   right: 0;
-  padding: 2.625rem 0 1.625rem 0;
+  padding: 4.0625rem 0 0 0;
   z-index: 10;
-  transition: padding 0.3s;
   background-color: ${COLOR_BLACK};
   background-image: url("/assets/svg/grid.svg");
   background-size: auto;
@@ -25,16 +24,24 @@ export const FixedHeader = styled.header<StringProps>`
   section {
     padding: 0;
   }
+
+  @media ${devices.mobileL} {
+    padding: 2rem 0 0 0;
+  }
 `;
 
 export const MenuItemWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  gap: 25px;
-  grid-gap: 25px;
+  grid-template-columns: repeat(5, max-content);
+  gap: 48px;
+  grid-gap: 48px;
 
-  @media ${devices.tabletL} {
-    grid-template-columns: repeat(1, max-content);
+  p {
+    font-size: 1rem;
+  }
+
+  @media ${devices.desktopL} {
+    grid-template-columns: auto;
 
     ${StyledLink}, ${StyledAnchor} {
       justify-content: flex-start;
@@ -68,7 +75,7 @@ export const SVGContainer = styled.div`
 `;
 
 export const MenuItemContainer = styled(Flex)`
-  @media ${devices.tabletL} {
+  @media ${devices.desktopL} {
     display: none;
   }
 `;
@@ -76,7 +83,7 @@ export const MenuItemContainer = styled(Flex)`
 export const MobileMenuContainer = styled(Flex)`
   display: none;
 
-  @media ${devices.tabletL} {
+  @media ${devices.desktopL} {
     display: flex;
     width: 100%;
   }

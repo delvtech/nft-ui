@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { NavigationButtons } from "common/Button";
@@ -30,7 +31,6 @@ const Rarity = ({ rarity }: StringProps) => {
 export const FormationSlider = ({ data }: Data) => {
   const slider = useRef<any>(null);
   const [slideState, setSlideState] = useState({
-    children: 3,
     slidesToShow: 3,
   });
 
@@ -44,7 +44,7 @@ export const FormationSlider = ({ data }: Data) => {
     autoplaySpeed: 3500,
     slidesToShow: 3,
     centerPadding: "0px",
-    infinite: slideState.children > 3,
+    infinite: true,
     responsive: [
       {
         breakpoint: 1300,
@@ -63,12 +63,17 @@ export const FormationSlider = ({ data }: Data) => {
     ],
   };
 
-  useEffect(() => {
+  const checkCurrentSlides = () => {
     setSlideState({
-      children: slider?.current?.props.children.length,
-      slidesToShow: slider?.current?.props.slidesToShow,
+      slidesToShow:
+        window.innerWidth > 1300 ? 3 : window.innerWidth > 767 ? 2 : 1,
     });
-  }, [slider]);
+  };
+
+  useEffect(() => {
+    checkCurrentSlides();
+    window.addEventListener("resize", checkCurrentSlides, false);
+  }, []);
 
   return (
     <FormationSliderContainer>
@@ -82,6 +87,7 @@ export const FormationSlider = ({ data }: Data) => {
                   src={`/assets/png/Formation/${data.title}/${item.image}.png`}
                   alt={item.image}
                   layout="fill"
+                  priority
                 />
               </ImageContainer>
               <Rarity rarity={item.rarity} />
@@ -90,7 +96,7 @@ export const FormationSlider = ({ data }: Data) => {
           );
         })}
       </StyledSlider>
-      {slideState.children > slideState.slidesToShow && (
+      {slider?.current?.props.children.length > slideState.slidesToShow && (
         <NavigationButtons slider={slider} />
       )}
     </FormationSliderContainer>
