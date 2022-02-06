@@ -2,15 +2,19 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { LinkProps, StringProps } from "helpers/types";
-import { COLOR_WHITE_LIGHT, COLOR_YELLOW } from "helpers/colorPalette";
+ import { COLOR_WHITE, COLOR_YELLOW } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
-
-export const InternalLink = ({ href, children }: LinkProps) => {
+export const InternalLink = ({
+  href,
+  children,
+  noUnderline,
+  onClick,
+}: LinkProps) => {
   const router = useRouter();
 
   return (
     <Link href={href} passHref>
-      <div>
+      <div onClick={onClick}>
         <StyledLink isActive={router.pathname === href}>
           <p>{children}</p>
         </StyledLink>
@@ -26,9 +30,11 @@ export const StyledLink = styled.div<StringProps>`
     cursor: pointer;
     text-decoration: none;
     transition: color 0.5s;
-    font-size: 1rem;
     max-width: max-content;
-    color: ${({ isActive }) => (isActive ? COLOR_YELLOW : COLOR_WHITE_LIGHT)};
+    color: ${({ isActive }) => (isActive ? COLOR_YELLOW : COLOR_WHITE)};
+    font-family: "Defcon Zero";
+    margin: 0.7125rem 0;
+    font-size: 14px;
 
     &:before {
       content: "";

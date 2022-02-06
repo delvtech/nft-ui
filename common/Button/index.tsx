@@ -1,5 +1,5 @@
 import React, { MouseEventHandler } from "react";
-import { ButtonsContainer, ButtonStyles, StyledButton } from "./styles";
+import { ButtonsContainer, PrimaryButtonContainer } from "common/Button/styles";
 import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
 import { Flex } from "common/Container/styles";
 import { StringProps } from "helpers/types";
@@ -53,6 +53,14 @@ export const NavigationButtons = ({ slider }: StringProps) => {
         </svg>
       </Flex>
     </ButtonsContainer>
+  );
+};
+
+export const PrimaryButton = ({ text, hasBorder }: StringProps) => {
+  return (
+    <PrimaryButtonContainer hasBorder={hasBorder}>
+      <div className="box foo">{text}</div>
+    </PrimaryButtonContainer>
   );
 };
 

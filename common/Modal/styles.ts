@@ -36,13 +36,13 @@ export const BurgerSidebarContainer = styled.div<StringProps>`
   background-image: url("/assets/svg/grid.svg");
   width: 100%;
   height: 100vh;
-  padding: 3rem 2rem 2rem;
+  padding: 4.0625rem 2rem 2rem;
   position: relative;
   overflow: hidden;
 
   @media ${devices.mobileL} {
     max-width: 100vw;
-    padding: 3rem 1rem 1rem;
+    padding: 2rem 1rem 1rem;
     overflow-y: auto;
   }
 `;
