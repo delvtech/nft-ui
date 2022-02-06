@@ -9,8 +9,6 @@ import { Transition } from "components/Layout/Transition";
 
 import { GlobalStyle } from "styles/globalStyles";
 import "public/assets/fonts/style.css";
-import { Web3ReactProvider } from "@web3-react/core";
-import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
 
 import "@fontsource/rubik";
 
@@ -40,12 +38,12 @@ export default function App({ Component, pageProps, router }: AppProps) {
       </Head>
       <GlobalStyle />
       <DefaultSeo {...SEO} />
-      <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
-        <Header />
-        <Transition location={router.pathname}>
+      <Header />
+      <Transition location={router.pathname}>
+        <div>
           <Component {...pageProps} />
-        </Transition>
-      </Web3ReactProvider>
+        </div>
+      </Transition>
       <Footer />
     </>
   );
