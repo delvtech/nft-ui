@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import { useEffect } from "react";
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import SEO from "next-seo.config";
@@ -12,6 +13,11 @@ import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
 import "@fontsource/rubik";
 
 export default function App({ Component, pageProps, router }: AppProps) {
+  useEffect(() => {
+    const hasEntered = localStorage.getItem("hasEntered");
+    hasEntered && router.pathname === "/" && router.push("/home");
+  }, [router]);
+
   return (
     <>
       <Head>
