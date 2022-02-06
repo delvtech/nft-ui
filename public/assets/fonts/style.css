@@ -122,3 +122,13 @@
   font-family: "Calculator";
   src: url("/assets/fonts/Calculator.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Rubik Medium";
+  src: url("/assets/fonts/Rubik-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik Regular";
+  src: url("/assets/fonts/Rubik-Regular.ttf") format("truetype");
+}
