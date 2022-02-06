@@ -1,81 +1,70 @@
 import styled from "styled-components";
 import { devices } from "helpers/devices";
+import { COLOR_WHITE_LIGHT } from "helpers/colorPalette";
 
-export const HeroWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 60px;
-  gap: 60px;
+export const ContentWrapper = styled.div`
+  max-height: 100%;
+  width: 100%;
+  background-image: url("/assets/gif/hero_image.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 640px;
 
-  @media ${devices.desktopL} {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media ${devices.tabletL} {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-export const ImageContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  min-height: 475px;
-  max-width: 660px;
-  margin-left: auto;
+export const ContentCenter = styled.div`
+  display: grid;
+  grid-template-columns: auto;
+  grid-gap: 70px;
+  gap: 70px;
 
-  &:after {
-    content: " ";
-    background-image: url("/assets/svg/HeroSection/vector-top.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: 0;
-    position: absolute;
-    left: -60px;
-    top: -50px;
-    height: 100%;
-    width: 100%;
-    max-width: 404px;
-    max-height: 192px;
-  }
-
-  &:before {
-    content: " ";
-    background-image: url("/assets/svg/HeroSection/vector-bottom.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    right: 0;
-    position: absolute;
-    right: -100px;
-    bottom: -55px;
-    height: 100%;
-    width: 100%;
-    max-width: 404px;
-    max-height: 192px;
-  }
-
-  @media ${devices.tabletL} {
-    margin: 5rem auto;
+  h1 {
+    display: flex;
+    text-align: center;
   }
 
   @media ${devices.tabletM} {
-    min-height: 50vh;
-    margin: 0;
+    padding: 0 20px;
+  }
+`;
 
-    &:after {
-      display: none;
-    }
+export const HeroWrapper = styled.div`
+  background-color: #09282d;
+  border: 3px solid ${COLOR_WHITE_LIGHT};
+  padding: 72px 65px;
 
-    &:before {
-      display: none;
-    }
+  @media ${devices.tabletM} {
+    padding: 0;
   }
 `;
 
 export const HeroSectionContainer = styled.section`
-  padding: 19.75rem 0;
+  padding: 13.75rem 0 0 0;
 
   @media ${devices.tabletM} {
     padding: 6.75rem 0 0 0;
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  max-width: max-content;
+  margin: 0 auto;
+
+  @media ${devices.tabletM} {
+    grid-template-columns: auto;
+    grid-gap: 30px;
+    gap: 30px;
+
+    button {
+      width: 100%;
+      max-width: initial;
+    }
   }
 `;
