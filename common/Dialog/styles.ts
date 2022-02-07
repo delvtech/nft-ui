@@ -25,10 +25,6 @@ export const DialogTitle = styled.div`
   margin-top: 10px;
 `;
 
-export const Spacer = styled.div`
-  margin: 10px;
-`;
-
 export const BodyText = styled.div`
   margin-top: 11px;
   padding: 15px;

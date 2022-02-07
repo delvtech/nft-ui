@@ -12,9 +12,9 @@ import {
   DialogTitle,
   FlexCol,
   PaddedButton,
-  Spacer,
 } from "common/Dialog/styles";
 import Button from "common/Button";
+import { Spacer } from "common/Spacer";
 
 interface WalletButtonProps {
   connector: AbstractConnector;
