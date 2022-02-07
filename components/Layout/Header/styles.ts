@@ -25,13 +25,20 @@ export const FixedHeader = styled.header<StringProps>`
   section {
     padding: 0;
   }
+
+  @media ${devices.mobileL} {
+    padding: 2rem 0 1.625rem 0;
+  }
 `;
 
 export const MenuItemWrapper = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, max-content);
-  gap: 25px;
-  grid-gap: 25px;
+  grid-template-columns: repeat(5, max-content);
+  gap: 48px;
+  grid-gap: 48px;
+  p {
+    font-size: 1rem;
+  }
 
   @media ${devices.tabletL} {
     grid-template-columns: repeat(1, max-content);
