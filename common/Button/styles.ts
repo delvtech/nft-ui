@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import {
+  COLORS,
   COLOR_GREEN_DARKEST,
   COLOR_GREEN_LIGHT,
   COLOR_WHITE_LIGHT,

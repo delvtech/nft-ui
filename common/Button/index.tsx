@@ -1,5 +1,10 @@
 import React, { MouseEventHandler } from "react";
-import { ButtonsContainer, PrimaryButtonContainer } from "common/Button/styles";
+import {
+  ButtonsContainer,
+  ButtonStyles,
+  PrimaryButtonContainer,
+  StyledButton,
+} from "common/Button/styles";
 import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
 import { Flex } from "common/Container/styles";
 import { StringProps } from "helpers/types";

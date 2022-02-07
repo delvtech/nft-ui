@@ -2,14 +2,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
 import { LinkProps, StringProps } from "helpers/types";
- import { COLOR_WHITE, COLOR_YELLOW } from "helpers/colorPalette";
+import { COLOR_WHITE, COLOR_YELLOW } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
-export const InternalLink = ({
-  href,
-  children,
-  noUnderline,
-  onClick,
-}: LinkProps) => {
+
+export const InternalLink = ({ href, children, onClick }: LinkProps) => {
   const router = useRouter();
 
   return (

@@ -12,6 +12,7 @@ export interface LinkProps {
   href: string;
   children: React.ReactNode;
   noUnderline?: boolean;
+  onClick?: () => void;
 }
 
 export interface ContainerProps {
