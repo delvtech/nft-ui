@@ -1,7 +1,6 @@
-import Button from "common/Button";
 import React, { useState } from "react";
 import useWeb3 from "elf/useWeb3";
-import { ButtonSize } from "common/Button/styles";
+import { Button, ButtonSize } from "common/Button/styles";
 import { ConnectWalletDialog } from "./ConnectWalletDialog";
 
 export const ConnectWalletButton: React.FC = () => {

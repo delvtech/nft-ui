@@ -2,21 +2,6 @@ import { COLORS } from "helpers/colorPalette";
 import styled from "styled-components";
 import { EaseInTransition } from "styles/globalStyles";
 
-export const PaddedButton = styled.button`
-  background: ${COLORS.blackDark};
-  border: 1px solid ${COLORS.greenLight};
-  padding: 50px;
-  max-height: 150px;
-  width: 225px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  &:hover {
-    background-color: ${COLORS.greenDarkest};
-  }
-`;
-
 export const DialogTitle = styled.div`
   color: ${COLORS.white};
   font-size: 18px;
@@ -25,7 +10,7 @@ export const DialogTitle = styled.div`
   margin-top: 10px;
 `;
 
-export const BodyText = styled.div`
+export const DialogBodyText = styled.div`
   margin-top: 11px;
   padding: 15px;
   font-size: 14px;

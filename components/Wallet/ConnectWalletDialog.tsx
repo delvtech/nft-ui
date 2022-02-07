@@ -7,14 +7,9 @@ import {
 import Image from "next/image";
 import React, { useCallback } from "react";
 import { AbstractConnector } from "@web3-react/abstract-connector";
-import {
-  BodyText,
-  DialogTitle,
-  FlexCol,
-  PaddedButton,
-} from "common/Dialog/styles";
-import Button from "common/Button";
+import { DialogBodyText, DialogTitle, FlexCol } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
+import { Button, PaddedButton } from "common/Button/styles";
 
 interface WalletButtonProps {
   connector: AbstractConnector;
@@ -37,7 +32,7 @@ const WalletButton: React.FC<WalletButtonProps> = ({
   const handleClick = useCallback(() => {
     activate(connector, deactivator);
     onClick?.();
-  }, [activate]);
+  }, [activate, connector, deactivator, onClick]);
 
   return (
     <PaddedButton onClick={handleClick}>
@@ -79,10 +74,10 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
         />
       </FlexCol>
       <Spacer />
-      <BodyText>
+      <DialogBodyText>
         Note: Some connectors can only disconnect wallets from their app. Some
         connectors may also cause a page refresh.
-      </BodyText>
+      </DialogBodyText>
 
       {active && (
         <>

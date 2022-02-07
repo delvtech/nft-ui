@@ -3,7 +3,6 @@ import {
   ButtonsContainer,
   ButtonStyles,
   PrimaryButtonContainer,
-  StyledButton,
 } from "common/Button/styles";
 import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
 import { Flex } from "common/Container/styles";
@@ -74,10 +73,10 @@ interface ButtonProps extends ButtonStyles {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button: React.FC<ButtonProps> = ({ children, ...styleProps }) => (
-  <StyledButton type="button" {...styleProps}>
-    {children}
-  </StyledButton>
-);
+// export const Button: React.FC<ButtonProps> = ({ children, ...styleProps }) => (
+//   <StyledButton type="button" {...styleProps}>
+//     {children}
+//   </StyledButton>
+// );
 
-export default Button;
+// export default Button;

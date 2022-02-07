@@ -20,21 +20,8 @@ export const Dialog: React.FC<DialogProps> = ({
       exit: 450,
     }}
   >
-    <DialogContainer
-      onClick={(e) => {
-        console.log("clicked container");
-        onClose && onClose();
-      }}
-      isOpen={isOpen}
-    >
-      <Card
-        onClick={(e) => {
-          console.log("clicked card");
-          e.stopPropagation();
-        }}
-      >
-        {children}
-      </Card>
+    <DialogContainer onClick={() => onClose && onClose()} isOpen={isOpen}>
+      <Card onClick={(e) => e.stopPropagation()}>{children}</Card>
     </DialogContainer>
   </CSSTransition>
 );
