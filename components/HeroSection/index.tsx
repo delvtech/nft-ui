@@ -1,13 +1,14 @@
-import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 import { SectionContainer } from "common/Container";
+import { DesktopHeader, MobileHeader } from "components/Entrance/styles";
+import { PrimaryButton } from "common/Button";
 import {
   HeroSectionContainer,
   HeroWrapper,
-  ImageContainer,
+  ContentWrapper,
+  ContentCenter,
+  ButtonWrapper,
 } from "components/HeroSection/styles";
-
-import HeroImage from "public/assets/gif/hero_image.gif";
 
 export const HeroSection = () => {
   return (
@@ -15,10 +16,22 @@ export const HeroSection = () => {
       <SectionContainer padding="0" textAlign="start" hasOverflow>
         <Fade triggerOnce>
           <HeroWrapper>
-            <h1>Welcome to Principal Valley</h1>
-            <ImageContainer>
-              <Image src={HeroImage} alt="hero" layout="fill" priority />
-            </ImageContainer>
+            <ContentWrapper>
+              <ContentCenter>
+                <DesktopHeader>
+                  <h1>
+                    wander <mark>to the</mark> elfiverse
+                  </h1>
+                </DesktopHeader>
+                <MobileHeader>
+                  <h1>wander to the elfiverse</h1>
+                </MobileHeader>
+                <ButtonWrapper>
+                  <PrimaryButton text="Start minting" />
+                  <PrimaryButton text="The Council" hasBorder />
+                </ButtonWrapper>
+              </ContentCenter>
+            </ContentWrapper>
           </HeroWrapper>
         </Fade>
       </SectionContainer>
