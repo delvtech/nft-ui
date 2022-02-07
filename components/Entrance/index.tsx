@@ -1,3 +1,4 @@
+import React from "react";
 import { PrimaryButton } from "common/Button";
 import { SectionContainer } from "common/Container";
 import { InternalLink } from "common/InternalLink";
@@ -14,7 +15,7 @@ const handleClick = () => {
   localStorage.setItem("hasEntered", "true");
 };
 
-export const Entrance = () => {
+export const Entrance = () => (
   <EntranceSection>
     <SectionContainer padding="0">
       <EntranceContainer>
@@ -40,5 +41,5 @@ export const Entrance = () => {
         <Timer />
       </EntranceContainer>
     </SectionContainer>
-  </EntranceSection>;
-};
+  </EntranceSection>
+);
