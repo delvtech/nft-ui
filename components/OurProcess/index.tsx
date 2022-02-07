@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
 import { SectionContainer } from "common/Container";
 import { COLOR_WHITE_LIGHT } from "helpers/colorPalette";
@@ -11,21 +10,21 @@ export const OurProcess = () => {
       <ContentWrapper>
         <p>
           This nascent form of Crypto Coven is a series of generative portraits
-          of WITCHES, forged in this corner we’ve carved out of the flat and
-          open internet.
+          of WITCHES, forged in this corner we&apos;ve carved out of the flat
+          and open internet.
         </p>
         <p>
           Each WITCH manifests virtually as an array of pixels (in lieu of flesh
           and blood or sweat or paint), and each is unique, with a non-fungible
           token (NFT) stored on the Ethereum mainnet that attests to that
           uniqueness.
-        </p>{" "}
+        </p>
         <p>
-          While anyone may steal a WITCH'S visage, if you hold a token, the
+          While anyone may steal a WITCH&apos;S visage, if you hold a token, the
           identity you form and the treasures you reap from this world will
           travel with you to any web3 destination that may welcome a WITCH.
-          Strangeness begets strangeness, and in coming days you’ll see that
-          number grow — we hope that you will grow it.{" "}
+          Strangeness begets strangeness, and in coming days you&apos;ll see
+          that number grow — we hope that you will grow it.
         </p>
         <p>
           For this initial coven, each WITCH falls into an archetype of power
