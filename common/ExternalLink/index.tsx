@@ -24,7 +24,6 @@ export const StyledAnchor = styled.div<StringProps>`
     cursor: pointer;
     text-decoration: none;
     transition: all 0.5s;
-    font-size: 1rem;
     max-width: max-content;
     font-family: "Defcon Zero";
 

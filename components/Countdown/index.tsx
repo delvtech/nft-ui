@@ -1,18 +1,20 @@
 import { Fade, Zoom } from "react-awesome-reveal";
 import { SectionContainer } from "common/Container";
-import { CountdownDate } from "components/Countdown/styles";
 import { Timer } from "components/Countdown/Timer";
+import { ContentWrapper, CountdownDate } from "components/Countdown/styles";
 
 export const Countdown = () => {
   return (
-    <SectionContainer maxWidth="45rem" padding="0">
-      <Fade triggerOnce>
-        <h2>First drop hits</h2>
-        <Zoom triggerOnce>
-          <CountdownDate>February 9th</CountdownDate>
-        </Zoom>
-        <Timer />
-      </Fade>
+    <SectionContainer maxWidth="38.5rem">
+     <ContentWrapper>
+       <Fade triggerOnce>
+         <h3>First drop hits</h3>
+         <Zoom triggerOnce>
+           <CountdownDate>February 9th</CountdownDate>
+         </Zoom>
+         <Timer />
+       </Fade>
+     </ContentWrapper>
     </SectionContainer>
   );
 };

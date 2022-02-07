@@ -3,7 +3,10 @@ import {
   COLORS,
   COLOR_GREEN_DARKEST,
   COLOR_GREEN_LIGHT,
+  COLOR_WHITE_LIGHT,
 } from "helpers/colorPalette";
+import { StringProps } from "helpers/types";
+import { devices } from "helpers/devices";
 
 export const ButtonsContainer = styled.div`
   margin: 2rem auto;
@@ -24,6 +27,59 @@ export const ButtonsContainer = styled.div`
       }
     }
     cursor: pointer;
+  }
+`;
+
+export const PrimaryButtonContainer = styled.button<StringProps>`
+  background-color: ${COLOR_GREEN_DARKEST};
+  color: ${COLOR_GREEN_LIGHT};
+  padding: 17px 60px;
+  font-size: 18px;
+  font-family: "Defcon Zero";
+  max-width: max-content;
+  margin: 0 auto;
+  position: relative;
+  border: ${({ hasBorder }) => hasBorder && `1px solid ${COLOR_GREEN_LIGHT}`};
+  &:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    top: calc(2px / -1);
+    left: calc(2px / -1);
+    background: linear-gradient(
+        to right,
+        ${COLOR_WHITE_LIGHT} 0%,
+        ${COLOR_WHITE_LIGHT} 100%
+      ),
+      linear-gradient(to top, ${COLOR_WHITE_LIGHT} 50%, transparent 50%),
+      linear-gradient(to top, ${COLOR_WHITE_LIGHT} 50%, transparent 50%),
+      linear-gradient(
+        to right,
+        ${COLOR_WHITE_LIGHT} 0%,
+        ${COLOR_WHITE_LIGHT} 100%
+      ),
+      linear-gradient(
+        to left,
+        ${COLOR_WHITE_LIGHT} 0%,
+        ${COLOR_WHITE_LIGHT} 100%
+      );
+    background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+    background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    background-repeat: no-repeat, no-repeat;
+    transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out,
+      background-size 0.3s ease-in-out;
+    transform: scaleX(0) rotate(0deg);
+    transition-delay: 0.6s, 0.3s, 0s;
+  }
+  &:hover:before {
+    background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+    background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+    transform: scaleX(1) rotate(0deg);
+    transition-delay: 0s, 0.3s, 0.6s;
+  }
+  @media ${devices.mobileL} {
+    padding: 17px 50px;
   }
 `;
 
