@@ -74,20 +74,8 @@ interface ButtonProps extends ButtonStyles {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  disabled,
-  onClick,
-  size,
-  variant,
-}) => (
-  <StyledButton
-    disabled={disabled}
-    onClick={onClick}
-    size={size}
-    type="button"
-    variant={variant}
-  >
+export const Button: React.FC<ButtonProps> = ({ children, ...styleProps }) => (
+  <StyledButton type="button" {...styleProps}>
     {children}
   </StyledButton>
 );

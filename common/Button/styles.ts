@@ -133,10 +133,12 @@ export const getHeight = (size: ButtonSize) => buttonSizes[size];
 export interface ButtonStyles {
   size?: ButtonSize;
   variant?: ButtonVariant;
+  sidePadding?: string;
 }
 
 export const StyledButton = styled.button<ButtonStyles>`
-  padding: 0px 10px 0px 10px;
+  padding: 0px ${({ sidePadding = "10px" }) => sidePadding} 0px
+    ${({ sidePadding = "10px" }) => sidePadding};
   width: max-content;
   height: ${({ size = ButtonSize.SMALL }) => getHeight(size)};
   background-color: ${({ variant = ButtonVariant.PRIMARY }) =>

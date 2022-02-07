@@ -1,8 +1,11 @@
 import { Dialog, DialogProps } from "common/Dialog";
 import useWeb3 from "elf/useWeb3";
-import { injectedConnector } from "elf/wallets/connectors";
+import {
+  getWalletConnectConnector,
+  injectedConnector,
+} from "elf/wallets/connectors";
 import Image from "next/image";
-import React, { useCallback, useState } from "react";
+import React, { useCallback } from "react";
 import { AbstractConnector } from "@web3-react/abstract-connector";
 import {
   BodyText,
@@ -11,29 +14,28 @@ import {
   PaddedButton,
   Spacer,
 } from "common/Dialog/styles";
+import Button from "common/Button";
 
-interface ConnectWalletButtonProps {
+interface WalletButtonProps {
   connector: AbstractConnector;
   source: string;
   alt: string;
 
   onClick?: () => void;
+  deactivator?: () => void;
 }
 
-const _ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
+const WalletButton: React.FC<WalletButtonProps> = ({
   connector,
   source,
   alt,
   onClick,
+  deactivator,
 }) => {
-  const { activate, deactivate } = useWeb3();
-
-  const deactivateActiveConnector = useCallback(async () => {
-    await deactivate();
-  }, [deactivate]);
+  const { activate } = useWeb3();
 
   const handleClick = useCallback(() => {
-    activate(connector, deactivateActiveConnector);
+    activate(connector, deactivator);
     onClick?.();
   }, [activate]);
 
@@ -47,30 +49,56 @@ const _ConnectWalletButton: React.FC<ConnectWalletButtonProps> = ({
 export const ConnectWalletDialog: React.FC<DialogProps> = ({
   isOpen,
   onClose,
-}) => (
-  <Dialog isOpen={isOpen} onClose={() => onClose && onClose()}>
-    <DialogTitle>Connect Wallet</DialogTitle>
-    <FlexCol>
-      <_ConnectWalletButton
-        connector={injectedConnector}
-        alt="MetaMask"
-        source="/assets/svg/metamask.svg"
-        onClick={() => onClose?.()}
-      />
+}) => {
+  const { active, deactivate } = useWeb3();
 
+  const deactivateActiveConnector = useCallback(async () => {
+    await deactivate();
+  }, [deactivate]);
+
+  return (
+    <Dialog isOpen={isOpen} onClose={() => onClose && onClose()}>
+      <DialogTitle>Connect Wallet</DialogTitle>
+      <FlexCol>
+        <WalletButton
+          connector={injectedConnector}
+          deactivator={deactivateActiveConnector}
+          alt="MetaMask"
+          source="/assets/svg/metamask.svg"
+          onClick={() => onClose?.()}
+        />
+
+        <Spacer />
+
+        <WalletButton
+          connector={getWalletConnectConnector()}
+          deactivator={deactivateActiveConnector}
+          alt="WalletConnect"
+          source="/assets/svg/walletConnectIcon.svg"
+          onClick={() => onClose?.()}
+        />
+      </FlexCol>
       <Spacer />
+      <BodyText>
+        Note: Some connectors can only disconnect wallets from their app. Some
+        connectors may also cause a page refresh.
+      </BodyText>
 
-      <_ConnectWalletButton
-        connector={injectedConnector}
-        alt="WalletConnect"
-        source="/assets/svg/walletConnectIcon.svg"
-        onClick={() => onClose?.()}
-      />
-    </FlexCol>
-    <Spacer />
-    <BodyText>
-      Note: Some connectors can only disconnect wallets from their app. Some
-      connectors may also cause a page refresh.
-    </BodyText>
-  </Dialog>
-);
+      {active && (
+        <>
+          <Spacer />
+          <Button
+            sidePadding="25px"
+            onClick={() => {
+              deactivateActiveConnector();
+              onClose?.();
+            }}
+          >
+            Close connection
+          </Button>
+          <Spacer />
+        </>
+      )}
+    </Dialog>
+  );
+};
