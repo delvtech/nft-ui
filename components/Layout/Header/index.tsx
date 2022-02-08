@@ -13,17 +13,18 @@ import {
   SVGContainer,
 } from "components/Layout/Header/styles";
 import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
+import { Spacer } from "common/Spacer";
 
 export const MenuItem = ({ onClose }: any) => {
   return (
     <MenuItemWrapper onClick={onClose}>
-    <InternalLink href="/home">Home</InternalLink>
-      <InternalLink href="/formation">Formation</InternalLink>
-      <InternalLink href="/how-to-mint">Minting</InternalLink>
+      <InternalLink href="/">Home</InternalLink>
+      <InternalLink href="https://www.youtube.com/">Formation</InternalLink>
+      <InternalLink href="https://www.youtube.com/">Minting</InternalLink>
       <InternalLink href="/rollout-release">The Rollout Release</InternalLink>
-      <ExternalLink href="https://www.youtube.com/">
-        Element Governance System
-      </ExternalLink>
+      <InternalLink href="https://www.youtube.com/">
+        Governance System
+      </InternalLink>
     </MenuItemWrapper>
   );
 };
@@ -66,6 +67,8 @@ export const SocialLinks = () => {
 export const Header = () => {
   const [sidebarVisibility, setSidebarVisibility] = useState<boolean>(false);
 
+  const connectWalletButton = <ConnectWalletButton />;
+
   return (
     <FixedHeader>
       <SectionContainer>
@@ -75,10 +78,9 @@ export const Header = () => {
               <MenuItem />
             </MenuItemContainer>
             <MenuItemContainer>
+              {connectWalletButton}
+              <Spacer size="20px" />
               <SocialLinks />
-            </MenuItemContainer>
-            <MenuItemContainer>
-              <ConnectWalletButton />
             </MenuItemContainer>
             <MobileMenuContainer>
               <div />
@@ -89,6 +91,7 @@ export const Header = () => {
                   setSidebarVisibility(!sidebarVisibility)
                 }
               />
+              {connectWalletButton}
             </MobileMenuContainer>
           </Flex>
         </HeaderWrapper>
