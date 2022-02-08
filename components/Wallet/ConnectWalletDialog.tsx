@@ -7,25 +7,25 @@ import {
 import Image from "next/image";
 import React, { useCallback } from "react";
 import { AbstractConnector } from "@web3-react/abstract-connector";
-import { DialogBodyText, DialogTitle, FlexCol } from "common/Dialog/styles";
+import { DialogBodyText, DialogTitle } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
 import { Button, PaddedButton } from "common/Button/styles";
+import { Flex } from "common/Container/styles";
 
 interface WalletButtonProps {
-  connector: AbstractConnector;
-  source: string;
   alt: string;
-
-  onClick?: () => void;
+  connector: AbstractConnector;
   deactivator?: () => void;
+  onClick?: () => void;
+  source: string;
 }
 
 const WalletButton: React.FC<WalletButtonProps> = ({
-  connector,
-  source,
   alt,
-  onClick,
+  connector,
   deactivator,
+  onClick,
+  source,
 }) => {
   const { activate } = useWeb3();
 
@@ -52,9 +52,9 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
   }, [deactivate]);
 
   return (
-    <Dialog isOpen={isOpen} onClose={() => onClose && onClose()}>
+    <Dialog isOpen={isOpen} onClose={() => onClose?.()}>
       <DialogTitle>Connect Wallet</DialogTitle>
-      <FlexCol>
+      <Flex align="center" direction="column">
         <WalletButton
           connector={injectedConnector}
           deactivator={deactivateActiveConnector}
@@ -72,8 +72,10 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
           source="/assets/svg/walletConnectIcon.svg"
           onClick={() => onClose?.()}
         />
-      </FlexCol>
+      </Flex>
+
       <Spacer />
+
       <DialogBodyText>
         Note: Some connectors can only disconnect wallets from their app. Some
         connectors may also cause a page refresh.
@@ -84,8 +86,8 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
           <Spacer />
           <Button
             sidePadding="25px"
-            onClick={() => {
-              deactivateActiveConnector();
+            onClick={async () => {
+              await deactivateActiveConnector();
               onClose?.();
             }}
           >
