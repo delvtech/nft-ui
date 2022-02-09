@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { NavigationButtons } from "common/Button";
