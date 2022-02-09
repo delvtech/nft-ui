@@ -1,10 +1,5 @@
-import React, { MouseEventHandler } from "react";
-import {
-  ButtonsContainer,
-  ButtonStyles,
-  PrimaryButtonContainer,
-  StyledButton,
-} from "common/Button/styles";
+import React from "react";
+import { ButtonsContainer, PrimaryButtonContainer } from "common/Button/styles";
 import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
 import { Flex } from "common/Container/styles";
 import { StringProps } from "helpers/types";
@@ -68,28 +63,3 @@ export const PrimaryButton = ({ text, hasBorder }: StringProps) => {
     </PrimaryButtonContainer>
   );
 };
-
-interface ButtonProps extends ButtonStyles {
-  disabled?: boolean;
-  onClick?: MouseEventHandler<HTMLButtonElement>;
-}
-
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  disabled,
-  onClick,
-  size,
-  variant,
-}) => (
-  <StyledButton
-    disabled={disabled}
-    onClick={onClick}
-    size={size}
-    type="button"
-    variant={variant}
-  >
-    {children}
-  </StyledButton>
-);
-
-export default Button;

@@ -7,6 +7,7 @@ export const BurgerMenuContainer = styled.div`
 
   @media ${devices.tabletL} {
     display: block;
+    margin-right: auto;
 
     svg {
       cursor: pointer;

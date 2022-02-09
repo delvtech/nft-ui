@@ -82,6 +82,7 @@ export const MenuItemContainer = styled(Flex)`
 
 export const MobileMenuContainer = styled(Flex)`
   display: none;
+  justify-content: flex-start;
 
   @media ${devices.tabletL} {
     display: flex;

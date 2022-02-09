@@ -133,10 +133,12 @@ export const getHeight = (size: ButtonSize) => buttonSizes[size];
 export interface ButtonStyles {
   size?: ButtonSize;
   variant?: ButtonVariant;
+  sidePadding?: string;
 }
 
-export const StyledButton = styled.button<ButtonStyles>`
-  padding: 0px 10px 0px 10px;
+export const Button = styled.button<ButtonStyles>`
+  padding: 0px ${({ sidePadding = "10px" }) => sidePadding} 0px
+    ${({ sidePadding = "10px" }) => sidePadding};
   width: max-content;
   height: ${({ size = ButtonSize.SMALL }) => getHeight(size)};
   background-color: ${({ variant = ButtonVariant.PRIMARY }) =>
@@ -146,4 +148,19 @@ export const StyledButton = styled.button<ButtonStyles>`
   font-family: "Defcon Zero";
   font-size: ${({}) => "14px"};
   color: ${({}) => "white"};
+`;
+
+export const PaddedButton = styled.button`
+  background: ${COLORS.blackDark};
+  border: 1px solid ${COLORS.greenLight};
+  padding: 50px;
+  max-height: 150px;
+  width: 225px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: ${COLORS.greenDarkest};
+  }
 `;

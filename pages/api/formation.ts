@@ -3,91 +3,97 @@ import { NextApiHandler } from "next";
 const formation: NextApiHandler = (req, res) => {
   res.status(200).json([
     {
-      title: "Hats",
+      title: "Bodies",
       content: [
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "2",
-          image: "cleric_crown",
+          rarity: "25",
+          image: "body_blue",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "9",
-          image: "floating_bonet",
+          rarity: "20",
+          image: "body_green",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "20",
+          image: "body_pale",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "25",
+          image: "body_pink",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
           rarity: "5",
-          image: "sun_headset",
+          image: "body_red",
         },
-      ],
-    },
-
-    {
-      title: "Eyewear",
-      content: [
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
           rarity: "5",
-          image: "eye_patch",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "3",
-          image: "chain_veil",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "8",
-          image: "maccar_mask",
+          image: "body_yellow",
         },
       ],
     },
 
     {
-      title: "Eyes",
+      title: "Clothes",
       content: [
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "7",
-          image: "eyes_fire",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
           rarity: "20",
-          image: "eyes_gold",
+          image: "clothes_colonist_blue",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "7",
-          image: "eyes_ice",
+          rarity: "10",
+          image: "clothes_colonist_green",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "20",
-          image: "eyes_left",
+          rarity: "15",
+          image: "clothes_colonist_red",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "20",
-          image: "eyes_red",
+          rarity: "5",
+          image: "clothes_colonist_white",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "20",
-          image: "eyes_right",
+          rarity: "15",
+          image: "clothes_colonist_yellow",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "15",
+          image: "clothes_garmet_blue",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "5",
+          image: "clothes_garmet_red",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "5",
+          image: "clothes_garmet_yellow",
         },
       ],
     },
@@ -199,97 +205,67 @@ const formation: NextApiHandler = (req, res) => {
     },
 
     {
-      title: "Bodies",
+      title: "Eyes",
       content: [
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "25",
-          image: "body_blue",
+          rarity: "7",
+          image: "eyes_fire",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
           rarity: "20",
-          image: "body_green",
+          image: "eyes_gold",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "7",
+          image: "eyes_ice",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
           rarity: "20",
-          image: "body_pale",
+          image: "eyes_left",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "25",
-          image: "body_pink",
+          rarity: "20",
+          image: "eyes_red",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "5",
-          image: "body_red",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "5",
-          image: "body_yellow",
+          rarity: "20",
+          image: "eyes_right",
         },
       ],
     },
 
     {
-      title: "Clothes",
+      title: "Eyewear",
       content: [
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "20",
-          image: "clothes_colonist_blue",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "10",
-          image: "clothes_colonist_green",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "15",
-          image: "clothes_colonist_red",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
           rarity: "5",
-          image: "clothes_colonist_white",
+          image: "eye_patch",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "15",
-          image: "clothes_colonist_yellow",
+          rarity: "3",
+          image: "chain_veil",
         },
         {
           description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "15",
-          image: "clothes_garmet_blue",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "5",
-          image: "clothes_garmet_red",
-        },
-        {
-          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
-          rarity: "5",
-          image: "clothes_garmet_yellow",
+          rarity: "8",
+          image: "maccar_mask",
         },
       ],
     },
@@ -350,6 +326,30 @@ const formation: NextApiHandler = (req, res) => {
             Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
           rarity: "5",
           image: "hair_short_grey",
+        },
+      ],
+    },
+
+    {
+      title: "Hats",
+      content: [
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "2",
+          image: "cleric_crown",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "9",
+          image: "floating_bonet",
+        },
+        {
+          description: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+            Lorem Ipsum has been the industry's standard dummy text ever since the start of 2000s.`,
+          rarity: "5",
+          image: "sun_headset",
         },
       ],
     },

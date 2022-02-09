@@ -153,6 +153,23 @@ export const AnimateSlideBurger = styled.div`
   }
 `;
 
+export const EaseInTransition = styled.div`
+  &.ease-in-enter {
+    opacity: 0;
+  }
+  &.ease-in-enter-active {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+  }
+  &.ease-in-exit {
+    opacity: 1;
+  }
+  &.ease-in-exit-active {
+    opacity: 0;
+    transition: opacity 400ms ease;
+  }
+`;
+
 export const PageHideOuterScroll = createGlobalStyle<StringProps>`
   @media ${devices.mobileM} {
     body {
