@@ -30,7 +30,6 @@ export const StyledLink = styled.div<StringProps>`
     color: ${({ isActive }) => (isActive ? COLOR_YELLOW : COLOR_WHITE)};
     font-family: "Defcon Zero";
     margin: 0.7125rem 0;
-    font-size: 14px;
 
     &:before {
       content: "";

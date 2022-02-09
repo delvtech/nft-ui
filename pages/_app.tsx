@@ -2,16 +2,13 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { DefaultSeo } from "next-seo";
 import SEO from "next-seo.config";
-
 import { Header } from "components/Layout/Header";
 import { Footer } from "components/Layout/Footer";
 import { Transition } from "components/Layout/Transition";
-
 import { GlobalStyle } from "styles/globalStyles";
 import "public/assets/fonts/style.css";
 import { Web3ReactProvider } from "@web3-react/core";
 import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
-
 import "@fontsource/rubik";
 
 export default function App({ Component, pageProps, router }: AppProps) {
