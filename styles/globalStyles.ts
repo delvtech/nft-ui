@@ -40,6 +40,8 @@ export const GlobalStyle = createGlobalStyle`
       text-align: initial;
       outline: none;
       font-family: "Defcon Zero";
+      display: flex;
+      align-items: center;
     }
 
     button {
@@ -54,61 +56,64 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     h1 {
-      font-size: 4.375rem;      
-      line-height: 70.29px;
+      font-size: 4rem;   
+      line-height: 100%;   
       letter-spacing: 0.025rem;      
-      font-family: "Defcon Zero Halftone";
+      font-family: "Defcon Zero Title";
       font-weight: 400;
       
-      @media ${devices.tabletM} {
+      @media ${devices.tabletL} {
         font-size: 3rem;  
+      }
+
+      @media ${devices.tabletM} {
+        font-size: 2.5rem;  
+      }
+
+      @media ${devices.mobileL} {
+        font-size: 1.75rem;
       }
 
     }
 
     h2 {
-      line-height: 60px;
-      font-size: 3.75rem;    
+      font-size: 5rem;   
+      margin-bottom: 70px; 
       font-family: "Defcon Zero";
 
       @media ${devices.tabletM} {
+        font-size: 3.75rem;    
+      }
+
+      @media ${devices.mobileL} {
         font-size: 2rem;    
       }
     }
 
     h3 {
       font-size: 2.5rem;    
-      font-family: "Defcon Zero 3D";
-      font-weight: 400;
+      font-family: "Rubik Medium";
+      font-weight: 600;
       
       @media ${devices.tabletL} {
         font-size: 1.8rem;  
       }
     }
-    
+
     h4 {
       font-size: 1.25rem;    
       font-family: "Defcon Zero";
       color: #8FD8E7;
     }
-
-    h5 {
-      font-size: 1.375rem;    
-    }
-
-    h6 {
-      font-size: 1.125rem;
-      margin: 0;
-    }
     
-    h1, h2, h3, h4, h5, p {
+    h1, h3, h4, h5, p {
       margin: 0;
       color: ${COLOR_WHITE};
     }
 
     p {
-      line-height: 23px;
-      font-family: "Defcon Zero";
+      line-height: 24px;
+      font-family: "Rubik Regular";
     }
 
     p, button, input {
@@ -118,18 +123,33 @@ export const GlobalStyle = createGlobalStyle`
 
 export const AnimateSlideBurger = styled.div`
   &.burgerslide-transition-enter {
-    opacity: 0;
+    transform: translateX(50%);
+    -webkit-transform: translateX(50%);
+    -moz-transform: translateX(50%);
+    transition: transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -moz-transition: -moz-transform 0.5s ease;
   }
   &.burgerslide-transition-enter-active {
-    opacity: 1;
-    transition: opacity 400ms ease;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    transition: transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -moz-transition: -moz-transform 0.5s ease;
   }
   &.burgerslide-transition-exit {
-    opacity: 1;
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
   }
   &.burgerslide-transition-exit-active {
-    opacity: 0;
-    transition: opacity 400ms ease;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transition: transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.5s ease;
+    -moz-transition: -moz-transform 0.5s ease;
   }
 `;
 

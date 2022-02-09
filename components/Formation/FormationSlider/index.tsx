@@ -15,60 +15,32 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Rarity = ({ rarity }: StringProps) => {
-  return (
-    <RarityContainer>
-      0%
-      <Progress>
-        <Missing rarity={rarity} />
-      </Progress>
-      {rarity}%
-    </RarityContainer>
-  );
-};
+const Rarity = ({ rarity }: StringProps) => (
+  <RarityContainer>
+    0%
+    <Progress>
+      <Missing rarity={rarity} />
+    </Progress>
+    {rarity}%
+  </RarityContainer>
+);
 
 export const FormationSlider = ({ data }: Data) => {
   const slider = useRef<any>(null);
   const [slideState, setSlideState] = useState({
-    children: 3,
     slidesToShow: 3,
   });
 
-  const settings = {
-    draggable: false,
-    swipe: false,
-    arrows: false,
-    speed: 500,
-    centerMode: true,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    slidesToShow: 3,
-    centerPadding: "0px",
-    infinite: slideState.children > 3,
-    responsive: [
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 2,
-          centerPadding: "-20px",
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "0px",
-        },
-      },
-    ],
-  };
-
   useEffect(() => {
-    setSlideState({
-      children: slider?.current?.props.children.length,
-      slidesToShow: slider?.current?.props.slidesToShow,
-    });
-  }, [slider]);
+    const checkCurrentSlides = () =>
+      setSlideState({
+        slidesToShow:
+          window.innerWidth > 1300 ? 3 : window.innerWidth > 767 ? 2 : 1,
+      });
+
+    checkCurrentSlides();
+    window.addEventListener("resize", checkCurrentSlides, false);
+  }, []);
 
   return (
     <FormationSliderContainer>
@@ -82,6 +54,7 @@ export const FormationSlider = ({ data }: Data) => {
                   src={`/assets/png/Formation/${data.title}/${item.image}.png`}
                   alt={item.image}
                   layout="fill"
+                  priority
                 />
               </ImageContainer>
               <Rarity rarity={item.rarity} />
@@ -90,9 +63,38 @@ export const FormationSlider = ({ data }: Data) => {
           );
         })}
       </StyledSlider>
-      {slideState.children > slideState.slidesToShow && (
+      {slider?.current?.props.children.length > slideState.slidesToShow && (
         <NavigationButtons slider={slider} />
       )}
     </FormationSliderContainer>
   );
+};
+
+const settings = {
+  draggable: false,
+  swipe: false,
+  arrows: false,
+  speed: 500,
+  centerMode: true,
+  autoplay: true,
+  autoplaySpeed: 3500,
+  slidesToShow: 3,
+  centerPadding: "0px",
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 2,
+        centerPadding: "-20px",
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: "0px",
+      },
+    },
+  ],
 };
