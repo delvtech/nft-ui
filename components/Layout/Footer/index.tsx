@@ -36,20 +36,15 @@ export const Footer = () => {
           </LogoContainer>
           <div>
             <h4>Home</h4>
-            <ExternalLink href="https://www.youtube.com/">
-              How to mint
-            </ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
+            <ExternalLink href="/minting">How to mint</ExternalLink>
+            <ExternalLink href="/rollout-release">
               The rollout release
             </ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
-              governance dashboard
-            </ExternalLink>
+            <ExternalLink href="/governance">governance dashboard</ExternalLink>
           </div>
           <div>
             <h4>Learn</h4>{" "}
             <ExternalLink href="https://www.youtube.com/">
-              {" "}
               Governance
             </ExternalLink>
             <ExternalLink href="https://www.youtube.com/">

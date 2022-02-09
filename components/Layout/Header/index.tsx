@@ -19,12 +19,10 @@ export const MenuItem = ({ onClose }: any) => {
   return (
     <MenuItemWrapper onClick={onClose}>
       <InternalLink href="/">Home</InternalLink>
-      <InternalLink href="https://www.youtube.com/">Formation</InternalLink>
-      <InternalLink href="https://www.youtube.com/">Minting</InternalLink>
+      <InternalLink href="/formation">Formation</InternalLink>
+      <InternalLink href="/how-to-mint">Minting</InternalLink>
       <InternalLink href="/rollout-release">The Rollout Release</InternalLink>
-      <InternalLink href="https://www.youtube.com/">
-        Governance System
-      </InternalLink>
+      <InternalLink href="/governance">Governance System</InternalLink>
     </MenuItemWrapper>
   );
 };
