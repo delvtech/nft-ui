@@ -18,7 +18,7 @@ import { Spacer } from "common/Spacer";
 export const MenuItem = ({ onClose }: any) => {
   return (
     <MenuItemWrapper onClick={onClose}>
-      <InternalLink href="/">Home</InternalLink>
+      <InternalLink href="/home">Home</InternalLink>
       <InternalLink href="/formation">Formation</InternalLink>
       <InternalLink href="/how-to-mint">Minting</InternalLink>
       <InternalLink href="/rollout-release">The Rollout Release</InternalLink>
