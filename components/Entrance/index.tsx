@@ -35,7 +35,7 @@ export const Entrance = () => (
             is your place online with Element.
           </p>
         </ContentWrapper>
-        <InternalLink href="/" noUnderline onClick={handleClick}>
+        <InternalLink href="/home" noUnderline onClick={handleClick}>
           <PrimaryButton text="Enter world" />
         </InternalLink>
         <Timer />

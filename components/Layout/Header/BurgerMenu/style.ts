@@ -5,7 +5,7 @@ import { devices } from "helpers/devices";
 export const BurgerMenuContainer = styled.div`
   display: none;
 
-  @media ${devices.tabletL} {
+  @media ${devices.desktopL} {
     display: block;
     margin-right: auto;
 
@@ -27,13 +27,14 @@ export const NavigationPrimary = styled.div`
     margin: 1.5rem 0;
     color: ${COLOR_WHITE_LIGHT};
 
-    @media ${devices.tabletM} {
+    @media ${devices.desktopM} {
       font-size: 24px;
     }
 
     @media ${devices.mobileL} {
-      font-size: 1rem;
+      font-size: 1.5rem;
       margin: 1rem 0;
+      line-height: 140%;
     }
 
     &:before {

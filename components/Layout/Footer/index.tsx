@@ -43,7 +43,7 @@ export const Footer = () => {
             <ExternalLink href="/governance">governance dashboard</ExternalLink>
           </div>
           <div>
-            <h4>Learn</h4>{" "}
+            <h4>Learn</h4>
             <ExternalLink href="https://www.youtube.com/">
               Governance
             </ExternalLink>
