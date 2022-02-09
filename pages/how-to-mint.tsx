@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { NextPage } from "next";
 import { ContentPage } from "components/ContentPage";
 
@@ -16,8 +15,9 @@ const HowToMint: NextPage = () => {
       starting 5:35 p.m. ET on february 9 at <mark>completely free</mark>. Each
       person can mint up to 4 elves. <br /> Active community members are defined
       as anyone who has used element, the defi fixed rate protocol. <br /> These
-      members will automatically receive <mark>their custom "elf"</mark>, which
-      will grant them access to a private Discord channel
+      members will automatically receive
+      <mark>their custom &quot;elf&quot;</mark>, which will grant them access to
+      a private Discord channel
       <mark> (#custom-elfi)</mark> where they can get updates about future
       community involvement in the elfiverse and future nft related content.
       <br /> The community pre-release will be
@@ -34,15 +34,16 @@ const HowToMint: NextPage = () => {
     <h2 key={7}>Unveiling</h2>,
     <p key={8}>
       The elves are revealed in weekly batches (Monday and Friday) to ensure
-      that minters can't select their elves based on rarity. Minters may view
-      their witches within a few days after minting them. <br />
+      that minters can&apos;t select their elves based on rarity. Minters may
+      view their witches within a few days after minting them. <br />
       After an unveiling, you can always see your elf on our website
       immediately. Connect your wallet at the top right and click on the button
-      to go to "Your Wallet," where you'll be able to see your revealed elf.
-      Wallets and platforms like OpenSea typically take a while (sometimes a few
-      hours, sometimes as long as days) to update to the refreshed metadata. On
-      your elf’s OpenSea page, you can click a "Refresh metadata" button at the
-      top right to request that OpenSea refresh the metadata more quickly.
+      to go to &quot;Your Wallet,&quot; where you&apos;ll be able to see your
+      revealed elf. Wallets and platforms like OpenSea typically take a while
+      (sometimes a few hours, sometimes as long as days) to update to the
+      refreshed metadata. On your elf&apos;s OpenSea page, you can click a
+      &quot;Refresh metadata&quot; button at the top right to request that
+      OpenSea refresh the metadata more quickly.
     </p>,
     <h2 key={9}>Gifts</h2>,
     <p key={10}>
