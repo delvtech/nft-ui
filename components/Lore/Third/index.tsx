@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import { LoreContainer } from "components/Lore/styles";
+import Image from "next/image";
 
 export const Third = () => {
   return (
@@ -23,7 +23,7 @@ export const Third = () => {
         </p>
       </div>
       <div className="flex-div max-width">
-        <img src={`/assets/png/Lore/Third/third.png`} alt="third" />
+        <Image src={`/assets/png/Lore/Third/third.png`} alt="third" />
       </div>
     </LoreContainer>
   );
