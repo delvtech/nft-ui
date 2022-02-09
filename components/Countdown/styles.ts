@@ -23,6 +23,9 @@ export const CountdownDate = styled.div`
   @media ${devices.tabletM} {
     font-size: 2.5rem;
   }
+  @media ${devices.tabletM} {
+    font-size: 2.5rem;
+  }
 `;
 
 export const StyledTimer = styled.div`
@@ -69,13 +72,11 @@ export const ContentWrapper = styled.div`
   padding: 100px 65px 90px 65px;
   background-color: #09282d;
   border: 5px solid ${COLOR_WHITE_LIGHT};
-
-  ${Flex} {
+  <<<<<<< HEAD =======>>>>>>>main ${Flex} {
     border: 1px solid ${COLOR_WHITE};
     padding: 10px;
   }
-
-  h3 {
+  <<<<<<< HEAD h3 {
     text-transform: uppercase;
   }
 
@@ -83,7 +84,13 @@ export const ContentWrapper = styled.div`
     padding: 100px 35px 90px 35px;
   }
 
-  @media ${devices.mobileL} {
+  ======= h3 {
+    text-transform: uppercase;
+  }
+  @media ${devices.tabletM} {
+    padding: 100px 35px 90px 35px;
+  }
+  >>>>>>>main @media ${devices.mobileL} {
     padding: 100px 1rem 90px 1rem;
   }
 `;

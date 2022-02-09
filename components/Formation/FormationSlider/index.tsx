@@ -16,17 +16,15 @@ import {
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const Rarity = ({ rarity }: StringProps) => {
-  return (
-    <RarityContainer>
-      0%
-      <Progress>
-        <Missing rarity={rarity} />
-      </Progress>
-      {rarity}%
-    </RarityContainer>
-  );
-};
+const Rarity = ({ rarity }: StringProps) => (
+  <RarityContainer>
+    0%
+    <Progress>
+      <Missing rarity={rarity} />
+    </Progress>
+    {rarity}%
+  </RarityContainer>
+);
 
 export const FormationSlider = ({ data }: Data) => {
   const slider = useRef<any>(null);
@@ -34,43 +32,13 @@ export const FormationSlider = ({ data }: Data) => {
     slidesToShow: 3,
   });
 
-  const settings = {
-    draggable: false,
-    swipe: false,
-    arrows: false,
-    speed: 500,
-    centerMode: true,
-    autoplay: true,
-    autoplaySpeed: 3500,
-    slidesToShow: 3,
-    centerPadding: "0px",
-    infinite: true,
-    responsive: [
-      {
-        breakpoint: 1300,
-        settings: {
-          slidesToShow: 2,
-          centerPadding: "-20px",
-        },
-      },
-      {
-        breakpoint: 767,
-        settings: {
-          slidesToShow: 1,
-          centerPadding: "0px",
-        },
-      },
-    ],
-  };
-
-  const checkCurrentSlides = () => {
-    setSlideState({
-      slidesToShow:
-        window.innerWidth > 1300 ? 3 : window.innerWidth > 767 ? 2 : 1,
-    });
-  };
-
   useEffect(() => {
+    const checkCurrentSlides = () =>
+      setSlideState({
+        slidesToShow:
+          window.innerWidth > 1300 ? 3 : window.innerWidth > 767 ? 2 : 1,
+      });
+
     checkCurrentSlides();
     window.addEventListener("resize", checkCurrentSlides, false);
   }, []);
@@ -101,4 +69,33 @@ export const FormationSlider = ({ data }: Data) => {
       )}
     </FormationSliderContainer>
   );
+};
+
+const settings = {
+  draggable: false,
+  swipe: false,
+  arrows: false,
+  speed: 500,
+  centerMode: true,
+  autoplay: true,
+  autoplaySpeed: 3500,
+  slidesToShow: 3,
+  centerPadding: "0px",
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 2,
+        centerPadding: "-20px",
+      },
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        centerPadding: "0px",
+      },
+    },
+  ],
 };

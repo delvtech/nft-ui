@@ -10,7 +10,6 @@ import {
 } from "components/Layout/Footer/styles";
 
 import Logo from "public/assets/svg/logo.svg";
-import { InternalLink } from "common/InternalLink";
 
 export const Footer = () => {
   return (
@@ -37,18 +36,15 @@ export const Footer = () => {
           </LogoContainer>
           <div>
             <h4>Home</h4>
-            <InternalLink href="/how-to-mint">How to mint</InternalLink>
-            <ExternalLink href="https://www.youtube.com/">
+            <ExternalLink href="/minting">How to mint</ExternalLink>
+            <ExternalLink href="/rollout-release">
               The rollout release
             </ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
-              governance dashboard
-            </ExternalLink>
+            <ExternalLink href="/governance">governance dashboard</ExternalLink>
           </div>
           <div>
             <h4>Learn</h4>{" "}
             <ExternalLink href="https://www.youtube.com/">
-              {" "}
               Governance
             </ExternalLink>
             <ExternalLink href="https://www.youtube.com/">
