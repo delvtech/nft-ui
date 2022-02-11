@@ -11,6 +11,9 @@ import { Web3ReactProvider } from "@web3-react/core";
 import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
 import "@fontsource/rubik";
 import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "react-query";
+
+const queryClient = new QueryClient();
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -39,11 +42,13 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <GlobalStyle />
       <DefaultSeo {...SEO} />
       <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
-        <Header />
-        <Toaster />
-        <Transition location={router.pathname}>
-          <Component {...pageProps} />
-        </Transition>
+        <QueryClientProvider client={queryClient}>
+          <Header />
+          <Toaster />
+          <Transition location={router.pathname}>
+            <Component {...pageProps} />
+          </Transition>
+        </QueryClientProvider>
       </Web3ReactProvider>
       <Footer />
     </>
