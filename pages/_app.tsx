@@ -10,6 +10,7 @@ import "public/assets/fonts/style.css";
 import { Web3ReactProvider } from "@web3-react/core";
 import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
 import "@fontsource/rubik";
+import { Toaster } from "react-hot-toast";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -39,6 +40,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <DefaultSeo {...SEO} />
       <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
         <Header />
+        <Toaster />
         <Transition location={router.pathname}>
           <Component {...pageProps} />
         </Transition>
