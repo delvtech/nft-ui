@@ -1,18 +1,16 @@
-import { useSmartContractTransaction } from "@elementfi/react-query-typechain";
-import { getProvider } from "elf/providers";
 import useWeb3 from "elf/useWeb3";
 import { ChainId } from "elf/wallets/chains";
-import { Signer } from "ethers";
-
 import { Minter__factory } from "typechain-types";
-
-const ADDRESS = "0xd787Ec2b6C962f611300175603741Db8438674a0";
+import { Signer } from "ethers";
+import { getAddressesList } from "src/nft-contract-addresses";
+import { getProvider } from "elf/providers";
+import { useSmartContractTransaction } from "@elementfi/react-query-typechain";
 
 export function getMinter() {
   const { chainId } = useWeb3();
   return Minter__factory.connect(
-    ADDRESS,
-    getProvider(chainId ?? ChainId.LOCAL),
+    getAddressesList(chainId).minter,
+    getProvider(chainId as ChainId),
   );
 }
 

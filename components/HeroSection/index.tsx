@@ -9,25 +9,9 @@ import {
   ContentCenter,
   ButtonWrapper,
 } from "components/HeroSection/styles";
-import { useMint } from "elf/hooks/useSmartContract";
-import useWeb3 from "elf/useWeb3";
-import { useCallback } from "react";
-import toast from "react-hot-toast";
+import Link from "next/link";
 
 export const HeroSection = () => {
-  const { library } = useWeb3();
-  const signer = library?.getSigner();
-
-  const { mutate: mint } = useMint(signer);
-
-  const handleMint = useCallback(async () => {
-    try {
-      mint([1, []]);
-    } catch (error) {
-      toast.error("User cancelled transaction");
-    }
-  }, [mint]);
-
   return (
     <HeroSectionContainer>
       <SectionContainer padding="0" textAlign="start" hasOverflow>
@@ -44,7 +28,9 @@ export const HeroSection = () => {
                   <h1>wander to the elfiverse</h1>
                 </MobileHeader>
                 <ButtonWrapper>
-                  <PrimaryButton text="Start minting" onClick={handleMint} />
+                  <Link href="/how-to-mint">
+                    <PrimaryButton text="Start minting" />
+                  </Link>
                   <PrimaryButton text="The Council" hasBorder />
                 </ButtonWrapper>
               </ContentCenter>
