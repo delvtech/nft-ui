@@ -6,6 +6,7 @@ node_modules/
 
 # local environment that may have private keys
 .env.local
+.env
 
 # Es-lint cache
 .eslintcache
