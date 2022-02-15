@@ -56,9 +56,19 @@ export const NavigationButtons = ({ slider }: StringProps) => {
   );
 };
 
-export const PrimaryButton = ({ text, hasBorder }: StringProps) => {
+interface PrimaryButtonProps {
+  text?: string;
+  hasBorder?: boolean;
+  onClick?: Function;
+}
+
+export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
+  text,
+  hasBorder,
+  onClick,
+}) => {
   return (
-    <PrimaryButtonContainer hasBorder={hasBorder}>
+    <PrimaryButtonContainer hasBorder={hasBorder} onClick={onClick}>
       <div className="box foo">{text}</div>
     </PrimaryButtonContainer>
   );

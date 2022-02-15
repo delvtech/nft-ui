@@ -9,6 +9,7 @@ import {
   ContentCenter,
   ButtonWrapper,
 } from "components/HeroSection/styles";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -27,7 +28,9 @@ export const HeroSection = () => {
                   <h1>wander to the elfiverse</h1>
                 </MobileHeader>
                 <ButtonWrapper>
-                  <PrimaryButton text="Start minting" />
+                  <Link href="/how-to-mint">
+                    <PrimaryButton text="Start minting" />
+                  </Link>
                   <PrimaryButton text="The Council" hasBorder />
                 </ButtonWrapper>
               </ContentCenter>
