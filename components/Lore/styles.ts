@@ -1,5 +1,9 @@
 import styled from "styled-components";
-import { COLOR_BLACK_DARK, COLOR_WHITE_LIGHT } from "helpers/colorPalette";
+import {
+  COLOR_BLACK_BACKGROUND,
+  COLOR_BLACK_DARK,
+  COLOR_WHITE_LIGHT,
+} from "helpers/colorPalette";
 import { Flex } from "common/Container/styles";
 import Slider from "react-slick";
 import { devices } from "helpers/devices";
@@ -12,7 +16,7 @@ export const GridContainer = styled.div`
 
 export const LoreContainer = styled(Flex)`
   padding: 65px 75px;
-  background-color: #09282d;
+  background-color: ${COLOR_BLACK_BACKGROUND};
   border: 3px solid ${COLOR_WHITE_LIGHT};
   align-items: ${({ align }) => align || "flex-start"};
 

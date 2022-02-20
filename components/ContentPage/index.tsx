@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { NextSeo } from "next-seo";
 import { SectionContainer } from "common/Container";
 import { Data } from "helpers/types";
+import { Section } from "common/Container/styles";
 import { devices } from "helpers/devices";
 import {
   COLOR_GREEN_LIGHT,
   COLOR_TRANSPARENT,
   COLOR_WHITE_LIGHT,
 } from "helpers/colorPalette";
-import { Section } from "common/Container/styles";
 
 export const ContentPage = ({ content, title }: Data) => {
   return (

@@ -14,9 +14,12 @@ export const Timer = () => {
 
   useEffect(() => {
     setInterval(() => {
-      const now: any = moment();
-      const then: any = moment("2020-01-09 00:00:00", "YYYY-MM-DD hh:mm:ss");
-      const countdown = moment(then - now);
+    const dateNow = moment() as any;
+     const dateThen = moment(
+       "2020-01-09 00:00:00",
+       "YYYY-MM-DD hh:mm:ss"
+     ) as any;
+     const countdown = moment(dateThen - dateNow);
       setDays(countdown.format("DD"));
       setHours(countdown.format("HH"));
       setMinutes(countdown.format("mm"));
