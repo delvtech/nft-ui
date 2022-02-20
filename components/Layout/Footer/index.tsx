@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
 import { SectionContainer } from "common/Container";
 import { ExternalLink } from "common/ExternalLink";
+import { InternalLink } from "common/InternalLink";
 import {
   Copyright,
   GridContainer,
@@ -18,7 +19,7 @@ export const Footer = () => {
         <LogoMobileContainer>
           <Image
             src={Logo}
-            alt=""
+            alt="Elfiverse logo"
             layout="fixed"
             height="120px"
             width="272px"
@@ -28,7 +29,7 @@ export const Footer = () => {
           <LogoContainer>
             <Image
               src={Logo}
-              alt=""
+              alt="Elfiverse logo"
               layout="fixed"
               height="120px"
               width="272px"
@@ -36,11 +37,13 @@ export const Footer = () => {
           </LogoContainer>
           <div>
             <h4>Home</h4>
-            <ExternalLink href="/minting">How to mint</ExternalLink>
-            <ExternalLink href="/rollout-release">
+            <InternalLink href="/mint">How to mint</InternalLink>
+            <InternalLink href="/rollout-release">
               The rollout release
+            </InternalLink>
+            <ExternalLink href="https://www.youtube.com/">
+              governance dashboard
             </ExternalLink>
-            <ExternalLink href="/governance">governance dashboard</ExternalLink>
           </div>
           <div>
             <h4>Learn</h4>
