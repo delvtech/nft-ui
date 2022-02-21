@@ -1,7 +1,6 @@
 import useWeb3 from "elf/useWeb3";
 import { Minter__factory } from "typechain-types";
 import { Signer } from "ethers";
-import { getAddressesList } from "src/nft-contract-addresses";
 import { useSmartContractTransaction } from "@elementfi/react-query-typechain";
 import { useProvider } from "./useProvider";
 import { useAddresses } from "./useAddress";
