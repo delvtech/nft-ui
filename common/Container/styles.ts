@@ -41,7 +41,9 @@ export const Section = styled("section")<StringProps>`
   gap: calc(12rem * 0.75) 0;
   padding: ${({ padding }) => padding || "10rem 0"};
   overflow: ${({ hasOverflow }) => (!hasOverflow ? "hidden" : "initial")};
-  justify-items: ${({ justifyItems }) => justifyItems} @media ${devices.tabletL} {
+  justify-items: ${({ justifyItems }) => justifyItems};
+
+  @media ${devices.tabletL} {
     grid-template-columns:
       minmax(2rem, auto) minmax(0, 82rem)
       minmax(2rem, auto);
