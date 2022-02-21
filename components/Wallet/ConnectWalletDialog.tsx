@@ -11,6 +11,7 @@ import { DialogBodyText, DialogTitle } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
 import { Button, PaddedButton } from "common/Button/styles";
 import { Flex } from "common/Container/styles";
+import { createToastError } from "helpers/createToast";
 
 interface WalletButtonProps {
   alt: string;
@@ -48,6 +49,7 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
   const { active, deactivate } = useWeb3();
 
   const deactivateActiveConnector = useCallback(async () => {
+    createToastError("An error has occurred when connecting to wallet.");
     await deactivate();
   }, [deactivate]);
 
