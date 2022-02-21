@@ -148,6 +148,10 @@ export const Button = styled.button<ButtonStyles>`
   font-family: "Defcon Zero";
   font-size: ${({}) => "14px"};
   color: ${({}) => "white"};
+
+  &:hover {
+    background-color: ${COLORS.greenDarkest};
+  }
 `;
 
 export const PaddedButton = styled.button`
