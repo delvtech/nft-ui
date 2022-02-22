@@ -13,7 +13,7 @@ import content from "./content.json";
 
 const UPDATE_PER = 100;
 
-export const Mint = () => {
+export const Mint: React.FC = () => {
   const [seconds, setSeconds] = useState<number>(1);
   const [showProgress, setShowProgress] = useState<boolean>(false);
 
