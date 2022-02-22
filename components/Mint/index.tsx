@@ -1,29 +1,32 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
 import ReactTextTransition, { presets } from "react-text-transition";
 import { PrimaryButton } from "common/Button";
 import { ContentPage } from "components/ContentPage";
 import { ContentWrapper } from "components/Entrance/styles";
-import { Progress } from "components/Formation/FormationSlider";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
 
 import MintGIF from "public/assets/gif/hero_image.gif";
 import content from "./content.json";
+// import { Progress } from "components/Formation/FormationSlider/styles";
+
+const UPDATE_PER = 100;
 
 export const Mint = () => {
   const [seconds, setSeconds] = useState<number>(1);
   const [showProgress, setShowProgress] = useState<boolean>(false);
 
-  const PENDING_STATUS = showProgress && seconds < 100;
-  const SUCCEEDEED_STATUS = seconds === 100;
-  const UPDATE_PER = 100;
+  const currentContent = useMemo(() => {
+    const PENDING_STATUS = showProgress && seconds < 100;
+    const STATUS = seconds === 100;
 
-  const currentContent = PENDING_STATUS
-    ? content.pending
-    : SUCCEEDEED_STATUS
-    ? content.success
-    : content.stale;
+    return PENDING_STATUS
+      ? content.pending
+      : STATUS
+      ? content.success
+      : content.stale;
+  }, [seconds, showProgress]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -59,7 +62,7 @@ export const Mint = () => {
                   springConfig={presets.gentle}
                 />
               </h2>
-              <Progress progress={seconds} />
+              {/* <Progress progress={seconds} /> */}
             </ProgressContainer>
           </Fade>
         )}
