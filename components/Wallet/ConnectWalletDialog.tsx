@@ -49,7 +49,7 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
   const { active, deactivate } = useWeb3();
 
   const deactivateActiveConnector = useCallback(async () => {
-    createToastError("An error has occurred when connecting to wallet.");
+    createToastError("Wallet has been disconnected.");
     await deactivate();
   }, [deactivate]);
 
