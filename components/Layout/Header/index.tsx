@@ -1,8 +1,8 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SectionContainer } from "common/Container";
 import { Flex, HeaderWrapper } from "common/Container/styles";
 import { ExternalLink } from "common/ExternalLink";
-import { COLOR_WHITE } from "helpers/colorPalette";
+import { COLORS, COLOR_WHITE } from "helpers/colorPalette";
 import { InternalLink } from "common/InternalLink";
 import { BurgerMenu } from "components/Layout/Header/BurgerMenu";
 import {
@@ -65,7 +65,7 @@ export const SocialLinks = () => {
 export const Header = () => {
   const [sidebarVisibility, setSidebarVisibility] = useState<boolean>(false);
 
-  const connectWalletButton = <ConnectWalletButton />;
+  const ConnectWallet = React.memo(ConnectWalletButton);
 
   return (
     <FixedHeader>
@@ -76,7 +76,7 @@ export const Header = () => {
               <MenuItem />
             </MenuItemContainer>
             <MenuItemContainer>
-              {connectWalletButton}
+              <ConnectWallet />
               <Spacer size="20px" />
               <SocialLinks />
             </MenuItemContainer>
@@ -89,7 +89,7 @@ export const Header = () => {
                   setSidebarVisibility(!sidebarVisibility)
                 }
               />
-              {connectWalletButton}
+              <ConnectWallet />
             </MobileMenuContainer>
           </Flex>
         </HeaderWrapper>

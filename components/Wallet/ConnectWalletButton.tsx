@@ -14,16 +14,11 @@ export const ConnectWalletButton: React.FC = () => {
         isOpen={modalOpen}
         onClose={() => setModalOpen(false)}
       />
-
-      {active ? (
-        <Button size={ButtonSize.SMALL} onClick={() => setModalOpen(true)}>
-          {account?.slice(0, 6)}...{account?.slice(-4)}
-        </Button>
-      ) : (
-        <Button size={ButtonSize.SMALL} onClick={() => setModalOpen(true)}>
-          Connect Wallet
-        </Button>
-      )}
+      <Button size={ButtonSize.SMALL} onClick={() => setModalOpen(true)}>
+        {active
+          ? `${account?.slice(0, 6)}...${account?.slice(-4)}`
+          : "Connect Wallet"}
+      </Button>
     </>
   );
 };

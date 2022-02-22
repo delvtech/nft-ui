@@ -9,7 +9,11 @@ export const Container = styled.div<StringProps>`
   margin: 0 auto;
 `;
 
-export const Flex = styled.div<StringProps>`
+export const Flex = styled.div<{
+  align?: string;
+  justify?: string;
+  direction?: string;
+}>`
   display: flex;
   align-items: center;
   text-align: ${({ align }) => align};
@@ -37,6 +41,7 @@ export const Section = styled("section")<StringProps>`
   gap: calc(12rem * 0.75) 0;
   padding: ${({ padding }) => padding || "10rem 0"};
   overflow: ${({ hasOverflow }) => (!hasOverflow ? "hidden" : "initial")};
+  justify-items: ${({ justifyItems }) => justifyItems};
 
   @media ${devices.tabletL} {
     grid-template-columns:

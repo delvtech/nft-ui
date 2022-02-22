@@ -12,6 +12,7 @@ import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
 import "@fontsource/rubik";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "react-query";
+import { WalletNotifier } from "components/Wallet/WalletNotifier";
 
 const queryClient = new QueryClient();
 
@@ -45,9 +46,11 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <QueryClientProvider client={queryClient}>
           <Header />
           <Toaster />
-          <Transition location={router.pathname}>
-            <Component {...pageProps} />
-          </Transition>
+          <WalletNotifier>
+            <Transition location={router.pathname}>
+              <Component {...pageProps} />
+            </Transition>
+          </WalletNotifier>
         </QueryClientProvider>
       </Web3ReactProvider>
       <Footer />

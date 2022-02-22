@@ -22,6 +22,7 @@ export interface ContainerProps {
   padding?: string;
   id?: string;
   maxWidth?: string;
+  justifyItems?: string;
 }
 
 export interface InputProps {

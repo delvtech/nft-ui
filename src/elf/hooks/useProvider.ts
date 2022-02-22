@@ -1,11 +1,6 @@
 import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 import { ExternalProvider, Provider } from "@ethersproject/providers";
-import {
-  ALCHEMY_GOERLI_KEY,
-  ALCHEMY_GOERLI_WSS_URL,
-  ALCHEMY_MAINNET_KEY,
-  ALCHEMY_MAINNET_WSS_URL,
-} from "elf/providers";
+import { ALCHEMY_GOERLI_WSS_URL, ALCHEMY_MAINNET_WSS_URL } from "elf/providers";
 import { ChainId } from "elf/wallets/chains";
 import { providers } from "ethers";
 import { useEffect, useState } from "react";

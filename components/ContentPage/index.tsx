@@ -10,18 +10,15 @@ import {
 } from "helpers/colorPalette";
 import { Section } from "common/Container/styles";
 
-export const ContentPage = ({ content, title }: Data) => {
-  return (
-    <ContentSection>
-      <SectionContainer padding="0" textAlign="start">
-        <NextSeo title={`Element ElfiVerse - ${title}`} />
-        <ContentPageContainer>{content}</ContentPageContainer>
-      </SectionContainer>
-    </ContentSection>
-  );
-};
-
-const ContentSection = styled.section`
+export const ContentPage = ({ children, title }: Data) => (
+  <ContentSection>
+    <SectionContainer padding="0" textAlign="start">
+      <NextSeo title={`Element ElfiVerse - ${title}`} />
+      <ContentPageContainer>{children}</ContentPageContainer>
+    </SectionContainer>
+  </ContentSection>
+);
+export const ContentSection = styled.section`
   padding: 13.75rem 0 0 0;
 
   ${Section} {
@@ -29,8 +26,10 @@ const ContentSection = styled.section`
   }
 `;
 
-const ContentPageContainer = styled.div`
-  padding: 100px 125px 235px 125px;
+export const ContentPageContainer = styled.div<{
+  padding?: string;
+}>`
+  padding: ${({ padding }) => padding ?? "100px 125px 235px 125px"};
   background-color: #09282d;
   border: 3px solid ${COLOR_WHITE_LIGHT};
 
@@ -53,7 +52,7 @@ const ContentPageContainer = styled.div`
 
   h1 {
     font-family: "Defcon Zero";
-    font-size: 80px;
+    font-size: 60px;
     margin-bottom: 55px;
   }
 
