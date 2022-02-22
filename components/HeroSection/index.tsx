@@ -28,7 +28,7 @@ export const HeroSection = () => {
                   <h1>wander to the elfiverse</h1>
                 </MobileHeader>
                 <ButtonWrapper>
-                  <Link href="/mint">
+                  <Link passHref href="/mint">
                     <PrimaryButton text="Start minting" />
                   </Link>
                   <PrimaryButton text="The Council" hasBorder />

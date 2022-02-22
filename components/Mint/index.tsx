@@ -10,6 +10,7 @@ import { MintContainer, ProgressContainer } from "components/Mint/styles";
 import MintGIF from "public/assets/gif/hero_image.gif";
 import content from "./content.json";
 // import { Progress } from "components/Formation/FormationSlider/styles";
+// TODO @tina: create progress component
 
 const UPDATE_PER = 100;
 

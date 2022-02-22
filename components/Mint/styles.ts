@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import { ContentWrapper } from "components/Entrance/styles";
-import { ProgressWrapper } from "components/Formation/FormationSlider/styles";
+// import { ProgressWrapper } from "components/Formation/FormationSlider/styles";
 import { COLOR_GREEN_LIGHT } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
+
+// TODO @tina: create progress wrapper and implement here
 
 export const MintContainer = styled.div`
   align-items: center;
@@ -13,9 +15,9 @@ export const MintContainer = styled.div`
   width: 100%;
   margin: 0 auto;
 
-  ${ProgressWrapper} {
-    width: 80%;
-  }
+  // "" {
+  //   width: 80%;
+  // }
 
   h1,
   h2 {
