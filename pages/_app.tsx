@@ -13,6 +13,7 @@ import "@fontsource/rubik";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { WalletNotifier } from "components/Wallet/WalletNotifier";
+import { WalletDialogProvider } from "contexts/WalletDialogContext/provider";
 
 const queryClient = new QueryClient();
 
@@ -44,13 +45,15 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <DefaultSeo {...SEO} />
       <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
         <QueryClientProvider client={queryClient}>
-          <Header />
-          <Toaster />
-          <WalletNotifier>
-            <Transition location={router.pathname}>
-              <Component {...pageProps} />
-            </Transition>
-          </WalletNotifier>
+          <WalletDialogProvider>
+            <Header />
+            <Toaster />
+            <WalletNotifier>
+              <Transition location={router.pathname}>
+                <Component {...pageProps} />
+              </Transition>
+            </WalletNotifier>
+          </WalletDialogProvider>
         </QueryClientProvider>
       </Web3ReactProvider>
       <Footer />
