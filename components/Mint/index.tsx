@@ -1,20 +1,26 @@
-import { useEffect, useMemo, useState } from "react";
-import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
+import MintGIF from "public/assets/gif/hero_image.gif";
 import ReactTextTransition, { presets } from "react-text-transition";
-import { PrimaryButton } from "common/Button";
+import content from "./content.json";
+import useWeb3 from "elf/useWeb3";
 import { ContentPage } from "components/ContentPage";
 import { ContentWrapper } from "components/Entrance/styles";
+import { Fade } from "react-awesome-reveal";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
-
-import MintGIF from "public/assets/gif/hero_image.gif";
-import content from "./content.json";
+import { PrimaryButton } from "common/Button/styles";
+import { useEffect, useMemo, useState } from "react";
+import { useProof } from "elf/hooks/useProof";
+import { useWalletDialog } from "elf/hooks/useWalletDialog";
 // import { Progress } from "components/Formation/FormationSlider/styles";
 // TODO @tina: create progress component
 
 const UPDATE_PER = 100;
 
 export const Mint: React.FC = () => {
+  const { active, account } = useWeb3();
+  const { data: proofData } = useProof(account);
+  const { openModal } = useWalletDialog();
+
   const [seconds, setSeconds] = useState<number>(1);
   const [showProgress, setShowProgress] = useState<boolean>(false);
 
@@ -38,9 +44,12 @@ export const Mint: React.FC = () => {
     return () => clearInterval(timer);
   }, [seconds, showProgress]);
 
-  const handleClick = () => {
-    setShowProgress(true);
-  };
+  const isAllowlisted = useMemo(
+    () => proofData?.proof && proofData.tokenId,
+    [proofData],
+  );
+
+  const handleClick = () => setShowProgress(true);
 
   return (
     <ContentPage padding="100px 125px 144px 125px" title="Mint">
@@ -53,7 +62,19 @@ export const Mint: React.FC = () => {
         </h1>
         <Image src={MintGIF} alt="Elfiverse" width="640px" height="403px" />
         {!showProgress ? (
-          <PrimaryButton text="Confirm mint" onClick={handleClick} />
+          active ? (
+            isAllowlisted ? (
+              <PrimaryButton onClick={handleClick}>Confirm mint</PrimaryButton>
+            ) : (
+              <PrimaryButton disabled>
+                Not currently eligible for mint.
+              </PrimaryButton>
+            )
+          ) : (
+            <PrimaryButton onClick={() => openModal()}>
+              Connect wallet
+            </PrimaryButton>
+          )
         ) : (
           <Fade>
             <ProgressContainer>
