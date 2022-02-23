@@ -30,7 +30,11 @@ export const ButtonsContainer = styled.div`
   }
 `;
 
-export const PrimaryButtonContainer = styled.button<StringProps>`
+export interface PrimaryButtonContainerProps {
+  hasBorder?: boolean;
+}
+
+export const PrimaryButton = styled.button<PrimaryButtonContainerProps>`
   background-color: ${COLOR_GREEN_DARKEST};
   color: ${COLOR_GREEN_LIGHT};
   padding: 17px 60px;
