@@ -55,8 +55,8 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
 
   return (
     <Dialog isOpen={isOpen} onClose={() => onClose?.()}>
-      <DialogTitle>Connect Wallet</DialogTitle>
       <Flex align="center" direction="column">
+        <DialogTitle>Connect Wallet</DialogTitle>
         <WalletButton
           connector={injectedConnector}
           deactivator={deactivateActiveConnector}
@@ -74,30 +74,28 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
           source="/assets/svg/walletConnectIcon.svg"
           onClick={() => onClose?.()}
         />
+
+        <DialogBodyText>
+          Note: Some connectors can only disconnect wallets from their app. Some
+          connectors may also cause a page refresh.
+        </DialogBodyText>
+
+        {active && (
+          <>
+            <Spacer />
+            <Button
+              sidePadding="25px"
+              onClick={async () => {
+                await deactivateActiveConnector();
+                onClose?.();
+              }}
+            >
+              Close connection
+            </Button>
+            <Spacer />
+          </>
+        )}
       </Flex>
-
-      <Spacer />
-
-      <DialogBodyText>
-        Note: Some connectors can only disconnect wallets from their app. Some
-        connectors may also cause a page refresh.
-      </DialogBodyText>
-
-      {active && (
-        <>
-          <Spacer />
-          <Button
-            sidePadding="25px"
-            onClick={async () => {
-              await deactivateActiveConnector();
-              onClose?.();
-            }}
-          >
-            Close connection
-          </Button>
-          <Spacer />
-        </>
-      )}
     </Dialog>
   );
 };
