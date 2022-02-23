@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonsContainer, PrimaryButtonContainer } from "common/Button/styles";
+import { ButtonsContainer } from "common/Button/styles";
 import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
 import { Flex } from "common/Container/styles";
 import { StringProps } from "helpers/types";
@@ -53,23 +53,5 @@ export const NavigationButtons = ({ slider }: StringProps) => {
         </svg>
       </Flex>
     </ButtonsContainer>
-  );
-};
-
-interface PrimaryButtonProps {
-  text?: string;
-  hasBorder?: boolean;
-  onClick?: Function;
-}
-
-export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
-  text,
-  hasBorder,
-  onClick,
-}) => {
-  return (
-    <PrimaryButtonContainer hasBorder={hasBorder} onClick={onClick}>
-      <div className="box foo">{text}</div>
-    </PrimaryButtonContainer>
   );
 };
