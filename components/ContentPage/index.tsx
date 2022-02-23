@@ -10,15 +10,27 @@ import {
 } from "helpers/colorPalette";
 import { Section } from "common/Container/styles";
 
-export const ContentPage = ({ children, title }: Data) => (
-  <ContentSection>
-    <SectionContainer padding="0" textAlign="start">
-      <NextSeo title={`Element ElfiVerse - ${title}`} />
-      <ContentPageContainer>{children}</ContentPageContainer>
-    </SectionContainer>
-  </ContentSection>
-);
-export const ContentSection = styled.section`
+interface ContentPageProps {
+  title?: string;
+  padding?: string;
+}
+
+export const ContentPage: React.FC<ContentPageProps> = ({
+  title,
+  children,
+  padding,
+}) => {
+  return (
+    <ContentSection>
+      <SectionContainer padding={padding ?? "0"} textAlign="start">
+        <NextSeo title={`Element ElfiVerse - ${title}`} />
+        <ContentPageContainer>{children}</ContentPageContainer>
+      </SectionContainer>
+    </ContentSection>
+  );
+};
+
+const ContentSection = styled.section`
   padding: 13.75rem 0 0 0;
 
   ${Section} {
