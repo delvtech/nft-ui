@@ -45,7 +45,7 @@ export const Mint: React.FC = () => {
   }, [seconds, showProgress]);
 
   const isAllowlisted = useMemo(
-    () => proofData?.proof && proofData.tokenId,
+    () => proofData?.proof && proofData?.tokenId,
     [proofData],
   );
 
