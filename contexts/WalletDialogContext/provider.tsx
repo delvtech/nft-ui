@@ -1,15 +1,12 @@
 import React, { useCallback, useState } from "react";
 import WalletDialogContext from "./index";
 import { ConnectWalletDialog } from "components/Wallet/ConnectWalletDialog";
+import { WithChildren } from "helpers/types";
 
-export const WalletDialogProvider: React.FC = ({ children }) => {
+export const WalletDialogProvider = ({ children }: WithChildren) => {
   const [modalOpen, setModalOpen] = useState(false);
 
-  const openModal = useCallback(() => {
-    console.log("click");
-    setModalOpen(true);
-  }, [setModalOpen]);
-
+  const openModal = useCallback(() => setModalOpen(true), [setModalOpen]);
   const closeModal = useCallback(() => setModalOpen(false), [setModalOpen]);
 
   return (

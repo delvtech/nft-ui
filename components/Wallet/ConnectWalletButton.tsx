@@ -3,7 +3,7 @@ import useWeb3 from "elf/useWeb3";
 import { Button, ButtonSize, ButtonStyles } from "common/Button/styles";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 
-export const ConnectWalletButton: React.FC<ButtonStyles> = ({ size }) => {
+export const ConnectWalletButton = ({ size }: ButtonStyles) => {
   const { account, active } = useWeb3();
   const { openModal } = useWalletDialog();
 

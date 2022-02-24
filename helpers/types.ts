@@ -44,3 +44,5 @@ export interface TransitionProps {
 export interface Data {
   [key: string]: any;
 }
+
+export type WithChildren<T = {}> = T & { children?: React.ReactNode };
