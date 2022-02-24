@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
 import { SectionContainer } from "common/Container";
-import { Data } from "helpers/types";
+import { Data, WithChildren } from "helpers/types";
 import { devices } from "helpers/devices";
 import {
   COLOR_GREEN_LIGHT,
@@ -15,11 +15,11 @@ interface ContentPageProps {
   padding?: string;
 }
 
-export const ContentPage: React.FC<ContentPageProps> = ({
+export const ContentPage = ({
   title,
   children,
   padding,
-}) => {
+}: WithChildren<ContentPageProps>) => {
   return (
     <ContentSection>
       <SectionContainer padding={padding ?? "0"} textAlign="start">

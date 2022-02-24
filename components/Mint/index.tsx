@@ -1,20 +1,24 @@
-import { useEffect, useMemo, useState } from "react";
-import { Fade } from "react-awesome-reveal";
 import Image from "next/image";
+import MintGIF from "public/assets/gif/hero_image.gif";
 import ReactTextTransition, { presets } from "react-text-transition";
-import { PrimaryButton } from "common/Button";
+import content from "./content.json";
+import useWeb3 from "elf/useWeb3";
 import { ContentPage } from "components/ContentPage";
 import { ContentWrapper } from "components/Entrance/styles";
+import { Fade } from "react-awesome-reveal";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
-
-import MintGIF from "public/assets/gif/hero_image.gif";
-import content from "./content.json";
-// import { Progress } from "components/Formation/FormationSlider/styles";
-// TODO @tina: create progress component
+import { PrimaryButton } from "common/Button/styles";
+import { useEffect, useMemo, useState } from "react";
+import { useProof } from "elf/hooks/useProof";
+import { useWalletDialog } from "elf/hooks/useWalletDialog";
 
 const UPDATE_PER = 100;
 
-export const Mint: React.FC = () => {
+export const Mint = () => {
+  const { active, account } = useWeb3();
+  const { data: proofData } = useProof(account);
+  const { openModal } = useWalletDialog();
+
   const [seconds, setSeconds] = useState<number>(1);
   const [showProgress, setShowProgress] = useState<boolean>(false);
 
@@ -38,12 +42,15 @@ export const Mint: React.FC = () => {
     return () => clearInterval(timer);
   }, [seconds, showProgress]);
 
-  const handleClick = () => {
-    setShowProgress(true);
-  };
+  const isAllowListed = useMemo(
+    () => proofData?.proof && proofData?.tokenId,
+    [proofData],
+  );
+
+  const handleClick = () => setShowProgress(true);
 
   return (
-    <ContentPage padding="100px 125px 144px 125px" title="Mint">
+    <ContentPage padding="100px 124px 144px 124px" title="Mint">
       <MintContainer>
         <h1>
           <ReactTextTransition
@@ -51,9 +58,25 @@ export const Mint: React.FC = () => {
             springConfig={presets.gentle}
           />
         </h1>
-        <Image src={MintGIF} alt="Elfiverse" width="640px" height="403px" />
+        <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
         {!showProgress ? (
-          <PrimaryButton text="Confirm mint" onClick={handleClick} />
+          <>
+            {!active && (
+              <PrimaryButton onClick={() => openModal()}>
+                Connect wallet
+              </PrimaryButton>
+            )}
+
+            {active && isAllowListed && (
+              <PrimaryButton onClick={handleClick}>Confirm mint</PrimaryButton>
+            )}
+
+            {active && !isAllowListed && (
+              <PrimaryButton disabled>
+                Not currently eligible for mint.
+              </PrimaryButton>
+            )}
+          </>
         ) : (
           <Fade>
             <ProgressContainer>
@@ -63,7 +86,6 @@ export const Mint: React.FC = () => {
                   springConfig={presets.gentle}
                 />
               </h2>
-              {/* <Progress progress={seconds} /> */}
             </ProgressContainer>
           </Fade>
         )}

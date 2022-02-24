@@ -1,3 +1,4 @@
+import { WithChildren } from "helpers/types";
 import React from "react";
 import { CSSTransition } from "react-transition-group";
 import { Card, DialogContainer, StyledDialogProps } from "./styles";
@@ -6,11 +7,11 @@ export interface DialogProps extends StyledDialogProps {
   onClose?: () => void;
 }
 
-export const Dialog: React.FC<DialogProps> = ({
+export const Dialog = ({
   children,
   isOpen,
   onClose,
-}) => (
+}: WithChildren<DialogProps>) => (
   <CSSTransition
     in={isOpen}
     classNames="ease-in"

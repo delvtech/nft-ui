@@ -12,6 +12,7 @@ import { Spacer } from "common/Spacer";
 import { Button, PaddedButton } from "common/Button/styles";
 import { Flex } from "common/Container/styles";
 import { createToastError } from "helpers/createToast";
+import { WithChildren } from "helpers/types";
 
 interface WalletButtonProps {
   alt: string;
@@ -21,13 +22,13 @@ interface WalletButtonProps {
   source: string;
 }
 
-const WalletButton: React.FC<WalletButtonProps> = ({
+const WalletButton = ({
   alt,
   connector,
   deactivator,
   onClick,
   source,
-}) => {
+}: WalletButtonProps) => {
   const { activate } = useWeb3();
 
   const handleClick = useCallback(() => {
@@ -42,10 +43,10 @@ const WalletButton: React.FC<WalletButtonProps> = ({
   );
 };
 
-export const ConnectWalletDialog: React.FC<DialogProps> = ({
+export const ConnectWalletDialog = ({
   isOpen,
   onClose,
-}) => {
+}: WithChildren<DialogProps>) => {
   const { active, deactivate } = useWeb3();
 
   const deactivateActiveConnector = useCallback(async () => {
@@ -55,8 +56,8 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
 
   return (
     <Dialog isOpen={isOpen} onClose={() => onClose?.()}>
-      <DialogTitle>Connect Wallet</DialogTitle>
       <Flex align="center" direction="column">
+        <DialogTitle>Connect Wallet</DialogTitle>
         <WalletButton
           connector={injectedConnector}
           deactivator={deactivateActiveConnector}
@@ -74,30 +75,28 @@ export const ConnectWalletDialog: React.FC<DialogProps> = ({
           source="/assets/svg/walletConnectIcon.svg"
           onClick={() => onClose?.()}
         />
+
+        <DialogBodyText>
+          Note: Some connectors can only disconnect wallets from their app. Some
+          connectors may also cause a page refresh.
+        </DialogBodyText>
+
+        {active && (
+          <>
+            <Spacer />
+            <Button
+              sidePadding="24px"
+              onClick={async () => {
+                await deactivateActiveConnector();
+                onClose?.();
+              }}
+            >
+              Close connection
+            </Button>
+            <Spacer />
+          </>
+        )}
       </Flex>
-
-      <Spacer />
-
-      <DialogBodyText>
-        Note: Some connectors can only disconnect wallets from their app. Some
-        connectors may also cause a page refresh.
-      </DialogBodyText>
-
-      {active && (
-        <>
-          <Spacer />
-          <Button
-            sidePadding="25px"
-            onClick={async () => {
-              await deactivateActiveConnector();
-              onClose?.();
-            }}
-          >
-            Close connection
-          </Button>
-          <Spacer />
-        </>
-      )}
     </Dialog>
   );
 };

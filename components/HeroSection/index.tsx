@@ -1,7 +1,6 @@
 import { Fade } from "react-awesome-reveal";
 import { SectionContainer } from "common/Container";
 import { DesktopHeader, MobileHeader } from "components/Entrance/styles";
-import { PrimaryButton } from "common/Button";
 import {
   HeroSectionContainer,
   HeroWrapper,
@@ -10,6 +9,7 @@ import {
   ButtonWrapper,
 } from "components/HeroSection/styles";
 import Link from "next/link";
+import { PrimaryButton } from "common/Button/styles";
 
 export const HeroSection = () => {
   return (
@@ -29,9 +29,9 @@ export const HeroSection = () => {
                 </MobileHeader>
                 <ButtonWrapper>
                   <Link passHref href="/mint">
-                    <PrimaryButton text="Start minting" />
+                    <PrimaryButton>Start minting</PrimaryButton>
                   </Link>
-                  <PrimaryButton text="The Council" hasBorder />
+                  <PrimaryButton hasBorder>The Council</PrimaryButton>
                 </ButtonWrapper>
               </ContentCenter>
             </ContentWrapper>
