@@ -3,6 +3,7 @@ import { HeroSection } from "components/HeroSection";
 import { Countdown } from "components/Countdown";
 import { Regenerated } from "components/Regenerated";
 import { OurProcess } from "components/OurProcess";
+import { Lore } from "components/Lore";
 
 const Home: NextPage = () => {
   return (
@@ -11,6 +12,7 @@ const Home: NextPage = () => {
       <Regenerated />
       <OurProcess />
       <Countdown />
+      <Lore />
     </>
   );
 };
