@@ -14,7 +14,7 @@ import {
 } from "components/Layout/Header/styles";
 import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
 import { Spacer } from "common/Spacer";
-import { DISCORD_URL, TWITTER_URL } from "src/constants";
+import { DISCORD_URL, TWITTER_URL } from "src/urls";
 
 export const MenuItem = ({ onClose }: any) => {
   return (

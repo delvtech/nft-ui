@@ -10,7 +10,7 @@ import {
 } from "components/Layout/Footer/styles";
 
 import Logo from "public/assets/svg/logo.svg";
-import { DISCORD_URL, ELEMENT_FI_URL, TWITTER_URL } from "src/constants";
+import { DISCORD_URL, ELEMENT_FI_URL, TWITTER_URL } from "src/urls";
 
 export const Footer = () => {
   return (
