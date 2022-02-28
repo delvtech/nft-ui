@@ -31,19 +31,54 @@ export const First = () => (
     <div className="flex-div max-width">
       <StyledSlider {...settings}>
         <div>
-          <Image src={`/assets/png/Lore/First/01.png`} alt="first" />
+          <Image
+            src="/assets/png/Lore/First/01.png"
+            alt="first"
+            height={100}
+            width={110}
+            layout="responsive"
+            quality={100}
+          />
         </div>
         <div>
-          <Image src={`/assets/png/Lore/First/02.png`} alt="second" />
+          <Image
+            src="/assets/png/Lore/First/02.png"
+            alt="second"
+            height={100}
+            width={110}
+            layout="responsive"
+            quality={100}
+          />
         </div>
         <div>
-          <Image src={`/assets/png/Lore/First/03.png`} alt="third" />
+          <Image
+            src={`/assets/png/Lore/First/03.png`}
+            alt="third"
+            height={100}
+            width={110}
+            layout="responsive"
+            quality={100}
+          />
         </div>
         <div>
-          <Image src={`/assets/png/Lore/First/04.png`} alt="fourth" />
+          <Image
+            src={`/assets/png/Lore/First/04.png`}
+            alt="fourth"
+            height={100}
+            width={110}
+            layout="responsive"
+            quality={100}
+          />
         </div>
         <div>
-          <Image src={`/assets/png/Lore/First/05.png`} alt="fifth" />
+          <Image
+            src={`/assets/png/Lore/First/05.png`}
+            alt="fifth"
+            height={100}
+            width={109}
+            layout="responsive"
+            quality={100}
+          />
         </div>
       </StyledSlider>
     </div>
@@ -53,7 +88,12 @@ export const First = () => (
 const settings = {
   customPaging: (i: number) => (
     <a className="slider-paging">
-      <Image src={`/assets/png/Lore/First/0${i + 1}.png`} alt="current" />
+      <Image
+        src={`/assets/png/Lore/First/0${i + 1}.png`}
+        alt="current"
+        height={100}
+        width={109}
+      />
     </a>
   ),
   dots: true,
