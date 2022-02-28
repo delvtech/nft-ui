@@ -10,6 +10,7 @@ import {
 } from "components/Layout/Footer/styles";
 
 import Logo from "public/assets/svg/logo.svg";
+import { DISCORD_URL, ELEMENT_FI_URL, TWITTER_URL } from "src/constants";
 
 export const Footer = () => {
   return (
@@ -36,39 +37,24 @@ export const Footer = () => {
           </LogoContainer>
           <div>
             <h4>Home</h4>
+            <ExternalLink href="/formation">Formation</ExternalLink>
             <ExternalLink href="/minting">How to mint</ExternalLink>
             <ExternalLink href="/rollout-release">
               The rollout release
             </ExternalLink>
-            <ExternalLink href="/governance">governance dashboard</ExternalLink>
           </div>
           <div>
             <h4>Learn</h4>
-            <ExternalLink href="https://www.youtube.com/">
-              Governance
-            </ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
-              Documentation
-            </ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
-              Governance Grants
-            </ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
-              Dashboard UI Guide
-            </ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
-              Introduction to the elfiverse
+            <ExternalLink href={ELEMENT_FI_URL}>Governance</ExternalLink>
+            <ExternalLink href={ELEMENT_FI_URL}>Documentation</ExternalLink>
+            <ExternalLink href={ELEMENT_FI_URL}>
+              Introduction to the Elfiverse
             </ExternalLink>
           </div>
           <div>
             <h4>Social</h4>
-            <ExternalLink href="https://www.youtube.com/">Discord</ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">Twitter</ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">Medium</ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">Github</ExternalLink>
-            <ExternalLink href="https://www.youtube.com/">
-              Telegram
-            </ExternalLink>
+            <ExternalLink href={DISCORD_URL}>Discord</ExternalLink>
+            <ExternalLink href={TWITTER_URL}>Twitter</ExternalLink>
           </div>
         </GridContainer>
       </Fade>
