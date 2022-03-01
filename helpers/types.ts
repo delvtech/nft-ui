@@ -46,3 +46,9 @@ export interface Data {
 }
 
 export type WithChildren<T = {}> = T & { children?: React.ReactNode };
+
+export interface Formation {
+  image: string;
+  description: string;
+  rarity: string;
+}
