@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
 import { SectionContainer } from "common/Container";
 import { Flex, HeaderWrapper } from "common/Container/styles";
 import { ExternalLink } from "common/ExternalLink";
-import { COLORS, COLOR_WHITE } from "helpers/colorPalette";
 import { InternalLink } from "common/InternalLink";
+import { Spacer } from "common/Spacer";
 import { BurgerMenu } from "components/Layout/Header/BurgerMenu";
 import {
   FixedHeader,
   MenuItemContainer,
-  MobileMenuContainer,
   MenuItemWrapper,
+  MobileMenuContainer,
   SVGContainer,
 } from "components/Layout/Header/styles";
 import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
-import { Spacer } from "common/Spacer";
+import { COLOR_WHITE } from "helpers/colorPalette";
+import React, { useState } from "react";
 import { DISCORD_URL, TWITTER_URL } from "src/urls";
 
 export const MenuItem = ({ onClose }: any) => {

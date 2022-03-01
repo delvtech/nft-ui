@@ -1,15 +1,13 @@
-import type { NextPage } from "next";
-import { Formation } from "components/Formation";
 import { SectionContainer } from "common/Container";
+import { Formation } from "components/Formation";
+import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
 
-const FormationPage: NextPage = () => {
-  return (
-    <SectionContainer padding="8.5rem 0">
-      <NextSeo title={`Element ElfiVerse - Formation`} />
-      <Formation />
-    </SectionContainer>
-  );
-};
+const FormationPage: NextPage = () => (
+  <SectionContainer padding="8rem 0">
+    <NextSeo title="Element ElfiVerse - Formation" />
+    <Formation />
+  </SectionContainer>
+);
 
 export default FormationPage;

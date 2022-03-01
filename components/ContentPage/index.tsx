@@ -1,14 +1,14 @@
-import styled from "styled-components";
-import { NextSeo } from "next-seo";
 import { SectionContainer } from "common/Container";
-import { Data, WithChildren } from "helpers/types";
-import { devices } from "helpers/devices";
+import { Section } from "common/Container/styles";
 import {
   COLOR_GREEN_LIGHT,
   COLOR_TRANSPARENT,
   COLOR_WHITE_LIGHT,
 } from "helpers/colorPalette";
-import { Section } from "common/Container/styles";
+import { devices } from "helpers/devices";
+import { WithChildren } from "helpers/types";
+import { NextSeo } from "next-seo";
+import styled from "styled-components";
 
 interface ContentPageProps {
   title?: string;
@@ -53,7 +53,7 @@ export const ContentPageContainer = styled.div<{
 
   p {
     font-size: 20px;
-    font-family: "Defcon Zero";
+    font-family: "Rubik";
     font-weight: 400;
   }
 

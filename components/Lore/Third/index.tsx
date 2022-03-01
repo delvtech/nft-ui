@@ -25,8 +25,8 @@ export const Third = () => (
       <Image
         src="/assets/png/Lore/Third/third.png"
         alt="third"
-        height={100}
-        width={100}
+        height={440}
+        width={440}
         quality={100}
       />
     </div>

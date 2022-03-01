@@ -1,21 +1,24 @@
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
 import { NavigationButtons } from "common/Button";
-import { Data, StringProps } from "helpers/types";
 import {
-  FormationSliderContainer,
-  RarityContainer,
-  ImageContainer,
-  Progress,
   FormationItem,
+  FormationSliderContainer,
+  ImageContainer,
   Missing,
+  Progress,
+  RarityContainer,
   StyledSlider,
 } from "components/Formation/FormationSlider/styles";
-
-import "slick-carousel/slick/slick.css";
+import { Data, Formation } from "helpers/types";
+import Image from "next/image";
+import { Key, useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 
-const Rarity = ({ rarity }: StringProps) => (
+interface RarityProps {
+  rarity?: string;
+}
+
+const Rarity = ({ rarity }: RarityProps) => (
   <RarityContainer>
     0%
     <Progress>
@@ -25,7 +28,13 @@ const Rarity = ({ rarity }: StringProps) => (
   </RarityContainer>
 );
 
-export const FormationSlider = ({ data }: Data) => {
+interface FormationSliderProps {
+  title: string;
+  content: Array<Formation>;
+  index?: Key;
+}
+
+export const FormationSlider = ({ title, content }: FormationSliderProps) => {
   const slider = useRef<any>(null);
   const [slideState, setSlideState] = useState({
     slidesToShow: 3,
@@ -44,14 +53,14 @@ export const FormationSlider = ({ data }: Data) => {
 
   return (
     <FormationSliderContainer>
-      <h3>{data.title}</h3>
+      <h3>{title}</h3>
       <StyledSlider ref={slider} {...settings}>
-        {data.content.map((item: Data, index: number) => {
+        {content.map((item: Data, index: number) => {
           return (
             <FormationItem key={index}>
               <ImageContainer>
                 <Image
-                  src={`/assets/png/Formation/${data.title}/${item.image}.png`}
+                  src={`/assets/png/Formation/${title}/${item.image}.png`}
                   alt={item.image}
                   layout="fill"
                   priority

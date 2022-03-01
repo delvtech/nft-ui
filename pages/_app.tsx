@@ -1,19 +1,19 @@
-import type { AppProps } from "next/app";
-import Head from "next/head";
-import { DefaultSeo } from "next-seo";
-import SEO from "next-seo.config";
-import { Header } from "components/Layout/Header";
-import { Footer } from "components/Layout/Footer";
-import { Transition } from "components/Layout/Transition";
-import { GlobalStyle } from "styles/globalStyles";
-import "public/assets/fonts/style.css";
-import { Web3ReactProvider } from "@web3-react/core";
-import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
 import "@fontsource/rubik";
-import { Toaster } from "react-hot-toast";
-import { QueryClient, QueryClientProvider } from "react-query";
+import { Web3ReactProvider } from "@web3-react/core";
+import { Footer } from "components/Layout/Footer";
+import { Header } from "components/Layout/Header";
+import { Transition } from "components/Layout/Transition";
 import { WalletNotifier } from "components/Wallet/WalletNotifier";
 import { WalletDialogProvider } from "contexts/WalletDialogContext/provider";
+import { DefaultSeo } from "next-seo";
+import SEO from "next-seo.config";
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import "public/assets/fonts/style.css";
+import { Toaster } from "react-hot-toast";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
+import { GlobalStyle } from "styles/globalStyles";
 
 const queryClient = new QueryClient();
 

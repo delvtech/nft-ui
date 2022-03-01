@@ -1,6 +1,6 @@
+import { SectionContainer } from "common/Container";
 import type { NextPage } from "next";
 import { NextSeo } from "next-seo";
-import { SectionContainer } from "common/Container";
 
 const GovernancePage: NextPage = () => {
   return (

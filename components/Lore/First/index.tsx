@@ -1,7 +1,7 @@
+import { LoreContainer, StyledSlider } from "components/Lore/styles";
+import Image from "next/image";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
-import Image from "next/image";
-import { LoreContainer, StyledSlider } from "components/Lore/styles";
 
 export const First = () => (
   <LoreContainer>

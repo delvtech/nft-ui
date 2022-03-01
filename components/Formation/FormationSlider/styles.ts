@@ -1,9 +1,9 @@
-import styled from "styled-components";
 import { Flex } from "common/Container/styles";
-import { devices } from "helpers/devices";
 import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
+import { devices } from "helpers/devices";
 import { StringProps } from "helpers/types";
 import Slider from "react-slick";
+import styled from "styled-components";
 
 export const FormationSliderContainer = styled.div`
   margin: 80px 0;
