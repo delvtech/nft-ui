@@ -10,7 +10,7 @@ import {
 } from "components/Formation/FormationSlider/styles";
 import { Data, Formation } from "helpers/types";
 import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
+import { Key, useEffect, useRef, useState } from "react";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
@@ -31,6 +31,7 @@ const Rarity = ({ rarity }: RarityProps) => (
 interface FormationSliderProps {
   title: string;
   content: Array<Formation>;
+  index?: Key;
 }
 
 export const FormationSlider = ({ title, content }: FormationSliderProps) => {

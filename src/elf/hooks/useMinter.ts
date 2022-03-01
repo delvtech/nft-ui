@@ -1,9 +1,9 @@
-import useWeb3 from "elf/useWeb3";
-import { Minter__factory } from "typechain-types";
-import { Signer } from "ethers";
 import { useSmartContractTransaction } from "@elementfi/react-query-typechain";
-import { useProvider } from "./useProvider";
+import useWeb3 from "elf/useWeb3";
+import { Signer } from "ethers";
+import { Minter__factory } from "typechain-types";
 import { useAddresses } from "./useAddress";
+import { useProvider } from "./useProvider";
 
 export function useMinter(signer?: Signer) {
   const { chainId } = useWeb3();

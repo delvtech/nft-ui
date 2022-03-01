@@ -1,7 +1,6 @@
 import useWeb3 from "elf/useWeb3";
 import { ChainId } from "elf/wallets/chains";
 import { useEffect, useState } from "react";
-
 import devAddressList from "../../nft-contract-addresses/dev.addresses.json";
 
 export const useAddresses = () => {

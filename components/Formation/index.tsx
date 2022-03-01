@@ -14,7 +14,11 @@ export const Formation = () => (
         <FormationContainer>
           <h2>The formation</h2>
           {formationData.data.map((item) => (
-            <FormationSlider title={item.title} content={item.content} />
+            <FormationSlider
+              title={item.title}
+              content={item.content}
+              key={item.title}
+            />
           ))}
         </FormationContainer>
       </Fade>

@@ -1,5 +1,5 @@
-import type { NextPage } from "next";
 import { ContentPage } from "components/ContentPage";
+import type { NextPage } from "next";
 
 const HowToMint: NextPage = () => {
   return (

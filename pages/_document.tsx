@@ -1,12 +1,12 @@
-import { ServerStyleSheet } from "styled-components";
 // eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from "next/document";
+import { ServerStyleSheet } from "styled-components";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {

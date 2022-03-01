@@ -1,10 +1,10 @@
 import { InjectedConnector } from "@web3-react/injected-connector";
-import { ChainId, ChainNames, DEFAULT_CHAIN_IDS } from "./chains";
 import { WalletConnectConnector } from "@web3-react/walletconnect-connector";
 import {
   ALCHEMY_GOERLI_HTTP_URL,
   ALCHEMY_MAINNET_HTTP_URL,
 } from "elf/providers";
+import { ChainId, ChainNames, DEFAULT_CHAIN_IDS } from "./chains";
 
 /**
  * The 'injected' connector refers to plugin-based wallets like MetaMask, which
