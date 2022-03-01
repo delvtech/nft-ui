@@ -1,6 +1,5 @@
-/* eslint-disable react/no-unescaped-entities */
-import type { NextPage } from "next";
 import { ContentPage } from "components/ContentPage";
+import type { NextPage } from "next";
 
 const RolloutRelease: NextPage = () => (
   <ContentPage title="Rollout Release">
@@ -16,8 +15,9 @@ const RolloutRelease: NextPage = () => (
       starting 5:35 p.m. ET on february 9 at <mark>completely free</mark>. Each
       person can mint up to 4 elves. <br /> Active community members are defined
       as anyone who has used element, the defi fixed rate protocol. <br /> These
-      members will automatically receive <mark>their custom "elf"</mark>, which
-      will grant them access to a private Discord channel
+      members will automatically receive{" "}
+      <mark>their custom &quot;elf&quot;</mark>, which will grant them access to
+      a private Discord channel
       <mark> (#custom-elfi)</mark> where they can get updates about future
       community involvement in the elfiverse and future nft related content.
       <br /> The community pre-release will be
@@ -36,11 +36,12 @@ const RolloutRelease: NextPage = () => (
       After a release, you can always see your elf on our website immediately.
       <br />
       Connect your wallet at the top right and click on the button to go to
-      "Your Wallet," where you'll be able to see your revealed elf. Wallets and
-      platforms like OpenSea typically take a while (sometimes a few hours,
-      sometimes as long as days) to update to the refreshed metadata. On your
-      elf’s OpenSea page, you can click a "Refresh metadata" button at the top
-      right to request that OpenSea refresh the metadata more quickly. <br />
+      &quot;Your Wallet,&quot; where you'll be able to see your revealed elf.
+      Wallets and platforms like OpenSea typically take a while (sometimes a few
+      hours, sometimes as long as days) to update to the refreshed metadata. On
+      your elf&apos;s OpenSea page, you can click a &quot;Refresh metadata&quot;
+      button at the top right to request that OpenSea refresh the metadata more
+      quickly. <br />
       Rarities will be uncovered across drops to ensure the rare elves are well
       distributed among the community.
     </p>
