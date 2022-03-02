@@ -1,9 +1,9 @@
-import { Countdown } from "components/Countdown";
-import { HeroSection } from "components/HeroSection";
-import { Lore } from "components/Lore";
-import { OurProcess } from "components/OurProcess";
-import { Regenerated } from "components/Regenerated";
 import type { NextPage } from "next";
+import { HeroSection } from "components/HeroSection";
+import { Countdown } from "components/Countdown";
+import { Regenerated } from "components/Regenerated";
+import { OurProcess } from "components/OurProcess";
+import { Lore } from "components/Lore";
 
 const Home: NextPage = () => {
   return (
