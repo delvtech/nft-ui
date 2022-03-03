@@ -7,10 +7,15 @@ import { useProof } from "elf/hooks/useProof";
 import { useTokenBalanceOf } from "elf/hooks/useTokenBalanceOf";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import useWeb3 from "elf/useWeb3";
+import {
+  createToastError,
+  createToastLoading,
+  createToastSuccess,
+} from "helpers/createToast";
 import Image from "next/image";
 import MintGIF from "public/assets/gif/hero_image.gif";
 import LoadingMintImage from "public/assets/svg/minting_loading.svg";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import ReactTextTransition, { presets } from "react-text-transition";
 import content from "./content.json";
@@ -19,26 +24,35 @@ export const Mint = () => {
   const { active, account, library } = useWeb3();
   const { data: proofData } = useProof(account);
   const { data: mintedCount } = useTokenBalanceOf(account);
-  const { mutate: mint, isLoading } = useMinter(library?.getSigner());
+  const toastIdRef = useRef<string>();
+
+  const {
+    mutate: mint,
+    isLoading,
+    isSuccess,
+  } = useMinter(library?.getSigner(), {
+    onError: (e) => {
+      createToastError(e.message, { id: toastIdRef.current });
+    },
+    onTransactionSubmitted: () => {
+      toastIdRef.current = createToastLoading("Confirming mint transaction.", {
+        id: toastIdRef.current,
+      });
+    },
+    onTransactionMined: () => {
+      createToastSuccess("Elfi has been successfully minted!", {
+        id: toastIdRef.current,
+      });
+    },
+  });
 
   const { openModal } = useWalletDialog();
 
-  const [showProgress, setShowProgress] = useState<boolean>(false);
-
-  useEffect(() => {
-    setShowProgress(isLoading);
-  }, [isLoading]);
-
-  const currentContent = useMemo(() => {
-    // TODO @cashd: figure out what to do here
-    const STATUS = false;
-
-    return isLoading
-      ? content.pending
-      : STATUS
-      ? content.success
-      : content.stale;
-  }, [isLoading]);
+  const currentContent = useMemo(
+    () =>
+      isLoading ? content.pending : isSuccess ? content.success : content.stale,
+    [isLoading, isSuccess],
+  );
 
   const canMint = useMemo(() => !!proofData, [proofData]);
   const hasMinted = useMemo(
@@ -85,7 +99,7 @@ export const Mint = () => {
     if (active && !hasMinted && canMint) {
       return <PrimaryButton onClick={handleMint}>Confirm mint</PrimaryButton>;
     }
-  }, [active, hasMinted, canMint]);
+  }, [active, hasMinted, canMint, openModal, handleMint]);
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Mint">
@@ -97,7 +111,7 @@ export const Mint = () => {
           />
         </h1>
         {HeroImage}
-        {!showProgress ? (
+        {!isLoading ? (
           MintButton
         ) : (
           <Fade>

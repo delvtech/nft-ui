@@ -12,8 +12,7 @@ const getProofURI = (address: string, chainId?: number) => {
   }
 
   if (chainId === ChainId.MAINNET) {
-    // TODO @cashd: update when mainnet bucket is ready
-    return `${S3_BUCKET_URI}/goerli2/${address}`;
+    return `${S3_BUCKET_URI}/ethereum/${address}`;
   }
 
   // defaulting to local testnet, fetching proof from public/proofs/<address>
@@ -23,18 +22,21 @@ const getProofURI = (address: string, chainId?: number) => {
 
 export const useProof = (address: string | undefined | null) => {
   const { chainId } = useWeb3();
-  return useQuery<ProofData | undefined>(["nft-proof", address], async () => {
-    if (!address) {
+  return useQuery<ProofData | undefined>(
+    ["nft-proof", address],
+    async () => {
+      const { data } = await axios.get<ProofDataResponse>(
+        getProofURI(address as string, chainId),
+      );
+
+      if (data && data[0]) {
+        return data[0];
+      }
+
       return undefined;
-    }
-    const { data } = await axios.get<ProofDataResponse>(
-      getProofURI(address, chainId),
-    );
-
-    if (data && data[0]) {
-      return data[0];
-    }
-
-    return undefined;
-  });
+    },
+    {
+      enabled: !!address,
+    },
+  );
 };
