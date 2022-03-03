@@ -29,11 +29,7 @@ export const useProof = (address: string | undefined | null) => {
         getProofURI(address as string, chainId),
       );
 
-      if (data && data[0]) {
-        return data[0];
-      }
-
-      return undefined;
+      return data.pop();
     },
     {
       enabled: !!address,

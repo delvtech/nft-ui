@@ -43,6 +43,7 @@ export const Mint = () => {
       createToastSuccess("Elfi has been successfully minted!", {
         id: toastIdRef.current,
       });
+      // TODO @cashd: push to collection view
     },
   });
 
