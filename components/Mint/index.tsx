@@ -4,56 +4,88 @@ import { ContentWrapper } from "components/Entrance/styles";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
 import { useMinter } from "elf/hooks/useMinter";
 import { useProof } from "elf/hooks/useProof";
+import { useTokenBalanceOf } from "elf/hooks/useTokenBalanceOf";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import useWeb3 from "elf/useWeb3";
 import Image from "next/image";
 import MintGIF from "public/assets/gif/hero_image.gif";
+import LoadingMintImage from "public/assets/svg/minting_loading.svg";
 import { useEffect, useMemo, useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import ReactTextTransition, { presets } from "react-text-transition";
 import content from "./content.json";
 
-const UPDATE_PER = 100;
-
 export const Mint = () => {
   const { active, account, library } = useWeb3();
   const { data: proofData } = useProof(account);
+  const { data: mintedCount } = useTokenBalanceOf(account);
+  const { mutate: mint, isLoading } = useMinter(library?.getSigner());
+
   const { openModal } = useWalletDialog();
 
-  const { mutate: mint } = useMinter(library?.getSigner());
-
-  const [seconds, setSeconds] = useState<number>(1);
   const [showProgress, setShowProgress] = useState<boolean>(false);
 
-  const currentContent = useMemo(() => {
-    const PENDING_STATUS = showProgress && seconds < 100;
-    const STATUS = seconds === 100;
+  useEffect(() => {
+    setShowProgress(isLoading);
+  }, [isLoading]);
 
-    return PENDING_STATUS
+  const currentContent = useMemo(() => {
+    // TODO @cashd: figure out what to do here
+    const STATUS = false;
+
+    return isLoading
       ? content.pending
       : STATUS
       ? content.success
       : content.stale;
-  }, [seconds, showProgress]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (showProgress && seconds < 100) {
-        setSeconds(seconds + 1);
-      }
-    }, UPDATE_PER);
-    return () => clearInterval(timer);
-  }, [seconds, showProgress]);
+  }, [isLoading]);
 
   const canMint = useMemo(() => !!proofData, [proofData]);
+  const hasMinted = useMemo(
+    () => mintedCount && mintedCount.gt(0),
+    [mintedCount],
+  );
 
   const handleMint = () => {
-    // setShowProgress(true);
-
     if (canMint && proofData) {
       mint([proofData.leaf.tokenId, proofData.proof]);
     }
   };
+
+  const HeroImage = useMemo(() => {
+    return isLoading ? (
+      <Image
+        src={LoadingMintImage}
+        alt="Elfiverse"
+        width="600px"
+        height="800px"
+      />
+    ) : (
+      <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
+    );
+  }, [isLoading]);
+
+  const MintButton = useMemo(() => {
+    if (!active) {
+      return <PrimaryButton onClick={openModal}>Connect wallet</PrimaryButton>;
+    }
+
+    if (active && !canMint) {
+      return (
+        <PrimaryButton disabled>Not currently eligible for mint.</PrimaryButton>
+      );
+    }
+
+    if (active && hasMinted) {
+      return (
+        <PrimaryButton disabled>Elfi has already been minted.</PrimaryButton>
+      );
+    }
+
+    if (active && !hasMinted && canMint) {
+      return <PrimaryButton onClick={handleMint}>Confirm mint</PrimaryButton>;
+    }
+  }, [active, hasMinted, canMint]);
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Mint">
@@ -64,23 +96,9 @@ export const Mint = () => {
             springConfig={presets.gentle}
           />
         </h1>
-        <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
+        {HeroImage}
         {!showProgress ? (
-          <>
-            {!active && (
-              <PrimaryButton onClick={openModal}>Connect wallet</PrimaryButton>
-            )}
-
-            {active && canMint && (
-              <PrimaryButton onClick={handleMint}>Confirm mint</PrimaryButton>
-            )}
-
-            {active && !canMint && (
-              <PrimaryButton disabled>
-                Not currently eligible for mint.
-              </PrimaryButton>
-            )}
-          </>
+          MintButton
         ) : (
           <Fade>
             <ProgressContainer>
