@@ -1,53 +1,79 @@
-import Image from "next/image";
-import MintGIF from "public/assets/gif/hero_image.gif";
-import ReactTextTransition, { presets } from "react-text-transition";
-import content from "./content.json";
-import useWeb3 from "elf/useWeb3";
+import { PrimaryButton } from "common/Button/styles";
 import { ContentPage } from "components/ContentPage";
 import { ContentWrapper } from "components/Entrance/styles";
-import { Fade } from "react-awesome-reveal";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
-import { PrimaryButton } from "common/Button/styles";
-import { useEffect, useMemo, useState } from "react";
+import { useMinter } from "elf/hooks/useMinter";
 import { useProof } from "elf/hooks/useProof";
+import { useTokenBalanceOf } from "elf/hooks/useTokenBalanceOf";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
-
-const UPDATE_PER = 100;
+import useWeb3 from "elf/useWeb3";
+import {
+  createToastError,
+  createToastLoading,
+  createToastSuccess,
+} from "helpers/createToast";
+import Image from "next/image";
+import MintGIF from "public/assets/gif/hero_image.gif";
+import LoadingMintImage from "public/assets/svg/minting_loading.svg";
+import { useMemo, useRef } from "react";
+import { Fade } from "react-awesome-reveal";
+import ReactTextTransition, { presets } from "react-text-transition";
+import content from "./content.json";
 
 export const Mint = () => {
-  const { active, account } = useWeb3();
-  const { data: proofData } = useProof(account);
+  const { active, account, library } = useWeb3();
+  const { data: proofData, isLoading: isProofLoading } = useProof(account);
+  const { data: mintedCount } = useTokenBalanceOf(account);
+  const toastIdRef = useRef<string>();
+
+  const canMint = !!proofData;
+  const hasMinted = mintedCount && mintedCount.gt(0);
+
+  const {
+    mutate: mint,
+    isLoading: isMinting,
+    isSuccess,
+  } = useMinter(library?.getSigner(), {
+    onError: (e) => {
+      createToastError(e.message, { id: toastIdRef.current });
+    },
+    onTransactionSubmitted: () => {
+      toastIdRef.current = createToastLoading("Confirming mint transaction.", {
+        id: toastIdRef.current,
+      });
+    },
+    onTransactionMined: () => {
+      createToastSuccess("Elfi has been successfully minted!", {
+        id: toastIdRef.current,
+      });
+      // TODO @cashd: push to collection view
+    },
+  });
+
   const { openModal } = useWalletDialog();
 
-  const [seconds, setSeconds] = useState<number>(1);
-  const [showProgress, setShowProgress] = useState<boolean>(false);
-
-  const currentContent = useMemo(() => {
-    const PENDING_STATUS = showProgress && seconds < 100;
-    const STATUS = seconds === 100;
-
-    return PENDING_STATUS
-      ? content.pending
-      : STATUS
-      ? content.success
-      : content.stale;
-  }, [seconds, showProgress]);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      if (showProgress && seconds < 100) {
-        setSeconds(seconds + 1);
-      }
-    }, UPDATE_PER);
-    return () => clearInterval(timer);
-  }, [seconds, showProgress]);
-
-  const isAllowListed = useMemo(
-    () => proofData?.proof && proofData?.tokenId,
-    [proofData],
+  const currentContent = useMemo(
+    () =>
+      isMinting ? content.pending : isSuccess ? content.success : content.stale,
+    [isMinting, isSuccess],
   );
 
-  const handleClick = () => setShowProgress(true);
+  const handleMint = () => {
+    if (canMint) {
+      mint([proofData.leaf.tokenId, proofData.proof]);
+    }
+  };
+
+  const HeroImage = isMinting ? (
+    <Image
+      src={LoadingMintImage}
+      alt="Elfiverse"
+      width="600px"
+      height="800px"
+    />
+  ) : (
+    <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
+  );
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Mint">
@@ -58,25 +84,16 @@ export const Mint = () => {
             springConfig={presets.gentle}
           />
         </h1>
-        <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
-        {!showProgress ? (
-          <>
-            {!active && (
-              <PrimaryButton onClick={() => openModal()}>
-                Connect wallet
-              </PrimaryButton>
-            )}
-
-            {active && isAllowListed && (
-              <PrimaryButton onClick={handleClick}>Confirm mint</PrimaryButton>
-            )}
-
-            {active && !isAllowListed && (
-              <PrimaryButton disabled>
-                Not currently eligible for mint.
-              </PrimaryButton>
-            )}
-          </>
+        {HeroImage}
+        {!isMinting ? (
+          <MintButton
+            active={active}
+            canMint={canMint}
+            hasMinted={hasMinted}
+            openModal={openModal}
+            handleMint={handleMint}
+            isProofLoading={isProofLoading}
+          />
         ) : (
           <Fade>
             <ProgressContainer>
@@ -98,4 +115,44 @@ export const Mint = () => {
       </MintContainer>
     </ContentPage>
   );
+};
+
+interface MintButtonProps {
+  active: boolean;
+  hasMinted?: boolean;
+  canMint: boolean;
+  isProofLoading: boolean;
+  openModal: () => void;
+  handleMint: () => void;
+}
+
+const MintButton = ({
+  active,
+  hasMinted,
+  canMint,
+  openModal,
+  handleMint,
+  isProofLoading,
+}: MintButtonProps) => {
+  if (active) {
+    if (hasMinted) {
+      return (
+        <PrimaryButton disabled>Elfi has already been minted.</PrimaryButton>
+      );
+    }
+
+    if (!hasMinted && canMint) {
+      return <PrimaryButton onClick={handleMint}>Confirm mint</PrimaryButton>;
+    }
+
+    if (isProofLoading) {
+      <PrimaryButton disabled>Checking eligibility...</PrimaryButton>;
+    }
+
+    return (
+      <PrimaryButton disabled>Not currently eligible for mint.</PrimaryButton>
+    );
+  } else {
+    return <PrimaryButton onClick={openModal}>Connect wallet</PrimaryButton>;
+  }
 };
