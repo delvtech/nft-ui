@@ -22,13 +22,16 @@ import content from "./content.json";
 
 export const Mint = () => {
   const { active, account, library } = useWeb3();
-  const { data: proofData } = useProof(account);
+  const { data: proofData, isLoading: isProofLoading } = useProof(account);
   const { data: mintedCount } = useTokenBalanceOf(account);
   const toastIdRef = useRef<string>();
 
+  const canMint = !!proofData;
+  const hasMinted = mintedCount && mintedCount.gt(0);
+
   const {
     mutate: mint,
-    isLoading,
+    isLoading: isMinting,
     isSuccess,
   } = useMinter(library?.getSigner(), {
     onError: (e) => {
@@ -51,56 +54,26 @@ export const Mint = () => {
 
   const currentContent = useMemo(
     () =>
-      isLoading ? content.pending : isSuccess ? content.success : content.stale,
-    [isLoading, isSuccess],
-  );
-
-  const canMint = useMemo(() => !!proofData, [proofData]);
-  const hasMinted = useMemo(
-    () => mintedCount && mintedCount.gt(0),
-    [mintedCount],
+      isMinting ? content.pending : isSuccess ? content.success : content.stale,
+    [isMinting, isSuccess],
   );
 
   const handleMint = () => {
-    if (canMint && proofData) {
+    if (canMint) {
       mint([proofData.leaf.tokenId, proofData.proof]);
     }
   };
 
-  const HeroImage = useMemo(() => {
-    return isLoading ? (
-      <Image
-        src={LoadingMintImage}
-        alt="Elfiverse"
-        width="600px"
-        height="800px"
-      />
-    ) : (
-      <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
-    );
-  }, [isLoading]);
-
-  const MintButton = useMemo(() => {
-    if (!active) {
-      return <PrimaryButton onClick={openModal}>Connect wallet</PrimaryButton>;
-    }
-
-    if (active && !canMint) {
-      return (
-        <PrimaryButton disabled>Not currently eligible for mint.</PrimaryButton>
-      );
-    }
-
-    if (active && hasMinted) {
-      return (
-        <PrimaryButton disabled>Elfi has already been minted.</PrimaryButton>
-      );
-    }
-
-    if (active && !hasMinted && canMint) {
-      return <PrimaryButton onClick={handleMint}>Confirm mint</PrimaryButton>;
-    }
-  }, [active, hasMinted, canMint, openModal, handleMint]);
+  const HeroImage = isMinting ? (
+    <Image
+      src={LoadingMintImage}
+      alt="Elfiverse"
+      width="600px"
+      height="800px"
+    />
+  ) : (
+    <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
+  );
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Mint">
@@ -112,8 +85,15 @@ export const Mint = () => {
           />
         </h1>
         {HeroImage}
-        {!isLoading ? (
-          MintButton
+        {!isMinting ? (
+          <MintButton
+            active={active}
+            canMint={canMint}
+            hasMinted={hasMinted}
+            openModal={openModal}
+            handleMint={handleMint}
+            isProofLoading={isProofLoading}
+          />
         ) : (
           <Fade>
             <ProgressContainer>
@@ -135,4 +115,44 @@ export const Mint = () => {
       </MintContainer>
     </ContentPage>
   );
+};
+
+interface MintButtonProps {
+  active: boolean;
+  hasMinted?: boolean;
+  canMint: boolean;
+  isProofLoading: boolean;
+  openModal: () => void;
+  handleMint: () => void;
+}
+
+const MintButton = ({
+  active,
+  hasMinted,
+  canMint,
+  openModal,
+  handleMint,
+  isProofLoading,
+}: MintButtonProps) => {
+  if (active) {
+    if (hasMinted) {
+      return (
+        <PrimaryButton disabled>Elfi has already been minted.</PrimaryButton>
+      );
+    }
+
+    if (!hasMinted && canMint) {
+      return <PrimaryButton onClick={handleMint}>Confirm mint</PrimaryButton>;
+    }
+
+    if (isProofLoading) {
+      <PrimaryButton disabled>Checking eligibility...</PrimaryButton>;
+    }
+
+    return (
+      <PrimaryButton disabled>Not currently eligible for mint.</PrimaryButton>
+    );
+  } else {
+    return <PrimaryButton onClick={openModal}>Connect wallet</PrimaryButton>;
+  }
 };
