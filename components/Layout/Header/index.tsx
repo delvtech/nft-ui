@@ -23,6 +23,7 @@ export const MenuItem = ({ onClose }: any) => {
       <InternalLink href="/formation">Formation</InternalLink>
       <InternalLink href="/mint">Minting</InternalLink>
       <InternalLink href="/rollout-release">The Rollout Release</InternalLink>
+      <InternalLink href="/collection">The Collection</InternalLink>
     </MenuItemWrapper>
   );
 };
