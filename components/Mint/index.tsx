@@ -29,6 +29,8 @@ export const Mint = () => {
   const canMint = !!proofData;
   const hasMinted = mintedCount && mintedCount.gt(0);
 
+  console.log(mintedCount, canMint, hasMinted);
+
   const {
     mutate: mint,
     isLoading: isMinting,
@@ -50,7 +52,7 @@ export const Mint = () => {
     },
   });
 
-  const { openModal } = useWalletDialog();
+  const { open } = useWalletDialog();
 
   const currentContent = useMemo(
     () =>
@@ -90,7 +92,7 @@ export const Mint = () => {
             active={active}
             canMint={canMint}
             hasMinted={hasMinted}
-            openModal={openModal}
+            openDialog={open}
             handleMint={handleMint}
             isProofLoading={isProofLoading}
           />
@@ -122,7 +124,7 @@ interface MintButtonProps {
   hasMinted?: boolean;
   canMint: boolean;
   isProofLoading: boolean;
-  openModal: () => void;
+  openDialog: () => void;
   handleMint: () => void;
 }
 
@@ -130,7 +132,7 @@ const MintButton = ({
   active,
   hasMinted,
   canMint,
-  openModal,
+  openDialog,
   handleMint,
   isProofLoading,
 }: MintButtonProps) => {
@@ -153,6 +155,6 @@ const MintButton = ({
       <PrimaryButton disabled>Not currently eligible for mint.</PrimaryButton>
     );
   } else {
-    return <PrimaryButton onClick={openModal}>Connect wallet</PrimaryButton>;
+    return <PrimaryButton onClick={openDialog}>Connect wallet</PrimaryButton>;
   }
 };
