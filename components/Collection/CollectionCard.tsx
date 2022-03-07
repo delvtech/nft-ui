@@ -21,7 +21,7 @@ export const CollectionCard = () => {
     <CollectionCardContainer>
       <Flex direction="column">
         <ElfContainer>
-          <Image src={tokenURL} height={200} width={200} />
+          <Image src={tokenURL} height={200} width={200} alt="Minted elf" />
         </ElfContainer>
 
         <Spacer size="4px" />

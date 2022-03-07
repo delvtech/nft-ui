@@ -20,7 +20,7 @@ export const Collection = () => {
 
   useEffect(() => {
     !active && open();
-  }, [active]);
+  }, [active, open]);
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Collection">
