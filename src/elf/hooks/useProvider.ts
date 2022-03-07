@@ -6,7 +6,9 @@ import { providers } from "ethers";
 import { useEffect, useState } from "react";
 
 export const NEXT_ENV = process.env.NODE_ENV as string;
+export const isDev = NEXT_ENV === "development";
 const LOCAL_RPC_HOST = "http://127.0.0.1:8545";
+
 const alchemyWeb3MainnetWebSocketProvider = new providers.Web3Provider(
   createAlchemyWeb3(ALCHEMY_MAINNET_WSS_URL)
     .currentProvider as ExternalProvider,

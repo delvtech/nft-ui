@@ -1,4 +1,4 @@
-import { ConnectWalletDialog } from "components/Wallet/ConnectWalletDialog";
+import { ConnectWalletDialog } from "components/Dialogs/ConnectWalletDialog";
 import { WithChildren } from "helpers/types";
 import React, { useCallback, useState } from "react";
 import WalletDialogContext from "./index";
