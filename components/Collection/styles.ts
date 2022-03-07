@@ -35,13 +35,13 @@ export const CollectionContainer = styled.div`
 `;
 
 export const CollectionCardContainer = styled.div`
-  padding: 12px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  padding: 12px;
 
   border: 0.5px solid;
   border-radius: 6px;
