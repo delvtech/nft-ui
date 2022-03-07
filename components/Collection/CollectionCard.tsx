@@ -1,11 +1,19 @@
 import { Spacer } from "common/Spacer";
+import { useProof } from "elf/hooks/useProof";
+import useWeb3 from "elf/useWeb3";
 import { devices } from "helpers/devices";
 import Image from "next/image";
 import React from "react";
+import { getTokenAssetURL } from "src/urls";
+import { proofToTokenId } from "src/util/proofToTokenId";
 import styled from "styled-components";
 import { CollectionCardContainer } from "./styles";
 
 export const CollectionCard = () => {
+  const { account } = useWeb3();
+  const { data: proofData } = useProof(account);
+  const token = proofToTokenId(proofData);
+
   return (
     <CollectionCardContainer>
       <div
@@ -15,7 +23,7 @@ export const CollectionCard = () => {
         }}
       >
         <ElfContainer>
-          <Image src="/testElfi.png" height={200} width={200} />
+          <Image src={getTokenAssetURL(token)} height={200} width={200} />
         </ElfContainer>
         <div
           style={{
@@ -23,7 +31,7 @@ export const CollectionCard = () => {
             marginTop: "8px",
           }}
         >
-          ELF 2002
+          ELF {token}
         </div>
       </div>
       <div
