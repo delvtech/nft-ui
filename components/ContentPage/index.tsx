@@ -30,8 +30,8 @@ export const ContentPage = ({
   );
 };
 
-const ContentSection = styled.section`
-  padding: 13.75rem 0 0 0;
+const ContentSection = styled.section<{ padding?: string }>`
+  padding: ${({ padding }) => padding ?? "13.75rem 0 0 0"};
 
   ${Section} {
     padding: 0;
@@ -64,7 +64,7 @@ export const ContentPageContainer = styled.div<{
 
   h1 {
     font-family: "Defcon Zero";
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 55px;
   }
 

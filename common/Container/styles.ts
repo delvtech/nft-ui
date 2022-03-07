@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import { devices } from "helpers/devices";
 import { StringProps } from "helpers/types";
+import styled from "styled-components";
 
 export const Container = styled.div<StringProps>`
   position: relative;
@@ -13,12 +13,16 @@ export const Flex = styled.div<{
   align?: string;
   justify?: string;
   direction?: string;
+  width?: string;
+  height?: string;
 }>`
   display: flex;
   align-items: center;
   text-align: ${({ align }) => align};
   justify-content: ${({ justify }) => (justify ? justify : "space-between")};
   flex-direction: ${({ direction }) => direction};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
 `;
 
 export const HeaderWrapper = styled.div`

@@ -1,17 +1,17 @@
+import { ConnectWalletDialog } from "components/Dialogs/ConnectWalletDialog";
+import { WithChildren } from "helpers/types";
 import React, { useCallback, useState } from "react";
 import WalletDialogContext from "./index";
-import { ConnectWalletDialog } from "components/Wallet/ConnectWalletDialog";
-import { WithChildren } from "helpers/types";
 
 export const WalletDialogProvider = ({ children }: WithChildren) => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const openModal = useCallback(() => setModalOpen(true), [setModalOpen]);
-  const closeModal = useCallback(() => setModalOpen(false), [setModalOpen]);
+  const open = useCallback(() => setIsOpen(true), [setIsOpen]);
+  const close = useCallback(() => setIsOpen(false), [setIsOpen]);
 
   return (
-    <WalletDialogContext.Provider value={{ modalOpen, openModal, closeModal }}>
-      <ConnectWalletDialog isOpen={modalOpen} onClose={() => closeModal()} />
+    <WalletDialogContext.Provider value={{ isOpen, open, close }}>
+      <ConnectWalletDialog isOpen={isOpen} onClose={() => close()} />
       {children}
     </WalletDialogContext.Provider>
   );

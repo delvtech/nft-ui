@@ -37,8 +37,9 @@ export const createToastLoading = (
   message?: string,
   options?: ToastOptions,
 ) => {
+  const { duration, ...restOptions } = toastStyleOptions;
   return toast.loading(message ?? "Loading", {
     ...options,
-    ...toastStyleOptions,
+    ...restOptions,
   });
 };

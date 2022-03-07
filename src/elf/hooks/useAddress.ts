@@ -2,6 +2,7 @@ import useWeb3 from "elf/useWeb3";
 import { ChainId } from "elf/wallets/chains";
 import { useEffect, useState } from "react";
 import devAddressList from "../../nft-contract-addresses/dev.addresses.json";
+import goerliAddressList from "../../nft-contract-addresses/goerli.addresses.json";
 
 export const useAddresses = () => {
   const { chainId } = useWeb3();
@@ -15,12 +16,12 @@ export const useAddresses = () => {
     }
 
     if (chainId === ChainId.GOERLI) {
-      // TODO @cashd: populate with mainnet address
-      setAddresses(devAddressList);
+      setAddresses(goerliAddressList);
     }
 
-    // default to local addresses
-    setAddresses(devAddressList);
+    if (chainId === ChainId.LOCAL) {
+      setAddresses(devAddressList);
+    }
   }, [chainId]);
 
   return addresses;

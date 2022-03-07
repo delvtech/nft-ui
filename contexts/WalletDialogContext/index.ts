@@ -1,15 +1,15 @@
 import React from "react";
 
 interface WalletDialogContext {
-  modalOpen: boolean;
-  closeModal: () => void;
-  openModal: () => void;
+  isOpen: boolean;
+  close: () => void;
+  open: () => void;
 }
 
 const defaultContext: WalletDialogContext = {
-  modalOpen: false,
-  closeModal: () => {},
-  openModal: () => {},
+  isOpen: false,
+  close: () => {},
+  open: () => {},
 };
 
 const WalletDialogContext =
