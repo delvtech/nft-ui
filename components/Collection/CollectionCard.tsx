@@ -24,9 +24,9 @@ export const CollectionCard = () => {
           <Image src={tokenURL} height={200} width={200} />
         </ElfContainer>
 
-        <Spacer size="8px" />
+        <Spacer size="4px" />
 
-        <DefconZero size="8px">ELF {token}</DefconZero>
+        <DefconZero size="16px">ELF {token}</DefconZero>
       </Flex>
 
       <Flex direction="column" align="center" height="100%">
