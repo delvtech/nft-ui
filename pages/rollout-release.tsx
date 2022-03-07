@@ -6,9 +6,9 @@ const RolloutRelease: NextPage = () => (
     <h1>Rollout release</h1>
     <p>
       The elfiverse is a gift for the Element community to commemorate
-      the launch of the Element DAO.
+      the launch of the Element DAO. An amplification of the community
+      involvement in Element.
 
-      It's an amplification of the community's involvement in Element.
       The release schedule below was designed to enable a fair and
       transparent distribution that ensures accessibility of NFTs
       for <mark> all Element community members and prioritizes humans
