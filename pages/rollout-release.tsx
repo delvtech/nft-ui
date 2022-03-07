@@ -48,7 +48,7 @@ const RolloutRelease: NextPage = () => (
       After a release and mint release, you will be able to see
       your elf on the Elfiverse website immediately. You will
       need to connect your wallet at the top right and click
-      on the “My Collection" button to see your revealed elf.
+      on the My Collection button to see your revealed elf.
       Wallets and platforms like OpenSea typically take a while
       (sometimes a few hours, sometimes as long as days) to update
       the refreshed metadata. Each member of the High Elves Council
