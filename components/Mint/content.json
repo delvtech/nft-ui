@@ -2,16 +2,16 @@
   "stale": {
     "title": "Mint Yours today",
     "status": "",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into stale."
+    "description": "Welcome to the elfiverse. You’re currently eligible to mint an ELF as a member of the Element community in this release period. To mint your own unique ELF click the minting button below and start the process."
   },
   "pending": {
     "title": "Mint in progress",
     "status": "Mint loading...",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into pending."
+    "description": "Standby ELF. We’re currently working to mint your ELF and the minting process is currently in progress. Please do not refresh the page, or exit out of the window during this process."
   },
   "success": {
     "title": "ELF acquired",
     "status": "Congratulations on minting 🎉",
-    "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into succeeded."
+    "description": "Congratulations on Minting! You now hold a piece of the future of the elfiverse and hold an identity as a community member of the protocol."
   }
 }

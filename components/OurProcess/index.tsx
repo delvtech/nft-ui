@@ -9,27 +9,24 @@ export const OurProcess = () => {
       <h2>our process</h2>
       <ContentWrapper>
         <p>
-          This nascent form of Crypto Coven is a series of generative portraits
-          of WITCHES, forged in this corner we&apos;ve carved out of the flat
-          and open internet.
+        The launch of an elfiverse signifies our first series of generative
+        portraits of Element elves gifted to our community to commemorate
+        the launch of the Element DAO.
         </p>
         <p>
-          Each WITCH manifests virtually as an array of pixels (in lieu of flesh
-          and blood or sweat or paint), and each is unique, with a non-fungible
-          token (NFT) stored on the Ethereum mainnet that attests to that
-          uniqueness.
+          Each ELF manifests as an array of regenerative pixels and each is
+           unique, with a non-fungible token (NFT) stored on the Ethereum
+           mainnet that attests to that uniqueness.
         </p>
         <p>
-          While anyone may steal a WITCH&apos;S visage, if you hold a token, the
-          identity you form and the treasures you reap from this world will
-          travel with you to any web3 destination that may welcome a WITCH.
-          Strangeness begets strangeness, and in coming days you&apos;ll see
-          that number grow — we hope that you will grow it.
+        Each Element community member may hold a token, where the identity
+        they form for the protocol and in the community lies within and
+        that will welcome our elves.
         </p>
         <p>
-          For this initial coven, each WITCH falls into an archetype of power
-          and will be named, described, and articulated. May you take them into
-          the metaverse and roam.
+          For this initial elfiverse launch, each ELF falls into a faction,
+          with different powers, capabilities and traits. May you take them
+          into the elfiverse and float through with other community members. 
         </p>
       </ContentWrapper>
     </SectionContainer>

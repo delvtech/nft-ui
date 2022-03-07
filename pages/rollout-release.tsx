@@ -5,53 +5,56 @@ const RolloutRelease: NextPage = () => (
   <ContentPage title="Rollout Release">
     <h1>Rollout release</h1>
     <p>
-      This process was designed with three aims: make distribution fair and
-      transparent,<mark> ensure access for element community members,</mark> and
-      favor humans over bots.
+      The elfiverse is a gift for the Element community to commemorate
+      the launch of the Element DAO.
+
+      It's an amplification of the community's involvement in Element.
+      The release schedule below was designed to enable a fair and
+      transparent distribution that ensures accessibility of NFTs
+      for <mark> all Element community members and prioritizes humans
+      over the masses of bots.</mark>
+
+
     </p>
-    <h2>Community Pre-release</h2>
+    <h2>First Release</h2>
     <p>
-      1,000 elves will be available to mint for element community members
-      starting 5:35 p.m. ET on february 9 at <mark>completely free</mark>. Each
-      person can mint up to 4 elves. <br /> Active community members are defined
-      as anyone who has used element, the defi fixed rate protocol. <br /> These
-      members will automatically receive
-      <mark>their custom &quot;elf&quot;</mark>, which will grant them access to
-      a private Discord channel
-      <mark> (#custom-elfi)</mark> where they can get updates about future
-      community involvement in the elfiverse and future nft related content.
-      <br /> The community pre-release will be
-      <mark> open indefinitely until we reach the cap of 1,000.</mark>
+
+      An initial set of two thousand Elf(s) Will be available to mint starting
+      at <mark> 6:09 p.m. EST on March 15, 2022. </mark> It will be accessible
+      for active Element community members only and <mark> completely free. </mark>
+      Each active community member will be able to mint one Elfi. <br /> Active
+      community members are traders, LPs, and any community member that has used
+      Element, the fixed rate protocol. <br /> Active community members will
+      automatically receive their unique Elfi generated custom for
+      their minting. Each elf contains traits that hold different
+      rarities or formations stored in the Elfiverse library.
     </p>
-    <h2>Public release</h2>
+    <h2>Second release</h2>
     <p>
-      The remaining Elves (plus any remaining from the pre-release) will be
-      available to mint for the general public at 12 p.m. ET on february 10 at
-      <mark>completely free</mark>. Each person can mint up up to 4 elves, and
-      this per-wallet cap includes any elves minted in the community-release or
-      exchanged on secondary marketplaces.
+    A second release of two thousand Elfis provides a second opportunity to
+    participate, while opening up participation to a broader section of the
+    community. This includes active members of the Element discord community
+    as well members of the Ethereum ecosystem based on Github contributions.
+    For more info on how we chose this set of community members and how you
+    can participate, check out <mark> this link. </mark>
+
     </p>
-    <h2>Release details</h2>
+    <h2>Third Release</h2>
     <p>
-      After a release, you can always see your elf on our website immediately.
-      <br />
-      Connect your wallet at the top right and click on the button to go to
-      &quot;Your Wallet,&quot; where you&apos;ll be able to see your revealed
-      elf. Wallets and platforms like OpenSea typically take a while (sometimes
-      a few hours, sometimes as long as days) to update to the refreshed
-      metadata. On your elf&apos;s OpenSea page, you can click a &quot;Refresh
-      metadata&quot; button at the top right to request that OpenSea refresh the
-      metadata more quickly. <br />
-      Rarities will be uncovered across drops to ensure the rare elves are well
-      distributed among the community.
+      Details of the final release are to be announced.
     </p>
-    <h2>Gifts</h2>
+    <h2>Release and Minting Details</h2>
     <p>
-      Each of our HIGH elves Council (the core team) and army (contributors)
-      will receive a custom, regenerative-designed elf. <br /> Friends of
-      elfiverse with significant followings may receive a elfi. <br /> Community
-      members who participate in the element governance system may be selected
-      to receive a elfi.
+      After a release and mint release, you will be able to see
+      your elf on the Elfiverse website immediately. You will
+      need to connect your wallet at the top right and click
+      on the “My Collection" button to see your revealed elf.
+      Wallets and platforms like OpenSea typically take a while
+      (sometimes a few hours, sometimes as long as days) to update
+      the refreshed metadata. Each member of the High Elves Council
+      (the core team) and army (contributors) may also receive a custom,
+      regenerative-designed elf.
+
     </p>
   </ContentPage>
 );
