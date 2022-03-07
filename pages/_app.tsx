@@ -4,7 +4,6 @@ import { Footer } from "components/Layout/Footer";
 import { Header } from "components/Layout/Header";
 import { Transition } from "components/Layout/Transition";
 import { WalletNotifier } from "components/Wallet/WalletNotifier";
-import { SwitchNetworkDialogProvider } from "contexts/SwitchNetworkDialog/provider";
 import { WalletDialogProvider } from "contexts/WalletDialogContext/provider";
 import { DefaultSeo } from "next-seo";
 import SEO from "next-seo.config";
@@ -47,15 +46,13 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
         <QueryClientProvider client={queryClient}>
           <WalletDialogProvider>
-            <SwitchNetworkDialogProvider>
-              <Header />
-              <Toaster />
-              <WalletNotifier>
-                <Transition location={router.pathname}>
-                  <Component {...pageProps} />
-                </Transition>
-              </WalletNotifier>
-            </SwitchNetworkDialogProvider>
+            <Header />
+            <Toaster />
+            <WalletNotifier>
+              <Transition location={router.pathname}>
+                <Component {...pageProps} />
+              </Transition>
+            </WalletNotifier>
           </WalletDialogProvider>
         </QueryClientProvider>
       </Web3ReactProvider>
