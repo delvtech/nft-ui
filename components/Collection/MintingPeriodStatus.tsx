@@ -2,6 +2,7 @@ import { Spacer } from "common/Spacer";
 import { devices } from "helpers/devices";
 import styled from "styled-components";
 
+// @cashd: mocking this data for now
 export const MintingPeriodStatus = () => (
   <MintingPeriodStatusContainer>
     <h1>501 Elves</h1>

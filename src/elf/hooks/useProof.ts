@@ -20,13 +20,13 @@ const getProofURI = (address: string, chainId?: number) => {
   return `/proofs/${address}.json`;
 };
 
-export const useProof = (address?: string | undefined | null) => {
-  const { chainId, account } = useWeb3();
+export const useProof = (address: string | undefined | null) => {
+  const { chainId } = useWeb3();
   return useQuery<ProofData | undefined>(
     ["nft-proof", address],
     async () => {
       const { data } = await axios.get<ProofDataResponse>(
-        getProofURI((address ?? account) as string, chainId),
+        getProofURI(address as string, chainId),
       );
 
       return data.pop();
