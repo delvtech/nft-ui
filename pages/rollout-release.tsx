@@ -19,7 +19,7 @@ const RolloutRelease: NextPage = () => (
     <h2>First Release</h2>
     <p>
 
-      An initial set of two thousand Elf(s) Will be available to mint starting
+      An initial set of two thousand ELFs will be available to mint starting
       at <mark> 6:09 p.m. EST on March 15, 2022. </mark> It will be accessible
       for active Element community members only and <mark> completely free. </mark>
       Each active community member will be able to mint one Elfi. <br /> Active
@@ -50,10 +50,7 @@ const RolloutRelease: NextPage = () => (
       need to connect your wallet at the top right and click
       on the My Collection button to see your revealed elf.
       Wallets and platforms like OpenSea typically take a while
-      (sometimes a few hours, sometimes as long as days) to update
-      the refreshed metadata. Each member of the High Elves Council
-      (the core team) and army (contributors) may also receive a custom,
-      regenerative-designed elf.
+      to update the refreshed metadata. 
 
     </p>
   </ContentPage>
