@@ -8,12 +8,12 @@ import { devices } from "helpers/devices";
 import styled from "styled-components";
 
 export const CountdownDate = styled.div`
-  font-family: "Rubik Medium";
+  font-family: "Rubik";
   font-weight: 600;
   text-transform: uppercase;
   font-size: 54px;
   margin: 30px 0;
-  text-shadow: 0px 0px 20px rgba(20, 223, 186, 0.8);
+  text-shadow: 0px 0px 10px rgba(20, 223, 186, 0.8);
   letter-spacing: 6px;
 
   @media ${devices.tabletL} {
@@ -72,25 +72,25 @@ export const ContentWrapper = styled.div`
   padding: 100px 65px 90px 65px;
   background-color: #09282d;
   border: 5px solid ${COLOR_WHITE_LIGHT};
-  <<<<<<< HEAD =======>>>>>>>main ${Flex} {
+
+  ${Flex} {
     border: 1px solid ${COLOR_WHITE};
     padding: 10px;
   }
-  <<<<<<< HEAD h3 {
+
+  h3 {
     text-transform: uppercase;
+    font-family: Defcon Zero;
   }
 
   @media ${devices.tabletM} {
     padding: 100px 35px 90px 35px;
   }
 
-  ======= h3 {
-    text-transform: uppercase;
-  }
   @media ${devices.tabletM} {
     padding: 100px 35px 90px 35px;
   }
-  >>>>>>>main @media ${devices.mobileL} {
+  @media ${devices.mobileL} {
     padding: 100px 1rem 90px 1rem;
   }
 `;
