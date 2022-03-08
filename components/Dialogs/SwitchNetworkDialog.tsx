@@ -22,6 +22,8 @@ export const SwitchNetworkDialog = ({
     await deactivate();
   }, [deactivate]);
 
+  const chainName = ChainNames[getTargetChain()];
+
   const switchToNetwork = async () => {
     if (!library?.provider?.request) {
       return;
@@ -48,7 +50,7 @@ export const SwitchNetworkDialog = ({
   return (
     <Dialog isOpen={isOpen} onClose={() => onClose?.()}>
       <Flex align="center" direction="column">
-        <DialogTitle>Switch to {ChainNames[getTargetChain()]}</DialogTitle>
+        <DialogTitle>Switch to {chainName}</DialogTitle>
         <Button sidePadding="24px" onClick={switchToNetwork}>
           Switch network
         </Button>
@@ -69,9 +71,9 @@ export const SwitchNetworkDialog = ({
         )}
 
         <DialogBodyText>
-          Note: Elfiverse is only supported on Ethereum mainnet. Please switch
-          to Ethereum mainnet by clicking on the button or changing networks in
-          your wallet directly.
+          Note: Elfiverse is only supported on {chainName}. Please switch to
+          {chainName} by clicking on the button or changing networks in your
+          wallet directly.
         </DialogBodyText>
       </Flex>
     </Dialog>
