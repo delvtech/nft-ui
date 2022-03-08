@@ -14,7 +14,7 @@ import {
 import Image from "next/image";
 import { useRouter } from "next/router";
 import MintGIF from "public/assets/gif/hero_image.gif";
-import LoadingMintImage from "public/assets/svg/minting_loading.svg";
+import LoadingMintGIF from "public/assets/gif/minting_loading.gif";
 import { useMemo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import ReactTextTransition, { presets } from "react-text-transition";
@@ -76,13 +76,20 @@ export const Mint = () => {
 
         {isMinting ? (
           <Image
-            src={LoadingMintImage}
+            src={LoadingMintGIF}
             alt="Elfiverse"
-            width="600px"
-            height="800px"
+            width="720px"
+            height="720px"
+            quality={100}
           />
         ) : (
-          <Image src={MintGIF} alt="Elfiverse" width="640px" height="400px" />
+          <Image
+            src={MintGIF}
+            alt="Elfiverse"
+            width="640px"
+            height="400px"
+            quality={100}
+          />
         )}
 
         {!isMinting ? (

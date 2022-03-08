@@ -1,15 +1,19 @@
-import Image from "next/image";
-import styled from "styled-components";
 import { SectionContainer } from "common/Container";
-
+import Image from "next/image";
 import Thumbnail from "public/assets/png/Thumbnail.png";
+import styled from "styled-components";
 
 export const Regenerated = () => {
   return (
     <SectionContainer>
       <h2>regenerated uniquely</h2>
       <ImageContainer>
-        <Image src={Thumbnail} layout="fill" alt="regenerated uniquely" />
+        <Image
+          src={Thumbnail}
+          layout="fill"
+          alt="regenerated uniquely"
+          quality={100}
+        />
       </ImageContainer>
     </SectionContainer>
   );
