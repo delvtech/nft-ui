@@ -1,5 +1,6 @@
 import "@fontsource/rubik";
 import { Web3ReactProvider } from "@web3-react/core";
+import { SwitchNetworkDialog } from "components/Dialogs/SwitchNetworkDialog";
 import { Footer } from "components/Layout/Footer";
 import { Header } from "components/Layout/Header";
 import { Transition } from "components/Layout/Transition";
@@ -45,6 +46,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
       <DefaultSeo {...SEO} />
       <Web3ReactProvider getLibrary={getEthereumProviderLibrary}>
         <QueryClientProvider client={queryClient}>
+          <SwitchNetworkDialog />
           <WalletDialogProvider>
             <Header />
             <Toaster />

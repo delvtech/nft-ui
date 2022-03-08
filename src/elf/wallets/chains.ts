@@ -17,3 +17,22 @@ export const DEFAULT_CHAIN_IDS: ChainId[] = [
   ChainId.GOERLI,
   ChainId.LOCAL,
 ];
+
+const targetChain = !!process.env.NEXT_PUBLIC_TARGET_CHAIN
+  ? +(process.env.NEXT_PUBLIC_TARGET_CHAIN as string)
+  : undefined;
+
+// Util function to guard possible env misconfiguration
+export const getTargetChain = (): ChainId => {
+  if (targetChain === ChainId.MAINNET) {
+    return ChainId.MAINNET;
+  }
+
+  if (targetChain === ChainId.GOERLI) {
+    return ChainId.GOERLI;
+  }
+  // defaulting to local
+  return ChainId.LOCAL;
+};
+
+export const chainName = ChainNames[getTargetChain()];
