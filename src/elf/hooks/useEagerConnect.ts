@@ -10,7 +10,6 @@ export function useEagerConnect(): void {
   useEffect(() => {
     injectedConnector.isAuthorized().then((isAuthorized: boolean) => {
       if (isAuthorized) {
-        console.log("here");
         activate(injectedConnector, undefined, true).catch(() => {
           setTried(true);
         });
