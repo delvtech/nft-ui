@@ -6,7 +6,7 @@ import styled from "styled-components";
 export const MintContainer = styled.div`
   align-items: center;
   display: grid;
-  gap: 54px;
+  gap: 40px;
   max-width: 44rem;
   text-align: center;
   width: 100%;
