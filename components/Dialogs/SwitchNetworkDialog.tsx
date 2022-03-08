@@ -1,28 +1,41 @@
 import { Button } from "common/Button/styles";
 import { Flex } from "common/Container/styles";
-import { Dialog, DialogProps } from "common/Dialog";
+import { Dialog } from "common/Dialog";
 import { DialogBodyText, DialogTitle } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
+import { NEXT_ENV } from "elf/hooks/useProvider";
 import useWeb3 from "elf/useWeb3";
-import { ChainNames, getTargetChain } from "elf/wallets/chains";
+import { chainName, getTargetChain } from "elf/wallets/chains";
 import { BigNumber } from "ethers";
 import { hexStripZeros } from "ethers/lib/utils";
 import { createToastError } from "helpers/createToast";
-import { WithChildren } from "helpers/types";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
-export const SwitchNetworkDialog = ({
-  isOpen,
-  onClose,
-}: WithChildren<DialogProps>) => {
-  const { active, deactivate, library } = useWeb3();
+export const SwitchNetworkDialog = () => {
+  const { active, deactivate, library, chainId } = useWeb3();
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openDialog = useCallback(() => setIsOpen(true), [setIsOpen]);
+  const closeDialog = useCallback(() => setIsOpen(false), [setIsOpen]);
+
+  useEffect(() => {
+    if (
+      !!chainId &&
+      getTargetChain() !== chainId &&
+      // Overrides this check if we are in development mode
+      NEXT_ENV !== "development"
+    ) {
+      openDialog();
+    } else {
+      closeDialog();
+    }
+  }, [chainId]);
 
   const deactivateActiveConnector = useCallback(async () => {
     createToastError("Wallet has been disconnected.");
     await deactivate();
   }, [deactivate]);
-
-  const chainName = ChainNames[getTargetChain()];
 
   const switchToNetwork = async () => {
     if (!library?.provider?.request) {
@@ -38,9 +51,9 @@ export const SwitchNetworkDialog = ({
       });
     } catch (error: any) {
       // 4902 is the error code for attempting to switch to an unrecognized chainId
-      if (error.code === 4902) {
+      if (error.code && error.code === 4902) {
         // This should never happen
-        createToastError("Network is not added to wallet.");
+        createToastError("Network not available in wallet provider.");
       } else {
         throw error;
       }
@@ -48,7 +61,7 @@ export const SwitchNetworkDialog = ({
   };
 
   return (
-    <Dialog isOpen={isOpen} onClose={() => onClose?.()}>
+    <Dialog isOpen={isOpen} onClose={() => closeDialog()}>
       <Flex align="center" direction="column">
         <DialogTitle>Switch to {chainName}</DialogTitle>
         <Button sidePadding="24px" onClick={switchToNetwork}>
@@ -62,7 +75,7 @@ export const SwitchNetworkDialog = ({
               sidePadding="24px"
               onClick={async () => {
                 await deactivateActiveConnector();
-                onClose?.();
+                closeDialog();
               }}
             >
               Close connection

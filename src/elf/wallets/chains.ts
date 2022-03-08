@@ -34,3 +34,5 @@ export const getTargetChain = (): ChainId => {
   // defaulting to local
   return ChainId.LOCAL;
 };
+
+export const chainName = ChainNames[getTargetChain()];
