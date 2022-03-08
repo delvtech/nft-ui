@@ -20,6 +20,7 @@ export const MintButton = ({
 }: MintButtonProps) => {
   const { active } = useWeb3();
   const { push } = useRouter();
+
   if (active) {
     if (hasMinted) {
       return (

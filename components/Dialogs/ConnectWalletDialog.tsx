@@ -47,11 +47,11 @@ export const ConnectWalletDialog = ({
   isOpen,
   onClose,
 }: WithChildren<DialogProps>) => {
-  const { active, deactivate, chainId, library } = useWeb3();
+  const { active, deactivate } = useWeb3();
 
   const deactivateActiveConnector = useCallback(async () => {
-    createToastError("Wallet has been disconnected.");
     await deactivate();
+    createToastError("Wallet has been disconnected.");
   }, [deactivate]);
 
   return (

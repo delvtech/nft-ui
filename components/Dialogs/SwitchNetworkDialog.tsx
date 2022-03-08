@@ -4,6 +4,7 @@ import { Dialog, DialogProps } from "common/Dialog";
 import { DialogBodyText, DialogTitle } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
 import useWeb3 from "elf/useWeb3";
+import { ChainNames, getTargetChain } from "elf/wallets/chains";
 import { BigNumber } from "ethers";
 import { hexStripZeros } from "ethers/lib/utils";
 import { createToastError } from "helpers/createToast";
@@ -25,7 +26,9 @@ export const SwitchNetworkDialog = ({
     if (!library?.provider?.request) {
       return;
     }
-    const formattedChainId = hexStripZeros(BigNumber.from(1).toHexString());
+    const formattedChainId = hexStripZeros(
+      BigNumber.from(getTargetChain()).toHexString(),
+    );
     try {
       await library.provider.request({
         method: "wallet_switchEthereumChain",
@@ -34,30 +37,8 @@ export const SwitchNetworkDialog = ({
     } catch (error: any) {
       // 4902 is the error code for attempting to switch to an unrecognized chainId
       if (error.code === 4902) {
-        // const info = CHAIN_INFO[chainId];
-        // await library.provider.request({
-        //   method: "wallet_addEthereumChain",
-        //   params: [
-        //     {
-        //       chainId: formattedChainId,
-        //       chainName: info.label,
-        //       rpcUrls: getRpcUrls(chainId),
-        //       nativeCurrency: info.nativeCurrency,
-        //       blockExplorerUrls: [info.explorer],
-        //     },
-        //   ],
-        // });
-        // // metamask (only known implementer) automatically switches after a network is added
-        // // the second call is done here because that behavior is not a part of the spec and cannot be relied upon in the future
-        // // metamask's behavior when switching to the current network is just to return null (a no-op)
-        // try {
-        //   await library.provider.request({
-        //     method: "wallet_switchEthereumChain",
-        //     params: [{ chainId: formattedChainId }],
-        //   });
-        // } catch (error) {
-        //   console.debug("Added network but could not switch chains", error);
-        // }
+        // This should never happen
+        createToastError("Network is not added to wallet.");
       } else {
         throw error;
       }
@@ -67,7 +48,7 @@ export const SwitchNetworkDialog = ({
   return (
     <Dialog isOpen={isOpen} onClose={() => onClose?.()}>
       <Flex align="center" direction="column">
-        <DialogTitle>Switch to Ethereum</DialogTitle>
+        <DialogTitle>Switch to {ChainNames[getTargetChain()]}</DialogTitle>
         <Button sidePadding="24px" onClick={switchToNetwork}>
           Switch network
         </Button>
@@ -88,8 +69,9 @@ export const SwitchNetworkDialog = ({
         )}
 
         <DialogBodyText>
-          Note: Some connectors can only disconnect wallets from their app. Some
-          connectors may also cause a page refresh.
+          Note: Elfiverse is only supported on Ethereum mainnet. Please switch
+          to Ethereum mainnet by clicking on the button or changing networks in
+          your wallet directly.
         </DialogBodyText>
       </Flex>
     </Dialog>
