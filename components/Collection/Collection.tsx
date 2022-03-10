@@ -29,7 +29,7 @@ export const Collection = () => {
     } else {
       close();
     }
-  }, [active, open]);
+  }, [active, open, close]);
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Collection">
