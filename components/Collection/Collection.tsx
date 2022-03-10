@@ -18,7 +18,6 @@ export const Collection = () => {
   const { active, account } = useWeb3();
   const { open, close } = useWalletDialog();
   const { push } = useRouter();
-
   const { data: mintDate } = useMintDate(account);
 
   useEffect(() => {
