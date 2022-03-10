@@ -20,7 +20,7 @@ export const Collection = () => {
   const { open, close } = useWalletDialog();
   const { push } = useRouter();
   const tokenIds = useTokenIds(account);
-  const firstTokenId = tokenIds.at(0);
+  const firstTokenId = tokenIds?.at(0);
   const { data: mintDate } = useMintDate(firstTokenId);
 
   useEffect(() => {
