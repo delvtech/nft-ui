@@ -1,11 +1,16 @@
 import { useSmartContractEvents } from "@elementfi/react-query-typechain";
 import useWeb3 from "elf/useWeb3";
-import { ethers } from "ethers";
+import { BigNumber } from "ethers";
+import { NullableAddress } from "src/types";
 import { ElfNFT__factory } from "typechain-types";
 import { useAddresses } from "./useAddress";
 import { useProvider } from "./useProvider";
 
-export function useMintEvents(ownerAddress: string | undefined | null) {
+export function useMintEvents(
+  from?: NullableAddress,
+  to?: NullableAddress,
+  tokenId?: BigNumber,
+) {
   const { chainId } = useWeb3();
 
   const address = useAddresses();
@@ -14,7 +19,7 @@ export function useMintEvents(ownerAddress: string | undefined | null) {
   const NFT = ElfNFT__factory.connect(address.tokenContract, provider);
 
   return useSmartContractEvents(NFT, "Transfer", {
-    callArgs: [ethers.constants.AddressZero, ownerAddress],
-    enabled: !!ownerAddress,
+    callArgs: [from, to, tokenId],
+    enabled: !!from || !!to || !!tokenId,
   });
 }
