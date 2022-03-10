@@ -4,6 +4,7 @@ import { ContentPage } from "components/ContentPage";
 import DefconZero from "components/Text/DefconZero";
 import { useHasMinted } from "elf/hooks/useHasMinted";
 import { useMintDate } from "elf/hooks/useMintDate";
+import { useTokenIds } from "elf/hooks/useTokenIds";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import useWeb3 from "elf/useWeb3";
 import { useRouter } from "next/router";
@@ -18,7 +19,9 @@ export const Collection = () => {
   const { active, account } = useWeb3();
   const { open, close } = useWalletDialog();
   const { push } = useRouter();
-  const { data: mintDate } = useMintDate(account);
+  const tokenIds = useTokenIds(account);
+  const firstTokenId = tokenIds.at(0);
+  const { data: mintDate } = useMintDate(firstTokenId);
 
   useEffect(() => {
     if (!active) {
@@ -40,7 +43,7 @@ export const Collection = () => {
         <Fade>
           {hasMinted ? (
             <>
-              <CollectionCard />
+              <CollectionCard tokenId={firstTokenId} />
               {mintDate && (
                 <>
                   <Spacer />
