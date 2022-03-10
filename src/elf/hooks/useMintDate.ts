@@ -1,12 +1,13 @@
 import { BigNumber, ethers } from "ethers";
 import moment from "moment";
 import { QueryObserverResult, useQuery } from "react-query";
-import { useMintEvents } from "./useMintEvents";
+import { useTransferEvents } from "./useTransferEvents";
 
 export function useMintDate(
   tokenId?: BigNumber,
 ): QueryObserverResult<string | undefined> {
-  const { data: events } = useMintEvents(
+  // Query for mint events aka from zero address
+  const { data: events } = useTransferEvents(
     ethers.constants.AddressZero,
     undefined,
     tokenId,

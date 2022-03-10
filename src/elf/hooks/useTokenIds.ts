@@ -1,12 +1,12 @@
 import { BigNumber, Event } from "ethers";
 import { Set } from "immutable";
-import { useMintEvents } from "./useMintEvents";
+import { useTransferEvents } from "./useTransferEvents";
 
 type TransferEventArgs = [string, string, BigNumber];
 
 export function useTokenIds(address: string | null | undefined) {
-  const { data: toEvents } = useMintEvents(undefined, address);
-  const { data: fromEvents } = useMintEvents(address, undefined);
+  const { data: toEvents } = useTransferEvents(undefined, address);
+  const { data: fromEvents } = useTransferEvents(address, undefined);
 
   if (toEvents && fromEvents) {
     const tokenIds = reconcileTransferEvents(address, toEvents, fromEvents);

@@ -6,7 +6,7 @@ import { ElfNFT__factory } from "typechain-types";
 import { useAddresses } from "./useAddress";
 import { useProvider } from "./useProvider";
 
-export function useMintEvents(
+export function useTransferEvents(
   from?: NullableAddress,
   to?: NullableAddress,
   tokenId?: BigNumber,
