@@ -1,5 +1,4 @@
 import { BigNumber, Event } from "ethers";
-import { Set } from "immutable";
 import { useTransferEvents } from "./useTransferEvents";
 
 type TransferEventArgs = [string, string, BigNumber];
@@ -10,7 +9,7 @@ export function useTokenIds(address: string | null | undefined) {
 
   if (toEvents && fromEvents) {
     const tokenIds = reconcileTransferEvents(address, toEvents, fromEvents);
-    return tokenIds.toJS() as Array<BigNumber>;
+    return Array.from(tokenIds);
   }
 
   return [];
@@ -23,29 +22,24 @@ function reconcileTransferEvents(
   fromEvents: Event[],
 ): Set<BigNumber> {
   const sortedEvents = sortEventsByBlock([...toEvents, ...fromEvents]);
+  const tokenIds = new Set<BigNumber>([]);
 
-  const tokenIds = sortedEvents.reduce((prev: Set<BigNumber>, curr: Event) => {
-    const eventArgs = curr.args as TransferEventArgs;
+  sortedEvents.forEach((event) => {
+    const eventArgs = event.args as TransferEventArgs;
     if (eventArgs) {
       const from = eventArgs[0];
       const to = eventArgs[1];
       const tokenId = eventArgs[2];
 
-      // Skip edge case: transfer to self
-      if (to === from) {
-        return prev;
-      }
-
       if (to === address) {
-        return prev.add(tokenId);
+        tokenIds.add(tokenId);
       }
 
       if (from === address) {
-        return prev.delete(tokenId);
+        tokenIds.delete(tokenId);
       }
     }
-    return prev;
-  }, Set());
+  });
 
   return tokenIds;
 }
