@@ -1,12 +1,11 @@
-import styled from "styled-components";
 import {
   COLORS,
   COLOR_GREEN_DARKEST,
   COLOR_GREEN_LIGHT,
   COLOR_WHITE_LIGHT,
 } from "helpers/colorPalette";
-import { StringProps } from "helpers/types";
 import { devices } from "helpers/devices";
+import styled from "styled-components";
 
 export const ButtonsContainer = styled.div`
   margin: 2rem auto;
@@ -71,16 +70,16 @@ export const PrimaryButton = styled.button<PrimaryButtonContainerProps>`
     background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
     background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
     background-repeat: no-repeat, no-repeat;
-    transition: transform 0.3s ease-in-out, background-position 0.3s ease-in-out,
+    transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out,
       background-size 0.3s ease-in-out;
     transform: scaleX(0) rotate(0deg);
-    transition-delay: 0.6s, 0.3s, 0s;
+    transition-delay: 0.4s, 0.2s, 0s;
   }
   &:hover:before {
     background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
     background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
     transform: scaleX(1) rotate(0deg);
-    transition-delay: 0s, 0.3s, 0.6s;
+    transition-delay: 0s, 0.2s, 0.4s;
   }
   @media ${devices.mobileL} {
     padding: 17px 50px;
