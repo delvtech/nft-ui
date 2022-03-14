@@ -30,7 +30,7 @@ export const SwitchNetworkDialog = () => {
     } else {
       closeDialog();
     }
-  }, [chainId]);
+  }, [chainId, openDialog, closeDialog]);
 
   const deactivateActiveConnector = useCallback(async () => {
     createToastError("Wallet has been disconnected.");

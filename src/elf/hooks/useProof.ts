@@ -2,7 +2,7 @@ import axios from "axios";
 import useWeb3 from "elf/useWeb3";
 import { ChainId } from "elf/wallets/chains";
 import { useQuery } from "react-query";
-import { ProofData, ProofDataResponse } from "src/types";
+import { NullableAddress, ProofData, ProofDataResponse } from "src/types";
 
 const S3_BUCKET_URI = "https://elementfi.s3.us-east-2.amazonaws.com/nft";
 
@@ -20,7 +20,7 @@ const getProofURI = (address: string, chainId?: number) => {
   return `/proofs/${address}.json`;
 };
 
-export const useProof = (address: string | undefined | null) => {
+export const useProof = (address: NullableAddress) => {
   const { chainId } = useWeb3();
   return useQuery<ProofData | undefined>(
     ["nft-proof", address],

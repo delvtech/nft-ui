@@ -1,21 +1,20 @@
 import { Flex } from "common/Container/styles";
 import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
-import { useProof } from "elf/hooks/useProof";
-import useWeb3 from "elf/useWeb3";
+import { BigNumber } from "ethers";
 import Image from "next/image";
 import React from "react";
 import { getTokenAssetURL } from "src/urls";
-import { proofToTokenId } from "src/util/proofToTokenId";
 import styled from "styled-components";
 import { MintingPeriodStatus } from "./MintingPeriodStatus";
 import { CollectionCardContainer } from "./styles";
 
-export const CollectionCard = () => {
-  const { account } = useWeb3();
-  const { data: proofData } = useProof(account);
-  const token = proofToTokenId(proofData);
-  const tokenURL = getTokenAssetURL(token);
+interface CollectionCardProps {
+  tokenId?: BigNumber;
+}
+
+export const CollectionCard = ({ tokenId }: CollectionCardProps) => {
+  const tokenURL = getTokenAssetURL(tokenId);
 
   return (
     <CollectionCardContainer>
@@ -32,7 +31,7 @@ export const CollectionCard = () => {
 
         <Spacer size="4px" />
 
-        <DefconZero size="16px">ELF {token}</DefconZero>
+        <DefconZero size="16px">ELF {tokenId?.toString()}</DefconZero>
       </Flex>
 
       <Flex direction="column" align="center" height="100%">

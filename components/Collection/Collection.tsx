@@ -3,6 +3,8 @@ import { Spacer } from "common/Spacer";
 import { ContentPage } from "components/ContentPage";
 import DefconZero from "components/Text/DefconZero";
 import { useHasMinted } from "elf/hooks/useHasMinted";
+import { useMintDate } from "elf/hooks/useMintDate";
+import { useTokenIds } from "elf/hooks/useTokenIds";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import useWeb3 from "elf/useWeb3";
 import { useRouter } from "next/router";
@@ -14,13 +16,20 @@ import { CollectionContainer } from "./styles";
 
 export const Collection = () => {
   const hasMinted = useHasMinted();
-  const { active } = useWeb3();
-  const { open } = useWalletDialog();
+  const { active, account } = useWeb3();
+  const { open, close } = useWalletDialog();
   const { push } = useRouter();
+  const tokenIds = useTokenIds(account);
+  const firstTokenId = tokenIds[0];
+  const { data: mintDate } = useMintDate(firstTokenId);
 
   useEffect(() => {
-    !active && open();
-  }, [active, open]);
+    if (!active) {
+      open();
+    } else {
+      close();
+    }
+  }, [active, open, close]);
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Collection">
@@ -33,7 +42,17 @@ export const Collection = () => {
         </h1>
         <Fade>
           {hasMinted ? (
-            <CollectionCard />
+            <>
+              <CollectionCard tokenId={firstTokenId} />
+              {mintDate && (
+                <>
+                  <Spacer />
+                  <DefconZero size="18px" color="greenLight">
+                    Minted ELF on {mintDate} 🎉
+                  </DefconZero>
+                </>
+              )}
+            </>
           ) : (
             <>
               <DefconZero color="greenLight">
