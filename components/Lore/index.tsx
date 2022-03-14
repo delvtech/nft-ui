@@ -18,7 +18,7 @@ export const Lore = () => {
 
   return (
     <SectionContainer padding="4rem 0">
-      <LoreTitle>The lore1</LoreTitle>
+      <LoreTitle>The lore</LoreTitle>
       <FlexRow margin="-60px 0px 40px 0px" justify="center">
         <LoreButton onClick={() => setIsMeme(false)}>
           <DefconZero
