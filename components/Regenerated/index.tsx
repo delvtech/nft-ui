@@ -1,6 +1,6 @@
 import { SectionContainer } from "common/Container";
 import Image from "next/image";
-import Thumbnail from "public/assets/png/Thumbnail.png";
+import ElfGrid from "public/assets/png/Regeneration/ElfGrid.png";
 import styled from "styled-components";
 
 export const Regenerated = () => {
@@ -8,12 +8,7 @@ export const Regenerated = () => {
     <SectionContainer>
       <h2>regenerated uniquely</h2>
       <ImageContainer>
-        <Image
-          src={Thumbnail}
-          layout="fill"
-          alt="regenerated uniquely"
-          quality={100}
-        />
+        <Image src={ElfGrid} alt="regenerated uniquely" quality={100} />
       </ImageContainer>
     </SectionContainer>
   );
@@ -22,6 +17,5 @@ export const Regenerated = () => {
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  height: calc(100vw / 1.7);
-  max-height: 725px;
+  height: calc(100vw / 1.4);
 `;
