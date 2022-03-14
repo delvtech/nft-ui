@@ -1,7 +1,7 @@
-import styled from "styled-components";
 import { SectionContainer } from "common/Container";
 import { COLOR_WHITE_LIGHT } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
+import styled from "styled-components";
 
 export const OurProcess = () => {
   return (

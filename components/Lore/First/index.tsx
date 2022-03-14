@@ -3,7 +3,7 @@ import Image from "next/image";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 
-export const First = () => (
+export const First = ({ isMeme }: { isMeme: boolean }) => (
   <LoreContainer>
     <div className="flex-div">
       <h2>

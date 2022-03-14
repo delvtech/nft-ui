@@ -1,6 +1,6 @@
 import { LoreContainer, VideoContainer } from "components/Lore/styles";
 
-export const Second = () => (
+export const Second = ({ isMeme }: { isMeme: boolean }) => (
   <LoreContainer align="center">
     <div className="flex-div">
       <VideoContainer>

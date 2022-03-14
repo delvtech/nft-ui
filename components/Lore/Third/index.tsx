@@ -1,7 +1,7 @@
 import { LoreContainer } from "components/Lore/styles";
 import Image from "next/image";
 
-export const Third = () => (
+export const Third = ({ isMeme }: { isMeme: boolean }) => (
   <LoreContainer>
     <div className="flex-div">
       <h2>Hearing of this prosperous harvest outside</h2>
