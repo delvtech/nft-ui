@@ -25,6 +25,24 @@ export const Flex = styled.div<{
   height: ${({ height }) => height};
 `;
 
+export const FlexRow = styled.div<{
+  align?: string;
+  justify?: string;
+  direction?: string;
+  width?: string;
+  height?: string;
+  margin?: string;
+}>`
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  text-align: ${({ align }) => align};
+  justify-content: ${({ justify }) => (justify ? justify : "space-between")};
+  width: ${({ width }) => width};
+  height: ${({ height }) => height};
+  margin: ${({ margin }) => margin};
+`;
+
 export const HeaderWrapper = styled.div`
   position: relative;
   width: auto;
