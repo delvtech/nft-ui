@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 export const Regenerated = () => {
   return (
-    <SectionContainer>
+    <SectionContainer padding="0">
       <h2>regenerated uniquely</h2>
       <ImageContainer>
         <Image src={ElfGrid} alt="regenerated uniquely" quality={100} />
@@ -17,5 +17,4 @@ export const Regenerated = () => {
 const ImageContainer = styled.div`
   position: relative;
   width: 100%;
-  height: calc(100vw / 1.4);
 `;
