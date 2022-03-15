@@ -8,7 +8,7 @@ export const Regenerated = () => {
     <SectionContainer padding="0">
       <h2>regenerated uniquely</h2>
       <ImageContainer>
-        <Image src={ElfGrid} alt="regenerated uniquely" quality={100} />
+        <Image src={ElfGrid} alt="regenerated uniquely" />
       </ImageContainer>
     </SectionContainer>
   );
