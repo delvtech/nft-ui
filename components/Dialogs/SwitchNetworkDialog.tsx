@@ -3,7 +3,7 @@ import { Flex } from "common/Container/styles";
 import { Dialog } from "common/Dialog";
 import { DialogBodyText, DialogTitle } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
-import { NEXT_ENV } from "elf/hooks/useProvider";
+import { NEXT_ENV } from "elf/providers";
 import useWeb3 from "elf/useWeb3";
 import { chainName, getTargetChain } from "elf/wallets/chains";
 import { BigNumber } from "ethers";
