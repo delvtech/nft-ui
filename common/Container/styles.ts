@@ -15,6 +15,7 @@ export const Flex = styled.div<{
   direction?: string;
   width?: string;
   height?: string;
+  margin?: string;
 }>`
   display: flex;
   align-items: center;
@@ -23,6 +24,7 @@ export const Flex = styled.div<{
   flex-direction: ${({ direction }) => direction};
   width: ${({ width }) => width};
   height: ${({ height }) => height};
+  margin: ${({ margin }) => margin};
 `;
 
 export const HeaderWrapper = styled.div`

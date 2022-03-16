@@ -23,7 +23,7 @@ export const StyledAnchor = styled.div<StringProps>`
     position: relative;
     cursor: pointer;
     text-decoration: none;
-    transition: all 0.5s;
+    transition: all 250ms;
     max-width: max-content;
     font-family: "Defcon Zero";
 
@@ -35,7 +35,7 @@ export const StyledAnchor = styled.div<StringProps>`
       bottom: -3px;
       height: 3px;
       background-color: ${COLOR_YELLOW};
-      transition: transform 500ms ease-in-out;
+      transition: transform 250ms ease-in-out;
       transform-origin: left;
       transform: scaleX(0);
     }

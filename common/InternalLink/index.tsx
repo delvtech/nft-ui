@@ -1,9 +1,9 @@
+import { COLOR_WHITE, COLOR_YELLOW } from "helpers/colorPalette";
+import { devices } from "helpers/devices";
+import { LinkProps, StringProps } from "helpers/types";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styled from "styled-components";
-import { LinkProps, StringProps } from "helpers/types";
-import { COLOR_WHITE, COLOR_YELLOW } from "helpers/colorPalette";
-import { devices } from "helpers/devices";
 
 export const InternalLink = ({ href, children, onClick }: LinkProps) => {
   const router = useRouter();
@@ -25,7 +25,7 @@ export const StyledLink = styled.div<StringProps>`
     position: relative;
     cursor: pointer;
     text-decoration: none;
-    transition: color 0.5s;
+    transition: color 250ms;
     max-width: max-content;
     color: ${({ isActive }) => (isActive ? COLOR_YELLOW : COLOR_WHITE)};
     font-family: "Defcon Zero";
@@ -39,7 +39,7 @@ export const StyledLink = styled.div<StringProps>`
       bottom: -3px;
       height: 3px;
       background-color: ${COLOR_YELLOW};
-      transition: transform 500ms ease-in-out;
+      transition: transform 250ms ease-in-out;
       transform-origin: left;
       transform: scaleX(0);
     }
