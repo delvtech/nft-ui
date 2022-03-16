@@ -11,9 +11,11 @@ export const Third = ({ isMeme }: { isMeme: boolean }) => (
           : content.original.partThree.header}
       </h2>
       {isMeme
-        ? content.meme.partThree.body.map((paragraph) => <p>{paragraph}</p>)
-        : content.original.partThree.body.map((paragraph) => (
-            <p>{paragraph}</p>
+        ? content.meme.partThree.body.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))
+        : content.original.partThree.body.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
           ))}
     </div>
     <div className="flex-div max-width">

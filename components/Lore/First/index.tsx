@@ -11,8 +11,12 @@ export const First = ({ isMeme }: { isMeme: boolean }) => (
         {isMeme ? content.meme.partOne.header : content.original.partOne.header}
       </h2>
       {isMeme
-        ? content.meme.partOne.body.map((paragraph) => <p>{paragraph}</p>)
-        : content.original.partOne.body.map((paragraph) => <p>{paragraph}</p>)}
+        ? content.meme.partOne.body.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))
+        : content.original.partOne.body.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
     </div>
     <div className="flex-div max-width">
       <StyledSlider {...settings}>

@@ -15,8 +15,12 @@ export const Second = ({ isMeme }: { isMeme: boolean }) => (
         {isMeme ? content.meme.partTwo.header : content.original.partTwo.header}
       </h2>
       {isMeme
-        ? content.meme.partTwo.body.map((paragraph) => <p>{paragraph}</p>)
-        : content.original.partTwo.body.map((paragraph) => <p>{paragraph}</p>)}
+        ? content.meme.partTwo.body.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))
+        : content.original.partTwo.body.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
     </div>
   </LoreContainer>
 );
