@@ -1,5 +1,5 @@
 import { SectionContainer } from "common/Container";
-import { FlexRow } from "common/Container/styles";
+import { Flex } from "common/Container/styles";
 import { First } from "components/Lore/First";
 import { Second } from "components/Lore/Second";
 import { GridContainer, LoreTitle } from "components/Lore/styles";
@@ -19,7 +19,7 @@ export const Lore = () => {
   return (
     <SectionContainer padding="4rem 0">
       <LoreTitle>The lore</LoreTitle>
-      <FlexRow margin="-60px 0px 40px 0px" justify="center">
+      <Flex margin="-60px 0px 40px 0px" justify="center">
         <LoreButton onClick={() => setIsMeme(false)}>
           <DefconZero
             size="16px"
@@ -35,7 +35,7 @@ export const Lore = () => {
             Meme Version
           </DefconZero>
         </LoreButton>
-      </FlexRow>
+      </Flex>
       <GridContainer>
         <First isMeme={isMeme} />
         <Second isMeme={isMeme} />
