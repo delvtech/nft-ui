@@ -1,4 +1,4 @@
-import React from "react";
+import { PrimaryButton } from "common/Button/styles";
 import { SectionContainer } from "common/Container";
 import { InternalLink } from "common/InternalLink";
 import { Timer } from "components/Countdown/Timer";
@@ -9,11 +9,10 @@ import {
   EntranceSection,
   MobileHeader,
 } from "components/Entrance/styles";
-import { PrimaryButton } from "common/Button/styles";
+import React from "react";
+import { releaseDate } from "src/constants";
 
-const handleClick = () => {
-  localStorage.setItem("hasEntered", "true");
-};
+const handleClick = () => localStorage.setItem("hasEntered", "true");
 
 export const Entrance = () => (
   <EntranceSection>
@@ -38,7 +37,7 @@ export const Entrance = () => (
         <InternalLink href="/home" noUnderline onClick={handleClick}>
           <PrimaryButton>Enter world</PrimaryButton>
         </InternalLink>
-        <Timer />
+        <Timer targetDate={releaseDate} />
       </EntranceContainer>
     </SectionContainer>
   </EntranceSection>

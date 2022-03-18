@@ -1,12 +1,16 @@
-import moment from "moment";
-import { useEffect, useState } from "react";
 import {
   StyledSemiColon,
   StyledTimer,
   TimerFlex,
 } from "components/Countdown/styles";
+import moment, { Moment } from "moment";
+import { useEffect, useState } from "react";
 
-export const Timer = () => {
+interface TimerProps {
+  targetDate: Moment;
+}
+
+export const Timer = ({ targetDate }: TimerProps) => {
   const [days, setDays] = useState<string | number>("00");
   const [hours, setHours] = useState<string | number>("00");
   const [minutes, setMinutes] = useState<string | number>("00");
@@ -14,15 +18,20 @@ export const Timer = () => {
 
   useEffect(() => {
     setInterval(() => {
-      const now: any = moment();
-      const then: any = moment("2020-01-09 00:00:00", "YYYY-MM-DD hh:mm:ss");
-      const countdown = moment(then - now);
-      setDays(countdown.format("DD"));
-      setHours(countdown.format("HH"));
-      setMinutes(countdown.format("mm"));
-      setSeconds(countdown.format("ss"));
+      const now = moment();
+      const duration = moment.duration(targetDate.diff(now));
+
+      const days = Math.floor(duration.asDays());
+      const hours = Math.floor(duration.asHours()) % 24;
+      const minutes = Math.floor(duration.asMinutes()) % 60;
+      const seconds = Math.floor(duration.asSeconds() % 60);
+
+      setDays(days);
+      setHours(hours);
+      setMinutes(minutes);
+      setSeconds(seconds);
     }, 1000);
-  }, []);
+  }, [targetDate]);
   return (
     <TimerFlex>
       <StyledTimer>{days}</StyledTimer>

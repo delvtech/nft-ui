@@ -1,7 +1,8 @@
-import { Fade, Zoom } from "react-awesome-reveal";
 import { SectionContainer } from "common/Container";
-import { Timer } from "components/Countdown/Timer";
 import { ContentWrapper, CountdownDate } from "components/Countdown/styles";
+import { Timer } from "components/Countdown/Timer";
+import { Fade, Zoom } from "react-awesome-reveal";
+import { releaseDate } from "src/constants";
 
 export const Countdown = () => {
   return (
@@ -10,9 +11,9 @@ export const Countdown = () => {
         <Fade triggerOnce>
           <h3>First drop hits</h3>
           <Zoom triggerOnce>
-            <CountdownDate>February 9th</CountdownDate>
+            <CountdownDate>{releaseDate.format("MMMM Do")}</CountdownDate>
           </Zoom>
-          <Timer />
+          <Timer targetDate={releaseDate} />
         </Fade>
       </ContentWrapper>
     </SectionContainer>
