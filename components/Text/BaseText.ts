@@ -8,7 +8,7 @@ const BaseText = styled.text<FontProps>`
 
   margin: ${({ margin }) => margin};
   &:hover {
-    color: ${({ onHoverColor }) => onHoverColor && COLORS[onHoverColor]};
+    color: ${({ hoverColor }) => hoverColor && COLORS[hoverColor]};
   }
 `;
 
