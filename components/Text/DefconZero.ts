@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import Text from "./Text";
+import BaseText from "./BaseText";
 
-const DefconZero = styled(Text)`
+const DefconZero = styled(BaseText)`
   font-family: Defcon Zero;
   letter-spacing: 2px;
 `;

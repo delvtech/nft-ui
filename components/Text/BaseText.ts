@@ -2,7 +2,7 @@ import { COLORS } from "helpers/colorPalette";
 import styled from "styled-components";
 import { FontProps } from "./types";
 
-const Text = styled.text<FontProps>`
+const BaseText = styled.text<FontProps>`
   font-size: ${({ size }) => size ?? "20px"};
   color: ${({ color }) => color && COLORS[color]};
 
@@ -12,4 +12,4 @@ const Text = styled.text<FontProps>`
   }
 `;
 
-export default Text;
+export default BaseText;
