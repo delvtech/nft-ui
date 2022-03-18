@@ -1,2 +1,7 @@
-export const isPreLaunch =
-  (process.env["NEXT_PUBLIC_preLaunch"] as string) === "true";
+type FeatureFlag = "preLaunch";
+
+const FeatureSwitches: Record<FeatureFlag, boolean> = {
+  preLaunch: true,
+};
+
+export const isFeatureEnabled = (flag: FeatureFlag) => FeatureSwitches[flag];
