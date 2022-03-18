@@ -1,7 +1,7 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import { StringProps } from "helpers/types";
-import { COLOR_BLACK, COLOR_WHITE } from "helpers/colorPalette";
+import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     body {
@@ -112,7 +112,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     p {
-      line-height: 24px;
+      line-height: 26px;
       font-family: "Rubik Regular";
     }
 
