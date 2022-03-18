@@ -1,6 +1,7 @@
 import { useWeb3React } from "@web3-react/core";
 import { injectedConnector } from "elf/wallets/connectors";
 import { useEffect, useState } from "react";
+import { isFeatureEnabled } from "src/features";
 
 export function useEagerConnect(): void {
   const { activate, active } = useWeb3React();
@@ -8,15 +9,17 @@ export function useEagerConnect(): void {
   const [tried, setTried] = useState(false);
 
   useEffect(() => {
-    injectedConnector.isAuthorized().then((isAuthorized: boolean) => {
-      if (isAuthorized) {
-        activate(injectedConnector, undefined, true).catch(() => {
+    if (!isFeatureEnabled("preLaunch")) {
+      injectedConnector.isAuthorized().then((isAuthorized: boolean) => {
+        if (isAuthorized) {
+          activate(injectedConnector, undefined, true).catch(() => {
+            setTried(true);
+          });
+        } else {
           setTried(true);
-        });
-      } else {
-        setTried(true);
-      }
-    });
+        }
+      });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // intentionally only running on mount (make sure it's only mounted once)
 
