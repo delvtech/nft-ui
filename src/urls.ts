@@ -12,5 +12,5 @@ const NFT_ASSET_PATH =
 export const getTokenAssetURL = (id?: BigNumber) => {
   return id
     ? PINATA_GATEWAY + NFT_ASSET_PATH + `/${id.toString()}.png`
-    : "/testElfi.png";
+    : undefined;
 };
