@@ -2,10 +2,16 @@ import { Spacer } from "common/Spacer";
 import { devices } from "helpers/devices";
 import styled from "styled-components";
 
-// @cashd: mocking this data for now
-export const MintingPeriodStatus = () => (
+const mintMax = 2500;
+interface MintingPeriodStatusProps {
+  totalMints: number;
+}
+
+export const MintingPeriodStatus = ({
+  totalMints,
+}: MintingPeriodStatusProps) => (
   <MintingPeriodStatusContainer>
-    <h1>501 Elves</h1>
+    <h1>{mintMax - totalMints} Elves</h1>
     <Spacer size="16px" />
     <h2>Remaining in this minting period</h2>
     <Spacer size="20px" />
@@ -14,7 +20,7 @@ export const MintingPeriodStatus = () => (
 );
 
 const MintingPeriodStatusContainer = styled.div`
-  border: 0.5px solid;
+  border: 1px solid;
   border-radius: 12px;
   border-color: rgba(255, 255, 255, 1);
 
@@ -33,7 +39,7 @@ const MintingPeriodStatusContainer = styled.div`
 
   h2 {
     font-family: Defcon Zero;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: #f7fff7;
     margin: 0;
   }
@@ -56,8 +62,5 @@ const CountdownDate = styled.div`
 
   @media ${devices.mobileL} {
     font-size: 1rem;
-  }
-  @media ${devices.tabletM} {
-    // font-size: 0.5rem;
   }
 `;
