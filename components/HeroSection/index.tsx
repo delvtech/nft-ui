@@ -1,15 +1,16 @@
-import { Fade } from "react-awesome-reveal";
+import { PrimaryButton } from "common/Button/styles";
 import { SectionContainer } from "common/Container";
 import { DesktopHeader, MobileHeader } from "components/Entrance/styles";
 import {
+  ButtonWrapper,
+  ContentCenter,
+  ContentWrapper,
   HeroSectionContainer,
   HeroWrapper,
-  ContentWrapper,
-  ContentCenter,
-  ButtonWrapper,
 } from "components/HeroSection/styles";
 import Link from "next/link";
-import { PrimaryButton } from "common/Button/styles";
+import { Fade } from "react-awesome-reveal";
+import { isFeatureEnabled } from "src/features";
 
 export const HeroSection = () => {
   return (
@@ -27,12 +28,14 @@ export const HeroSection = () => {
                 <MobileHeader>
                   <h1>wander to the elfiverse</h1>
                 </MobileHeader>
-                <ButtonWrapper>
-                  <Link passHref href="/mint">
-                    <PrimaryButton>Start minting</PrimaryButton>
-                  </Link>
-                  <PrimaryButton hasBorder>The Council</PrimaryButton>
-                </ButtonWrapper>
+                {!isFeatureEnabled("preLaunch") && (
+                  <ButtonWrapper>
+                    <Link passHref href="/mint">
+                      <PrimaryButton>Start minting</PrimaryButton>
+                    </Link>
+                    <PrimaryButton hasBorder>The Council</PrimaryButton>
+                  </ButtonWrapper>
+                )}
               </ContentCenter>
             </ContentWrapper>
           </HeroWrapper>

@@ -9,9 +9,9 @@ const Home: NextPage = () => {
   return (
     <>
       <HeroSection />
+      <Countdown />
       <Regenerated />
       <OurProcess />
-      <Countdown />
       <Lore />
     </>
   );

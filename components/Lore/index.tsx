@@ -21,17 +21,13 @@ export const Lore = () => {
       <LoreTitle>The lore</LoreTitle>
       <Flex margin="-60px 0px 40px 0px" justify="center">
         <LoreButton onClick={() => setIsMeme(false)}>
-          <DefconZero
-            size="16px"
-            margin="0px 40px 0px 0px"
-            onHoverColor="yellow"
-          >
+          <DefconZero size="16px" margin="0px 40px 0px 0px" hoverColor="yellow">
             Original Version
           </DefconZero>
         </LoreButton>
 
         <LoreButton onClick={() => setIsMeme(true)}>
-          <DefconZero size="16px" onHoverColor="yellow">
+          <DefconZero size="16px" hoverColor="yellow">
             Meme Version
           </DefconZero>
         </LoreButton>

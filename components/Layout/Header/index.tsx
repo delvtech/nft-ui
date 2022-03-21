@@ -14,6 +14,7 @@ import {
 import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
 import { COLOR_WHITE } from "helpers/colorPalette";
 import React, { useState } from "react";
+import { isFeatureEnabled } from "src/features";
 import { DISCORD_URL, TWITTER_URL } from "src/urls";
 
 export const MenuItem = ({ onClose }: any) => {
@@ -21,9 +22,13 @@ export const MenuItem = ({ onClose }: any) => {
     <MenuItemWrapper onClick={onClose}>
       <InternalLink href="/home">Home</InternalLink>
       <InternalLink href="/formation">Formation</InternalLink>
-      <InternalLink href="/mint">Minting</InternalLink>
+      {!isFeatureEnabled("preLaunch") && (
+        <InternalLink href="/mint">Minting</InternalLink>
+      )}
       <InternalLink href="/rollout-release">The Rollout Release</InternalLink>
-      <InternalLink href="/collection">The Collection</InternalLink>
+      {!isFeatureEnabled("preLaunch") && (
+        <InternalLink href="/collection">The Collection</InternalLink>
+      )}
     </MenuItemWrapper>
   );
 };
@@ -75,7 +80,7 @@ export const Header = () => {
               <MenuItem />
             </MenuItemContainer>
             <MenuItemContainer>
-              <ConnectWallet />
+              {!isFeatureEnabled("preLaunch") && <ConnectWallet />}
               <Spacer size="20px" />
               <SocialLinks />
             </MenuItemContainer>
@@ -88,7 +93,7 @@ export const Header = () => {
                   setSidebarVisibility(!sidebarVisibility)
                 }
               />
-              <ConnectWallet />
+              {!isFeatureEnabled("preLaunch") && <ConnectWallet />}
             </MobileMenuContainer>
           </Flex>
         </HeaderWrapper>

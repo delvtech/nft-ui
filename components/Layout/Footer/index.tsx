@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
 import { SectionContainer } from "common/Container";
 import { ExternalLink } from "common/ExternalLink";
 import {
@@ -8,9 +6,10 @@ import {
   LogoContainer,
   LogoMobileContainer,
 } from "components/Layout/Footer/styles";
-
+import Image from "next/image";
 import Logo from "public/assets/svg/logo.svg";
-import { DISCORD_URL, ELEMENT_FI_URL, TWITTER_URL } from "src/urls";
+import { Fade } from "react-awesome-reveal";
+import { DISCORD_URL, TWITTER_URL } from "src/urls";
 
 export const Footer = () => {
   return (
@@ -38,19 +37,19 @@ export const Footer = () => {
           <div>
             <h4>Home</h4>
             <ExternalLink href="/formation">Formation</ExternalLink>
-            <ExternalLink href="/minting">How to mint</ExternalLink>
+            {/* <ExternalLink href="/minting">How to mint</ExternalLink> */}
             <ExternalLink href="/rollout-release">
               The rollout release
             </ExternalLink>
           </div>
-          <div>
+          {/* <div>
             <h4>Learn</h4>
             <ExternalLink href={ELEMENT_FI_URL}>Governance</ExternalLink>
             <ExternalLink href={ELEMENT_FI_URL}>Documentation</ExternalLink>
             <ExternalLink href={ELEMENT_FI_URL}>
               Introduction to the Elfiverse
             </ExternalLink>
-          </div>
+          </div> */}
           <div>
             <h4>Social</h4>
             <ExternalLink href={DISCORD_URL}>Discord</ExternalLink>
