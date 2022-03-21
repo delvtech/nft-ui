@@ -16,8 +16,8 @@ export function useMintDayHistory(history?: Event[]) {
         const last = history[history.length - 1];
         const lastTimestamp = (await last.getBlock()).timestamp;
 
-        const result = history.map((event) => {
-          return moment(
+        const scaledHistory = history.map((event) =>
+          moment(
             new Date(
               scale(
                 event.blockNumber,
@@ -27,12 +27,13 @@ export function useMintDayHistory(history?: Event[]) {
                 lastTimestamp * 1000,
               ),
             ),
-          ).format("DD MMM");
-        });
+          ).format("DD MMM"),
+        );
 
-        return toPairs(countBy(result)).map((pair) => {
-          return { date: pair[0], count: pair[1] };
-        });
+        return toPairs(countBy(scaledHistory)).map((pair) => ({
+          date: pair[0],
+          count: pair[1],
+        }));
       }
     },
     {
