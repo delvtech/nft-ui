@@ -9,19 +9,23 @@ export const COLOR_GREEN_DARKEST = "#1A535C";
 export const COLOR_YELLOW = "#FFE66D";
 export const COLOR_INHERIT = "inherit";
 export const COLOR_TRANSPARENT = "transparent";
+export const COLOR_SEMI_TRANSPARENT = "rgba(0, 0, 0, 0.2)";
+export const COLOR_LIGHT_GRAY = "#999EA1";
 
 export const COLORS = {
   black: COLOR_BLACK,
   blackDark: COLOR_BLACK_DARK,
-  white: COLOR_WHITE,
-  whiteLight: COLOR_WHITE_LIGHT,
   green: COLOR_GREEN,
-  greenLight: COLOR_GREEN_LIGHT,
   greenDark: COLOR_GREEN_DARK,
   greenDarkest: COLOR_GREEN_DARKEST,
-  yellow: COLOR_YELLOW,
+  greenLight: COLOR_GREEN_LIGHT,
   inherit: COLOR_INHERIT,
+  lightGray: COLOR_LIGHT_GRAY,
   transparent: COLOR_TRANSPARENT,
+  white: COLOR_WHITE,
+  whiteLight: COLOR_WHITE_LIGHT,
+  yellow: COLOR_YELLOW,
+  semiTransparent: COLOR_SEMI_TRANSPARENT,
 } as const;
 
 export type Color = keyof typeof COLORS;
