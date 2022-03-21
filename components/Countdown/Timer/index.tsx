@@ -17,7 +17,7 @@ export const Timer = ({ targetDate }: TimerProps) => {
   const [seconds, setSeconds] = useState<string | number>("00");
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
       const now = moment();
       const duration = moment.duration(targetDate.diff(now));
 
@@ -31,7 +31,10 @@ export const Timer = ({ targetDate }: TimerProps) => {
       setMinutes(minutes);
       setSeconds(seconds);
     }, 1000);
+
+    return () => clearInterval(interval);
   }, [targetDate]);
+
   return (
     <TimerFlex>
       <StyledTimer>{days}</StyledTimer>
