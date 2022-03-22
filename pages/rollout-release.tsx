@@ -5,7 +5,7 @@ const RolloutRelease: NextPage = () => (
   <ContentPage title="Rollout Release">
     <h1>Rollout release</h1>
     <p>
-      The elfiverse is a gift for the Element community to commemorate the
+      The Elfiverse is a gift for the Element community to commemorate the
       launch of the Element DAO. An amplification of the community involvement
       in Element. The release schedule below was designed to enable a fair and
       transparent distribution that ensures accessibility of NFTs for{" "}
@@ -17,8 +17,8 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>First Release</h2>
     <p>
-      An initial set of two thousand ELFs will be available to mint starting at{" "}
-      <mark> 6:09 p.m. EST on March 15, 2022. </mark> It will be accessible for
+      An initial set of 5000 Elfis will be available to mint starting at{" "}
+      <mark> 2:00p.m. EST on March 30, 2022. </mark> It will be accessible for
       active Element community members only and <mark> completely free. </mark>
       Each active community member will be able to mint one Elfi. <br /> Active
       community members are traders, LPs, and any community member that has used
@@ -29,7 +29,7 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>Second release</h2>
     <p>
-      A second release of two thousand Elfis provides a second opportunity to
+      A second release of 5000 Elfis provides a second opportunity to
       participate, while opening up participation to a broader section of the
       community. This includes active members of the Element discord community
       as well members of the Ethereum ecosystem based on Github contributions.

@@ -5,7 +5,7 @@ export const Second = ({ isMeme }: { isMeme: boolean }) => (
   <LoreContainer align="center">
     <div className="flex-div">
       <VideoContainer>
-        <video controls>
+        <video controls muted>
           <source src="/assets/video/video.mp4" />
         </video>
       </VideoContainer>
