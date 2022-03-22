@@ -13,23 +13,24 @@ import { MintHistoryChart } from "./MintHistoryChart";
 import { MintingPeriodStatus } from "./MintingPeriodStatus";
 import { CollectionCardContainer } from "./styles";
 
+type CollectionCardView = "history" | "remaining";
+
 interface CollectionCardProps {
   tokenId?: BigNumber;
 }
 
-type CollectionCardView = "history" | "remaining";
-
 export const CollectionCard = ({ tokenId }: CollectionCardProps) => {
   const tokenURL = getTokenAssetURL(tokenId);
-
   const [view, setView] = useState<CollectionCardView>("remaining");
 
-  const { data: history, isError: didTransferFail } = useTransferEvents(
-    ethers.constants.AddressZero,
-  );
+  const {
+    data: history,
+    isLoading: isTransferLoading,
+    isError: didTransferFail,
+  } = useTransferEvents(ethers.constants.AddressZero);
 
   const {
-    data: _mintHistory,
+    data: mintHistory,
     isLoading: isMintHistoryLoading,
     isError: didMintHistoryFail,
   } = useMintDayHistory(history);
@@ -80,11 +81,11 @@ export const CollectionCard = ({ tokenId }: CollectionCardProps) => {
         )}
         <CardContainer>
           {view === "remaining" ? (
-            <MintingPeriodStatus totalMints={_mintHistory?.length ?? 0} />
+            <MintingPeriodStatus totalMints={mintHistory?.length ?? 0} />
           ) : (
             <MintHistoryChart
-              mintHistory={_mintHistory ?? []}
-              isLoading={isMintHistoryLoading}
+              mintHistory={mintHistory}
+              isLoading={isMintHistoryLoading || isTransferLoading}
               isError={didMintHistoryFail || didTransferFail}
             />
           )}

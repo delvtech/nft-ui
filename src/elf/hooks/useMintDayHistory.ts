@@ -18,14 +18,12 @@ export function useMintDayHistory(history?: Event[]) {
 
         const scaledHistory = history.map((event) =>
           moment(
-            new Date(
-              scale(
-                event.blockNumber,
-                first.blockNumber,
-                last.blockNumber,
-                firstTimestamp * 1000,
-                lastTimestamp * 1000,
-              ),
+            scale(
+              event.blockNumber,
+              first.blockNumber,
+              last.blockNumber,
+              firstTimestamp * 1000,
+              lastTimestamp * 1000,
             ),
           ).format("DD MMM"),
         );

@@ -10,7 +10,7 @@ import styled from "styled-components";
 interface MintHistoryChartProps {
   isLoading?: boolean;
   isError?: boolean;
-  mintHistory: MintDayCount[];
+  mintHistory?: MintDayCount[];
 }
 
 export const MintHistoryChart = ({
@@ -27,7 +27,7 @@ export const MintHistoryChart = ({
     );
   }
 
-  if (isLoading || !mintHistory || mintHistory.length < 2) {
+  if (isLoading || !mintHistory) {
     return (
       <ChartContainer>
         <Spacer size="60px" />
