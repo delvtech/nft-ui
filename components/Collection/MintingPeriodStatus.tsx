@@ -1,5 +1,7 @@
 import { Spacer } from "common/Spacer";
+import { Timer } from "components/Countdown/Timer";
 import { devices } from "helpers/devices";
+import { releaseDate } from "src/constants";
 import styled from "styled-components";
 
 const mintMax = 2500;
@@ -15,7 +17,9 @@ export const MintingPeriodStatus = ({
     <Spacer size="16px" />
     <h2>Remaining in this minting period</h2>
     <Spacer size="20px" />
-    <CountdownDate>05: 35: 35</CountdownDate>
+    <TimerContainer>
+      <Timer targetDate={releaseDate} />
+    </TimerContainer>
   </MintingPeriodStatusContainer>
 );
 
@@ -45,7 +49,7 @@ const MintingPeriodStatusContainer = styled.div`
   }
 `;
 
-const CountdownDate = styled.div`
+const TimerContainer = styled.div`
   font-family: "Defcon Zero";
   font-weight: 600;
   font-size: 30px;
