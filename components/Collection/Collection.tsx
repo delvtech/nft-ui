@@ -32,7 +32,7 @@ export const Collection = () => {
   }, [active, open, close]);
 
   return (
-    <ContentPage padding="100px 124px 144px 124px" title="Collection">
+    <ContentPage padding="100px 0px 144px 0px" title="Collection">
       <CollectionContainer>
         <h1>
           <ReactTextTransition

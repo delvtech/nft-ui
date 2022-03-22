@@ -1,5 +1,4 @@
 import { ContentWrapper } from "components/Entrance/styles";
-import { devices } from "helpers/devices";
 import styled from "styled-components";
 
 export const CollectionContainer = styled.div`
@@ -26,10 +25,6 @@ export const CollectionContainer = styled.div`
     .text-transition_inner {
       font-size: 14px;
       font-family: "Rubik Regular";
-    }
-
-    @media ${devices.tabletM} {
-      padding: 20px 1rem;
     }
   }
 `;
