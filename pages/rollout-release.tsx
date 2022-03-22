@@ -18,7 +18,7 @@ const RolloutRelease: NextPage = () => (
     <h2>First Release</h2>
     <p>
       An initial set of 2000 Elfis will be available to mint starting at{" "}
-      <mark> 2:00p.m. EST on March 30, 2022. </mark> It will be accessible for
+      <mark> 2:00p.m. EST on April 6th, 2022. </mark> It will be accessible for
       active Element community members only and <mark> completely free. </mark>
       Each active community member will be able to mint one Elfi. <br /> Active
       community members are traders, LPs, and any community member that has used
