@@ -8,11 +8,6 @@ import DefconZero from "components/Text/DefconZero";
 import { useState } from "react";
 import styled from "styled-components";
 
-const LoreButton = styled.button`
-  background: none;
-  padding: 0;
-`;
-
 export const Lore = () => {
   const [isMeme, setIsMeme] = useState(false);
 
@@ -40,3 +35,8 @@ export const Lore = () => {
     </SectionContainer>
   );
 };
+
+const LoreButton = styled.button`
+  background: none;
+  padding: 0;
+`;

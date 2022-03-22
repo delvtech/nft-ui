@@ -3,35 +3,32 @@ import { COLOR_WHITE_LIGHT } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import styled from "styled-components";
 
-export const OurProcess = () => {
-  return (
-    <SectionContainer padding="0">
-      <h2>our process</h2>
-      <ContentWrapper>
-        <p>
-        The launch of an elfiverse signifies our first series of generative
-        portraits of Element elves gifted to our community to commemorate
-        the launch of the Element DAO.
-        </p>
-        <p>
-          Each ELF manifests as an array of regenerative pixels and each is
-           unique, with a non-fungible token (NFT) stored on the Ethereum
-           mainnet that attests to that uniqueness.
-        </p>
-        <p>
-        Each Element community member may hold a token, where the identity
-        they form for the protocol and in the community lies within and
-        that will welcome our elves.
-        </p>
-        <p>
-          For this initial elfiverse launch, each ELF falls into a faction,
-          with different powers, capabilities and traits. May you take them
-          into the elfiverse and float through with other community members. 
-        </p>
-      </ContentWrapper>
-    </SectionContainer>
-  );
-};
+export const OurProcess = () => (
+  <SectionContainer padding="0">
+    <h2>our process</h2>
+    <ContentWrapper>
+      <p>
+        The launch of the Elfiverse signifies our first series of generative
+        portraits of Element elves gifted to our community to commemorate the
+        launch of the Element DAO.
+      </p>
+      <p>
+        Each ELF manifests as an array of regenerative pixels and is unique,
+        with a non-fungible token (NFT) stored on the Ethereum mainnet that
+        attests to that uniqueness.
+      </p>
+      <p>
+        Each Element community member may hold a token, where the identity they
+        form in the community lies within.
+      </p>
+      <p>
+        For this initial Elfiverse launch, each ELF falls into a faction, with
+        different powers, capabilities and traits. May you take them into the
+        Elfiverse and float through with other community members.
+      </p>
+    </ContentWrapper>
+  </SectionContainer>
+);
 
 const ContentWrapper = styled.div`
   padding: 55px 75px;
