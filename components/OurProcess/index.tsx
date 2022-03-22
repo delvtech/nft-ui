@@ -19,8 +19,7 @@ export const OurProcess = () => (
       </p>
       <p>
         Each Element community member may hold a token, where the identity they
-        form for the protocol and in the community lies within and that will
-        welcome our elves.
+        form in the community lies within.
       </p>
       <p>
         For this initial Elfiverse launch, each ELF falls into a faction, with
