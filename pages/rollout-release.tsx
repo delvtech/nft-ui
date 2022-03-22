@@ -17,7 +17,7 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>First Release</h2>
     <p>
-      An initial set of 5000 Elfis will be available to mint starting at{" "}
+      An initial set of 2000 Elfis will be available to mint starting at{" "}
       <mark> 2:00p.m. EST on March 30, 2022. </mark> It will be accessible for
       active Element community members only and <mark> completely free. </mark>
       Each active community member will be able to mint one Elfi. <br /> Active
@@ -29,7 +29,7 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>Second release</h2>
     <p>
-      A second release of 5000 Elfis provides a second opportunity to
+      A second release of 2000 Elfis provides a second opportunity to
       participate, while opening up participation to a broader section of the
       community. This includes active members of the Element discord community
       as well members of the Ethereum ecosystem based on Github contributions.
