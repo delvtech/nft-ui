@@ -5,6 +5,7 @@ import { Second } from "components/Lore/Second";
 import { GridContainer, LoreTitle } from "components/Lore/styles";
 import { Third } from "components/Lore/Third";
 import { COLORS } from "helpers/colorPalette";
+import { devices } from "helpers/devices";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -42,6 +43,14 @@ const ModeText = styled.div<{ active?: boolean }>`
 
   :hover {
     color: ${COLORS.yellow};
+  }
+
+  @media ${devices.tabletM} {
+    font-size: 16px;
+  }
+
+  @media ${devices.mobileL} {
+    font-size: 14px;
   }
 `;
 
