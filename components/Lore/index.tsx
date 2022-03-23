@@ -4,7 +4,8 @@ import { First } from "components/Lore/First";
 import { Second } from "components/Lore/Second";
 import { GridContainer, LoreTitle } from "components/Lore/styles";
 import { Third } from "components/Lore/Third";
-import DefconZero from "components/Text/DefconZero";
+import { COLORS } from "helpers/colorPalette";
+import { devices } from "helpers/devices";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -15,16 +16,12 @@ export const Lore = () => {
     <SectionContainer padding="4rem 0">
       <LoreTitle>The lore</LoreTitle>
       <Flex margin="-60px 0px 40px 0px" justify="center">
-        <LoreButton onClick={() => setIsMeme(false)}>
-          <DefconZero size="16px" margin="0px 40px 0px 0px" hoverColor="yellow">
-            Original Version
-          </DefconZero>
+        <LoreButton onClick={() => setIsMeme(false)} margin="0px 40px 0px 0px">
+          <ModeText active={!isMeme}>Original Version</ModeText>
         </LoreButton>
 
         <LoreButton onClick={() => setIsMeme(true)}>
-          <DefconZero size="16px" hoverColor="yellow">
-            Meme Version
-          </DefconZero>
+          <ModeText active={isMeme}>Meme Version</ModeText>
         </LoreButton>
       </Flex>
       <GridContainer>
@@ -36,7 +33,30 @@ export const Lore = () => {
   );
 };
 
-const LoreButton = styled.button`
+const ModeText = styled.div<{ active?: boolean }>`
+  font-family: Defcon Zero;
+  font-size: 20px;
+  letter-spacing: 2px;
+  transition: color 250ms;
+  color: ${({ active }) => (active ? COLORS.yellow : COLORS.white)};
+  text-shadow: ${({ active }) => active && `0px 0px 10px ${COLORS.yellow}`};
+
+  :hover {
+    color: ${COLORS.yellow};
+  }
+
+  @media ${devices.tabletM} {
+    font-size: 16px;
+  }
+
+  @media ${devices.mobileL} {
+    font-size: 14px;
+  }
+`;
+
+const LoreButton = styled.button<{ margin?: string }>`
   background: none;
   padding: 0;
+
+  margin: ${({ margin }) => margin};
 `;
