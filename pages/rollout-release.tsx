@@ -31,10 +31,9 @@ const RolloutRelease: NextPage = () => (
     <p>
       A second release of 2000 Elfis provides a second opportunity to
       participate, while opening up participation to a broader section of the
-      community. This includes active members of the Element discord community
-      as well members of the Ethereum ecosystem based on Github contributions.
-      For more info on how we chose this set of community members and how you
-      can participate, check out <mark> this link. </mark>
+      community. This includes active members of the Element protocol, our
+      discord community, and members of the Ethereum ecosystem based on Github
+      contributions. More specific info will be released soon!
     </p>
     <h2>Third Release</h2>
     <p>Details of the final release are to be announced.</p>
@@ -45,6 +44,14 @@ const RolloutRelease: NextPage = () => (
       top right and click on the My Collection button to see your revealed elf.
       Wallets and platforms like OpenSea typically take a while to update the
       refreshed metadata.
+    </p>
+    <h2>Transferability</h2>
+    <p>
+      Upon release, every Elfi will be non-transferable. We made this decision
+      for the launch to prioritize community building over speculative activity.
+      The primary goal of this project is to foster a collaborative community
+      around the Element DAO. For any questions, concerns, or suggestions please
+      reach out to us in our discord.
     </p>
   </ContentPage>
 );
