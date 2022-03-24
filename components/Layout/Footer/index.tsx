@@ -41,6 +41,12 @@ export const Footer = () => {
             <ExternalLink href="/rollout-release">
               The rollout release
             </ExternalLink>
+            <ExternalLink href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf">
+              Terms of Service
+            </ExternalLink>
+            <ExternalLink href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-privacy-policy.pdf">
+              Privacy Policy
+            </ExternalLink>
           </div>
           {/* <div>
             <h4>Learn</h4>
