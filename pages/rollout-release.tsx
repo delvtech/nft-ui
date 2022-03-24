@@ -42,12 +42,6 @@ const RolloutRelease: NextPage = () => (
       Wallets and platforms like OpenSea typically take a while to update the
       refreshed metadata.
     </p>
-    <h2>Community</h2>
-    <p>
-      The primary goal of this project is to foster a collaborative community
-      around the Element DAO. For any questions, concerns, or suggestions please
-      reach out to us in our discord.
-    </p>
   </ContentPage>
 );
 
