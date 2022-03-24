@@ -10,33 +10,30 @@ const RolloutRelease: NextPage = () => (
       in Element. The release schedule below was designed to enable a fair and
       transparent distribution that ensures accessibility of NFTs for{" "}
       <mark>
-        {" "}
-        all Element community members and prioritizes humans over the masses of
+        for eligible community members prioritizes humans over the masses of
         bots.
-      </mark>
+      </mark>{" "}
+      A total of <mark>5000 ELFs</mark> will be available to mint.
     </p>
     <h2>First Release</h2>
     <p>
-      An initial set of 2000 Elfis will be available to mint starting at{" "}
-      <mark> 2:00p.m. EST on April 6th, 2022. </mark> It will be accessible for
-      active Element community members only and <mark> completely free. </mark>
-      Each active community member will be able to mint one Elfi. <br /> Active
-      community members are traders, LPs, and any community member that has used
-      Element, the fixed rate protocol. <br /> Active community members will
-      automatically receive their unique Elfi generated custom for their
-      minting. Each elf contains traits that hold different rarities or
-      formations stored in the Elfiverse library.
+      The first <mark>2,000 community members</mark> to qualify will be given
+      the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
+      accessible to active Element community members only. The first eligible
+      2,000 community members can qualify by performing certain actions within
+      the Element ecosystem. This will be a limited release and details will be
+      released shortly. Minting will be available by <mark>5pm EST</mark>.
     </p>
     <h2>Second release</h2>
     <p>
-      A second release of 2000 Elfis provides a second opportunity to
-      participate, while opening up participation to a broader section of the
-      community. This includes active members of the Element protocol, our
-      discord community, and members of the Ethereum ecosystem based on Github
-      contributions. More specific info will be released soon!
+      A second offer to mint an additional <mark>2,000 ELFs</mark> will be
+      offered shortly after the initial release. Details to come.
     </p>
     <h2>Third Release</h2>
-    <p>Details of the final release are to be announced.</p>
+    <p>
+      A final <mark>1,000 ELFs</mark> will be available to mint. More details on
+      this will be released later.
+    </p>
     <h2>Release and Minting Details</h2>
     <p>
       After a release and mint release, you will be able to see your elf on the
@@ -44,6 +41,12 @@ const RolloutRelease: NextPage = () => (
       top right and click on the My Collection button to see your revealed elf.
       Wallets and platforms like OpenSea typically take a while to update the
       refreshed metadata.
+    </p>
+    <h2>Community</h2>
+    <p>
+      The primary goal of this project is to foster a collaborative community
+      around the Element DAO. For any questions, concerns, or suggestions please
+      reach out to us in our discord.
     </p>
   </ContentPage>
 );
