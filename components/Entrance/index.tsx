@@ -9,6 +9,7 @@ import {
   EntranceSection,
   MobileHeader,
 } from "components/Entrance/styles";
+import DefconZero from "components/Text/DefconZero";
 import React from "react";
 import { releaseDate } from "src/constants";
 
@@ -26,11 +27,9 @@ export const Entrance = () => (
         <MobileHeader>
           <h1>wander into the elfiverse</h1>
         </MobileHeader>
-        <ContentWrapper>
+        <ContentWrapper padding="10px">
           <p>
-            The <i>ELFIVerse</i> is what you want it to be. It can be a place of
-            community, a place of peace and a place of laughter. The{" "}
-            <i>ELFIVerse</i> <br />
+            The <DefconZero size="1rem">ELFIVerse</DefconZero> <br />
             is your place online with Element.
           </p>
         </ContentWrapper>
