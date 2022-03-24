@@ -18,8 +18,8 @@ export const OurProcess = () => (
         attests to that uniqueness.
       </p>
       <p>
-        Each Element community member may hold a token, where the identity they
-        form in the community lies within.
+        Each Element community member may hold one of these NFTs, where the
+        identity they form in the community lies within.
       </p>
       <p>
         For this initial Elfiverse launch, each ELF falls into a faction, with
