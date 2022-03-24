@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { COLOR_BLACK_DARK, COLOR_WHITE_LIGHT } from "helpers/colorPalette";
 import { Flex } from "common/Container/styles";
-import Slider from "react-slick";
+import { COLOR_BLACK_DARK, COLOR_WHITE_LIGHT } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
+import Slider from "react-slick";
+import styled from "styled-components";
 
 export const GridContainer = styled.div`
   display: grid;
@@ -127,7 +127,6 @@ export const StyledSlider = styled(Slider)`
 
 export const VideoContainer = styled.div`
   width: 100%;
-  height: 100%;
   background-color: ${COLOR_BLACK_DARK};
 `;
 
