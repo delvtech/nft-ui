@@ -8,11 +8,8 @@ const RolloutRelease: NextPage = () => (
       The Elfiverse is a gift for the Element community to commemorate the
       launch of the Element DAO. An amplification of the community involvement
       in Element. The release schedule below was designed to enable a fair and
-      transparent distribution that ensures accessibility of NFTs for{" "}
-      <mark>
-        for eligible community members prioritizes humans over the masses of
-        bots.
-      </mark>{" "}
+      transparent distribution that ensures accessibility of NFTs for eligible
+      community members <mark>prioritizes humans over the masses of bots</mark>.
       A total of <mark>5000 ELFs</mark> will be available to mint.
     </p>
     <h2>First Release</h2>
@@ -21,8 +18,8 @@ const RolloutRelease: NextPage = () => (
       the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
       accessible to active Element community members only. The first eligible
       2,000 community members can qualify by performing certain actions within
-      the Element ecosystem. This will be a limited release and details will be
-      released shortly. Minting will be available by <mark>5pm EST</mark>.
+      the Element ecosystem. This will be a limited release and more details
+      will be released shortly.
     </p>
     <h2>Second release</h2>
     <p>
@@ -31,8 +28,8 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>Third Release</h2>
     <p>
-      A final <mark>1,000 ELFs</mark> will be available to mint. More details on
-      this will be released later.
+      A final <mark>1,000 ELFs</mark> release will be available to mint. More
+      details on this later.
     </p>
     <h2>Release and Minting Details</h2>
     <p>
