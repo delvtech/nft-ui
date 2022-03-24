@@ -65,7 +65,7 @@ export const Footer = () => {
       </Fade>
       <Fade triggerOnce>
         <Copyright>
-          <p>©2021 ElementFi. All rights reserved</p>
+          <p>©2022 ElementFi. All rights reserved</p>
         </Copyright>
       </Fade>
     </SectionContainer>
