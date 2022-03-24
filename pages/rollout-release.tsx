@@ -45,14 +45,6 @@ const RolloutRelease: NextPage = () => (
       Wallets and platforms like OpenSea typically take a while to update the
       refreshed metadata.
     </p>
-    <h2>Transferability</h2>
-    <p>
-      Upon release, every Elfi will be non-transferable. We made this decision
-      for the launch to prioritize community building over speculative activity.
-      The primary goal of this project is to foster a collaborative community
-      around the Element DAO. For any questions, concerns, or suggestions please
-      reach out to us in our discord.
-    </p>
   </ContentPage>
 );
 
