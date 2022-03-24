@@ -35,7 +35,6 @@
         }
       ]
     },
-
     {
       "title": "Clothes",
       "content": [
@@ -297,6 +296,106 @@
           "description": "",
           "rarity": "5",
           "image": "sun_headset"
+        }
+      ]
+    },
+    {
+      "title": "Weapons",
+      "content": [
+        {
+          "description": "",
+          "rarity": "2",
+          "image": "01_jade_bow"
+        },
+        {
+          "description": "",
+          "rarity": "2",
+          "image": "01_bow_golden"
+        },
+        {
+          "description": "",
+          "rarity": "2",
+          "image": "01_bow_draconic"
+        },
+        {
+          "description": "",
+          "rarity": "2",
+          "image": "01_bow_dark"
+        },
+        {
+          "description": "",
+          "rarity": "3",
+          "image": "01_long_sword_dark"
+        },
+        {
+          "description": "",
+          "rarity": "3",
+          "image": "01_long_sword_red"
+        },
+        {
+          "description": "",
+          "rarity": "3",
+          "image": "01_long_sword_golden"
+        },
+        {
+          "description": "",
+          "rarity": "3",
+          "image": "01_long_sword_golden"
+        },
+        {
+          "description": "",
+          "rarity": "2",
+          "image": "01_lance_ice"
+        },
+        {
+          "description": "",
+          "rarity": "2",
+          "image": "01_lance_golden"
+        },
+        {
+          "description": "",
+          "rarity": "2",
+          "image": "01_lance_draconic"
+        },
+        {
+          "description": "",
+          "rarity": "5",
+          "image": "01_sword_dual_red"
+        },
+        {
+          "description": "",
+          "rarity": "5",
+          "image": "01_sword_dual_green"
+        },
+        {
+          "description": "",
+          "rarity": "5",
+          "image": "01_sword_dual_golden"
+        },
+        {
+          "description": "",
+          "rarity": "8",
+          "image": "01_right_quartz_sword"
+        },
+        {
+          "description": "",
+          "rarity": "8",
+          "image": "01_left_quarz_sword"
+        },
+        {
+          "description": "",
+          "rarity": "3",
+          "image": "01_staff_jade"
+        },
+        {
+          "description": "",
+          "rarity": "1",
+          "image": "01_staff_golden"
+        },
+        {
+          "description": "",
+          "rarity": "1",
+          "image": "01_staff_draconic"
         }
       ]
     },
