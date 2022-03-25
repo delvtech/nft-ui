@@ -39,6 +39,13 @@ const RolloutRelease: NextPage = () => (
       Wallets and platforms like OpenSea typically take a while to update the
       refreshed metadata.
     </p>
+
+    <h2>Non-investments</h2>
+    <p>
+      These ELF NFTs are not for sale. They are not investments or hold or
+      represent anything of monetary value. The overarching goal of this NFT
+      project is to foster a collaborative community around the Element DAO.
+    </p>
   </ContentPage>
 );
 
