@@ -31,16 +31,16 @@ export default function App({ Component, pageProps, router }: AppProps) {
         />
         <link rel="canonical" href={`https://nft.element.fi${router.asPath}`} />
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="" />
-        <meta property="og:description" content="" />
-        <meta property="og:title" content="Element ElfiVerse" />
+        <meta property="og:site_name" content="Elfiverse" />
+        <meta property="og:description" content="Elfiverse" />
+        <meta property="og:title" content="Elfiverse" />
         <meta property="og:image" content="" />
         <meta property="og:image:alt" content="" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@" />
-        <meta name="twitter:title" content="Element ElfiVerse" />
-        <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="" />
+        <meta name="twitter:card" content="elfiverse_council.png" />
+        <meta name="twitter:site" content="@element_fi" />
+        <meta name="twitter:title" content="Elfiverse" />
+        <meta name="twitter:description" content="Enter the Elfiverse" />
+        <meta name="twitter:image" content="elfiverse_council.png" />
       </Head>
       <GlobalStyle />
       <DefaultSeo {...SEO} />
