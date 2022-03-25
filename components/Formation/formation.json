@@ -320,7 +320,7 @@
         {
           "description": "",
           "rarity": "2",
-          "image": "01_bow_dark"
+          "image": "01_dark_bow"
         },
         {
           "description": "",
@@ -385,17 +385,17 @@
         {
           "description": "",
           "rarity": "3",
-          "image": "01_staff_jade"
+          "image": "01_jade_staff"
         },
         {
           "description": "",
           "rarity": "1",
-          "image": "01_staff_golden"
+          "image": "01_golden_staff"
         },
         {
           "description": "",
           "rarity": "1",
-          "image": "01_staff_draconic"
+          "image": "01_draconic_staff"
         }
       ]
     },
