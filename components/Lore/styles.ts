@@ -128,6 +128,13 @@ export const StyledSlider = styled(Slider)`
 export const VideoContainer = styled.div`
   width: 100%;
   background-color: ${COLOR_BLACK_DARK};
+
+  flex: 1 1 0%;
+  margin-right: 60px;
+
+  @media ${devices.tabletL} {
+    margin-right: 0px;
+  }
 `;
 
 export const LoreTitle = styled.h2`
