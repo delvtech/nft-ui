@@ -18,8 +18,8 @@ const RolloutRelease: NextPage = () => (
       the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
       accessible to active Element community members only. The first eligible
       2,000 community members can qualify by performing certain actions within
-      the Element ecosystem. This will be a limited release and more details
-      will be released shortly.
+      the ecosystem. This will be a limited release and more details will be
+      released shortly.
     </p>
     <h2>Second release</h2>
     <p>
@@ -38,6 +38,13 @@ const RolloutRelease: NextPage = () => (
       top right and click on the My Collection button to see your revealed elf.
       Wallets and platforms like OpenSea typically take a while to update the
       refreshed metadata.
+    </p>
+
+    <h2>Non-investments</h2>
+    <p>
+      These ELF NFTs are not for sale. They are not investments or hold or
+      represent anything of monetary value. The overarching goal of this NFT
+      project is to foster a collaborative community around the Element DAO.
     </p>
   </ContentPage>
 );
