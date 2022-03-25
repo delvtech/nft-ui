@@ -34,7 +34,7 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>Release and Minting Details</h2>
     <p>
-      After a release and mint release, you will be able to see your elf on the
+      After minting, you will be able to see your elf on the
       Elfiverse website immediately. You will need to connect your wallet at the
       top right and click on the My Collection button to see your revealed elf.
       Wallets and platforms like OpenSea typically take a while to update the
