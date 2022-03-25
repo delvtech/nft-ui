@@ -3,13 +3,11 @@ import content from "../content.json";
 
 export const Second = ({ isMeme }: { isMeme: boolean }) => (
   <LoreContainer align="center">
-    <div className="flex-div">
-      <VideoContainer>
-        <video controls poster="/assets/png/Lore/videoPreview.png">
-          <source src="/assets/video/Launch-clip.mp4" />
-        </video>
-      </VideoContainer>
-    </div>
+    <VideoContainer>
+      <video controls>
+        <source src="/assets/video/Launch-clip.mp4" />
+      </video>
+    </VideoContainer>
     <div className="flex-div max-width">
       <h2>
         {isMeme ? content.meme.partTwo.header : content.original.partTwo.header}

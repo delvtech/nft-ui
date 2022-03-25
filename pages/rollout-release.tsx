@@ -9,8 +9,9 @@ const RolloutRelease: NextPage = () => (
       launch of the Element DAO. An amplification of the community involvement
       in Element. The release schedule below was designed to enable a fair and
       transparent distribution that ensures accessibility of NFTs for eligible
-      community members <mark>prioritizes humans over the masses of bots</mark>.
-      A total of <mark>5000 ELFs</mark> will be available to mint.
+      community members and{" "}
+      <mark>prioritizes humans over the masses of bots</mark>. A total of{" "}
+      <mark>5000 ELFs</mark> will be available to mint.
     </p>
     <h2>First Release</h2>
     <p>
@@ -23,8 +24,8 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>Second release</h2>
     <p>
-      A second offer to mint an additional <mark>2,000 ELFs</mark> will be
-      offered shortly after the initial release. Details to come.
+      A second release to mint an additional <mark>2,000 ELFs</mark> will be
+      offered shortly. Details to come.
     </p>
     <h2>Third Release</h2>
     <p>
