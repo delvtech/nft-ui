@@ -1,11 +1,13 @@
 import { SectionContainer } from "common/Container";
 import { Flex } from "common/Container/styles";
+import { Spacer } from "common/Spacer";
 import { First } from "components/Lore/First";
 import { Second } from "components/Lore/Second";
 import { GridContainer, LoreTitle } from "components/Lore/styles";
 import { Third } from "components/Lore/Third";
 import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
+import Image from "next/image";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -21,7 +23,11 @@ export const Lore = () => {
         </LoreButton>
 
         <LoreButton onClick={() => setIsMeme(true)}>
-          <ModeText active={isMeme}>Meme Version</ModeText>
+          <Flex>
+            <Image src="/assets/svg/icons8.png" height={25} width={25} />
+            <Spacer size="5px" />
+            <ModeTextGlow active={isMeme}>Meme Version</ModeTextGlow>
+          </Flex>
         </LoreButton>
       </Flex>
       <GridContainer>
@@ -37,9 +43,7 @@ const ModeText = styled.div<{ active?: boolean }>`
   font-family: Defcon Zero;
   font-size: 20px;
   letter-spacing: 2px;
-  transition: color 250ms;
   color: ${({ active }) => (active ? COLORS.yellow : COLORS.white)};
-  text-shadow: ${({ active }) => active && `0px 0px 10px ${COLORS.yellow}`};
 
   :hover {
     color: ${COLORS.yellow};
@@ -54,9 +58,33 @@ const ModeText = styled.div<{ active?: boolean }>`
   }
 `;
 
+const ModeTextGlow = styled(ModeText)`
+  animation-name: ${({ active }) => (!active ? "glowing" : "none")};
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
+
+  @keyframes glowing {
+    0% {
+      text-shadow: 0px 0px 0px ${COLORS.greenLight};
+    }
+    50% {
+      text-shadow: 0px 0px 30px ${COLORS.greenLight};
+    }
+    100% {
+      text-shadow: 0px 0px 0px ${COLORS.greenLight};
+    }
+  }
+`;
+
 const LoreButton = styled.button<{ margin?: string }>`
   background: none;
   padding: 0;
 
   margin: ${({ margin }) => margin};
+`;
+
+const WarningWrapper = styled.svg`
+  img {
+    fill: white;
+  }
 `;

@@ -1,5 +1,3 @@
-import styled from "styled-components";
-import { devices } from "helpers/devices";
 import { Section } from "common/Container/styles";
 import { StyledLink } from "common/InternalLink";
 import {
@@ -8,6 +6,8 @@ import {
   COLOR_WHITE,
   COLOR_WHITE_LIGHT,
 } from "helpers/colorPalette";
+import { devices } from "helpers/devices";
+import styled from "styled-components";
 
 export const EntranceSection = styled.div`
   padding: 10rem 0 6rem 0;
@@ -40,8 +40,8 @@ export const EntranceContainer = styled.div`
   }
 `;
 
-export const ContentWrapper = styled.div`
-  padding: 20px 1rem;
+export const ContentWrapper = styled.div<{ padding?: string }>`
+  padding: ${({ padding }) => padding ?? "20px 1rem"};
   background-color: ${COLOR_GREEN_DARKEST};
   border: 1px solid ${COLOR_WHITE_LIGHT};
   color: ${COLOR_WHITE};
