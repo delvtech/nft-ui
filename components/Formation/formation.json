@@ -310,17 +310,17 @@
         {
           "description": "",
           "rarity": "2",
-          "image": "01_bow_golden"
+          "image": "01_golden_bow"
         },
         {
           "description": "",
           "rarity": "2",
-          "image": "01_bow_draconic"
+          "image": "01_draconic_bow"
         },
         {
           "description": "",
           "rarity": "2",
-          "image": "01_bow_dark"
+          "image": "01_dark_bow"
         },
         {
           "description": "",
@@ -345,17 +345,17 @@
         {
           "description": "",
           "rarity": "2",
-          "image": "01_lance_ice"
+          "image": "01_ice_lance"
         },
         {
           "description": "",
           "rarity": "2",
-          "image": "01_lance_golden"
+          "image": "01_golden_lance"
         },
         {
           "description": "",
           "rarity": "2",
-          "image": "01_lance_draconic"
+          "image": "01_draconic_lance"
         },
         {
           "description": "",
@@ -385,17 +385,17 @@
         {
           "description": "",
           "rarity": "3",
-          "image": "01_staff_jade"
+          "image": "01_jade_staff"
         },
         {
           "description": "",
           "rarity": "1",
-          "image": "01_staff_golden"
+          "image": "01_golden_staff"
         },
         {
           "description": "",
           "rarity": "1",
-          "image": "01_staff_draconic"
+          "image": "01_draconic_staff"
         }
       ]
     },
