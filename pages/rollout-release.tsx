@@ -18,8 +18,8 @@ const RolloutRelease: NextPage = () => (
       the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
       accessible to active Element community members only. The first eligible
       2,000 community members can qualify by performing certain actions within
-      the Element ecosystem. This will be a limited release and more details
-      will be released shortly.
+      the ecosystem. This will be a limited release and more details will be
+      released shortly.
     </p>
     <h2>Second release</h2>
     <p>
