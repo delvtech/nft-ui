@@ -1,6 +1,66 @@
 {
   "data": [
     {
+          "title": "Backgrounds",
+          "content": [
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_blue_portal"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_green_portal"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_carmesi_portal"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_blood_river"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_good_night"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_warm_morning"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_clean_clouds"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_blue_vapor"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_green_vapor"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_carrot_vapour"
+            },
+            {
+              "description": "",
+              "rarity": "2",
+              "image": "00_purple_vapour"
+            }
+          ]
+        },
+    {
       "title": "Bodies",
       "content": [
         {
