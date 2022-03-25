@@ -41,8 +41,6 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <meta name="twitter:title" content="Elfiverse" />
         <meta name="twitter:description" content="Enter the Elfiverse" />
         <meta name="twitter:image" content="elfiverse_council.png" />
-
-
       </Head>
       <GlobalStyle />
       <DefaultSeo {...SEO} />
