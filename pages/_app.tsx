@@ -1,5 +1,6 @@
 import "@fontsource/rubik";
 import { Web3ReactProvider } from "@web3-react/core";
+import { IneligibleAccountDialog } from "components/Dialogs/IneligibleDialog";
 import { SwitchNetworkDialog } from "components/Dialogs/SwitchNetworkDialog";
 import { Footer } from "components/Layout/Footer";
 import { Header } from "components/Layout/Header";
@@ -48,6 +49,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <QueryClientProvider client={queryClient}>
           <SwitchNetworkDialog />
           <WalletDialogProvider>
+            <IneligibleAccountDialog />
             <Header />
             <Toaster />
             <WalletNotifier>
