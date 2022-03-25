@@ -36,11 +36,11 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <meta property="og:title" content="Elfiverse" />
         <meta property="og:image" content="" />
         <meta property="og:image:alt" content="" />
-        <meta name="twitter:card" content="elfiverse_council.png" />
+        <meta name="twitter:card" content="https://ibb.co/KLTHwVM" />
         <meta name="twitter:site" content="@element_fi" />
         <meta name="twitter:title" content="Elfiverse" />
         <meta name="twitter:description" content="Enter the Elfiverse" />
-        <meta name="twitter:image" content="elfiverse_council.png" />
+        <meta name="twitter:image" content="https://ibb.co/KLTHwVM" />
       </Head>
       <GlobalStyle />
       <DefaultSeo {...SEO} />
