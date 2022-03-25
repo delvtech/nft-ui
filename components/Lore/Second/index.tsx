@@ -6,7 +6,7 @@ export const Second = ({ isMeme }: { isMeme: boolean }) => (
     <div className="flex-div">
       <VideoContainer>
         <video controls poster="/assets/png/Lore/videoPreview.png">
-          <source src="/assets/video/video.mp4" />
+          <source src="/assets/video/Launch-clip.mp4" />
         </video>
       </VideoContainer>
     </div>
