@@ -3,24 +3,18 @@ import { DialogTitle } from "common/Dialog/styles";
 import useAddressScreening from "elf/hooks/useAddressScreening";
 import useWeb3 from "elf/useWeb3";
 import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import styled from "styled-components";
-
-const StyledContainer = styled.div`
-  padding: 0 20px 10px;
-  text-align: center;
-`;
 
 export const IneligibleAccountDialog = () => {
   const { account } = useWeb3();
-  const { pass } = useAddressScreening(account);
-  const { route, replace } = useRouter();
-  const safeReplace = useRef(replace).current;
+  const { pass } = useAddressScreening('0x20A690167060542EfFF10A947958286C31c7fF41');
+  const router = useRouter();
   useEffect(() => {
-    if (pass === false && route !== "/void") {
-      safeReplace("/void");
+    if (pass === false && router.route !== "/void") {
+      router.replace("/void");
     }
-  }, [pass, route, safeReplace]);
+  }, [pass, router]);
   return (
     <Dialog isOpen={pass === false}>
       <StyledContainer>
@@ -30,3 +24,8 @@ export const IneligibleAccountDialog = () => {
     </Dialog>
   );
 };
+
+const StyledContainer = styled.div`
+  padding: 0 20px 10px;
+  text-align: center;
+`;

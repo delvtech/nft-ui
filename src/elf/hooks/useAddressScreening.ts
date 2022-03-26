@@ -1,4 +1,6 @@
+import axios from "axios";
 import { useQuery } from "react-query";
+import { ADDRESS_SCREEN_URL } from "src/urls";
 
 interface APIResponse {
   status: number;
@@ -17,10 +19,11 @@ export default function useAddressScreening(
   const { data: result, error } = useQuery<APIResponse>({
     queryKey: ["address-screen", address],
     queryFn: () =>
-      fetch("https://6zqnxzsgja.execute-api.us-east-2.amazonaws.com/screen", {
-        method: "POST",
-        body: JSON.stringify({ address }),
-      }).then((res) => res.json()),
+      axios.post(ADDRESS_SCREEN_URL, JSON.stringify({ address }), {
+        headers: {
+          "Content-Type": "text/plain",
+        },
+      }),
     staleTime: Infinity,
     enabled: !!address,
     retry: 6,
