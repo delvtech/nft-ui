@@ -1,0 +1,31 @@
+import { Dialog } from "common/Dialog";
+import { DialogTitle } from "common/Dialog/styles";
+import useAddressScreening from "elf/hooks/useAddressScreening";
+import useWeb3 from "elf/useWeb3";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import styled from "styled-components";
+
+export const IneligibleAccountDialog = () => {
+  const { account } = useWeb3();
+  const { pass } = useAddressScreening('0x20A690167060542EfFF10A947958286C31c7fF41');
+  const router = useRouter();
+  useEffect(() => {
+    if (pass === false && router.route !== "/void") {
+      router.replace("/void");
+    }
+  }, [pass, router]);
+  return (
+    <Dialog isOpen={pass === false}>
+      <StyledContainer>
+        <DialogTitle>Ineligible Account</DialogTitle>
+        <p>This account is not eligible to use this website.</p>
+      </StyledContainer>
+    </Dialog>
+  );
+};
+
+const StyledContainer = styled.div`
+  padding: 0 20px 10px;
+  text-align: center;
+`;
