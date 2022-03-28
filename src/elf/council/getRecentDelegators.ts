@@ -5,6 +5,8 @@ import {
 import { getProvider } from "elf/providers";
 import { getAddresses } from "src/addresses";
 
+// Fetches the number of unique delegators from both locking and vesting vaults
+// This function should be used within NextJs getStaticProps with a TTL to cache this result
 export async function getRecentDelegators() {
   const provider = getProvider();
   const address = getAddresses();
@@ -19,8 +21,7 @@ export async function getRecentDelegators() {
     provider,
   );
 
-  console.log(await vestingVault.manager());
-
+  // Query for all events
   const lockingFilter = lockingVault.filters.VoteChange(null, null, null);
   const vestingFilter = vestingVault.filters.VoteChange(null, null, null);
 
@@ -33,5 +34,19 @@ export async function getRecentDelegators() {
     ...vestingFilter,
   });
 
-  console.log(lockingLogs, vestingLogs);
+  const delegators: Set<string> = new Set([]);
+
+  lockingLogs.forEach((log) => {
+    const from = log.topics[1];
+    from && delegators.add(from);
+  });
+
+  vestingLogs.forEach((log) => {
+    const from = log.topics[1];
+    from && delegators.add(from);
+  });
+
+  return {
+    numOfDelegates: delegators.size,
+  };
 }
