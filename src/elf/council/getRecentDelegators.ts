@@ -47,6 +47,6 @@ export async function getRecentDelegators() {
   });
 
   return {
-    numOfDelegates: delegators.size,
+    delegators,
   };
 }
