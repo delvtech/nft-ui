@@ -1,8 +1,8 @@
 import useWeb3 from "elf/useWeb3";
 import { ChainId } from "elf/wallets/chains";
 import { useEffect, useState } from "react";
-import devAddressList from "../../nft-contract-addresses/dev.addresses.json";
-import goerliAddressList from "../../nft-contract-addresses/goerli.addresses.json";
+import devAddressList from "../../addresses/dev.addresses.json";
+import goerliAddressList from "../../addresses/goerli.addresses.json";
 
 export const useAddresses = () => {
   const { chainId } = useWeb3();
