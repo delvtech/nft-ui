@@ -1,0 +1,20 @@
+import { ChainId, getTargetChain } from "elf/wallets/chains";
+import { memoize } from "lodash";
+import devAddressList from "./dev.addresses.json";
+import goerliAddressList from "./goerli.addresses.json";
+
+export const getAddresses = memoize(() => {
+  const chainId = getTargetChain();
+  if (chainId === ChainId.GOERLI) {
+    return goerliAddressList;
+  }
+
+  if (chainId === ChainId.MAINNET) {
+    return goerliAddressList;
+  }
+
+  console.warn(
+    "Chain id not recognized. Defaulting to local host address list.",
+  );
+  return devAddressList;
+});
