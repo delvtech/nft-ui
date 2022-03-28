@@ -2,26 +2,34 @@ import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import Image from "next/image";
 import Logo from "public/assets/svg/element.svg";
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 export const TermsBanner = () => {
+  const [accepted, setAccepted] = useState(false);
+
   return (
-    <Container>
-      <LogoContainer>
-        <Image src={Logo} height={100} width={100} />
-      </LogoContainer>
-      <ChildrenWrapper>
-        <SummaryWrapper>
-          <Rubik>
-            By continuing to navigate, we assume your permission to accept our
-            Terms of Service and Privacy Policies.
-          </Rubik>
-        </SummaryWrapper>
-        <PrimaryButton>Accept Terms</PrimaryButton>
-        <SecondaryButton>Decline</SecondaryButton>
-      </ChildrenWrapper>
-    </Container>
+    !accepted && (
+      <Container>
+        <LogoContainer>
+          <Image src={Logo} height={100} width={100} />
+        </LogoContainer>
+        <ChildrenWrapper>
+          <SummaryWrapper>
+            <Rubik>
+              By continuing to navigate, we assume your permission to accept our
+              Terms of Service and Privacy Policies.
+            </Rubik>
+          </SummaryWrapper>
+          <PrimaryButton onClick={() => setAccepted(true)}>
+            Accept Terms
+          </PrimaryButton>
+          <SecondaryButton onClick={() => setAccepted(false)}>
+            Decline
+          </SecondaryButton>
+        </ChildrenWrapper>
+      </Container>
+    )
   );
 };
 
@@ -85,6 +93,10 @@ const PrimaryButton = styled.button`
     margin-bottom: 10px;
     margin-right: 0px;
   }
+
+  &:hover {
+    background-color: ${COLORS.greenLight};
+  }
 `;
 
 const SecondaryButton = styled.button`
@@ -103,6 +115,12 @@ const SecondaryButton = styled.button`
 
   @media ${devices.mobileL} {
     margin-right: 0;
+  }
+
+  &:hover {
+    background-color: #e5aca3;
+    opacity: .4
+    color: ${COLORS.black};
   }
 `;
 
@@ -134,6 +152,16 @@ const Container = styled.div`
   @media ${devices.mobileL} {
     top: 76%;
     max-width: 100%;
+  }
+  animation: fadeIn ease-in 500ms;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
   }
 `;
 
