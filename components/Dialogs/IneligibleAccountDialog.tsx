@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 export const IneligibleAccountDialog = () => {
   const { account } = useWeb3();
-  const { pass } = useAddressScreening('0x20A690167060542EfFF10A947958286C31c7fF41');
+  const { pass } = useAddressScreening(account);
   const router = useRouter();
   useEffect(() => {
     if (pass === false && router.route !== "/void") {
