@@ -1,10 +1,9 @@
 import { Spacer } from "common/Spacer";
 import { Timer } from "components/Countdown/Timer";
 import { devices } from "helpers/devices";
-import { releaseDate } from "src/constants";
+import { firstBatchMintMax, releaseDate } from "src/constants";
 import styled from "styled-components";
 
-const mintMax = 2500;
 interface MintingPeriodStatusProps {
   totalMints: number;
 }
@@ -13,7 +12,7 @@ export const MintingPeriodStatus = ({
   totalMints,
 }: MintingPeriodStatusProps) => (
   <MintingPeriodStatusContainer>
-    <h1>{mintMax - totalMints} Elves</h1>
+    <h1>{firstBatchMintMax - totalMints} Elves</h1>
     <Spacer size="16px" />
     <h2>Remaining in this minting period</h2>
     <Spacer size="20px" />

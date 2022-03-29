@@ -11,10 +11,19 @@ import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { Fade } from "react-awesome-reveal";
 import ReactTextTransition, { presets } from "react-text-transition";
+import { DayCount } from "src/types";
 import { CollectionCard } from "./CollectionCard";
 import { CollectionContainer } from "./styles";
 
-export const Collection = () => {
+interface CollectionProps {
+  mintHistory: Array<DayCount>;
+  delegationHistory: Array<DayCount>;
+}
+
+export const Collection = ({
+  mintHistory,
+  delegationHistory,
+}: CollectionProps) => {
   const hasMinted = useHasMinted();
   const { active, account } = useWeb3();
   const { open, close } = useWalletDialog();
@@ -43,7 +52,11 @@ export const Collection = () => {
         <Fade>
           {hasMinted ? (
             <>
-              <CollectionCard tokenId={firstTokenId} />
+              <CollectionCard
+                mintHistory={mintHistory}
+                delegationHistory={delegationHistory}
+                tokenId={firstTokenId}
+              />
               {mintDate && (
                 <>
                   <Spacer />
