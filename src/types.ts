@@ -15,7 +15,7 @@ export type ProofDataResponse = Array<ProofData>;
 
 export type NullableAddress = string | null | undefined;
 
-export interface MintDayCount {
+export interface DayCount {
   date: string;
   count: number;
 }
