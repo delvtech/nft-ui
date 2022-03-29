@@ -21,7 +21,9 @@ export const Lore = () => {
         <LoreButton onClick={() => setIsMeme(false)} margin="0px 40px 0px 0px">
           <ModeText active={!isMeme}>Original Version</ModeText>
         </LoreButton>
-
+        <WarningContainer>
+          <Image src="/assets/svg/icons8.png" height={25} width={25} />
+        </WarningContainer>
         <LoreButton onClick={() => setIsMeme(true)}>
           <Flex>
             <Image
@@ -43,6 +45,11 @@ export const Lore = () => {
     </SectionContainer>
   );
 };
+
+const WarningContainer = styled.div`
+  margin-left: 5px;
+  margin-top: 4px;
+`;
 
 const ModeText = styled.div<{ active?: boolean }>`
   font-family: Defcon Zero;
@@ -86,10 +93,4 @@ const LoreButton = styled.button<{ margin?: string }>`
   padding: 0;
 
   margin: ${({ margin }) => margin};
-`;
-
-const WarningWrapper = styled.svg`
-  img {
-    fill: white;
-  }
 `;
