@@ -81,6 +81,7 @@ export const Mint = () => {
             width="720px"
             height="720px"
             quality={100}
+            priority
           />
         ) : (
           <Image
@@ -89,6 +90,7 @@ export const Mint = () => {
             width="640px"
             height="400px"
             quality={100}
+            priority
           />
         )}
 
