@@ -14,3 +14,8 @@ export type ProofData = { leaf: Leaf; proof: Proof };
 export type ProofDataResponse = Array<ProofData>;
 
 export type NullableAddress = string | null | undefined;
+
+export interface MintDayCount {
+  date: string;
+  count: number;
+}

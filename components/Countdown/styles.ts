@@ -41,7 +41,7 @@ export const StyledTimer = styled.div`
   font-weight: bold;
   letter-spacing: inherit;
   color: ${COLOR_GREEN_DARK};
-  text-shadow: 0px 0px 3px rgba(0, 181, 192, 0.8);
+  text-shadow: 0px 0px 6px rgba(0, 181, 192, 0.8);
 
   @media ${devices.mobileL} {
     font-size: 50px;
@@ -53,8 +53,7 @@ export const StyledSemiColon = styled.div`
   font-family: "Calculator";
   font-weight: bold;
   color: ${COLOR_GREEN_DARK};
-  margin: 0 10px;
-  text-shadow: 0px 0px 3px rgba(20, 223, 186, 0.8);
+  text-shadow: 0px 0px 5px rgba(20, 223, 186, 0.8);
 
   @media ${devices.tabletM} {
     font-size: 30px;
