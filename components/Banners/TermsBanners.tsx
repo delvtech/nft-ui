@@ -1,68 +1,63 @@
 import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import Image from "next/image";
+import Close from "public/assets/svg/close.svg";
 import Logo from "public/assets/svg/element.svg";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { TOS_LOCAL_KEY } from "src/constants";
 import styled from "styled-components";
 
 export const TermsBanner = () => {
-  const [accepted, setAccepted] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      setOpen(!isTermsAccepted());
+    }
+  }, []);
+
+  if (!open) {
+    return <> </>;
+  }
 
   return (
-    !accepted && (
-      <Container>
-        <LogoContainer>
-          <Image src={Logo} height={100} width={100} />
-        </LogoContainer>
-        <ChildrenWrapper>
-          <SummaryWrapper>
-            <Rubik>
-              By continuing to navigate, we assume your permission to accept our
-              Terms of Service and Privacy Policies.
-            </Rubik>
-          </SummaryWrapper>
-          <PrimaryButton onClick={() => setAccepted(true)}>
-            Accept Terms
-          </PrimaryButton>
-          <SecondaryButton onClick={() => setAccepted(false)}>
-            Decline
-          </SecondaryButton>
-        </ChildrenWrapper>
-      </Container>
-    )
+    <Container>
+      <LogoContainer>
+        <Image src={Logo} height={100} width={100} />
+      </LogoContainer>
+      <ChildrenContainer>
+        <SummaryContainer>
+          <Rubik>
+            By continuing to navigate, we assume your permission to accept our
+            Terms of Service and Privacy Policies.
+          </Rubik>
+        </SummaryContainer>
+        <PrimaryButton
+          onClick={() => {
+            setAcceptedTOS();
+            setOpen(false);
+          }}
+        >
+          Accept Terms
+        </PrimaryButton>
+        <SecondaryButton onClick={() => setOpen(false)}>
+          Decline
+        </SecondaryButton>
+      </ChildrenContainer>
+      <CloseContainer>
+        <Image src={Close} height={16} width={16} />
+      </CloseContainer>
+    </Container>
   );
 };
 
-const ChildrenWrapper = styled.div`
-  margin-left: 25px;
-  display: flex;
-  align-items: center;
+const isTermsAccepted = () => {
+  return localStorage?.getItem(TOS_LOCAL_KEY);
+};
 
-  width: 100%;
-
-  @media ${devices.tabletM} {
-    padding: 30px;
-  }
-
-  @media ${devices.mobileL} {
-    flex-direction: column;
-    padding: 20px;
-    justify-content: center;
-    text-align: center;
-    margin-left: 0;
-  }
-`;
-
-const SummaryWrapper = styled.div`
-  max-width: 50%;
-  margin-right: auto;
-
-  @media ${devices.mobileL} {
-    margin-right: 0;
-    max-width: none;
-    margin-bottom: 10px;
-  }
-`;
+const setAcceptedTOS = () => {
+  localStorage?.setItem(TOS_LOCAL_KEY, "true");
+};
 
 const Rubik = styled.text`
   font-family: Rubik;
@@ -124,6 +119,61 @@ const SecondaryButton = styled.button`
   }
 `;
 
+const SummaryContainer = styled.div`
+  max-width: 50%;
+  margin-right: auto;
+
+  @media ${devices.mobileL} {
+    margin-right: 0;
+    max-width: 80%;
+    margin-bottom: 10px;
+  }
+`;
+
+const LogoContainer = styled.div`
+  margin-top: 25px;
+  margin-left: -15px;
+  min-width: fit-content;
+
+  @media ${devices.tabletM} {
+    display: none;
+    margin-top: 25px;
+    margin-left: -15px;
+  }
+`;
+
+const CloseContainer = styled.button`
+  position: absolute;
+  top: 14px;
+  right: 18px;
+
+  background: none;
+  padding: 0;
+`;
+
+const ChildrenContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  margin-left: 25px;
+  margin-right: 20px;
+
+  @media ${devices.tabletM} {
+    padding: 30px;
+    margin-right: 0px;
+  }
+
+  @media ${devices.mobileL} {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    padding: 15px;
+    margin-left: 0;
+  }
+`;
+
 const Container = styled.div`
   display: flex;
   align-items: center;
@@ -136,6 +186,7 @@ const Container = styled.div`
   z-index: 2;
 
   max-width: 80%;
+  min-width: 320px;
 
   border-radius: 20px;
   border-color: ${COLORS.grayLight};
@@ -162,17 +213,5 @@ const Container = styled.div`
     100% {
       opacity: 1;
     }
-  }
-`;
-
-const LogoContainer = styled.div`
-  margin-top: 25px;
-  margin-left: -15px;
-  min-width: fit-content;
-
-  @media ${devices.tabletM} {
-    display: none;
-    margin-top: 25px;
-    margin-left: -15px;
   }
 `;
