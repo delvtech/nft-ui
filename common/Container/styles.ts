@@ -49,6 +49,8 @@ export const Section = styled("section")<StringProps>`
   overflow: ${({ hasOverflow }) => (!hasOverflow ? "hidden" : "initial")};
   justify-items: ${({ justifyItems }) => justifyItems};
 
+  min-width: 350px;
+
   @media ${devices.tabletL} {
     grid-template-columns:
       minmax(2rem, auto) minmax(0, 82rem)
