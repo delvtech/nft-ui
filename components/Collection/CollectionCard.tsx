@@ -76,15 +76,7 @@ export const CollectionCard = ({
           {view === "remaining" && (
             <MintingPeriodStatus totalMints={delegationHistory.length} />
           )}
-          {view === "history" && (
-            <MintHistoryChart
-              mintHistory={mintHistory}
-              // isLoading={isMintHistoryLoading || isTransferLoading}
-              // isError={didMintHistoryFail || didTransferFail}
-              // isLoading={false}
-              // isError={didMintHistoryFail || didTransferFail}
-            />
-          )}
+          {view === "history" && <MintHistoryChart mintHistory={mintHistory} />}
         </CardContainer>
       </Flex>
     </CollectionCardContainer>

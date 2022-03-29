@@ -4,13 +4,13 @@ import { COLORS } from "helpers/colorPalette";
 import Image from "next/image";
 import React from "react";
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
-import { MintDayCount } from "src/types";
+import { DayCount } from "src/types";
 import styled from "styled-components";
 
 interface MintHistoryChartProps {
   isLoading?: boolean;
   isError?: boolean;
-  mintHistory?: MintDayCount[];
+  mintHistory?: DayCount[];
 }
 
 export const MintHistoryChart = ({
