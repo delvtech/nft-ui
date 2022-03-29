@@ -9,30 +9,34 @@ export function useMintDayHistory(history?: Event[]) {
   return useQuery<MintDayCount[] | undefined>(
     "mint-history",
     async () => {
-      if (history && history.length >= 2) {
-        const first = history[0];
-        const firstTimestamp = (await first.getBlock()).timestamp;
+      const _history = history as Event[];
 
-        const last = history[history.length - 1];
-        const lastTimestamp = (await last.getBlock()).timestamp;
+      // Get earliest event timestamp
+      const first = _history[0];
+      const firstTimestamp = (await first.getBlock()).timestamp;
 
-        const scaledHistory = history.map((event) =>
-          moment(
-            scale(
-              event.blockNumber,
-              first.blockNumber,
-              last.blockNumber,
-              firstTimestamp * 1000,
-              lastTimestamp * 1000,
-            ),
-          ).format("DD MMM"),
-        );
+      // Get latest event timestamp
+      const last = _history[_history.length - 1];
+      const lastTimestamp = (await last.getBlock()).timestamp;
 
-        return toPairs(countBy(scaledHistory)).map((pair) => ({
-          date: pair[0],
-          count: pair[1],
-        }));
-      }
+      // Scale all events blockNumber over [first, last] timestamp domain
+      // All new scaled timestamps are formatted using moment
+      const scaledHistory = _history.map((event) =>
+        moment(
+          scale(
+            event.blockNumber,
+            first.blockNumber,
+            last.blockNumber,
+            firstTimestamp * 1000,
+            lastTimestamp * 1000,
+          ),
+        ).format("DD MMM"),
+      );
+
+      return toPairs(countBy(scaledHistory)).map((pair) => ({
+        date: pair[0],
+        count: pair[1],
+      }));
     },
     {
       enabled: history && history.length >= 2,
