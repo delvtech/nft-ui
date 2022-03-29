@@ -7,7 +7,8 @@
     "start": "next start",
     "lint": "next lint",
     "prettier": "prettier --write \"{pages,src}/**/*.ts{,x}\"",
-    "prettier:check": "prettier --check \"{pages,src}/**/*.ts{,x}\""
+    "prettier:check": "prettier --check \"{pages,src}/**/*.ts{,x}\"",
+    "update-elf-council-typechain": "yarn add git+https://github.com/element-fi/elf-council-typechain.git"
   },
   "dependencies": {
     "@alch/alchemy-web3": "^1.2.3",
@@ -18,6 +19,7 @@
     "@web3-react/walletconnect-connector": "^6.2.10",
     "axios": "^0.26.0",
     "babel-preset-next": "^1.4.0",
+    "elf-council-typechain": "git+https://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:x-oauth-basic@github.com/element-fi/elf-council-typechain.git",
     "ethers": "^5.5.4",
     "lodash.memoize": "^4.1.2",
     "lodash.countby": "^4.6.0",

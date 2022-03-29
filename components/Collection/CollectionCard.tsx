@@ -1,12 +1,11 @@
 import { Flex } from "common/Container/styles";
 import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
-import { useMintDayHistory } from "elf/hooks/useMintDayHistory";
-import { useTransferEvents } from "elf/hooks/useTransferEvents";
-import { BigNumber, ethers } from "ethers";
+import { BigNumber } from "ethers";
 import { COLORS } from "helpers/colorPalette";
 import Image from "next/image";
 import React, { useState } from "react";
+import { DayCount } from "src/types";
 import { getTokenAssetURL } from "src/urls";
 import styled from "styled-components";
 import { MintHistoryChart } from "./MintHistoryChart";
@@ -17,23 +16,17 @@ type CollectionCardView = "history" | "remaining";
 
 interface CollectionCardProps {
   tokenId?: BigNumber;
+  mintHistory: Array<DayCount>;
+  delegationHistory: Array<DayCount>;
 }
 
-export const CollectionCard = ({ tokenId }: CollectionCardProps) => {
+export const CollectionCard = ({
+  tokenId,
+  mintHistory,
+  delegationHistory,
+}: CollectionCardProps) => {
   const tokenURL = getTokenAssetURL(tokenId);
   const [view, setView] = useState<CollectionCardView>("remaining");
-
-  const {
-    data: history,
-    isLoading: isTransferLoading,
-    isError: didTransferFail,
-  } = useTransferEvents(ethers.constants.AddressZero);
-
-  const {
-    data: mintHistory,
-    isLoading: isMintHistoryLoading,
-    isError: didMintHistoryFail,
-  } = useMintDayHistory(history);
 
   return (
     <CollectionCardContainer>
@@ -80,15 +73,10 @@ export const CollectionCard = ({ tokenId }: CollectionCardProps) => {
           </svg>
         )}
         <CardContainer>
-          {view === "remaining" ? (
-            <MintingPeriodStatus totalMints={mintHistory?.length ?? 0} />
-          ) : (
-            <MintHistoryChart
-              mintHistory={mintHistory}
-              isLoading={isMintHistoryLoading || isTransferLoading}
-              isError={didMintHistoryFail || didTransferFail}
-            />
+          {view === "remaining" && (
+            <MintingPeriodStatus totalMints={delegationHistory.length} />
           )}
+          {view === "history" && <MintHistoryChart mintHistory={mintHistory} />}
         </CardContainer>
       </Flex>
     </CollectionCardContainer>

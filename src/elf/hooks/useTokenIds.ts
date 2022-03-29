@@ -1,4 +1,5 @@
 import { BigNumber, Event } from "ethers";
+import { sortEventsByBlock } from "src/util/sortEventsByBlock";
 import { useTransferEvents } from "./useTransferEvents";
 
 type TransferEventArgs = [string, string, BigNumber];
@@ -42,8 +43,4 @@ function reconcileTransferEvents(
   });
 
   return tokenIds;
-}
-
-function sortEventsByBlock(events: Event[]) {
-  return events.sort((event) => event.blockNumber);
 }
