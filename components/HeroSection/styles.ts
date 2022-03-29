@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { devices } from "helpers/devices";
 import { COLOR_WHITE_LIGHT } from "helpers/colorPalette";
+import { devices } from "helpers/devices";
+import styled from "styled-components";
 
 export const ContentWrapper = styled.div`
   max-height: 100%;
@@ -44,6 +44,8 @@ export const HeroWrapper = styled.div`
 
 export const HeroSectionContainer = styled.section`
   padding: 13.75rem 0 0 0;
+
+  min-width: 360px;
 
   @media ${devices.tabletM} {
     padding: 6.75rem 0 0 0;
