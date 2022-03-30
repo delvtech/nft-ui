@@ -35,7 +35,7 @@ const MintingPeriodStatusContainer = styled.div`
 
   h1 {
     font-family: Defcon Zero;
-    font-size: 2rem;
+    font-size: 2rem !important;
     color: #4ecdc4;
     margin: 0;
   }

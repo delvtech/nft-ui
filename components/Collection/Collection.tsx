@@ -14,13 +14,37 @@ import {
 import { devices } from "helpers/devices";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
-import ReactTextTransition, { presets } from "react-text-transition";
+import React, { PropsWithChildren, useEffect } from "react";
 import { DayCount } from "src/types";
 import { getTokenAssetURL } from "src/urls";
 import styled from "styled-components";
 import { MintHistoryChart } from "./MintHistoryChart";
 import { MintingPeriodStatus } from "./MintingPeriodStatus";
+
+const Card = ({ title, children }: PropsWithChildren<{ title: string }>) => (
+  <CardContainer>
+    <h3>{title}</h3>
+    <Spacer size="4px" />
+    <svg width="100%" height={1}>
+      <line x1="0" y1="0" x2="1000" y2="0" stroke={COLORS.whiteLight} />
+    </svg>
+    {children}
+    <Spacer size="4px" />
+  </CardContainer>
+);
+
+const CardContainer = styled.div`
+  background-color: rgba(247, 255, 247, 0.07);
+
+  padding: 24px;
+  margin: 5px;
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: fit-content;
+`;
 
 interface CollectionProps {
   mintHistory: Array<DayCount>;
@@ -52,41 +76,13 @@ export const Collection = ({
   return (
     <ContentPageContainer>
       <CollectionContainer>
-        <h1>
-          <ReactTextTransition
-            text="My ELF Collection"
-            springConfig={presets.gentle}
-          />
-        </h1>
+        <h1>My ELF Collection</h1>
         <BodyContainer>
           <GraphContainer>
-            <Card>
-              <h3>Minting Inventory</h3>
-              <svg width="100%" height={1}>
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="1000"
-                  y2="0"
-                  stroke={COLORS.whiteLight}
-                />
-              </svg>
-              <Spacer size="4px" />
+            <Card title="Minting Inventory">
               <MintingPeriodStatus totalMints={delegationHistory.length} />
             </Card>
-            <Card>
-              <h3>Minting History</h3>
-
-              <svg width="100%" height={1}>
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="1000"
-                  y2="0"
-                  stroke={COLORS.whiteLight}
-                />
-              </svg>
-              <Spacer size="4px" />
+            <Card title="Minting History">
               <MintHistoryChart mintHistory={mintHistory} />
             </Card>
           </GraphContainer>
@@ -98,33 +94,17 @@ export const Collection = ({
               overflow: "scroll",
             }}
           >
-            <Card>
-              <h3>Claimed ELF</h3>
-              <svg width="100%" height={1}>
-                <line
-                  x1="0"
-                  y1="0"
-                  x2="400"
-                  y2="0"
-                  stroke={COLORS.whiteLight}
-                />
-              </svg>
-              <Spacer size="4px" />
-              {tokenIds.length <= 1 ? (
+            <Card title="Claimed ELF">
+              {false ? (
                 <ElfContainer>
-                  {tokenURL ? (
-                    <Image
-                      src={tokenURL}
-                      height={200}
-                      width={200}
-                      alt="Minted elf"
-                      quality={100}
-                    />
-                  ) : (
-                    <ImagePlaceholder />
-                  )}
+                  <Image
+                    src={tokenURL}
+                    height={300}
+                    width={300}
+                    alt="Minted elf"
+                    quality={100}
+                  />
                   <Spacer size="6px" />
-
                   <DefconZero size="16px">ELF 123</DefconZero>
                 </ElfContainer>
               ) : (
@@ -165,19 +145,6 @@ const GraphContainer = styled.div`
 
   @media ${devices.desktopL} {
     flex-direction: column;
-`;
-
-const Card = styled.div`
-  background-color: rgba(247, 255, 247, 0.07);
-
-  padding: 24px;
-  margin: 5px;
-
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: fit-content;
 `;
 
 const BodyContainer = styled.div`
@@ -250,6 +217,10 @@ const ContentPageContainer = styled.div<{
   padding: ${({ padding }) => padding ?? "100px 0px 235px 0px"};
   background-color: #09282d;
   border: 3px solid ${COLOR_WHITE_LIGHT};
+
+  h1 {
+    font-size: 3rem;
+  }
 
   br {
     display: block;
