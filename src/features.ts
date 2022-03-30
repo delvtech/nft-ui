@@ -1,7 +1,7 @@
 type FeatureFlag = "preLaunch";
 
 const FeatureSwitches: Record<FeatureFlag, boolean> = {
-  preLaunch: false,
+  preLaunch: true,
 };
 
 export const isFeatureEnabled = (flag: FeatureFlag) => FeatureSwitches[flag];
