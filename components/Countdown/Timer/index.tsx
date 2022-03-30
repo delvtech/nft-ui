@@ -39,11 +39,11 @@ export const Timer = ({ targetDate, fontSize }: TimerProps) => {
   return (
     <TimerFlex>
       <StyledTimer fontSize={fontSize}>{days}</StyledTimer>
-      <StyledSemiColon>:</StyledSemiColon>
+      <StyledSemiColon fontSize={fontSize}>:</StyledSemiColon>
       <StyledTimer fontSize={fontSize}>{hours}</StyledTimer>
-      <StyledSemiColon>:</StyledSemiColon>
+      <StyledSemiColon fontSize={fontSize}>:</StyledSemiColon>
       <StyledTimer fontSize={fontSize}>{minutes}</StyledTimer>
-      <StyledSemiColon>:</StyledSemiColon>
+      <StyledSemiColon fontSize={fontSize}>:</StyledSemiColon>
       <StyledTimer fontSize={fontSize}>{seconds}</StyledTimer>
     </TimerFlex>
   );

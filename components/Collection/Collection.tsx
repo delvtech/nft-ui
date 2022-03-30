@@ -101,6 +101,14 @@ export const Collection = ({
 const Header = styled.text`
   font-size 50px;
   font-family: Defcon Zero;
+
+  @media ${devices.tabletM} {
+    font-size 36px;
+  }
+
+  @media ${devices.mobileL} {
+    font-size 22px;
+  }
 `;
 
 const GraphContainer = styled.div`
@@ -214,6 +222,6 @@ const ContentPageContainer = styled.div`
   }
 
   @media ${devices.mobileL} {
-    padding: 30px 0px 30px 0px;
+    padding: 50px 0px 50px 0px;
   }
 `;

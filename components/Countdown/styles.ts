@@ -1,9 +1,5 @@
 import { Flex } from "common/Container/styles";
-import {
-  COLOR_GREEN_DARK,
-  COLOR_WHITE,
-  COLOR_WHITE_LIGHT,
-} from "helpers/colorPalette";
+import { COLOR_GREEN_DARK, COLOR_WHITE_LIGHT } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import styled from "styled-components";
 
@@ -42,10 +38,6 @@ export const StyledTimer = styled.div<{ fontSize?: string }>`
   letter-spacing: inherit;
   color: ${COLOR_GREEN_DARK};
   text-shadow: 0px 0px 6px rgba(0, 181, 192, 0.8);
-
-  @media ${devices.mobileL} {
-    font-size: 50px;
-  }
 `;
 
 export const StyledSemiColon = styled.div<{ fontSize?: string }>`
@@ -65,6 +57,7 @@ export const TimerFlex = styled(Flex)`
   max-width: max-content;
   margin: 0 auto;
   overflow: hidden;
+  letter-spacing: 8px;
 `;
 
 export const ContentWrapper = styled.div`
@@ -73,7 +66,6 @@ export const ContentWrapper = styled.div`
   border: 5px solid ${COLOR_WHITE_LIGHT};
 
   ${Flex} {
-    border: 1px solid ${COLOR_WHITE};
     padding: 10px;
   }
 

@@ -14,10 +14,10 @@ export const MintingPeriodStatus = ({
   <MintingPeriodStatusContainer>
     <h1>{firstBatchMintMax - totalMints} Elves</h1>
     <Spacer size="16px" />
-    <h2>Remaining in this minting period</h2>
+    <h2>Remaining time left to delegate</h2>
     <Spacer size="10px" />
     <TimerContainer>
-      <Timer fontSize="50px" targetDate={releaseDate} />
+      <Timer fontSize="inherit" targetDate={releaseDate} />
     </TimerContainer>
   </MintingPeriodStatusContainer>
 );
@@ -46,16 +46,29 @@ const MintingPeriodStatusContainer = styled.div`
     color: #f7fff7;
     margin: 0;
   }
+
+  @media ${devices.mobileL} {
+    padding: 12px;
+
+    h1 {
+      font-size: 1.5rem !important;
+    }
+
+    h2 {
+      font-family: Defcon Zero;
+      font-size: 0.75rem !important;
+      color: #f7fff7;
+    }
+  }
 `;
 
 const TimerContainer = styled.div`
   font-family: "Defcon Zero";
   font-weight: 600;
-  font-size: 30px;
+  font-size: 3rem;
   text-shadow: 0px 0px 20px rgba(20, 223, 186, 0.8);
   letter-spacing: 6px;
 
-  // outline: 1px solid #f7fff7;
   padding: 10px;
   margin-top: auto;
 
@@ -64,6 +77,6 @@ const TimerContainer = styled.div`
   }
 
   @media ${devices.mobileL} {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 `;
