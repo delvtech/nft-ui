@@ -1,5 +1,8 @@
+import { PrimaryButton } from "common/Button/styles";
+import { Flex } from "common/Container/styles";
 import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
+import { useHasMinted } from "elf/hooks/useHasMinted";
 import { useTokenIds } from "elf/hooks/useTokenIds";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import useWeb3 from "elf/useWeb3";
@@ -7,6 +10,7 @@ import { BigNumber } from "ethers";
 import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { DayCount } from "src/types";
 import { getTokenAssetURL } from "src/urls";
@@ -26,8 +30,10 @@ export const Collection = ({
 }: CollectionProps) => {
   const { active, account } = useWeb3();
   const { open, close } = useWalletDialog();
+  const hasMinted = useHasMinted();
   const tokenIds = useTokenIds(account);
   const firstTokenId = tokenIds[0];
+  const { push } = useRouter();
 
   const tokenURL = getTokenAssetURL(firstTokenId);
 
@@ -38,6 +44,25 @@ export const Collection = ({
       close();
     }
   }, [active, open, close]);
+
+  if (!hasMinted) {
+    return (
+      <ContentPageContainer>
+        <Flex direction="column" margin="50px">
+          <Header>My ELF Collection</Header>
+          <Spacer size="40px" />
+
+          <DefconZero color="greenLight">
+            No ELF has been minted for this account.
+          </DefconZero>
+          <Spacer size="40px" />
+          <PrimaryButton onClick={() => push("/mint")}>
+            Confirm eligibility
+          </PrimaryButton>
+        </Flex>
+      </ContentPageContainer>
+    );
+  }
 
   return (
     <ContentPageContainer>
@@ -178,10 +203,6 @@ const ImagePlaceholder = styled.div`
 `;
 
 const ContentPageContainer = styled.div`
-  // * {
-  //   outline: 1px solid red;
-  // }
-
   padding: 100px 0px 100px 0px;
   background-color: #09282d;
   border: 3px solid ${COLORS.whiteLight};
