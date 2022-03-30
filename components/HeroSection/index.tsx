@@ -31,7 +31,7 @@ export const HeroSection = () => {
                 {!isFeatureEnabled("preLaunch") && (
                   <ButtonWrapper>
                     <Link passHref href="/mint">
-                      <PrimaryButton>Start minting</PrimaryButton>
+                      <PrimaryButton as="a">Start minting</PrimaryButton>
                     </Link>
                     <PrimaryButton hasBorder>The Council</PrimaryButton>
                   </ButtonWrapper>
