@@ -15,9 +15,9 @@ export const MintingPeriodStatus = ({
     <h1>{firstBatchMintMax - totalMints} Elves</h1>
     <Spacer size="16px" />
     <h2>Remaining in this minting period</h2>
-    <Spacer size="20px" />
+    <Spacer size="10px" />
     <TimerContainer>
-      <Timer fontSize="40px" targetDate={releaseDate} />
+      <Timer fontSize="50px" targetDate={releaseDate} />
     </TimerContainer>
   </MintingPeriodStatusContainer>
 );
@@ -55,7 +55,7 @@ const TimerContainer = styled.div`
   text-shadow: 0px 0px 20px rgba(20, 223, 186, 0.8);
   letter-spacing: 6px;
 
-  outline: 1px solid #f7fff7;
+  // outline: 1px solid #f7fff7;
   padding: 10px;
   margin-top: auto;
 
