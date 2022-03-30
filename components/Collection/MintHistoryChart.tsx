@@ -1,46 +1,15 @@
-import { Spacer } from "common/Spacer";
-import DefconZero from "components/Text/DefconZero";
 import { COLORS } from "helpers/colorPalette";
-import Image from "next/image";
+import { devices } from "helpers/devices";
 import React from "react";
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 import { DayCount } from "src/types";
 import styled from "styled-components";
 
 interface MintHistoryChartProps {
-  isLoading?: boolean;
-  isError?: boolean;
   mintHistory?: DayCount[];
 }
 
-export const MintHistoryChart = ({
-  mintHistory,
-  isLoading,
-  isError,
-}: MintHistoryChartProps) => {
-  if (isError) {
-    return (
-      <ChartContainer>
-        <Spacer size="70px" />
-        <DefconZero size="14px">Could not fetch minting history!</DefconZero>
-      </ChartContainer>
-    );
-  }
-
-  if (isLoading || !mintHistory) {
-    return (
-      <ChartContainer>
-        <Spacer size="60px" />
-        <Image
-          src="/assets/svg/rings.svg"
-          height={75}
-          width={75}
-          color={COLORS.green}
-        />
-      </ChartContainer>
-    );
-  }
-
+export const MintHistoryChart = ({ mintHistory }: MintHistoryChartProps) => {
   return (
     <ChartContainer>
       <ResponsiveContainer width="100%" height="100%">
@@ -94,9 +63,22 @@ export const MintHistoryChart = ({
 
 const ChartContainer = styled.div`
   height: 220px;
-  width: 360px;
-  border: 1px solid white;
-  border-radius: 12px;
+  width: 376px;
   margin: 10px 30px;
   padding: 5px;
+
+  @media ${devices.mobileL} {
+    height: 140px;
+    width: 220px;
+  }
+
+  @media ${devices.mobileM} {
+    height: 140px;
+    width: 200px;
+  }
+
+  @media ${devices.mobileS} {
+    height: 140px;
+    width: 200px;
+  }
 `;

@@ -24,7 +24,12 @@ export const Lore = () => {
 
         <LoreButton onClick={() => setIsMeme(true)}>
           <Flex>
-            <Image src="/assets/svg/icons8.png" height={25} width={25} />
+            <Image
+              alt="warning"
+              src="/assets/svg/icons8.png"
+              height={25}
+              width={25}
+            />
             <Spacer size="5px" />
             <ModeTextGlow active={isMeme}>Meme Version</ModeTextGlow>
           </Flex>

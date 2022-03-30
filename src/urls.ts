@@ -9,8 +9,6 @@ const PINATA_GATEWAY = "https://element-fi.mypinata.cloud/ipfs";
 const NFT_ASSET_PATH =
   "/bafybeibar2yqdpghqprbq6ltqszdmczff3koalgoespozhff4e6ptxe44q";
 
-export const getTokenAssetURL = (id?: BigNumber) => {
-  return id
-    ? PINATA_GATEWAY + NFT_ASSET_PATH + `/${id.toString()}.png`
-    : undefined;
+export const getTokenAssetURL = (id: BigNumber) => {
+  return PINATA_GATEWAY + NFT_ASSET_PATH + `/${id.toString()}.png`;
 };
