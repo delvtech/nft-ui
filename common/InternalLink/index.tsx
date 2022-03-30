@@ -10,11 +10,11 @@ export const InternalLink = ({ href, children, onClick }: LinkProps) => {
 
   return (
     <Link href={href} passHref>
-      <div onClick={onClick}>
+      <a onClick={onClick}>
         <StyledLink isActive={router.pathname === href}>
           <p>{children}</p>
         </StyledLink>
-      </div>
+      </a>
     </Link>
   );
 };
