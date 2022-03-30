@@ -8,9 +8,10 @@ import { useEffect, useState } from "react";
 
 interface TimerProps {
   targetDate: Moment;
+  fontSize?: string;
 }
 
-export const Timer = ({ targetDate }: TimerProps) => {
+export const Timer = ({ targetDate, fontSize }: TimerProps) => {
   const [days, setDays] = useState<string | number>("00");
   const [hours, setHours] = useState<string | number>("00");
   const [minutes, setMinutes] = useState<string | number>("00");
@@ -37,13 +38,13 @@ export const Timer = ({ targetDate }: TimerProps) => {
 
   return (
     <TimerFlex>
-      <StyledTimer>{days}</StyledTimer>
+      <StyledTimer fontSize={fontSize}>{days}</StyledTimer>
       <StyledSemiColon>:</StyledSemiColon>
-      <StyledTimer>{hours}</StyledTimer>
+      <StyledTimer fontSize={fontSize}>{hours}</StyledTimer>
       <StyledSemiColon>:</StyledSemiColon>
-      <StyledTimer>{minutes}</StyledTimer>
+      <StyledTimer fontSize={fontSize}>{minutes}</StyledTimer>
       <StyledSemiColon>:</StyledSemiColon>
-      <StyledTimer>{seconds}</StyledTimer>
+      <StyledTimer fontSize={fontSize}>{seconds}</StyledTimer>
     </TimerFlex>
   );
 };

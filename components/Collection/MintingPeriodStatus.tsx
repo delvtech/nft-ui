@@ -17,7 +17,7 @@ export const MintingPeriodStatus = ({
     <h2>Remaining in this minting period</h2>
     <Spacer size="20px" />
     <TimerContainer>
-      <Timer targetDate={releaseDate} />
+      <Timer fontSize="40px" targetDate={releaseDate} />
     </TimerContainer>
   </MintingPeriodStatusContainer>
 );

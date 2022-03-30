@@ -28,8 +28,8 @@ export const CountdownDate = styled.div`
   }
 `;
 
-export const StyledTimer = styled.div`
-  font-size: 60px;
+export const StyledTimer = styled.div<{ fontSize?: string }>`
+  font-size: ${({ fontSize }) => fontSize ?? "60px"};
   letter-spacing: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -48,8 +48,8 @@ export const StyledTimer = styled.div`
   }
 `;
 
-export const StyledSemiColon = styled.div`
-  font-size: 60px;
+export const StyledSemiColon = styled.div<{ fontSize?: string }>`
+  font-size: ${({ fontSize }) => fontSize ?? "60px"};
   font-family: "Calculator";
   font-weight: bold;
   color: ${COLOR_GREEN_DARK};
