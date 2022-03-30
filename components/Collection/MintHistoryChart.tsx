@@ -63,18 +63,21 @@ export const MintHistoryChart = ({ mintHistory }: MintHistoryChartProps) => {
 
 const ChartContainer = styled.div`
   height: 220px;
-  width: 375px;
-  border: 1px solid white;
-  border-radius: 12px;
+  width: 376px;
   margin: 10px 30px;
   padding: 5px;
 
   @media ${devices.mobileL} {
     height: 140px;
-    width: 260px;
+    width: 220px;
   }
 
   @media ${devices.mobileM} {
+    height: 140px;
+    width: 200px;
+  }
+
+  @media ${devices.mobileS} {
     height: 140px;
     width: 200px;
   }

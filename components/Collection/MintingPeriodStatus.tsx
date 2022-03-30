@@ -23,10 +23,6 @@ export const MintingPeriodStatus = ({
 );
 
 const MintingPeriodStatusContainer = styled.div`
-  border: 1px solid;
-  border-radius: 12px;
-  border-color: rgba(255, 255, 255, 1);
-
   padding: 20px;
   margin: 10px 30px;
 
@@ -49,6 +45,7 @@ const MintingPeriodStatusContainer = styled.div`
 
   @media ${devices.mobileL} {
     padding: 12px;
+    margin: 0px;
 
     h1 {
       font-size: 1.5rem !important;
@@ -73,10 +70,10 @@ const TimerContainer = styled.div`
   margin-top: auto;
 
   @media ${devices.tabletL} {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   @media ${devices.mobileL} {
-    font-size: 1.25rem;
+    font-size: 2.25rem;
   }
 `;
