@@ -3,6 +3,7 @@ import DefconZero from "components/Text/DefconZero";
 import { useTokenIds } from "elf/hooks/useTokenIds";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import useWeb3 from "elf/useWeb3";
+import { BigNumber } from "ethers";
 import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import Image from "next/image";
@@ -67,8 +68,8 @@ export const Collection = ({
                 </ElfContainer>
               ) : (
                 <Tokens>
-                  {tokenIds.map((id) => (
-                    <ElfContainer>
+                  {tokenIds.map((id: BigNumber) => (
+                    <ElfContainer key={id.toString()}>
                       {tokenURL ? (
                         <Image
                           src={tokenURL}

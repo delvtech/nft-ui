@@ -36,6 +36,7 @@ export const MintHistoryChart = ({
           height={75}
           width={75}
           color={COLORS.green}
+          alt="Mint history loading icon"
         />
       </ChartContainer>
     );
