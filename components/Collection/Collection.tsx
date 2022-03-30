@@ -35,8 +35,6 @@ export const Collection = ({
   const firstTokenId = tokenIds[0];
   const { push } = useRouter();
 
-  const tokenURL = getTokenAssetURL(firstTokenId);
-
   useEffect(() => {
     if (!active) {
       open();
@@ -78,43 +76,45 @@ export const Collection = ({
         </GraphContainer>
         <ClaimElfContainer>
           <Card title="Claimed ELF">
-            {!!tokenIds.length ? (
-              tokenURL && tokenURL?.length > 2 ? (
+            {tokenIds.length !== 0 ? (
+              tokenIds.length === 1 ? (
                 <ElfContainer>
                   <Image
-                    src={tokenURL}
+                    src={getTokenAssetURL(tokenIds[0])}
                     height={300}
                     width={300}
                     alt="Minted elf"
                     quality={100}
                   />
                   <Spacer size="6px" />
-                  <DefconZero size="16px">ELF 123</DefconZero>
+                  <DefconZero size="16px">
+                    ELF {firstTokenId.toString()}
+                  </DefconZero>
                 </ElfContainer>
               ) : (
                 <Tokens>
                   {tokenIds.map((id: BigNumber) => (
                     <ElfContainer key={id.toString()}>
-                      {tokenURL ? (
-                        <Image
-                          src={tokenURL}
-                          height={200}
-                          width={200}
-                          alt="Minted elf"
-                          quality={100}
-                        />
-                      ) : (
-                        <ImagePlaceholder />
-                      )}
+                      <Image
+                        src={getTokenAssetURL(id)}
+                        height={200}
+                        width={200}
+                        alt="Minted elf"
+                        quality={100}
+                      />
                       <Spacer size="6px" />
 
-                      <DefconZero size="16px">ELF 123</DefconZero>
+                      <DefconZero size="16px">ELF {id.toString()}</DefconZero>
                     </ElfContainer>
                   ))}
                 </Tokens>
               )
             ) : (
-              <ImagePlaceholder />
+              <ElfContainer>
+                <ImagePlaceholder />
+                <Spacer size="6px" />
+                <DefconZero size="16px">ELF ?</DefconZero>
+              </ElfContainer>
             )}
           </Card>
         </ClaimElfContainer>
