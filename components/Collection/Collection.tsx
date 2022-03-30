@@ -164,8 +164,8 @@ const ElfContainer = styled.div`
 `;
 
 const ImagePlaceholder = styled.div`
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   background: ${COLORS.semiTransparent};
 `;
 
@@ -174,7 +174,7 @@ const ContentPageContainer = styled.div`
   //   outline: 1px solid red;
   // }
 
-  padding: 100px 0px 0px 0px;
+  padding: 100px 0px 100px 0px;
   background-color: #09282d;
   border: 3px solid ${COLORS.whiteLight};
   margin-top: 30px;
