@@ -5,6 +5,7 @@ import Close from "public/assets/svg/close.svg";
 import Logo from "public/assets/svg/element.svg";
 import React, { useEffect, useState } from "react";
 import { TOS_LOCAL_KEY } from "src/constants";
+import { PRIVACY_POLICY_URL, TOS_URL } from "src/urls";
 import styled from "styled-components";
 
 export const TermsBanner = () => {
@@ -28,8 +29,23 @@ export const TermsBanner = () => {
       <ChildrenContainer>
         <SummaryContainer>
           <Rubik>
-            By continuing to navigate, we assume your permission to accept our
-            Terms of Service and Privacy Policies.
+            By continuing to navigate, we assume your permission to accept our{" "}
+            <InlineLink
+              href={TOS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Terms of Service
+            </InlineLink>{" "}
+            and{" "}
+            <InlineLink
+              href={PRIVACY_POLICY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privacy Policy
+            </InlineLink>
+            .
           </Rubik>
         </SummaryContainer>
         <PrimaryButton
@@ -62,10 +78,14 @@ const setAcceptedTOS = () => {
 const Rubik = styled.text`
   font-family: Rubik;
   font-size: 14px;
+`;
 
-  @media ${devices.tabletM} {
-    font-size: 14px;
-  }
+const InlineLink = styled.a`
+  font-family: Rubik;
+  font-size: 14px;
+  display: inline;
+
+  color: ${COLORS.greenLight};
 `;
 
 const PrimaryButton = styled.button`
