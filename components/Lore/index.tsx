@@ -1,6 +1,5 @@
 import { SectionContainer } from "common/Container";
 import { Flex } from "common/Container/styles";
-import { Spacer } from "common/Spacer";
 import { First } from "components/Lore/First";
 import { Second } from "components/Lore/Second";
 import { GridContainer, LoreTitle } from "components/Lore/styles";
@@ -25,16 +24,7 @@ export const Lore = () => {
           <Image src="/assets/svg/icons8.png" height={25} width={25} />
         </WarningContainer>
         <LoreButton onClick={() => setIsMeme(true)}>
-          <Flex>
-            <Image
-              alt="warning"
-              src="/assets/svg/icons8.png"
-              height={25}
-              width={25}
-            />
-            <Spacer size="5px" />
-            <ModeTextGlow active={isMeme}>Meme Version</ModeTextGlow>
-          </Flex>
+          <ModeTextGlow active={isMeme}>Meme Version</ModeTextGlow>
         </LoreButton>
       </Flex>
       <GridContainer>
@@ -47,7 +37,7 @@ export const Lore = () => {
 };
 
 const WarningContainer = styled.div`
-  margin-left: 5px;
+  margin-right: 5px;
   margin-top: 4px;
 `;
 
