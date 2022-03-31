@@ -9,7 +9,15 @@ import {
 import Image from "next/image";
 import Logo from "public/assets/svg/logo.svg";
 import { Fade } from "react-awesome-reveal";
-import { DISCORD_URL, TWITTER_URL } from "src/urls";
+import {
+  COUNCIL_DELEGATE_URL,
+  COUNCIL_DOC_URL,
+  COUNCIL_URL,
+  DISCORD_URL,
+  PRIVACY_POLICY_URL,
+  TOS_URL,
+  TWITTER_URL,
+} from "src/urls";
 
 export const Footer = () => {
   return (
@@ -37,25 +45,20 @@ export const Footer = () => {
           <div>
             <h4>Home</h4>
             <ExternalLink href="/formation">Formation</ExternalLink>
-            {/* <ExternalLink href="/minting">How to mint</ExternalLink> */}
             <ExternalLink href="/rollout-release">
               The rollout release
             </ExternalLink>
-            <ExternalLink href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf">
-              Terms of Service
-            </ExternalLink>
-            <ExternalLink href="https://elementfi.s3.us-east-2.amazonaws.com/element-finance-privacy-policy.pdf">
+            <ExternalLink href={TOS_URL}>Terms of Service</ExternalLink>
+            <ExternalLink href={PRIVACY_POLICY_URL}>
               Privacy Policy
             </ExternalLink>
           </div>
-          {/* <div>
-            <h4>Learn</h4>
-            <ExternalLink href={ELEMENT_FI_URL}>Governance</ExternalLink>
-            <ExternalLink href={ELEMENT_FI_URL}>Documentation</ExternalLink>
-            <ExternalLink href={ELEMENT_FI_URL}>
-              Introduction to the Elfiverse
-            </ExternalLink>
-          </div> */}
+          <div>
+            <h4>Governance</h4>
+            <ExternalLink href={COUNCIL_URL}>Council</ExternalLink>
+            <ExternalLink href={COUNCIL_DELEGATE_URL}>Delegate</ExternalLink>
+            <ExternalLink href={COUNCIL_DOC_URL}>Documentation</ExternalLink>
+          </div>
           <div>
             <h4>Social</h4>
             <ExternalLink href={DISCORD_URL}>Discord</ExternalLink>
