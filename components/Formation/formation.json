@@ -4,58 +4,58 @@
           "title": "Backgrounds",
           "content": [
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Blue Portal",
+              "rarity": "9",
               "image": "00_blue_portal"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Green Portal",
+              "rarity": "9",
               "image": "00_green_portal"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Red Portal",
+              "rarity": "9",
               "image": "00_carmesi_portal"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Blood River",
+              "rarity": "9",
               "image": "00_blood_river"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Good Night",
+              "rarity": "9",
               "image": "00_good_night"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Sunrise",
+              "rarity": "9",
               "image": "00_warm_morning"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Clean Skies",
+              "rarity": "9",
               "image": "00_clean_clouds"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Blue Vapor",
+              "rarity": "9",
               "image": "00_blue_vapor"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Green Vapor",
+              "rarity": "9",
               "image": "00_green_vapor"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Orange Mist",
+              "rarity": "9",
               "image": "00_carrot_vapor"
             },
             {
-              "description": "",
-              "rarity": "2",
+              "description": "Purple Mist",
+              "rarity": "9",
               "image": "00_purple_vapor"
             }
           ]
@@ -64,32 +64,32 @@
       "title": "Bodies",
       "content": [
         {
-          "description": "",
+          "description": "Blue Body",
           "rarity": "25",
           "image": "body_blue"
         },
         {
-          "description": "",
+          "description": "Green Body",
           "rarity": "20",
           "image": "body_green"
         },
         {
-          "description": "",
+          "description": "Pale Body",
           "rarity": "20",
           "image": "body_pale"
         },
         {
-          "description": "",
+          "description": "Pink Body",
           "rarity": "25",
           "image": "body_pink"
         },
         {
-          "description": "",
+          "description": "Red Body",
           "rarity": "5",
           "image": "body_red"
         },
         {
-          "description": "",
+          "description": "Yellow Body",
           "rarity": "5",
           "image": "body_yellow"
         }
@@ -99,39 +99,59 @@
       "title": "Clothes",
       "content": [
         {
-          "description": "",
-          "rarity": "20",
+          "description": "Blue Uniform",
+          "rarity": "8.4",
           "image": "clothes_colonist_blue"
         },
         {
-          "description": "",
+          "description": "Green Uniform",
           "rarity": "10",
           "image": "clothes_colonist_green"
         },
         {
-          "description": "",
+          "description": "Red Uniform",
           "rarity": "15",
           "image": "clothes_colonist_red"
         },
         {
-          "description": "",
+          "description": "White Uniform",
           "rarity": "5",
           "image": "clothes_colonist_white"
         },
         {
-          "description": "",
+          "description": "Yellow Uniform",
           "rarity": "15",
           "image": "clothes_colonist_yellow"
         },
         {
-          "description": "",
+          "description": "Blue Uniform",
           "rarity": "15",
           "image": "clothes_garmet_blue"
         },
         {
-          "description": "",
+          "description": "Red Cape",
           "rarity": "5",
           "image": "clothes_garmet_red"
+        },
+        {
+          "description": "Blue Breastplate",
+          "rarity": "1",
+          "image": "03_Breastplate_blue_r03"
+        },
+        {
+          "description": "Draconic Breastplate",
+          "rarity": "1",
+          "image": "03_Breastplate_Draconic_r03"
+        },
+        {
+          "description": "Golden Breastplace",
+          "rarity": "1",
+          "image": "03_Breastplate_golden_r03"
+        },
+        {
+          "description": "Dark Suit of Straps",
+          "rarity": "1",
+          "image": "03_Deep Sleep Vitality Suit_dark_r07"
         },
         {
           "description": "",
