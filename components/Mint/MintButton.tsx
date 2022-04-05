@@ -30,9 +30,9 @@ export const MintButton = ({
 
   if (isFeatureEnabled("preLaunch")) {
     return isWhitelisted ? (
-      <PrimaryButton disabled>Whitelist confirmed!</PrimaryButton>
+      <PrimaryButton disabled>Account eligible!</PrimaryButton>
     ) : (
-      <PrimaryButton disabled>Account not in whitelist.</PrimaryButton>
+      <PrimaryButton disabled>Account not eligible.</PrimaryButton>
     );
   }
 
