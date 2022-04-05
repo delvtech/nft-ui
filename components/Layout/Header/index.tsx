@@ -22,9 +22,7 @@ export const MenuItem = ({ onClose }: any) => {
     <MenuItemWrapper onClick={onClose}>
       <InternalLink href="/home">Home</InternalLink>
       <InternalLink href="/formation">Formation</InternalLink>
-      {!isFeatureEnabled("preLaunch") && (
-        <InternalLink href="/mint">Minting</InternalLink>
-      )}
+      <InternalLink href="/mint">Minting</InternalLink>
       <InternalLink href="/rollout-release">The Rollout Release</InternalLink>
       {!isFeatureEnabled("preLaunch") && (
         <InternalLink href="/collection">The Collection</InternalLink>
@@ -80,7 +78,7 @@ export const Header = () => {
               <MenuItem />
             </MenuItemContainer>
             <MenuItemContainer>
-              {!isFeatureEnabled("preLaunch") && <ConnectWallet />}
+              <ConnectWallet />
               <Spacer size="20px" />
               <SocialLinks />
             </MenuItemContainer>
@@ -93,7 +91,7 @@ export const Header = () => {
                   setSidebarVisibility(!sidebarVisibility)
                 }
               />
-              {!isFeatureEnabled("preLaunch") && <ConnectWallet />}
+              <ConnectWallet />
             </MobileMenuContainer>
           </Flex>
         </HeaderWrapper>

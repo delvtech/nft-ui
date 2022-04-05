@@ -5,6 +5,7 @@ import { useMinter } from "elf/hooks/useMinter";
 import { useProof } from "elf/hooks/useProof";
 import { useTokenBalanceOf } from "elf/hooks/useTokenBalanceOf";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
+import { useWhitelistStatus } from "elf/hooks/useWhitelistStatus";
 import useWeb3 from "elf/useWeb3";
 import {
   createToastError,
@@ -58,6 +59,8 @@ export const Mint = () => {
     },
   });
 
+  const { data: whitelistStatus } = useWhitelistStatus(account);
+
   const currentContent = useMemo(
     () =>
       isMinting ? content.pending : isSuccess ? content.success : content.stale,
@@ -102,6 +105,7 @@ export const Mint = () => {
             openDialog={open}
             handleMint={handleMint}
             isProofLoading={isProofLoading}
+            isWhitelisted={whitelistStatus}
           />
         ) : (
           <Fade>
@@ -116,12 +120,14 @@ export const Mint = () => {
           </Fade>
         )}
 
-        <ContentWrapper>
-          <ReactTextTransition
-            text={currentContent.description}
-            springConfig={presets.gentle}
-          />
-        </ContentWrapper>
+        {active && whitelistStatus && (
+          <ContentWrapper>
+            <ReactTextTransition
+              text={currentContent.description}
+              springConfig={presets.gentle}
+            />
+          </ContentWrapper>
+        )}
       </MintContainer>
     </ContentPage>
   );

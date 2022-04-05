@@ -46,13 +46,9 @@ export const Footer = () => {
           <div>
             <h4>Home</h4>
             <ExternalLink href="/formation">Formation</ExternalLink>
+            <ExternalLink href="/mint">Minting</ExternalLink>
             <ExternalLink href="/rollout-release">
               The rollout release
-            </ExternalLink>
-            <ExternalLink href={TOS_URL}>Terms of Service</ExternalLink>
-            <ExternalLink href={CC0_URL}>Artwork License</ExternalLink>
-            <ExternalLink href={PRIVACY_POLICY_URL}>
-              Privacy Policy
             </ExternalLink>
           </div>
           <div>
@@ -65,6 +61,14 @@ export const Footer = () => {
             <h4>Social</h4>
             <ExternalLink href={DISCORD_URL}>Discord</ExternalLink>
             <ExternalLink href={TWITTER_URL}>Twitter</ExternalLink>
+          </div>
+          <div>
+            <h4>Legal</h4>
+            <ExternalLink href={TOS_URL}>Terms of Service</ExternalLink>
+            <ExternalLink href={CC0_URL}>Artwork License</ExternalLink>
+            <ExternalLink href={PRIVACY_POLICY_URL}>
+              Privacy Policy
+            </ExternalLink>
           </div>
         </GridContainer>
       </Fade>

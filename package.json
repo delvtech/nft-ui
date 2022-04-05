@@ -16,7 +16,7 @@
     "@fontsource/rubik": "^4.5.1",
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
-    "@web3-react/walletconnect-connector": "^6.2.10",
+    "@web3-react/walletconnect-connector": "^6.2.13",
     "axios": "^0.26.0",
     "babel-preset-next": "^1.4.0",
     "elf-council-typechain": "git+https://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:x-oauth-basic@github.com/element-fi/elf-council-typechain.git",

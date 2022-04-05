@@ -2,6 +2,7 @@ import axios from "axios";
 import useWeb3 from "elf/useWeb3";
 import { ChainId } from "elf/wallets/chains";
 import { useQuery } from "react-query";
+import { isFeatureEnabled } from "src/features";
 import { NullableAddress, ProofData, ProofDataResponse } from "src/types";
 
 const S3_BUCKET_URI = "https://elementfi.s3.us-east-2.amazonaws.com/nft";
@@ -32,7 +33,7 @@ export const useProof = (address: NullableAddress) => {
       return data.pop();
     },
     {
-      enabled: !!address,
+      enabled: !!address && !isFeatureEnabled("preLaunch"),
     },
   );
 };
