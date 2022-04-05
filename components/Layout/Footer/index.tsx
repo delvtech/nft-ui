@@ -10,6 +10,7 @@ import Image from "next/image";
 import Logo from "public/assets/svg/logo.svg";
 import { Fade } from "react-awesome-reveal";
 import {
+  CC0_URL,
   COUNCIL_DELEGATE_URL,
   COUNCIL_DOC_URL,
   COUNCIL_URL,
@@ -49,6 +50,7 @@ export const Footer = () => {
               The rollout release
             </ExternalLink>
             <ExternalLink href={TOS_URL}>Terms of Service</ExternalLink>
+            <ExternalLink href={CC0_URL}>Artwork License</ExternalLink>
             <ExternalLink href={PRIVACY_POLICY_URL}>
               Privacy Policy
             </ExternalLink>
