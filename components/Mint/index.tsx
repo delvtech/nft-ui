@@ -120,12 +120,14 @@ export const Mint = () => {
           </Fade>
         )}
 
-        <ContentWrapper>
-          <ReactTextTransition
-            text={currentContent.description}
-            springConfig={presets.gentle}
-          />
-        </ContentWrapper>
+        {active && whitelistStatus && (
+          <ContentWrapper>
+            <ReactTextTransition
+              text={currentContent.description}
+              springConfig={presets.gentle}
+            />
+          </ContentWrapper>
+        )}
       </MintContainer>
     </ContentPage>
   );

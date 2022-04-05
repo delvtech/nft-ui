@@ -25,4 +25,4 @@ export const PRIVACY_POLICY_URL =
   "https://elementfi.s3.us-east-2.amazonaws.com/element-finance-privacy-policy.pdf";
 
 export const WHITELIST_URL =
-  "https://gist.githubusercontent.com/cashd/f50649acc6e6d3c4142152e90d707707/raw/d42ec6d8134963f3a5a3464c700f05b9d97f59db/whitelist.json";
+  "https://elementfi.s3.us-east-2.amazonaws.com/nft/whitelist.json";

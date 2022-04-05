@@ -49,7 +49,7 @@ export const MintButton = ({
   }
 
   if (isProofLoading) {
-    <PrimaryButton disabled>Checking eligibility...</PrimaryButton>;
+    return <PrimaryButton disabled>Checking eligibility...</PrimaryButton>;
   }
 
   return (
