@@ -19,5 +19,7 @@ export const getTokenAssetURL = (id: BigNumber) => {
 
 export const TOS_URL =
   "https://elementfi.s3.us-east-2.amazonaws.com/element-finance-terms-of-service.pdf";
+export const CC0_URL =
+  "https://creativecommons.org/publicdomain/zero/1.0/legalcode";
 export const PRIVACY_POLICY_URL =
   "https://elementfi.s3.us-east-2.amazonaws.com/element-finance-privacy-policy.pdf";
