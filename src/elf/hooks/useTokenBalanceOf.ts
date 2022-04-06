@@ -1,6 +1,5 @@
 import { useSmartContractReadCall } from "@elementfi/react-query-typechain";
 import { getProvider } from "elf/providers";
-import { isFeatureEnabled } from "src/features";
 import { NullableAddress } from "src/types";
 import { ElfNFT__factory } from "typechain-types";
 import { useAddresses } from "./useAddress";
@@ -16,6 +15,6 @@ export function useTokenBalanceOf(address: NullableAddress) {
 
   return useSmartContractReadCall(tokenContract, "balanceOf", {
     callArgs: [address as string],
-    enabled: !!address && !isFeatureEnabled("preLaunch"),
+    enabled: !!address,
   });
 }
