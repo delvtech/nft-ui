@@ -11,50 +11,33 @@
   },
   {
     "name": "Blue Portal",
-    "fileName": "Blue_Mist.png",
-    "color": "portal",
+    "image": "Blue_Mist.png",
     "rarity": 10,
-    "adjustedRarity": 9.090909091,
     "description": "Blue portal that transfers users across the many Valleys of Yield and Principal"
   },
   {
-    "layer_id": 0,
-    "id": 2,
     "name": "Blue Mist",
-    "fileName": "Blue_Portal.png",
-    "color": "vapor",
+    "image": "Blue_Portal.png",
     "rarity": 10,
     "adjustedRarity": 9.090909091,
     "description": "Soothing skies belie unknown futures"
   },
   {
-    "layer_id": 0,
-    "id": 3,
-    "name": "Red Portal",
-    "fileName": "Clear_Skies.png",
-    "color": "portal",
+    "name": "Clear Skies",
+    "image": "Clear_Skies.png",
     "rarity": 10,
-    "adjustedRarity": 9.090909091,
     "description": "A red portal signifies strife and battle"
   },
   {
-    "layer_id": 0,
-    "id": 4,
     "name": "Orange Mist",
     "fileName": "Good_Night.png",
-    "color": "vapor",
     "rarity": 10,
-    "adjustedRarity": 9.090909091,
     "description": "Soothing vapors expand into the vast ether of existence"
   },
   {
-    "layer_id": 0,
-    "id": 5,
     "name": "Clear Skies",
     "fileName": "Green_Mist.png",
-    "color": "clouds",
     "rarity": 10,
-    "adjustedRarity": 9.090909091,
     "description": "Clear skies signal peace and tranquility"
   },
   {
@@ -1676,3 +1659,4 @@
       ]
     }
   ]
+},
