@@ -1,7 +1,6 @@
 import { PrimaryButton } from "common/Button/styles";
 import { SectionContainer } from "common/Container";
 import { InternalLink } from "common/InternalLink";
-import { Timer } from "components/Countdown/Timer";
 import {
   ContentWrapper,
   DesktopHeader,
@@ -11,7 +10,6 @@ import {
 } from "components/Entrance/styles";
 import DefconZero from "components/Text/DefconZero";
 import React from "react";
-import { releaseDate } from "src/constants";
 
 const handleClick = () => localStorage.setItem("hasEntered", "true");
 
@@ -36,7 +34,6 @@ export const Entrance = () => (
         <InternalLink href="/home" noUnderline onClick={handleClick}>
           <PrimaryButton>Enter world</PrimaryButton>
         </InternalLink>
-        <Timer targetDate={releaseDate} />
       </EntranceContainer>
     </SectionContainer>
   </EntranceSection>
