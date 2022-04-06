@@ -21,13 +21,10 @@ import { MintingPeriodStatus } from "./MintingPeriodStatus";
 
 interface CollectionProps {
   mintHistory: Array<DayCount>;
-  delegationHistory: Array<DayCount>;
+  mintCount: number;
 }
 
-export const Collection = ({
-  mintHistory,
-  delegationHistory,
-}: CollectionProps) => {
+export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
   const { active, account } = useWeb3();
   const { open, close } = useWalletDialog();
   const hasMinted = useHasMinted();
@@ -71,7 +68,7 @@ export const Collection = ({
       <Body>
         <GraphContainer>
           <Card title="Minting Inventory">
-            <MintingPeriodStatus totalMints={delegationHistory.length} />
+            <MintingPeriodStatus totalMints={mintCount} />
           </Card>
           <Card title="Minting History">
             <MintHistoryChart mintHistory={mintHistory} />

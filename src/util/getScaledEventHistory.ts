@@ -27,7 +27,7 @@ export async function getScaledEventHistory(events: Event[]) {
         firstTimestamp * 1000,
         lastTimestamp * 1000,
       ),
-    ).format("DD MMM"),
+    ).format("lll"),
   );
 
   return toPairs(countBy(scaledHistory)).map((pair) => ({
