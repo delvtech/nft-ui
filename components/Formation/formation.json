@@ -583,19 +583,54 @@
       "title": "Hats",
       "content": [
         {
-          "description": "",
+          "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. Blue represents its creator's depth of knowledge",
+          "rarity": "3",
+          "image": "Blue_Mage_hat"
+        },
+        {
+          "description": "Somehow lighter than a feather, the magical stones used in this cap make you feel constantly energized",
+          "rarity": "6",
+          "image": "Cap"
+        },
+        {
+          "description": "Battle-tested helmet that invokes fear in their opponents",
+          "rarity": "6",
+          "image": "Draconic_Helmet"
+        },
+        {
+          "description": "Battle-tested helmet that invokes fear in their opponents",
+          "rarity": "6",
+          "image": "Dark_Helmet"
+        },
+        {
+          "description": "Battle-tested helmet that invokes fear in their opponents",
+          "rarity": "6",
+          "image": "Golden_Helmet"
+        },
+        {
+          "description": "A tribute to the life-giving sun, this heavy helmet is mostly worn by high priests at harvest festivals",
           "rarity": "2",
-          "image": "cleric_crown"
+          "image": "Headdress"
         },
         {
-          "description": "",
-          "rarity": "9",
-          "image": "floating_bonet"
+          "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. Red represents its creator's passion",
+          "rarity": "3",
+          "image": "Red_Mage_Hat"
         },
         {
-          "description": "",
-          "rarity": "5",
-          "image": "sun_headset"
+          "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. White represents its creator's power over others",
+          "rarity": "3",
+          "image": "White_Mage_Hat"
+        },
+        {
+          "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. Yellow represents its creator's ambition",
+          "rarity": "3",
+          "image": "Yellow_Mage_Hat"
+        },
+        {
+          "description": "Gem-studded crown used by high priests for ancient rituals, heightening their already impressive powers",
+          "rarity": "2",
+          "image": "Crown"
         }
       ]
     },
