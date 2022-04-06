@@ -11,7 +11,7 @@ export const Countdown = () => {
         <Fade triggerOnce>
           <h3>First drop hits</h3>
           <Zoom triggerOnce>
-            <CountdownDate>{releaseDate.format("MMMM Do YYYY, h:mm:ss a")}</CountdownDate>
+            <CountdownDate>{releaseDate.format("MMMM Do YYYY")}</CountdownDate>
           </Zoom>
           <Timer targetDate={releaseDate} />
         </Fade>
