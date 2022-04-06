@@ -59,7 +59,8 @@ export const Mint = () => {
     },
   });
 
-  const { data: whitelistStatus } = useWhitelistStatus(account);
+  const { data: isWhitelisted, isLoading: isWhitelistLoading } =
+    useWhitelistStatus(account);
 
   const currentContent = useMemo(
     () =>
@@ -96,6 +97,7 @@ export const Mint = () => {
             priority
           />
         )}
+        {console.log(isWhitelistLoading, isProofLoading)}
 
         {!isMinting ? (
           <MintButton
@@ -104,8 +106,8 @@ export const Mint = () => {
             hasMinted={hasMinted}
             openDialog={open}
             handleMint={handleMint}
-            isProofLoading={isProofLoading}
-            isWhitelisted={whitelistStatus}
+            isLoading={isWhitelistLoading || isProofLoading}
+            isWhitelisted={isWhitelisted}
           />
         ) : (
           <Fade>
@@ -120,7 +122,7 @@ export const Mint = () => {
           </Fade>
         )}
 
-        {active && whitelistStatus && (
+        {active && isWhitelisted && canMint && !hasMinted && (
           <ContentWrapper>
             <ReactTextTransition
               text={currentContent.description}
