@@ -57,18 +57,17 @@ export const TermsBanner = () => {
           Accept Terms
         </PrimaryButton>
         <SecondaryButton onClick={() => setOpen(false)}>
-        
         <InlineLink
-              href={TOS_URL}
+              href={PRIVACY_POLICY_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
-             Learn More
-            </InlineLink>{" "}
-
+              Learn More
+            </InlineLink>
         </SecondaryButton>
       </ChildrenContainer>
       <CloseContainer>
+
         <Image src={Close} height={16} width={16} />
       </CloseContainer>
     </Container>
