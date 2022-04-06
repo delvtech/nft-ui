@@ -1,529 +1,1678 @@
 {
   "data": [
     {
-          "title": "Backgrounds",
-          "content": [
-            {
-              "description": "Blue Portal",
-              "rarity": "9",
-              "image": "Blue_Portal"
-            },
-            {
-              "description": "Green Portal",
-              "rarity": "9",
-              "image": "Green_Portal"
-            },
-            {
-              "description": "Red Portal",
-              "rarity": "9",
-              "image": "Red_Portal"
-            },
-            {
-              "description": "Blood River",
-              "rarity": "9",
-              "image": "Blood_River"
-            },
-            {
-              "description": "Good Night",
-              "rarity": "9",
-              "image": "Good_Night"
-            },
-            {
-              "description": "Sunrise",
-              "rarity": "9",
-              "image": "Warm_Sunrise"
-            },
-            {
-              "description": "Clear Skies",
-              "rarity": "9",
-              "image": "Clear_Skies"
-            },
-            {
-              "description": "Blue Vapor",
-              "rarity": "9",
-              "image": "Blue_Mist"
-            },
-            {
-              "description": "Green Vapor",
-              "rarity": "9",
-              "image": "Green_Mist"
-            },
-            {
-              "description": "Orange Mist",
-              "rarity": "9",
-              "image": "Orange_Mist"
-            },
-            {
-              "description": "Purple Mist",
-              "rarity": "9",
-              "image": "Purple_Mist"
-            }
-          ]
-        },
+    "title": "Backgrounds",
+    "content": [
     {
-      "title": "Bodies",
-      "content": [
-        {
-          "description": "Blue Body",
-          "rarity": "25",
-          "image": "body_blue"
-        },
-        {
-          "description": "Green Body",
-          "rarity": "20",
-          "image": "body_green"
-        },
-        {
-          "description": "Pale Body",
-          "rarity": "20",
-          "image": "body_pale"
-        },
-        {
-          "description": "Pink Body",
-          "rarity": "25",
-          "image": "body_pink"
-        },
-        {
-          "description": "Red Body",
-          "rarity": "5",
-          "image": "body_red"
-        },
-        {
-          "description": "Yellow Body",
-          "rarity": "5",
-          "image": "body_yellow"
-        }
-      ]
-    },
-    {
-      "title": "Clothes",
-      "content": [
-        {
-          "description": "Blue Uniform",
-          "rarity": "8",
-          "image": "clothes_colonist_blue"
-        },
-        {
-          "description": "Green Uniform",
-          "rarity": "4",
-          "image": "clothes_colonist_green"
-        },
-        {
-          "description": "Red Uniform",
-          "rarity": "6",
-          "image": "clothes_colonist_red"
-        },
-        {
-          "description": "White Uniform",
-          "rarity": "2",
-          "image": "clothes_colonist_white"
-        },
-        {
-          "description": "Yellow Uniform",
-          "rarity": "6",
-          "image": "clothes_colonist_yellow"
-        },
-        {
-          "description": "Blue Cape",
-          "rarity": "6",
-          "image": "clothes_garmet_blue"
-        },
-        {
-          "description": "Red Cape",
-          "rarity": "5",
-          "image": "clothes_garmet_red"
-        },
-        {
-          "description": "Blue Breastplate",
-          "rarity": "1",
-          "image": "Blue_Breastplate"
-        },
-        {
-          "description": "Draconic Breastplate",
-          "rarity": "1",
-          "image": "Draconic_Breastplate"
-        },
-        {
-          "description": "Golden Breastplace",
-          "rarity": "1",
-          "image": "Golden_Breas"
-        },
-        {
-          "description": "Dark Suit of Straps",
-          "rarity": "2",
-          "image": "03_Deep Sleep Vitality Suit_dark_r07"
-        },
-        {
-          "description": "Yellow Cape",
-          "rarity": "2",
-          "image": "clothes_garmet_yellow"
-        }
-      ]
-    },
-
-    {
-      "title": "Eyebrows",
-      "content": [
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_angry_blue"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_angry_grey"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_angry_red"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_angry_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_doubting_blue"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_doubting_grey"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_doubting_red"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_doubting_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-
-          "image": "eyebrown_neutral_blue"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_neutral_grey"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-
-          "image": "eyebrown_neutral_red"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_neutral_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-
-          "image": "eyebrown_surprised_blue"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_surprised_grey"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-
-          "image": "eyebrown_surprised_red"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "eyebrown_surprised_yellow"
-        }
-      ]
-    },
-
-    {
-      "title": "Eyes",
-      "content": [
-        {
-          "description": "",
-          "rarity": "7",
-          "image": "eyes_fire"
-        },
-        {
-          "description": "",
-          "rarity": "20",
-          "image": "eyes_gold"
-        },
-        {
-          "description": "",
-          "rarity": "7",
-          "image": "eyes_ice"
-        },
-        {
-          "description": "",
-          "rarity": "20",
-          "image": "eyes_left"
-        },
-        {
-          "description": "",
-          "rarity": "20",
-          "image": "eyes_red"
-        },
-        {
-          "description": "",
-          "rarity": "20",
-          "image": "eyes_right"
-        }
-      ]
-    },
-
-    {
-      "title": "Eyewear",
-      "content": [
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "eye_patch"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "chain_veil"
-        },
-        {
-          "description": "",
-          "rarity": "8",
-          "image": "maccar_mask"
-        }
-      ]
-    },
-
-    {
-      "title": "Hair",
-      "content": [
-        {
-          "description": "",
-          "rarity": "15",
-          "image": "hair_bun_blue"
-        },
-        {
-          "description": "",
-          "rarity": "15",
-          "image": "hair_bun_green"
-        },
-        {
-          "description": "",
-          "rarity": "10",
-          "image": "hair_bun_red"
-        },
-        {
-          "description": "",
-          "rarity": "20",
-          "image": "hair_bun_grey"
-        },
-        {
-          "description": "",
-          "rarity": "20",
-          "image": "hair_bun_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "10",
-          "image": "hair_long_blue"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "hair_mohawk_green"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "hair_pony_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "hair_short_grey"
-        }
-      ]
-    },
-
-    {
-      "title": "Hats",
-      "content": [
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "cleric_crown"
-        },
-        {
-          "description": "",
-          "rarity": "9",
-          "image": "floating_bonet"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "sun_headset"
-        }
-      ]
-    },
-    {
-      "title": "Weapons",
-      "content": [
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_jade_bow"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_golden_bow"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_draconic_bow"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_dark_bow"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "01_long_sword_dark"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "01_long_sword_red"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "01_long_sword_golden"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "01_long_sword_golden"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_ice_lance"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_golden_lance"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_draconic_lance"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "01_sword_dual_red"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "01_sword_dual_green"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "01_sword_dual_golden"
-        },
-        {
-          "description": "",
-          "rarity": "8",
-          "image": "01_right_quartz_sword"
-        },
-        {
-          "description": "",
-          "rarity": "8",
-          "image": "01_left_quartz_sword"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "01_jade_staff"
-        },
-        {
-          "description": "",
-          "rarity": "1",
-          "image": "01_golden_staff"
-        },
-        {
-          "description": "",
-          "rarity": "1",
-          "image": "01_draconic_staff"
-        }
-      ]
-    },
-
-    {
-      "title": "Mouth",
-      "content": [
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_neutral_blue"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_neutral_red"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_blue"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_green"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_red"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_talking_blue"
-        },
-        {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_talking_pink"
-        }
+    "name": "Blood River",
+    "image": "Blood_River",
+    "rarity": 9,
+    "description": "Blood river that is shown to those with a future of battle or strife"
+  },
+  {
+    "name": "Blue Portal",
+    "fileName": "Blue_Mist.png",
+    "color": "portal",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "Blue portal that transfers users across the many Valleys of Yield and Principal"
+  },
+  {
+    "layer_id": 0,
+    "id": 2,
+    "name": "Blue Mist",
+    "fileName": "Blue_Portal.png",
+    "color": "vapor",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "Soothing skies belie unknown futures"
+  },
+  {
+    "layer_id": 0,
+    "id": 3,
+    "name": "Red Portal",
+    "fileName": "Clear_Skies.png",
+    "color": "portal",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "A red portal signifies strife and battle"
+  },
+  {
+    "layer_id": 0,
+    "id": 4,
+    "name": "Orange Mist",
+    "fileName": "Good_Night.png",
+    "color": "vapor",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "Soothing vapors expand into the vast ether of existence"
+  },
+  {
+    "layer_id": 0,
+    "id": 5,
+    "name": "Clear Skies",
+    "fileName": "Green_Mist.png",
+    "color": "clouds",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "Clear skies signal peace and tranquility"
+  },
+  {
+    "layer_id": 0,
+    "id": 6,
+    "name": "Good Night",
+    "fileName": "Green_Portal.png",
+    "color": "night",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "A starry night full of pinpoints of distant opportunity"
+  },
+  {
+    "layer_id": 0,
+    "id": 7,
+    "name": "Green Portal",
+    "fileName": "Orange_Mist.png",
+    "color": "portal",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "A green portal signifies balance in all things"
+  },
+  {
+    "layer_id": 0,
+    "id": 8,
+    "name": "Green Mist",
+    "fileName": "Purple_Mist.png",
+    "color": "vapor",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "The skies simmer with soothing green vapors"
+  },
+  {
+    "layer_id": 0,
+    "id": 9,
+    "name": "Purple Mist",
+    "fileName": "Red_Portal.png",
+    "color": "vapor",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "The skies glimmer with mysterious purple vapors"
+  },
+  {
+    "layer_id": 0,
+    "id": 10,
+    "name": "Warm Sunrise",
+    "fileName": "Warm_Sunrise.png",
+    "color": "morning",
+    "rarity": 10,
+    "adjustedRarity": 9.090909091,
+    "description": "Sunrise across Principal Valley to signify a new light and journey"
+  },
+  {
+        "title": "Weapons",
+        "content": [
+  {
+    "layer_id": 1,
+    "id": 1,
+    "name": "Dark Bow",
+    "fileName": "Blue_Bow.png",
+    "color": "dark",
+    "rarity": 6.666666667,
+    "adjustedRarity": 3.737432432,
+    "description": "Dark bows draw no attention, allowing their user to slither in the night"
+  },
+  {
+    "layer_id": 1,
+    "id": 2,
+    "name": "Draconic Bow",
+    "fileName": "Dark_Bow.png",
+    "color": "draconic",
+    "rarity": 3.333333333,
+    "adjustedRarity": 3.737432432,
+    "description": "Draconic markings bode ill for those standing in its way"
+  },
+  {
+    "layer_id": 1,
+    "id": 3,
+    "name": "Golden Bow",
+    "fileName": "Dark_Longsword.png",
+    "color": "golden",
+    "rarity": 3.333333333,
+    "adjustedRarity": 3.737432432,
+    "description": "Gold-plated bows wielded by those of high status"
+  },
+  {
+    "layer_id": 1,
+    "id": 4,
+    "name": "Ice Lance",
+    "fileName": "Draconic_Bow.png",
+    "color": "",
+    "rarity": 4,
+    "adjustedRarity": 1.351351351,
+    "description": "Songs of old told of weapons made of unbreakable, never-melting ice, carried by elite soldiers"
+  },
+  {
+    "layer_id": 1,
+    "id": 5,
+    "name": "Blue Bow",
+    "fileName": "Draconic_Lance.png",
+    "color": "",
+    "rarity": 6.666666667,
+    "adjustedRarity": 1.868716216,
+    "description": "Markings of tradition adorn this ceremonial bow"
+  },
+  {
+    "layer_id": 1,
+    "id": 6,
+    "name": "Draconic Lance",
+    "fileName": "Draconic_Staff.png",
+    "color": "draconic",
+    "rarity": 2,
+    "adjustedRarity": 1.351351351,
+    "description": "Draconic lances wielded by tribes of elves as fierce and wild as their prey"
+  },
+  {
+    "layer_id": 1,
+    "id": 7,
+    "name": "Golden Lance",
+    "fileName": "Golden_Bow.png",
+    "color": "golden",
+    "rarity": 2,
+    "adjustedRarity": 1.351351351,
+    "description": "Lances dripping with gold leaf lull opponents into a false sense of security"
+  },
+  {
+    "layer_id": 1,
+    "id": 8,
+    "name": "Left Quartz Sword",
+    "fileName": "Golden_Dual_Swords.png",
+    "color": "",
+    "rarity": 8,
+    "adjustedRarity": 5.405405405,
+    "description": "Elves possess unparalleled quartz craftsmanship, through which they imbue their weapons with eternal sharpness"
+  },
+  {
+    "layer_id": 1,
+    "id": 9,
+    "name": "Dark Longsword",
+    "fileName": "Golden_Lance.png",
+    "color": "dark",
+    "rarity": 3,
+    "adjustedRarity": 2.027027027,
+    "description": "Massive broadsword ready to fell anything in its path"
+  },
+  {
+    "layer_id": 1,
+    "id": 10,
+    "name": "Golden Longsword",
+    "fileName": "Golden_Longsword.png",
+    "color": "golden",
+    "rarity": 3,
+    "adjustedRarity": 2.027027027,
+    "description": "A golden blade wielded by someone of high status; or someone who cut them down for it"
+  },
+  {
+    "layer_id": 1,
+    "id": 11,
+    "name": "Red Longsword",
+    "fileName": "Golden_Staff.png",
+    "color": "red",
+    "rarity": 3,
+    "adjustedRarity": 2.027027027,
+    "description": "An ominous blade that shimmers with imbued power and incantation"
+  },
+  {
+    "layer_id": 1,
+    "id": 12,
+    "name": "Right Quartz Sword",
+    "fileName": "Green_Dual_Swords.png",
+    "color": "",
+    "rarity": 8,
+    "adjustedRarity": 5.405405405,
+    "description": "Elves possess unparalleled quartz craftsmanship, through which they imbue their weapons with eternal sharpness"
+  },
+  {
+    "layer_id": 1,
+    "id": 13,
+    "name": "Draconic Staff",
+    "fileName": "Ice_Lance.png",
+    "color": "draconic",
+    "rarity": 1,
+    "adjustedRarity": 0.6756756757,
+    "description": "A staff adorned with the bones of dire beasts exhorts power and influence"
+  },
+  {
+    "layer_id": 1,
+    "id": 14,
+    "name": "Golden Staff",
+    "fileName": "Jade_Staff.png",
+    "color": "golden",
+    "rarity": 1,
+    "adjustedRarity": 0.6756756757,
+    "description": "A gold-plated staff passed down through generations now serves as a symbol of diplomacy"
+  },
+  {
+    "layer_id": 1,
+    "id": 15,
+    "name": "Jade Staff",
+    "fileName": "Left_Quartz_Sword.png",
+    "color": "jade",
+    "rarity": 3,
+    "adjustedRarity": 2.027027027,
+    "description": "Only the finest tribes of artisans ever possessed the ability to craft such opulent weapons"
+  },
+  {
+    "layer_id": 1,
+    "id": 16,
+    "name": "Golden Dual Swords",
+    "fileName": "Red_Dual_Swords.png",
+    "color": "golden",
+    "rarity": 2,
+    "adjustedRarity": 3.378378378,
+    "description": "Dual swords favored by the most degen tribes endlessly searching for the highest yields"
+  },
+  {
+    "layer_id": 1,
+    "id": 17,
+    "name": "Green Dual Swords",
+    "fileName": "Red_Longsword.png",
+    "color": "green",
+    "rarity": 5,
+    "adjustedRarity": 3.378378378,
+    "description": "Dual swords favored by the most degen tribes endlessly searching for the highest yields"
+  },
+  {
+    "layer_id": 1,
+    "id": 18,
+    "name": "Red Dual Swords",
+    "fileName": "Right_Quartz_Sword.png",
+    "color": "red",
+    "rarity": 5,
+    "adjustedRarity": 3.378378378,
+    "description": "Dual swords favored by the most degen tribes endlessly searching for the highest yields"
+  },
+  {
+    "layer_id": 2,
+    "id": 0,
+    "name": "Blue",
+    "fileName": "Blue.png",
+    "color": "blue",
+    "rarity": 25,
+    "adjustedRarity": 25,
+    "description": "Elves whose kin have been exposed to the deep blue waters of the Sea of Liquidity bear a blue tinge"
+  },
+  {
+    "layer_id": 2,
+    "id": 1,
+    "name": "Pale",
+    "fileName": "Light.png",
+    "color": "green",
+    "rarity": 10,
+    "adjustedRarity": 20,
+    "description": "The skin of Elfis whose generations have spent their time among the trees of the Forests of Yield has become green"
+  },
+  {
+    "layer_id": 2,
+    "id": 2,
+    "name": "Light",
+    "fileName": "Pale.png",
+    "color": "pale",
+    "rarity": 15,
+    "adjustedRarity": 20,
+    "description": "The icy peaks of the Bearish Mountains are said to be home to Elfis whose skin is paler than snow"
+  },
+  {
+    "layer_id": 2,
+    "id": 3,
+    "name": "Pink",
+    "fileName": "Pink.png",
+    "color": "pink",
+    "rarity": 25,
+    "adjustedRarity": 25,
+    "description": "Exposure to the red arid soil of the Bullish Valleys has made the skin of each new generation become slightly more pink"
+  },
+  {
+    "layer_id": 2,
+    "id": 4,
+    "name": "Red",
+    "fileName": "Red.png",
+    "color": "red",
+    "rarity": 5,
+    "adjustedRarity": 5,
+    "description": "Red Elves are believed to be descendants of the Ancestral Degens, whose skin was tempered by the fiery forges of the Degen Inferno"
+  },
+  {
+    "layer_id": 2,
+    "id": 5,
+    "name": "Yellow",
+    "fileName": "Yellow.png",
+    "color": "yellow",
+    "rarity": 5,
+    "adjustedRarity": 5,
+    "description": "Yellow elves are believed to be descendants of the Ancient Proposers, whose rules of governance still guide to this day"
+  },
+  {
+    "layer_id": 3,
+    "id": 0,
+    "name": "None",
+    "fileName": "none",
+    "color": "none",
+    "rarity": 2,
+    "adjustedRarity": 0.8547008547,
+    "description": "Some elves shun the moral rigitude of society in favor of being one with nature"
+  },
+  {
+    "layer_id": 3,
+    "id": 1,
+    "name": "Blue Breastplate",
+    "fileName": "Blue_Blouse.png",
+    "color": "blue",
+    "rarity": 3,
+    "adjustedRarity": 1.282051282,
+    "description": "Full-body armor made of magical quartz. Movement is somewhat restricted, but it’s highly protective against Degen magics"
+  },
+  {
+    "layer_id": 3,
+    "id": 2,
+    "name": "Draconic Breastplate",
+    "fileName": "Blue_Breastplate.png",
+    "color": "draconic",
+    "rarity": 1,
+    "adjustedRarity": 1.282051282,
+    "description": "Full-body armor made with the scales of ancient dragons. Although said to still roam the land, nobody has seen them since the fall of Mount Qogs"
+  },
+  {
+    "layer_id": 3,
+    "id": 3,
+    "name": "Golden Breastplace",
+    "fileName": "Blue_Cape.png",
+    "color": "golden",
+    "rarity": 1,
+    "adjustedRarity": 1.282051282,
+    "description": "Full-body armor made of gold and worn by elite warriors. The magical quartz infused in it makes it lighter than fabric"
+  },
+  {
+    "layer_id": 3,
+    "id": 4,
+    "name": "Blue Uniform",
+    "fileName": "Blue_Robes.png",
+    "color": "blue",
+    "rarity": 20,
+    "adjustedRarity": 8.547008547,
+    "description": "Light clothing, good for fast travel. Its blue color is obtained from Liquidity Flowers, found near all kinds of shores"
+  },
+  {
+    "layer_id": 3,
+    "id": 5,
+    "name": "Green Uniform",
+    "fileName": "Blue_Uniform.png",
+    "color": "green",
+    "rarity": 10,
+    "adjustedRarity": 4.273504274,
+    "description": "Light clothing, good for fast travel. Its green color is obtained from the peels of Yield Fruits, which thrive during the summer"
+  },
+  {
+    "layer_id": 3,
+    "id": 6,
+    "name": "Red Uniform",
+    "fileName": "Dark_Exoskeleton.png",
+    "color": "red",
+    "rarity": 15,
+    "adjustedRarity": 6.41025641,
+    "description": "Light clothing, good for fast travel. Its red color is obtained from the leaves of Copium plants, commonly found on the Bearish Mountains"
+  },
+  {
+    "layer_id": 3,
+    "id": 7,
+    "name": "White Uniform",
+    "fileName": "Dark_Panoply.png",
+    "color": "white",
+    "rarity": 5,
+    "adjustedRarity": 2.136752137,
+    "description": "Light clothing, good for fast travel. The white color is reserved for explorers who have proven themselves in the Degen Trials"
+  },
+  {
+    "layer_id": 3,
+    "id": 8,
+    "name": "Yellow Uniform",
+    "fileName": "Dark_Straps.png",
+    "color": "yellow",
+    "rarity": 15,
+    "adjustedRarity": 6.41025641,
+    "description": "Light clothing, good for fast travel. Its yellow color is obtained from the golden sands of the deserts of Etcal"
+  },
+  {
+    "layer_id": 3,
+    "id": 9,
+    "name": "Blue Cape",
+    "fileName": "Dark_Tunic.png",
+    "color": "blue",
+    "rarity": 15,
+    "adjustedRarity": 6.41025641,
+    "description": "Ritualistic attire comes to life as individual facets intertwine both moonlight and campfire"
+  },
+  {
+    "layer_id": 3,
+    "id": 10,
+    "name": "Red Cape",
+    "fileName": "Draconic_Breastplate.png",
+    "color": "red",
+    "rarity": 5,
+    "adjustedRarity": 2.136752137,
+    "description": "Traditional ritualistic attire favored by warriors as well as researchers innovating novel farming methods"
+  },
+  {
+    "layer_id": 3,
+    "id": 11,
+    "name": "Yellow Cape",
+    "fileName": "Draconic_Exoskeleton.png",
+    "color": "yellow",
+    "rarity": 5,
+    "adjustedRarity": 2.136752137,
+    "description": "Traditional ritualistic attire whose yellow color symbolizes the sharing of wisdom"
+  },
+  {
+    "layer_id": 3,
+    "id": 12,
+    "name": "Dark Panoply",
+    "fileName": "Draconic_Panoply.png",
+    "color": "dark",
+    "rarity": 2,
+    "adjustedRarity": 2.991452991,
+    "description": "This quartz-infused suit hardens you for battle. You feel lighter when wearing it."
+  },
+  {
+    "layer_id": 3,
+    "id": 13,
+    "name": "Draconic Panoply",
+    "fileName": "Draconic_Straps.png",
+    "color": "draconic",
+    "rarity": 1,
+    "adjustedRarity": 2.991452991,
+    "description": "This quartz-infused suit hardens you for battle. You also feel unaffected by heat"
+  },
+  {
+    "layer_id": 3,
+    "id": 14,
+    "name": "Golden Panoply",
+    "fileName": "Draconic_Tunic.png",
+    "color": "golden",
+    "rarity": 1,
+    "adjustedRarity": 2.991452991,
+    "description": "This quartz-infused suit hardens you for battle. You’ll go to any lengths to follow orders"
+  },
+  {
+    "layer_id": 3,
+    "id": 15,
+    "name": "Dark Tunic",
+    "fileName": "Golden_Blouse.png",
+    "color": "dark",
+    "rarity": 7,
+    "adjustedRarity": 2.991452991,
+    "description": "This tight-fitting outfit is reserved for night-time missions, as sunlight tends to damage leather. You feel weightless when wearing this"
+  },
+  {
+    "layer_id": 3,
+    "id": 16,
+    "name": "Draconic Tunic",
+    "fileName": "Golden_Breastplace.png",
+    "color": "draconic",
+    "rarity": 7,
+    "adjustedRarity": 2.991452991,
+    "description": "This tight-fitting outfit is reserved for night-time missions, as sunlight tends to damage leather"
+  },
+  {
+    "layer_id": 3,
+    "id": 17,
+    "name": "Golden Tunic",
+    "fileName": "Golden_Exoskeleton.png",
+    "color": "golden",
+    "rarity": 7,
+    "adjustedRarity": 2.991452991,
+    "description": "This tight-fitting outfit is reserved for night-time missions, as sunlight tends to damage leather. It gives off a particular shine, as if emitting its own light"
+  },
+  {
+    "layer_id": 3,
+    "id": 18,
+    "name": "Blue Blouse",
+    "fileName": "Golden_Panoply.png",
+    "color": "blue",
+    "rarity": 3.5,
+    "adjustedRarity": 2.991452991,
+    "description": "Clothes worn by nobility on diplomatic events. Blue represents liquidity and mastery of diplomacy"
+  },
+  {
+    "layer_id": 3,
+    "id": 19,
+    "name": "Golden Blouse",
+    "fileName": "Golden_Straps.png",
+    "color": "golden",
+    "rarity": 3.5,
+    "adjustedRarity": 2.991452991,
+    "description": "Clothes worn by nobility on diplomatic events. Yellow is both opulent and ostentatious"
+  },
+  {
+    "layer_id": 3,
+    "id": 20,
+    "name": "Red Blouse",
+    "fileName": "Golden_Tunic.png",
+    "color": "red",
+    "rarity": 3.5,
+    "adjustedRarity": 2.991452991,
+    "description": "Clothes worn by nobility on diplomatic events. Red used to represent the Degen faction, but now is worn by all"
+  },
+  {
+    "layer_id": 3,
+    "id": 21,
+    "name": "Blue Robes",
+    "fileName": "Green_Uniform.png",
+    "color": "blue",
+    "rarity": 7,
+    "adjustedRarity": 2.991452991,
+    "description": "Made from a fabric of magically-treated quartz, these robes are said to amplify their wearer’s magical output"
+  },
+  {
+    "layer_id": 3,
+    "id": 22,
+    "name": "Red Robes",
+    "fileName": "Red_Blouse.png",
+    "color": "red",
+    "rarity": 7,
+    "adjustedRarity": 2.991452991,
+    "description": "Dyed with the crushed powder of their enemies’ bones, only the most crazen Degen wear them"
+  },
+  {
+    "layer_id": 3,
+    "id": 23,
+    "name": "White Robes",
+    "fileName": "Red_Cape.png",
+    "color": "white",
+    "rarity": 7,
+    "adjustedRarity": 2.991452991,
+    "description": "Infused with the magical properties of moonlight, these robes are said to improve the effects of healing magics"
+  },
+  {
+    "layer_id": 3,
+    "id": 24,
+    "name": "Yellow Robes",
+    "fileName": "Red_Robes.png",
+    "color": "yellow",
+    "rarity": 7,
+    "adjustedRarity": 2.991452991,
+    "description": "Made from a fabric of woven gold, these robes allow their wearer to channel the power of the sun much more effectively"
+  },
+  {
+    "layer_id": 3,
+    "id": 25,
+    "name": "Dark Straps",
+    "fileName": "Red_Uniform.png",
+    "color": "dark",
+    "rarity": 10,
+    "adjustedRarity": 2.991452991,
+    "description": "Dark straps provide flexibility and function for all kinds of tasks, both day and night"
+  },
+  {
+    "layer_id": 3,
+    "id": 26,
+    "name": "Draconic Straps",
+    "fileName": "White_Robes.png",
+    "color": "draconic",
+    "rarity": 5,
+    "adjustedRarity": 2.991452991,
+    "description": "These straps aid with farming even in unwelcoming conditions, raising untapped potential from the earth"
+  },
+  {
+    "layer_id": 3,
+    "id": 27,
+    "name": "Golden Straps",
+    "fileName": "White_Uniform.png",
+    "color": "golden",
+    "rarity": 5,
+    "adjustedRarity": 2.991452991,
+    "description": "Straps glisten as gold under the harsh sunlight, energizing those who wear them"
+  },
+  {
+    "layer_id": 3,
+    "id": 28,
+    "name": "Dark Exoskeleton",
+    "fileName": "Yellow_Cape.png",
+    "color": "dark",
+    "rarity": 4,
+    "adjustedRarity": 2.991452991,
+    "description": "A hardened exoskeleton of armor readies you for battle. You feel empowered and weightless."
+  },
+  {
+    "layer_id": 3,
+    "id": 29,
+    "name": "Draconic Exoskeleton",
+    "fileName": "Yellow_Robes.png",
+    "color": "draconic",
+    "rarity": 2,
+    "adjustedRarity": 2.991452991,
+    "description": "A hardened exoskeleton of armor readies you for battle. You feel empowered and impervious to heat."
+  },
+  {
+    "layer_id": 3,
+    "id": 30,
+    "name": "Golden Exoskeleton",
+    "fileName": "Yellow_Uniform.png",
+    "color": "golden",
+    "rarity": 2,
+    "adjustedRarity": 2.991452991,
+    "description": "A hardened exoskeleton of armor readies you for battle. You feel empowered and elegant."
+  },
+  {
+    "layer_id": 4,
+    "id": 0,
+    "name": "None",
+    "fileName": "none",
+    "color": "none",
+    "rarity": 25,
+    "adjustedRarity": 12.5,
+    "description": "The freedom of not having hair allows one to be more productive with their day"
+  },
+  {
+    "layer_id": 4,
+    "id": 1,
+    "name": "Blue Hair Bun",
+    "fileName": "Blue_Hair_Bun.png",
+    "color": "blue",
+    "rarity": 15,
+    "adjustedRarity": 7.5,
+    "description": "Long hair tied in a bun, to combat the heat of labour. Blue in color, often worn by scholarly individuals"
+  },
+  {
+    "layer_id": 4,
+    "id": 2,
+    "name": "Green Hair Bun",
+    "fileName": "Blue_Long_Hair.png",
+    "color": "green",
+    "rarity": 15,
+    "adjustedRarity": 7.5,
+    "description": "Long hair tied in a bun, to combat the heat of labour. Green in color, often worn by those who experiment with farming"
+  },
+  {
+    "layer_id": 4,
+    "id": 3,
+    "name": "Grey Hair Bun",
+    "fileName": "Blue_Mohawk.png",
+    "color": "grey",
+    "rarity": 20,
+    "adjustedRarity": 10,
+    "description": "Long hair tied in a bun, to combat the heat of labour. Grey in color, often worn by those who have a way with words"
+  },
+  {
+    "layer_id": 4,
+    "id": 4,
+    "name": "Red Hair Bun",
+    "fileName": "Blue_Ponytail.png",
+    "color": "red",
+    "rarity": 10,
+    "adjustedRarity": 5,
+    "description": "Long hair tied in a bun, to combat the heat of labour. Red in color, often worn by those who possess great stamina"
+  },
+  {
+    "layer_id": 4,
+    "id": 5,
+    "name": "Yellow Hair Bun",
+    "fileName": "Green_Hair_Bun.png",
+    "color": "yellow",
+    "rarity": 20,
+    "adjustedRarity": 10,
+    "description": "Long hair tied in a bun, to combat the heat of labour. Yellow in color, often worn by those adept at precision work"
+  },
+  {
+    "layer_id": 4,
+    "id": 6,
+    "name": "Green Mohawk",
+    "fileName": "Green_Long_Hair.png",
+    "color": "green",
+    "rarity": 2,
+    "adjustedRarity": 1,
+    "description": "Elven hair that grows wild and untamed is a sign of raw magical potential"
+  },
+  {
+    "layer_id": 4,
+    "id": 7,
+    "name": "Blue Long Hair",
+    "fileName": "Green_Mohawk.png",
+    "color": "blue",
+    "rarity": 10,
+    "adjustedRarity": 5,
+    "description": "Long hair worn worn loosely as if unconcerned with worldly matters. Blue like the depth of the Sea of Liquidity"
+  },
+  {
+    "layer_id": 4,
+    "id": 8,
+    "name": "Green Long Hair",
+    "fileName": "Green_Ponytail.png",
+    "color": "green",
+    "rarity": 10,
+    "adjustedRarity": 5,
+    "description": "Long hair worn worn loosely as if unconcerned with worldly matters. Green like the spoils of a fresh harvest"
+  },
+  {
+    "layer_id": 4,
+    "id": 9,
+    "name": "Red Long Hair",
+    "fileName": "Green_Short_Hair.png",
+    "color": "red",
+    "rarity": 10,
+    "adjustedRarity": 5,
+    "description": "Long hair worn worn loosely as if unconcerned with worldly matters. Red is favored by those quick to action"
+  },
+  {
+    "layer_id": 4,
+    "id": 10,
+    "name": "White Long Hair",
+    "fileName": "Grey_Hair_Bun.png",
+    "color": "white",
+    "rarity": 10,
+    "adjustedRarity": 5,
+    "description": "Long hair worn worn loosely as if unconcerned with worldly matters. White with wisdom and ancient knowledge"
+  },
+  {
+    "layer_id": 4,
+    "id": 11,
+    "name": "Yellow Long Hair",
+    "fileName": "Red_Hair_Bun.png",
+    "color": "yellow",
+    "rarity": 10,
+    "adjustedRarity": 5,
+    "description": "Long hair worn worn loosely as if unconcerned with worldly matters. Yellow is a mark of status but also of greed"
+  },
+  {
+    "layer_id": 4,
+    "id": 12,
+    "name": "Blue Mohawk",
+    "fileName": "Red_Long_Hair.png",
+    "color": "blue",
+    "rarity": 2,
+    "adjustedRarity": 1,
+    "description": "Unruly blue hair is characteristic of the most profound researchers in arcane types of liquidity"
+  },
+  {
+    "layer_id": 4,
+    "id": 13,
+    "name": "Red Mohawk",
+    "fileName": "Red_Mohawk.png",
+    "color": "red",
+    "rarity": 2,
+    "adjustedRarity": 1,
+    "description": "Wild red hair like the color of battle makes others wary, for good reason or not"
+  },
+  {
+    "layer_id": 4,
+    "id": 14,
+    "name": "White Mohawk",
+    "fileName": "Red_Ponytail.png",
+    "color": "white",
+    "rarity": 2,
+    "adjustedRarity": 1,
+    "description": "Untamed white hair channels the wisdom of the Ancients"
+  },
+  {
+    "layer_id": 4,
+    "id": 15,
+    "name": "Yellow Mohawk",
+    "fileName": "Red_Short_Hair.png",
+    "color": "yellow",
+    "rarity": 2,
+    "adjustedRarity": 1,
+    "description": "Chaotic golden locks symbolize great power over others, how it’s used remains to be seen"
+  },
+  {
+    "layer_id": 4,
+    "id": 16,
+    "name": "Blue Ponytail",
+    "fileName": "White_Long_Hair.png",
+    "color": "blue",
+    "rarity": 3,
+    "adjustedRarity": 1.5,
+    "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent"
+  },
+  {
+    "layer_id": 4,
+    "id": 17,
+    "name": "Green Ponytail",
+    "fileName": "White_Mohawk.png",
+    "color": "green",
+    "rarity": 3,
+    "adjustedRarity": 1.5,
+    "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent"
+  },
+  {
+    "layer_id": 4,
+    "id": 18,
+    "name": "Red Ponytail",
+    "fileName": "White_Ponytail.png",
+    "color": "red",
+    "rarity": 3,
+    "adjustedRarity": 1.5,
+    "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent"
+  },
+  {
+    "layer_id": 4,
+    "id": 19,
+    "name": "White Ponytail",
+    "fileName": "White_Short_Hair.png",
+    "color": "white",
+    "rarity": 3,
+    "adjustedRarity": 1.5,
+    "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent"
+  },
+  {
+    "layer_id": 4,
+    "id": 20,
+    "name": "Yellow Ponytail",
+    "fileName": "Yellow_Hair_Bun.png",
+    "color": "yellow",
+    "rarity": 3,
+    "adjustedRarity": 1.5,
+    "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent"
+  },
+  {
+    "layer_id": 4,
+    "id": 21,
+    "name": "Green Short Hair",
+    "fileName": "Yellow_Long_Hair.png",
+    "color": "green",
+    "rarity": 5,
+    "adjustedRarity": 2.5,
+    "description": "Short hair is less frivolous and more practical, showing a focus on substance over style"
+  },
+  {
+    "layer_id": 4,
+    "id": 22,
+    "name": "Red Short Hair",
+    "fileName": "Yellow_Mohawk.png",
+    "color": "red",
+    "rarity": 5,
+    "adjustedRarity": 2.5,
+    "description": "Short hair is less frivolous and more practical, showing a focus on substance over style"
+  },
+  {
+    "layer_id": 4,
+    "id": 23,
+    "name": "White Short Hair",
+    "fileName": "Yellow_Ponytail.png",
+    "color": "white",
+    "rarity": 5,
+    "adjustedRarity": 2.5,
+    "description": "Short hair is less frivolous and more practical, showing a focus on substance over style"
+  },
+  {
+    "layer_id": 4,
+    "id": 24,
+    "name": "Yellow Short Hair",
+    "fileName": "Yellow_Short_Hair.png",
+    "color": "yellow",
+    "rarity": 5,
+    "adjustedRarity": 2.5,
+    "description": "Short hair is less frivolous and more practical, showing a focus on substance over style"
+  },
+  {
+    "layer_id": 5,
+    "id": 0,
+    "name": "None",
+    "fileName": "none",
+    "color": "none",
+    "rarity": 2,
+    "adjustedRarity": 1.408450704,
+    "description": "Those who feel no need to speak sometimes have the most wisdom to impart"
+  },
+  {
+    "layer_id": 5,
+    "id": 1,
+    "name": "Stoic Blue",
+    "fileName": "Blue_Smile.png",
+    "color": "blue",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "An idle expression that hides the busiest of minds"
+  },
+  {
+    "layer_id": 5,
+    "id": 2,
+    "name": "Stoic Red",
+    "fileName": "Green_Smile.png",
+    "color": "red",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "An idle expression that hides the busiest of minds"
+  },
+  {
+    "layer_id": 5,
+    "id": 3,
+    "name": "Neutral Blue",
+    "fileName": "Neutral_Blue.png",
+    "color": "blue",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Seeking balance in all things, as with their emotions"
+  },
+  {
+    "layer_id": 5,
+    "id": 4,
+    "name": "Neutral Pink",
+    "fileName": "Neutral_Pink.png",
+    "color": "pink",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Seeking balance in all things, as with their emotions"
+  },
+  {
+    "layer_id": 5,
+    "id": 5,
+    "name": "Neutral Red",
+    "fileName": "Neutral_Red.png",
+    "color": "red",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Seeking balance in all things, as with their emotions"
+  },
+  {
+    "layer_id": 5,
+    "id": 6,
+    "name": "Sad Blue",
+    "fileName": "Red_Smile.png",
+    "color": "blue",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Those who don’t smile are their own harshest critics"
+  },
+  {
+    "layer_id": 5,
+    "id": 7,
+    "name": "Sad Pink",
+    "fileName": "Sad_Blue.png",
+    "color": "pink",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Those who don’t smile are their own harshest critics"
+  },
+  {
+    "layer_id": 5,
+    "id": 8,
+    "name": "Sad Red",
+    "fileName": "Sad_Pink.png",
+    "color": "red",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Those who don’t smile are their own harshest critics"
+  },
+  {
+    "layer_id": 5,
+    "id": 9,
+    "name": "Blue Smile",
+    "fileName": "Sad_Red.png",
+    "color": "blue",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain"
+  },
+  {
+    "layer_id": 5,
+    "id": 10,
+    "name": "Green Smile",
+    "fileName": "Stoic_Blue.png",
+    "color": "green",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain"
+  },
+  {
+    "layer_id": 5,
+    "id": 11,
+    "name": "Red Smile",
+    "fileName": "Stoic_Red.png",
+    "color": "red",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain"
+  },
+  {
+    "layer_id": 5,
+    "id": 12,
+    "name": "Yellow Smile",
+    "fileName": "Talking_Blue.png",
+    "color": "yellow",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain"
+  },
+  {
+    "layer_id": 5,
+    "id": 13,
+    "name": "Talking Blue",
+    "fileName": "Talking_Pink.png",
+    "color": "blue",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Be wary of those who always have a story to tell"
+  },
+  {
+    "layer_id": 5,
+    "id": 14,
+    "name": "Talking Pink",
+    "fileName": "Yellow_Smile.png",
+    "color": "pink",
+    "rarity": 10,
+    "adjustedRarity": 7.042253521,
+    "description": "Be wary of those who always have a story to tell"
+  },
+  {
+    "layer_id": 6,
+    "id": 0,
+    "name": "Angry Blue",
+    "fileName": "Angry_Blue.png",
+    "color": "blue",
+    "rarity": 20,
+    "adjustedRarity": 10.58201058,
+    "description": "An elf is not quick to anger, so be wary of their consternation"
+  },
+  {
+    "layer_id": 6,
+    "id": 1,
+    "name": "Angry Grey",
+    "fileName": "Angry_Grey.png",
+    "color": "grey",
+    "rarity": 20,
+    "adjustedRarity": 10.58201058,
+    "description": "An elf is not quick to anger, so be wary of their consternation"
+  },
+  {
+    "layer_id": 6,
+    "id": 2,
+    "name": "Angry Red",
+    "fileName": "Angry_Red.png",
+    "color": "red",
+    "rarity": 5,
+    "adjustedRarity": 2.645502646,
+    "description": "An elf is not quick to anger, so be wary of their consternation"
+  },
+  {
+    "layer_id": 6,
+    "id": 3,
+    "name": "Angry Yellow",
+    "fileName": "Angry_Yellow.png",
+    "color": "yellow",
+    "rarity": 10,
+    "adjustedRarity": 5.291005291,
+    "description": "An elf is not quick to anger, so be wary of their consternation"
+  },
+  {
+    "layer_id": 6,
+    "id": 4,
+    "name": "Doubting Blue",
+    "fileName": "Doubting_Blue.png",
+    "color": "blue",
+    "rarity": 10,
+    "adjustedRarity": 5.291005291,
+    "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales"
+  },
+  {
+    "layer_id": 6,
+    "id": 5,
+    "name": "Doubting Red",
+    "fileName": "Doubting_Red.png",
+    "color": "red",
+    "rarity": 5,
+    "adjustedRarity": 2.645502646,
+    "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales"
+  },
+  {
+    "layer_id": 6,
+    "id": 6,
+    "name": "Doubting White",
+    "fileName": "Doubting_White.png",
+    "color": "white",
+    "rarity": 10,
+    "adjustedRarity": 5.291005291,
+    "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales"
+  },
+  {
+    "layer_id": 6,
+    "id": 7,
+    "name": "Doubting Yellow",
+    "fileName": "Doubting_Yellow.png",
+    "color": "yellow",
+    "rarity": 5,
+    "adjustedRarity": 2.645502646,
+    "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales"
+  },
+  {
+    "layer_id": 6,
+    "id": 8,
+    "name": "Neutral Blue",
+    "fileName": "Neutral_Blue.png",
+    "color": "blue",
+    "rarity": 20,
+    "adjustedRarity": 10.58201058,
+    "description": "Conveying but a neutral expression, giving nothing away"
+  },
+  {
+    "layer_id": 6,
+    "id": 9,
+    "name": "Neutral Grey",
+    "fileName": "Neutral_Grey.png",
+    "color": "grey",
+    "rarity": 10,
+    "adjustedRarity": 5.291005291,
+    "description": "Conveying but a neutral expression, giving nothing away"
+  },
+  {
+    "layer_id": 6,
+    "id": 10,
+    "name": "Neutral Red",
+    "fileName": "Neutral_Red.png",
+    "color": "red",
+    "rarity": 10,
+    "adjustedRarity": 5.291005291,
+    "description": "Conveying but a neutral expression, giving nothing away"
+  },
+  {
+    "layer_id": 6,
+    "id": 11,
+    "name": "Neutral Yellow",
+    "fileName": "Neutral_Yellow.png",
+    "color": "yellow",
+    "rarity": 10,
+    "adjustedRarity": 5.291005291,
+    "description": "Conveying but a neutral expression, giving nothing away"
+  },
+  {
+    "layer_id": 6,
+    "id": 12,
+    "name": "Surprised Blue",
+    "fileName": "Surprised_Blue.png",
+    "color": "blue",
+    "rarity": 20,
+    "adjustedRarity": 10.58201058,
+    "description": "Having been through much, few things surprise elves nowadays"
+  },
+  {
+    "layer_id": 6,
+    "id": 13,
+    "name": "Surprised Grey",
+    "fileName": "Surprised_Grey.png",
+    "color": "grey",
+    "rarity": 16,
+    "adjustedRarity": 8.465608466,
+    "description": "Having been through much, few things surprise elves nowadays"
+  },
+  {
+    "layer_id": 6,
+    "id": 14,
+    "name": "Surprised Red",
+    "fileName": "Surprised_Red.png",
+    "color": "red",
+    "rarity": 16,
+    "adjustedRarity": 8.465608466,
+    "description": "Having been through much, few things surprise elves nowadays"
+  },
+  {
+    "layer_id": 6,
+    "id": 15,
+    "name": "Surprised Yellow",
+    "fileName": "Surprised_Yellow.png",
+    "color": "yellow",
+    "rarity": 2,
+    "adjustedRarity": 1.058201058,
+    "description": "Having been through much, few things surprise elves nowadays"
+  },
+  {
+    "layer_id": 7,
+    "id": 0,
+    "name": "None",
+    "fileName": "none",
+    "color": "none",
+    "rarity": 1,
+    "adjustedRarity": 0.2985074627,
+    "description": "Those with no eyes sometimes see most clearly"
+  },
+  {
+    "layer_id": 7,
+    "id": 1,
+    "name": "Big Blue",
+    "fileName": "Big_Blue.png",
+    "color": "blue",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Big blue eyes full of wonder at the mysteries lying in wait"
+  },
+  {
+    "layer_id": 7,
+    "id": 2,
+    "name": "Big Dark",
+    "fileName": "Big_Dark.png",
+    "color": "dark",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Big dark eyes ready to take in all the world has to offer, yet give nothing back"
+  },
+  {
+    "layer_id": 7,
+    "id": 3,
+    "name": "Big Yellow",
+    "fileName": "Big_Red.png",
+    "color": "yellow",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Big golden eyes shine with glee and enthusiasm"
+  },
+  {
+    "layer_id": 7,
+    "id": 4,
+    "name": "Fire",
+    "fileName": "Big_Yellow.png",
+    "color": "fire",
+    "rarity": 7,
+    "adjustedRarity": 2.089552239,
+    "description": "Fire eyes that burn like the flames in the forges of the Ancient Builders"
+  },
+  {
+    "layer_id": 7,
+    "id": 5,
+    "name": "Gold",
+    "fileName": "Blue_Side_Eye.png",
+    "color": "gold",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Eyes as gold as sunlight convey friendliness, but don’t mistake it for complacency"
+  },
+  {
+    "layer_id": 7,
+    "id": 6,
+    "name": "Ice",
+    "fileName": "Dark_Glance_.png",
+    "color": "ice",
+    "rarity": 7,
+    "adjustedRarity": 2.089552239,
+    "description": "Eyes as cold as ice are seen as unwelcoming, leading those who bear them to withdraw"
+  },
+  {
+    "layer_id": 7,
+    "id": 7,
+    "name": "Blue Side Eye",
+    "fileName": "Dark_Side_Eye.png",
+    "color": "left",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Some elves are always suspicious of their surroundings, and can’t be fooled"
+  },
+  {
+    "layer_id": 7,
+    "id": 8,
+    "name": "Big Red",
+    "fileName": "Fire.png",
+    "color": "red",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Red eyes convey passion and desire"
+  },
+  {
+    "layer_id": 7,
+    "id": 9,
+    "name": "Dark Side Eye",
+    "fileName": "Fire_Glance.png",
+    "color": "dark",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Dark eyes are better for not drawing attention and capture more detail in the night"
+  },
+  {
+    "layer_id": 7,
+    "id": 10,
+    "name": "Fire Side Eye",
+    "fileName": "Fire_Side_Eye.png",
+    "color": "fire",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Fire eyes that burn like the flames in the forges of the Ancient Builders"
+  },
+  {
+    "layer_id": 7,
+    "id": 11,
+    "name": "Ice Side Eye",
+    "fileName": "Gold.png",
+    "color": "ice",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Eyes as cold as ice are seen as unwelcoming, leading those who bear them to withdraw"
+  },
+  {
+    "layer_id": 7,
+    "id": 12,
+    "name": "Red Side Eye",
+    "fileName": "Ice.png",
+    "color": "red",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Red eyes convey passion and desire"
+  },
+  {
+    "layer_id": 7,
+    "id": 13,
+    "name": "Yellow Side Eye",
+    "fileName": "Ice_Glance.png",
+    "color": "yellow",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Yellow eyes shine with warmth that makes others more obedientambition"
+  },
+  {
+    "layer_id": 7,
+    "id": 14,
+    "name": "Dark Glance",
+    "fileName": "Ice_Side_Eye.png",
+    "color": "dark",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Dark eyes are better for not drawing attention and capture more detail in the night"
+  },
+  {
+    "layer_id": 7,
+    "id": 15,
+    "name": "Fire Glance",
+    "fileName": "Red_Glance.png",
+    "color": "fire",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Fire eyes that burn like the flames in the forges of the Ancient Builders"
+  },
+  {
+    "layer_id": 7,
+    "id": 16,
+    "name": "Ice Glance",
+    "fileName": "Red_Side_Eye.png",
+    "color": "ice",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Eyes as cold as ice are seen as unwelcoming, leading those who bear them to withdraw"
+  },
+  {
+    "layer_id": 7,
+    "id": 17,
+    "name": "Red Glance",
+    "fileName": "Yellow_Glance.png",
+    "color": "red",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Red eyes convey passion and desire"
+  },
+  {
+    "layer_id": 7,
+    "id": 18,
+    "name": "Yellow Glance",
+    "fileName": "Yellow_Side_Eye.png",
+    "color": "yellow",
+    "rarity": 20,
+    "adjustedRarity": 5.970149254,
+    "description": "Yellow eyes shine with warmth that makes others more obedient"
+  },
+  {
+    "layer_id": 8,
+    "id": 0,
+    "name": "None",
+    "fileName": "none",
+    "color": "none",
+    "rarity": 70,
+    "adjustedRarity": 53.84615385,
+    "description": "Headwear is reserved for those with the means and desire to show off"
+  },
+  {
+    "layer_id": 8,
+    "id": 1,
+    "name": "Crown",
+    "fileName": "Blue_Mage_Hat.png",
+    "color": "crown",
+    "rarity": 2,
+    "adjustedRarity": 1.538461538,
+    "description": "Gem-studded crown used by high priests for ancient rituals, heightening their already impressive powers"
+  },
+  {
+    "layer_id": 8,
+    "id": 2,
+    "name": "Cap",
+    "fileName": "Cap.png",
+    "color": "bonet",
+    "rarity": 9,
+    "adjustedRarity": 6.923076923,
+    "description": "Somehow lighter than a feather, the magical stones used in this cap make you feel constantly energized"
+  },
+  {
+    "layer_id": 8,
+    "id": 3,
+    "name": "Dark Helmet",
+    "fileName": "Crown.png",
+    "color": "dark",
+    "rarity": 9,
+    "adjustedRarity": 6.923076923,
+    "description": "Battle-tested helmet that invokes fear in their opponents"
+  },
+  {
+    "layer_id": 8,
+    "id": 4,
+    "name": "Draconic Helmet",
+    "fileName": "Dark_Helmet.png",
+    "color": "draconic",
+    "rarity": 9,
+    "adjustedRarity": 6.923076923,
+    "description": "Battle-tested helmet that invokes fear in their opponents"
+  },
+  {
+    "layer_id": 8,
+    "id": 5,
+    "name": "Golden Helmet",
+    "fileName": "Draconic_Helmet.png",
+    "color": "golden",
+    "rarity": 9,
+    "adjustedRarity": 6.923076923,
+    "description": "Battle-tested helmet that invokes fear in their opponents"
+  },
+  {
+    "layer_id": 8,
+    "id": 6,
+    "name": "Headdress",
+    "fileName": "Golden_Helmet.png",
+    "color": "headset",
+    "rarity": 2,
+    "adjustedRarity": 1.538461538,
+    "description": "A tribute to the life-giving sun, this heavy helmet is mostly worn by high priests at harvest festivals"
+  },
+  {
+    "layer_id": 8,
+    "id": 7,
+    "name": "Blue Mage Hat",
+    "fileName": "Headdress.png",
+    "color": "blue",
+    "rarity": 5,
+    "adjustedRarity": 3.846153846,
+    "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. Blue represents its creator's depth of knowledge"
+  },
+  {
+    "layer_id": 8,
+    "id": 8,
+    "name": "Red Mage Hat",
+    "fileName": "Red_Mage_Hat.png",
+    "color": "red",
+    "rarity": 5,
+    "adjustedRarity": 3.846153846,
+    "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. Red represents its creator's passion"
+  },
+  {
+    "layer_id": 8,
+    "id": 9,
+    "name": "White Mage Hat",
+    "fileName": "White_Mage_Hat.png",
+    "color": "white",
+    "rarity": 5,
+    "adjustedRarity": 3.846153846,
+    "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. White represents its creator's power over others"
+  },
+  {
+    "layer_id": 8,
+    "id": 10,
+    "name": "Yellow Mage Hat",
+    "fileName": "Yellow_Mage_Hat.png",
+    "color": "yellow",
+    "rarity": 5,
+    "adjustedRarity": 3.846153846,
+    "description": "Woven by the owner's magic, it imbues a fragment of the Wizard's soul. Yellow represents its creator's ambition"
+  },
+  {
+    "layer_id": 9,
+    "id": 0,
+    "name": "none",
+    "fileName": "none",
+    "color": "none",
+    "rarity": 89,
+    "adjustedRarity": 76,
+    "description": "No need for eyewear, adventure is afoot"
+  },
+  {
+    "layer_id": 9,
+    "id": 1,
+    "name": "3D Glasses",
+    "fileName": "3D_Glasses.png",
+    "color": "",
+    "rarity": 1,
+    "adjustedRarity": 1.5,
+    "description": "Little is known about its origins, it is said to make visuals come to life"
+  },
+  {
+    "layer_id": 9,
+    "id": 2,
+    "name": "Draconic Mask",
+    "fileName": "Draconic_Mask.png",
+    "color": "mask",
+    "rarity": 2,
+    "adjustedRarity": 12,
+    "description": "Worn for feasts and revelrie, or tricksters looking to give nothing away"
+  },
+  {
+    "layer_id": 9,
+    "id": 3,
+    "name": "Eye Patch",
+    "fileName": "Eye_Patch.png",
+    "color": "patch",
+    "rarity": 3,
+    "adjustedRarity": 7.5,
+    "description": "Many elves use eyepatches to attune their vision to darkness. Some say it also improves their luck"
+  },
+  {
+    "layer_id": 9,
+    "id": 4,
+    "name": "Hunter Scope",
+    "fileName": "Hunter_Scope.png",
+    "color": "",
+    "rarity": 2,
+    "adjustedRarity": 3,
+    "description": "The latest research and innovation allows the wearer to ascertain another’s degen level"
+  },
+  {
+    "layer_id": 9,
+    "id": 5,
+    "name": "Pointeau Mask",
+    "fileName": "Pointeau_Mask.png",
+    "color": "",
+    "rarity": 0,
+    "adjustedRarity": 0,
+    "description": "Privacy is an utmost priority for all, even those who have nothing to hide"
+  },
+  {
+    "layer_id": 10,
+    "id": 0,
+    "name": "None",
+    "fileName": "none",
+    "color": "none",
+    "rarity": 88,
+    "adjustedRarity": 62.41134752,
+    "description": ""
+  },
+  {
+    "layer_id": 10,
+    "id": 1,
+    "name": "Dark Battle Mask",
+    "fileName": "Dark_Battle_Mask.png",
+    "color": "dark",
+    "rarity": 10,
+    "adjustedRarity": 3.546099291,
+    "description": "Battle mask covering the wearer's mouth, it enhances oxygen intake and fearsomeness"
+  },
+  {
+    "layer_id": 10,
+    "id": 2,
+    "name": "Draconic Battle Mask",
+    "fileName": "Dark_Nasotube.png",
+    "color": "draconic",
+    "rarity": 5,
+    "adjustedRarity": 7.092198582,
+    "description": "Battle mask covering the wearer's mouth, it enhances oxygen intake and fearsomeness"
+  },
+  {
+    "layer_id": 10,
+    "id": 3,
+    "name": "Golden Battle Mask",
+    "fileName": "Draconic_Battle_Mask.png",
+    "color": "golden",
+    "rarity": 5,
+    "adjustedRarity": 3.546099291,
+    "description": "Battle mask covering the wearer's mouth, it enhances oxygen intake and fearsomeness"
+  },
+  {
+    "layer_id": 10,
+    "id": 4,
+    "name": "Golden Veil",
+    "fileName": "Earrings.png",
+    "color": "veil",
+    "rarity": 3,
+    "adjustedRarity": 2.127659574,
+    "description": "Luxurious veil worn in celebratory fashion, each golden strand represents their wearer's lineage"
+  },
+  {
+    "layer_id": 10,
+    "id": 5,
+    "name": "Earrings",
+    "fileName": "Golden_Battle_Mask.png",
+    "color": "",
+    "rarity": 8,
+    "adjustedRarity": 5.673758865,
+    "description": "A subdued style, only an astute eye will notice these earrings are adorned with the rarest gems"
+  },
+  {
+    "layer_id": 10,
+    "id": 6,
+    "name": "Golden Earrings",
+    "fileName": "Golden_Earrings.png",
+    "color": "",
+    "rarity": 3,
+    "adjustedRarity": 2.127659574,
+    "description": "Studded with golden gems, these earrings make a bold statement"
+  },
+  {
+    "layer_id": 10,
+    "id": 7,
+    "name": "Necklace",
+    "image": "Golden_Veil.png",
+    "color": "",
+    "rarity": 8,
+    "adjustedRarity": 5.673758865,
+    "description": "A necklace worn by the attendants of court while plotting political plays"
+  },
+  {
+    "name": "Dark Nasotube",
+    "image": "Necklace",
+    "rarity": 2,
+    "description": "Enhanced oxygen filtration conveys a distinct advantage on the battlefield"
+  },
+  {
+    "name": "White Nasotube",
+    "image": "White_Nasotube",
+    "rarity": 8,
+    "adjustedRarity": 5,
+    "description": "Enhanced oxygen filtration conveys a distinct advantage on the battlefield"
+  }
       ]
     }
   ]
-}
