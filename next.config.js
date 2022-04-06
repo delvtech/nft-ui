@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["assets.example.com", "element-fi.mypinata.cloud"],
+    domains: ["assets.example.com", "element-fi.mypinata.cloud", "ipfs.io"],
   },
 };
 
