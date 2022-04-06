@@ -13,7 +13,7 @@ export const ALCHEMY_GOERLI_HTTP_URL = `https://eth-goerli.alchemyapi.io/v2/${AL
 export const ALCHEMY_MAINNET_HTTP_URL = `https://eth-mainnet.alchemyapi.io/v2/${ALCHEMY_MAINNET_KEY}`;
 
 export const ALCHEMY_GOERLI_WSS_URL = `wss://eth-goerli.ws.alchemyapi.io/v2/${ALCHEMY_GOERLI_KEY}`;
-export const ALCHEMY_MAINNET_WSS_URL = `wss://eth-goerli.ws.alchemyapi.io/v2/${ALCHEMY_GOERLI_KEY}`;
+export const ALCHEMY_MAINNET_WSS_URL = `wss://eth-mainnet.ws.alchemyapi.io/v2/${ALCHEMY_GOERLI_KEY}`;
 
 export const NEXT_ENV = process.env.NODE_ENV as string;
 const LOCAL_RPC_HOST = "http://127.0.0.1:8545";
