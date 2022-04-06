@@ -1,9 +1,9 @@
 import { ContentPage } from "components/ContentPage";
 import { ContentWrapper } from "components/Entrance/styles";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
+import { useHasMinted } from "elf/hooks/useHasMinted";
 import { useMinter } from "elf/hooks/useMinter";
 import { useProof } from "elf/hooks/useProof";
-import { useTokenBalanceOf } from "elf/hooks/useTokenBalanceOf";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import { useWhitelistStatus } from "elf/hooks/useWhitelistStatus";
 import useWeb3 from "elf/useWeb3";
@@ -13,7 +13,6 @@ import {
   createToastSuccess,
 } from "helpers/createToast";
 import Image from "next/image";
-import { useRouter } from "next/router";
 import MintGIF from "public/assets/gif/hero_image.gif";
 import LoadingMintGIF from "public/assets/gif/minting_loading.gif";
 import { useMemo, useRef } from "react";
@@ -25,14 +24,12 @@ import { MintButton } from "./MintButton";
 export const Mint = () => {
   const { active, account, library } = useWeb3();
   const { data: proofData, isLoading: isProofLoading } = useProof(account);
-  const { data: mintedCount } = useTokenBalanceOf(account);
+  const hasMinted = useHasMinted(account);
 
-  const { push } = useRouter();
   const { open } = useWalletDialog();
   const toastIdRef = useRef<string>();
 
   const canMint = !!proofData;
-  const hasMinted = mintedCount && mintedCount.gt(0);
 
   const handleMint = () => {
     canMint && mint([proofData.leaf.tokenId, proofData.proof]);
@@ -55,18 +52,22 @@ export const Mint = () => {
       createToastSuccess("Elfi has been successfully minted!", {
         id: toastIdRef.current,
       });
-      push("/collection");
     },
   });
 
   const { data: isWhitelisted, isLoading: isWhitelistLoading } =
     useWhitelistStatus(account);
 
-  const currentContent = useMemo(
-    () =>
-      isMinting ? content.pending : isSuccess ? content.success : content.stale,
-    [isMinting, isSuccess],
-  );
+  const currentContent = useMemo(() => {
+    if (hasMinted) {
+      return content.success;
+    }
+    return isMinting
+      ? content.pending
+      : isSuccess
+      ? content.success
+      : content.stale;
+  }, [isMinting, isSuccess, hasMinted]);
 
   return (
     <ContentPage padding="100px 124px 144px 124px" title="Mint">
