@@ -345,34 +345,89 @@
       "title": "Eyes",
       "content": [
         {
-          "description": "",
-          "rarity": "7",
-          "image": "eyes_fire"
-        },
-        {
-          "description": "",
+          "description": "Big blue eyes full of wonder at the mysteries lying in wait",
           "rarity": "20",
-          "image": "eyes_gold"
+          "image": "Big_Blue"
         },
         {
-          "description": "",
-          "rarity": "7",
-          "image": "eyes_ice"
-        },
-        {
-          "description": "",
+          "description": "Big dark eyes ready to take in all the world has to offer, yet give nothing back",
           "rarity": "20",
-          "image": "eyes_left"
+          "image": "Big_Dark"
         },
         {
-          "description": "",
-          "rarity": "20",
-          "image": "eyes_red"
+          "description": "Red eyes convey passion and desire",
+          "rarity": "5",
+          "image": "Big_Red"
         },
         {
-          "description": "",
+          "description": "Big golden eyes shine with glee and enthusiasm",
+          "rarity": "5",
+          "image": "Big_Yellow"
+        },
+        {
+          "description": "Some elves are always suspicious of their surroundings, and can’t be fooled",
+          "rarity": "5",
+          "image": "Blue_Side_Eye"
+        },
+        {
+          "description": "Dark eyes are better for not drawing attention and capture more detail in the night",
+          "rarity": "5",
+          "image": "Dark_Side_Eye"
+        },
+        {
+          "description": "Fire eyes that burn like the flames in the forges of the Ancient Builders",
           "rarity": "20",
-          "image": "eyes_right"
+          "image": "Fire_Glance"
+        },
+        {
+          "description": "Fire eyes that burn like the flames in the forges of the Ancient Builders",
+          "rarity": "5",
+          "image": "Fire_Side_Eye"
+        },
+        {
+          "description": "Eyes as gold as sunlight convey friendliness, but don’t mistake it for complacency",
+          "rarity": "5",
+          "image": "Gold"
+        },
+        {
+          "description": "Eyes as cold as ice are seen as unwelcoming, leading those who bear them to withdraw",
+          "rarity": "2",
+          "image": "Ice"
+        },
+        {
+          "description": "Eyes as cold as ice are seen as unwelcoming, leading those who bear them to withdraw",
+          "rarity": "5",
+          "image": "Ice_Glance"
+        },
+        {
+          "description": "Eyes as cold as ice are seen as unwelcoming, leading those who bear them to withdraw",
+          "rarity": "5",
+          "image": "Ice_Side_Eye"
+        },
+        {
+          "description": "Red eyes convey passion and desire",
+          "rarity": "5",
+          "image": "Red_Glance"
+        },
+        {
+          "description": "Red eyes convey passion and desire",
+          "rarity": "5",
+          "image": "Red_Side_Eye"
+        },
+        {
+          "description": "Yellow eyes shine with warmth that makes others more obedient",
+          "rarity": "5",
+          "image": "Yellow_Glance"
+        },
+        {
+          "description": "Yellow eyes shine with warmth that makes others more obedientambition",
+          "rarity": "5",
+          "image": "Yellow_Side_Eye"
+        },
+        {
+          "description": "Dark eyes are better for not drawing attention and capture more detail in the night",
+          "rarity": "20",
+          "image": "Dark_Glance_"
         }
       ]
     },
