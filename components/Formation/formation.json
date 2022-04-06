@@ -6,22 +6,22 @@
             {
               "description": "Blue Portal",
               "rarity": "9",
-              "image": "00_blue_portal"
+              "image": "00_blue_portal_r10"
             },
             {
               "description": "Green Portal",
               "rarity": "9",
-              "image": "00_green_portal"
+              "image": "00_green_portal_r10"
             },
             {
               "description": "Red Portal",
               "rarity": "9",
-              "image": "00_carmesi_portal"
+              "image": "00_carmesi_portal_r10"
             },
             {
               "description": "Blood River",
               "rarity": "9",
-              "image": "00_blood_river"
+              "image": "00_blood_river_r10"
             },
             {
               "description": "Good Night",
@@ -100,32 +100,32 @@
       "content": [
         {
           "description": "Blue Uniform",
-          "rarity": "8.4",
+          "rarity": "8",
           "image": "clothes_colonist_blue"
         },
         {
           "description": "Green Uniform",
-          "rarity": "10",
+          "rarity": "4",
           "image": "clothes_colonist_green"
         },
         {
           "description": "Red Uniform",
-          "rarity": "15",
+          "rarity": "6",
           "image": "clothes_colonist_red"
         },
         {
           "description": "White Uniform",
-          "rarity": "5",
+          "rarity": "2",
           "image": "clothes_colonist_white"
         },
         {
           "description": "Yellow Uniform",
-          "rarity": "15",
+          "rarity": "6",
           "image": "clothes_colonist_yellow"
         },
         {
-          "description": "Blue Uniform",
-          "rarity": "15",
+          "description": "Blue Cape",
+          "rarity": "6",
           "image": "clothes_garmet_blue"
         },
         {
@@ -136,26 +136,26 @@
         {
           "description": "Blue Breastplate",
           "rarity": "1",
-          "image": "03_Breastplate_blue_r03"
+          "image": "Blue_Breastplate"
         },
         {
           "description": "Draconic Breastplate",
           "rarity": "1",
-          "image": "03_Breastplate_Draconic_r03"
+          "image": "Draconic_Breastplate"
         },
         {
           "description": "Golden Breastplace",
           "rarity": "1",
-          "image": "03_Breastplate_golden_r03"
+          "image": "Golden_Breas"
         },
         {
           "description": "Dark Suit of Straps",
-          "rarity": "1",
+          "rarity": "2",
           "image": "03_Deep Sleep Vitality Suit_dark_r07"
         },
         {
-          "description": "",
-          "rarity": "5",
+          "description": "Yellow Cape",
+          "rarity": "2",
           "image": "clothes_garmet_yellow"
         }
       ]
