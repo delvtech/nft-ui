@@ -10,7 +10,6 @@ import { BigNumber } from "ethers";
 import { hexStripZeros } from "ethers/lib/utils";
 import { createToastError } from "helpers/createToast";
 import React, { useCallback, useEffect, useState } from "react";
-import { isFeatureEnabled } from "src/features";
 
 export const SwitchNetworkDialog = () => {
   const { active, deactivate, library, chainId } = useWeb3();
@@ -25,8 +24,7 @@ export const SwitchNetworkDialog = () => {
       !!chainId &&
       getTargetChain() !== chainId &&
       // Overrides this check if we are in development mode
-      NEXT_ENV !== "development" &&
-      !isFeatureEnabled("preLaunch")
+      NEXT_ENV !== "development"
     ) {
       openDialog();
     } else {
