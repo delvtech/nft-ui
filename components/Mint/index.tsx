@@ -122,7 +122,7 @@ export const Mint = () => {
           </Fade>
         )}
 
-        {active && isWhitelisted && canMint && !hasMinted && (
+        {active && isWhitelisted && canMint && (
           <ContentWrapper>
             <ReactTextTransition
               text={currentContent.description}

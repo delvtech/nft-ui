@@ -42,7 +42,7 @@ export const MintButton = ({
   if (hasMinted) {
     return (
       <PrimaryButton onClick={() => push("/collection")}>
-        Elfi has already been minted.
+        Elf minted click to view collection
       </PrimaryButton>
     );
   }
