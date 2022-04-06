@@ -14,10 +14,12 @@ interface MintButtonProps {
 
 export const MintButton = ({
   hasMinted,
+  // canMint means that we found a merkle proof for the connected address
   canMint,
   openDialog,
   handleMint,
   isLoading,
+  // isWhitelisted means that we found the connected address in our whitelist
   isWhitelisted,
 }: MintButtonProps) => {
   const { active } = useWeb3();
@@ -27,7 +29,6 @@ export const MintButton = ({
   if (!active) {
     return <PrimaryButton onClick={openDialog}>Connect wallet</PrimaryButton>;
   }
-  console.log(isLoading);
   // Proof or whitelist is loading
   if (isLoading) {
     return <PrimaryButton disabled>Loading eligibility...</PrimaryButton>;

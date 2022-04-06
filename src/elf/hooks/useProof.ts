@@ -12,7 +12,7 @@ const getProofURI = (address: string, chainId?: number) => {
   }
 
   if (chainId === ChainId.MAINNET) {
-    return `${S3_BUCKET_URI}/ethereum/${address}`;
+    return `${S3_BUCKET_URI}/mainnet/${address}`;
   }
 
   // defaulting to local testnet, fetching proof from public/proofs/<address>
