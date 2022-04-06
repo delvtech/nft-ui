@@ -635,6 +635,76 @@
       ]
     },
     {
+      "title": "Add-Ons",
+      "content": [
+        {
+          "description": "Little is known about its origins, it is said to make visuals come to life",
+          "rarity": "1",
+          "image": "3D_Glasses"
+        },
+        {
+          "description": "Worn for feasts and revelrie, or tricksters looking to give nothing away",
+          "rarity": "2",
+          "image": "Draconic_Mask"
+        },
+        {
+          "description": "Many elves use eyepatches to attune their vision to darkness. Some say it also improves their luck",
+          "rarity": "3",
+          "image": "Eye_Patch"
+        },
+        {
+          "description": "The latest research and innovation allows the wearer to ascertain another’s degen level",
+          "rarity": "2",
+          "image": "Hunter_Scope"
+        }, 
+        {
+          "description": "Enhanced oxygen filtration conveys a distinct advantage on the battlefield",
+          "rarity": "4",
+          "image": "Dark_Nasotube"
+        }, 
+        {
+          "description": "Battle mask covering the wearer's mouth, it enhances oxygen intake and fearsomeness",
+          "rarity": "4",
+          "image": "Dark_Battle_Mask"
+        }, 
+        {
+          "description": "A subdued style, only an astute eye will notice these earrings are adorned with the rarest gems",
+          "rarity": "8",
+          "image": "Earrings"
+        }, 
+        {
+          "description": "Battle mask covering the wearer's mouth, it enhances oxygen intake and fearsomeness",
+          "rarity": "5",
+          "image": "Golden_Battle_Mask"
+        }, 
+        {
+          "description": "Studded with golden gems, these earrings make a bold statement",
+          "rarity": "3",
+          "image": "Golden_Earrings"
+        }, 
+        {
+          "description": "Luxurious veil worn in celebratory fashion, each golden strand represents their wearer's lineage",
+          "rarity": "3",
+          "image": "Golden_Veil"
+        }, 
+        {
+          "description": "A necklace worn by the attendants of court while plotting political plays",
+          "rarity": "8",
+          "image": "Necklace"
+        }, 
+        {
+          "description": "Enhanced oxygen filtration conveys a distinct advantage on the battlefield",
+          "rarity": "8",
+          "image": "White_Nasotube"
+        }, 
+        {
+          "description": "Gem-studded crown used by high priests for ancient ritu",
+          "rarity": "2",
+          "image": "Crown"
+        }
+      ]
+    },
+    {
       "title": "Weapons",
       "content": [
         {
