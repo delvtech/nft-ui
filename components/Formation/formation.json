@@ -649,44 +649,144 @@
       "title": "Mouth",
       "content": [
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_neutral_blue"
+          "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain",
+          "rarity": "10",
+          "image": "Blue_Smile"
         },
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_neutral_red"
+          "description": "Seeking balance in all things, as with their emotions",
+          "rarity": "10",
+          "image": "Neutral_Blue"
         },
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_blue"
+          "description": "Seeking balance in all things, as with their emotions",
+          "rarity": "10",
+          "image": "Neutral_Pink"
         },
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_green"
+          "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain",
+          "rarity": "10",
+          "image": "Green_Smile"
         },
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_red"
+          "description": "Seeking balance in all things, as with their emotions",
+          "rarity": "10",
+          "image": "Neutral_Red"
         },
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_smile_yellow"
+          "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain",
+          "rarity": "10",
+          "image": "Red_Smile"
         },
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_talking_blue"
+          "description": "Those who don’t smile are their own harshest critics",
+          "rarity": "5",
+          "image": "Sad_Blue"
         },
         {
-          "description": "",
-          "rarity": "100",
-          "image": "mouth_talking_pink"
+          "description": "Those who don’t smile are their own harshest critics",
+          "rarity": "10",
+          "image": "Sad_Pink"
+        },
+        {
+          "description": "Those who don’t smile are their own harshest critics",
+          "rarity": "10",
+          "image": "Sad_Red"
+        },
+        {
+          "description": "An idle expression that hides the busiest of minds",
+          "rarity": "10",
+          "image": "Stoic_Blue"
+        },
+        {
+          "description": "Be wary of those who always have a story to tell",
+          "rarity": "10",
+          "image": "Talking_Blue"
+        },
+        {
+          "description": "Be wary of those who always have a story to tell",
+          "rarity": "10",
+          "image": "Talking_Pink"
+        },
+        {
+          "description": "A smile conveys a world of meaning, yet its meaning isn’t always certain",
+          "rarity": "10",
+          "image": "Yellow_Smile"
+        },
+        {
+          "description": "An elf is not quick to anger, so be wary of their consternation",
+          "rarity": "10",
+          "image": "Angry_Blue"
+        },
+        {
+          "description": "An elf is not quick to anger, so be wary of their consternation",
+          "rarity": "10",
+          "image": "Angry_Grey"
+        },
+        {
+          "description": "An elf is not quick to anger, so be wary of their consternation",
+          "rarity": "5",
+          "image": "Angry_Red"
+        },
+        {
+          "description": "An elf is not quick to anger, so be wary of their consternation",
+          "rarity": "10",
+          "image": "Angry_Yellow"
+        },
+        {
+          "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales",
+          "rarity": "10",
+          "image": "Doubting_Blue"
+        },
+        {
+          "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales",
+          "rarity": "5",
+          "image": "Doubting_Red"
+        },
+        {
+          "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales",
+          "rarity": "10",
+          "image": "Doubting_White"
+        },
+        {
+          "description": "Elves are a naturally inquisitive lot, always doing their own research, skeptical of tall tales",
+          "rarity": "5",
+          "image": "Doubting_Yellow"
+        },
+        {
+          "description": "Seeking balance in all things, as with their emotions",
+          "rarity": "10",
+          "image": "Neutral_Blue"
+        },
+        {
+          "description": "Conveying but a neutral expression, giving nothing away",
+          "rarity": "10",
+          "image": "Neutral_Grey"
+        },
+        {
+          "description": "Seeking balance in all things, as with their emotions",
+          "rarity": "10",
+          "image": "Neutral_Red"
+        },
+        {
+          "description": "Having been through much, few things surprise elves nowadays",
+          "rarity": "20",
+          "image": "Surprised_Blue"
+        },
+        {
+          "description": "Having been through much, few things surprise elves nowadays",
+          "rarity": "16",
+          "image": "Surprised_Grey"
+        },
+        {
+          "description": "Having been through much, few things surprise elves nowadays",
+          "rarity": "16",
+          "image": "Surprised_Red"
+        }, 
+        {
+          "description": "Having been through much, few things surprise elves nowadays",
+          "rarity": "2",
+          "image": "Surprised_Yellow"
         }
       ]
     }
