@@ -1,6 +1,5 @@
 import { SectionContainer } from "common/Container";
 import { ContentWrapper, CountdownDate } from "components/Countdown/styles";
-import { Timer } from "components/Countdown/Timer";
 import { Fade, Zoom } from "react-awesome-reveal";
 import { releaseDate } from "src/constants";
 
@@ -13,7 +12,6 @@ export const Countdown = () => {
           <Zoom triggerOnce>
             <CountdownDate>{releaseDate.format("MMMM Do YYYY")}</CountdownDate>
           </Zoom>
-          <Timer targetDate={releaseDate} />
         </Fade>
       </ContentWrapper>
     </SectionContainer>

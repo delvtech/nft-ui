@@ -1,7 +1,6 @@
 import { Spacer } from "common/Spacer";
-import { Timer } from "components/Countdown/Timer";
 import { devices } from "helpers/devices";
-import { firstBatchMintMax, releaseDate } from "src/constants";
+import { firstBatchMintMax } from "src/constants";
 import styled from "styled-components";
 
 interface MintingPeriodStatusProps {
@@ -13,12 +12,9 @@ export const MintingPeriodStatus = ({
 }: MintingPeriodStatusProps) => (
   <MintingPeriodStatusContainer>
     <h1>{firstBatchMintMax - totalMints} Elves</h1>
-    <Spacer size="16px" />
+    <Spacer size="25px" />
     <h2>Remaining elfs left to claim!</h2>
     <Spacer size="10px" />
-    <TimerContainer>
-      <Timer fontSize="inherit" targetDate={releaseDate} />
-    </TimerContainer>
   </MintingPeriodStatusContainer>
 );
 
