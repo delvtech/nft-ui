@@ -1,11 +1,11 @@
 import { useSmartContractReadCall } from "@elementfi/react-query-typechain";
 import { getProvider } from "elf/providers";
+import { getAddresses } from "src/addresses";
 import { NullableAddress } from "src/types";
 import { ElfNFT__factory } from "typechain-types";
-import { useAddresses } from "./useAddress";
 
 export function useTokenBalanceOf(address: NullableAddress) {
-  const addresses = useAddresses();
+  const addresses = getAddresses();
   const provider = getProvider();
 
   const tokenContract = ElfNFT__factory.connect(
