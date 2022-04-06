@@ -4,6 +4,7 @@ import {
 } from "elf-council-typechain";
 import { getProvider } from "elf/providers";
 import { getAddresses } from "src/addresses";
+import { getBlockFrom } from "src/blocks";
 import { getScaledEventHistory } from "src/util/getScaledEventHistory";
 import { sortEventsByBlock } from "src/util/sortEventsByBlock";
 
@@ -27,8 +28,14 @@ export async function getDelegatorHistory() {
   const lockingFilter = lockingVault.filters.VoteChange(null, null, null);
   const vestingFilter = vestingVault.filters.VoteChange(null, null, null);
 
-  const lockingEvents = await lockingVault.queryFilter(lockingFilter, 0);
-  const vestingEvents = await vestingVault.queryFilter(vestingFilter, 0);
+  const lockingEvents = await lockingVault.queryFilter(
+    lockingFilter,
+    getBlockFrom(),
+  );
+  const vestingEvents = await vestingVault.queryFilter(
+    vestingFilter,
+    getBlockFrom(),
+  );
 
   const sortedEvents = sortEventsByBlock(lockingEvents.concat(vestingEvents));
   const history = await getScaledEventHistory(sortedEvents);

@@ -1,12 +1,15 @@
-import useWeb3 from "elf/useWeb3";
+import { ethers } from "ethers";
 import { NullableAddress } from "src/types";
-import { useTokenBalanceOf } from "./useTokenBalanceOf";
+import { useTransferEvents } from "./useTransferEvents";
 
 // TODO @cashd: This needs to be refactored to check for the
 // existence of a mintDate from useMintDate
 export function useHasMinted(address?: NullableAddress) {
-  const { account } = useWeb3();
-  const { data: mintedCount } = useTokenBalanceOf(address ?? account);
+  const { data: mintEvents } = useTransferEvents(
+    ethers.constants.AddressZero,
+    address,
+    undefined,
+  );
 
-  return mintedCount && mintedCount.gt(0);
+  return !!mintEvents && mintEvents.length > 0;
 }
