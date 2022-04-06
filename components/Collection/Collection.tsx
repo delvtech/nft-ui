@@ -2,6 +2,7 @@ import { PrimaryButton } from "common/Button/styles";
 import { Flex } from "common/Container/styles";
 import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
+import { useElfImage } from "elf/hooks/useElfImage";
 import { useHasMinted } from "elf/hooks/useHasMinted";
 import { useTokenIds } from "elf/hooks/useTokenIds";
 import { useWalletDialog } from "elf/hooks/useWalletDialog";
@@ -13,7 +14,6 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 import { DayCount } from "src/types";
-import { getTokenAssetURL } from "src/urls";
 import styled from "styled-components";
 import Card from "./Card";
 import { MintHistoryChart } from "./MintHistoryChart";
@@ -34,6 +34,9 @@ export const Collection = ({
   const tokenIds = useTokenIds(account);
   const firstTokenId = tokenIds[0];
   const { push } = useRouter();
+  const { data: elfImage } = useElfImage(
+    firstTokenId ? firstTokenId.toNumber() : undefined,
+  );
 
   useEffect(() => {
     if (!active) {
@@ -79,13 +82,15 @@ export const Collection = ({
             {tokenIds.length !== 0 ? (
               tokenIds.length === 1 ? (
                 <ElfContainer>
-                  <Image
-                    src={getTokenAssetURL(tokenIds[0])}
-                    height={300}
-                    width={300}
-                    alt="Minted elf"
-                    quality={100}
-                  />
+                  {elfImage && (
+                    <Image
+                      src={elfImage}
+                      height={300}
+                      width={300}
+                      alt="Minted elf"
+                      quality={100}
+                    />
+                  )}
                   <Spacer size="6px" />
                   <DefconZero size="16px">
                     ELF {firstTokenId.toString()}
@@ -95,13 +100,15 @@ export const Collection = ({
                 <Tokens>
                   {tokenIds.map((id: BigNumber) => (
                     <ElfContainer key={id.toString()}>
-                      <Image
-                        src={getTokenAssetURL(id)}
-                        height={200}
-                        width={200}
-                        alt="Minted elf"
-                        quality={100}
-                      />
+                      {elfImage && (
+                        <Image
+                          src={elfImage}
+                          height={200}
+                          width={200}
+                          alt="Minted elf"
+                          quality={100}
+                        />
+                      )}
                       <Spacer size="6px" />
 
                       <DefconZero size="16px">ELF {id.toString()}</DefconZero>
