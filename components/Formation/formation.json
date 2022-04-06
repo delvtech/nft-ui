@@ -66,12 +66,12 @@
         {
           "description": "Elves whose kin have been exposed to the deep blue waters of the Sea of Liquidity bear a blue tinge",
           "rarity": "25",
-          "image": "blue"
+          "image": "Blue"
         },
         {
           "description": "The skin of Elfis whose generations have spent their time among the trees of the Forests of Yield has become green",
           "rarity": "20",
-          "image": "pale"
+          "image": "Pale"
         },
         {
           "description": "The icy peaks of the Bearish Mountains are said to be home to Elfis whose skin is paler than snow",
@@ -99,44 +99,154 @@
       "title": "Clothes",
       "content": [
         {
-          "description": "",
+          "description": "Clothes worn by nobility on diplomatic events. Blue represents liquidity and mastery of diplomacy",
+          "rarity": "3",
+          "image": "blue_blouse"
+        },
+        {
+          "description": "Full-body armor made of magical quartz. Movement is somewhat restricted, but it’s highly protective against Degen magics",
+          "rarity": "3",
+          "image": "Blue_Breastplate"
+        },
+        {
+          "description": "Ritualistic attire comes to life as individual facets intertwine both moonlight and campfire",
+          "rarity": "15",
+          "image": "Blue_Cape"
+        },
+        {
+          "description": "Made from a fabric of magically-treated quartz, these robes are said to amplify their wearer’s magical output",
+          "rarity": "5",
+          "image": "Blue_Robes"
+        },
+        {
+          "description": "Light clothing, good for fast travel. Its blue color is obtained from Liquidity Flowers, found near all kinds of shores",
           "rarity": "20",
-          "image": "clothes_colonist_blue"
+          "image": "Blue_Uniform"
         },
         {
-          "description": "",
+          "description": "A hardened exoskeleton of armor readies you for battle. You feel empowered and weightless",
+          "rarity": "4",
+          "image": "Dark_Exoskeleton"
+        },
+        {
+          "description": "This quartz-infused suit hardens you for battle. You feel lighter when wearing it",
+          "rarity": "2",
+          "image": "Dark_Panoply"
+        },
+        {
+          "description": "This tight-fitting outfit is reserved for night-time missions, as sunlight tends to damage leather",
+          "rarity": "7",
+          "image": "Dark_Tunic"
+        },
+        {
+          "description": "Full-body armor made with the scales of ancient dragons. Although said to still roam the land, nobody has seen them since the fall of Mount Qogs",
+          "rarity": "1",
+          "image": "Draconic_Breastplate"
+        },
+        {
+          "description": "A hardened exoskeleton of armor readies you for battle. You feel empowered and impervious to heat",
+          "rarity": "2",
+          "image": "Draconic_Exoskeleton"
+        },
+        {
+          "description": "This quartz-infused suit hardens you for battle. You also feel unaffected by heat",
+          "rarity": "2",
+          "image": "Draconic_Panoply"
+        },
+        {
+          "description": "These straps aid with farming even in unwelcoming conditions, raising untapped potential from the earth",
+          "rarity": "5",
+          "image": "Draconic_Straps"
+        },
+        {
+          "description": "This tight-fitting outfit is reserved for night-time missions, as sunlight tends to damage leather",
+          "rarity": "7",
+          "image": "Draconic_Tunic"
+        },
+        {
+          "description": "Clothes worn by nobility on diplomatic events. Yellow is both opulent and ostentatious",
+          "rarity": "3",
+          "image": "Golden_Blouse"
+        },
+        {
+          "description": "Full-body armor made of gold and worn by elite warriors. The magical quartz infused in it makes it lighter than fabric",
+          "rarity": "1",
+          "image": "Golden_Breastplace"
+        },
+        {
+          "description": "A hardened exoskeleton of armor readies you for battle. You feel empowered and elegant",
+          "rarity": "2",
+          "image": "Golden_Exoskeleton"
+        },
+        {
+          "description": "This quartz-infused suit hardens you for battle. You’ll go to any lengths to follow orders",
+          "rarity": "1",
+          "image": "Golden_Panoply"
+        },
+        {
+          "description": "Straps glisten as gold under the harsh sunlight, energizing those who wear them",
+          "rarity": "5",
+          "image": "Golden_Straps"
+        },
+        {
+          "description": "This tight-fitting outfit is reserved for night-time missions, as sunlight tends to damage leather. It gives off a particular shine, as if emitting its own light",
+          "rarity": "7",
+          "image": "Golden_Tunic"
+        },
+        {
+          "description": "Light clothing, good for fast travel. Its green color is obtained from the peels of Yield Fruits, which thrive during the summer",
           "rarity": "10",
-          "image": "clothes_colonist_green"
+          "image": "Green_Uniform"
         },
         {
-          "description": "",
-          "rarity": "15",
-          "image": "clothes_colonist_red"
+          "description": "Clothes worn by nobility on diplomatic events. Red used to represent the Degen faction, but now is worn by all",
+          "rarity": "4",
+          "image": "Red_Blouse"
         },
         {
-          "description": "",
+          "description": "Traditional ritualistic attire favored by warriors as well as researchers innovating novel farming methods",
           "rarity": "5",
-          "image": "clothes_colonist_white"
+          "image": "Red_Cape"
         },
         {
-          "description": "",
-          "rarity": "15",
-          "image": "clothes_colonist_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "15",
-          "image": "clothes_garmet_blue"
-        },
-        {
-          "description": "",
+          "description": "Dyed with the crushed powder of their enemies’ bones, only the most crazen Degen wear them",
           "rarity": "5",
-          "image": "clothes_garmet_red"
+          "image": "Red_Robes"
         },
         {
-          "description": "",
+          "description": "Light clothing, good for fast travel. Its red color is obtained from the leaves of Copium plants, commonly found on the Bearish Mountains",
+          "rarity": "15",
+          "image": "Red_Uniform"
+        },
+        {
+          "description": "Infused with the magical properties of moonlight, these robes are said to improve the effects of healing magics",
           "rarity": "5",
-          "image": "clothes_garmet_yellow"
+          "image": "White_Robes"
+        },
+        {
+          "description": "Light clothing, good for fast travel. The white color is reserved for explorers who have proven themselves in the Degen Trials",
+          "rarity": "5",
+          "image": "White_Uniform"
+        },
+        {
+          "description": "Traditional ritualistic attire whose yellow color symbolizes the sharing of wisdom",
+          "rarity": "5",
+          "image": "Yellow_Cape"
+        },
+        {
+          "description": "Made from a fabric of woven gold, these robes allow their wearer to channel the power of the sun much more effectively",
+          "rarity": "5",
+          "image": "Yellow_Robes"
+        },
+        {
+          "description": "Light clothing, good for fast travel. Its yellow color is obtained from the golden sands of the deserts of Etcal",
+          "rarity": "15",
+          "image": "Yellow_Uniform"
+        },
+        {
+          "description": "Dark straps provide flexibility and function for all kinds of tasks",
+          "rarity": "10",
+          "image": "Dark_Straps"
         }
       ]
     },
