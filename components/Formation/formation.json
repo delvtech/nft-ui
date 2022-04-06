@@ -708,99 +708,89 @@
       "title": "Weapons",
       "content": [
         {
-          "description": "",
+          "description": "Markings of tradition adorn this ceremonial bow",
           "rarity": "2",
-          "image": "01_jade_bow"
+          "image": "Blue_Bow"
         },
         {
-          "description": "",
-          "rarity": "2",
-          "image": "01_golden_bow"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_draconic_bow"
-        },
-        {
-          "description": "",
-          "rarity": "2",
-          "image": "01_dark_bow"
-        },
-        {
-          "description": "",
+          "description": "Dark bows draw no attention, allowing their user to slither in the night",
           "rarity": "3",
-          "image": "01_long_sword_dark"
+          "image": "Dark_Bow"
         },
         {
-          "description": "",
+          "description": "Massive broadsword ready to fell anything in its path",
           "rarity": "3",
-          "image": "01_long_sword_red"
+          "image": "Dark_Longsword"
         },
         {
-          "description": "",
-          "rarity": "3",
-          "image": "01_long_sword_golden"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "01_long_sword_golden"
-        },
-        {
-          "description": "",
+          "description": "Draconic markings bode ill for those standing in its way",
           "rarity": "2",
-          "image": "01_ice_lance"
+          "image": "Draconic_Bow"
         },
         {
-          "description": "",
+          "description": "Draconic lances wielded by tribes of elves as fierce and wild as their prey",
           "rarity": "2",
-          "image": "01_golden_lance"
+          "image": "Draconic_Lance"
         },
         {
-          "description": "",
-          "rarity": "2",
-          "image": "01_draconic_lance"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "01_sword_dual_red"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "01_sword_dual_green"
-        },
-        {
-          "description": "",
-          "rarity": "5",
-          "image": "01_sword_dual_golden"
-        },
-        {
-          "description": "",
-          "rarity": "8",
-          "image": "01_right_quartz_sword"
-        },
-        {
-          "description": "",
-          "rarity": "8",
-          "image": "01_left_quartz_sword"
-        },
-        {
-          "description": "",
-          "rarity": "3",
-          "image": "01_jade_staff"
-        },
-        {
-          "description": "",
+          "description": "A staff adorned with the bones of dire beasts exhorts power and influence",
           "rarity": "1",
-          "image": "01_golden_staff"
+          "image": "Draconic_Staff"
         },
         {
-          "description": "",
+          "description": "Gold-plated bows wielded by those of high status",
+          "rarity": "3",
+          "image": "Golden_Bow"
+        },
+        {
+          "description": "Dual swords favored by the most degen tribes endlessly searching for the highest yields",
+          "rarity": "2",
+          "image": "Golden_Dual_Swords"
+        },
+        {
+          "description": "Lances dripping with gold leaf lull opponents into a false sense of security",
+          "rarity": "2",
+          "image": "Golden_Lance"
+        },
+        {
+          "description": "A golden blade wielded by someone of high status; or someone who cut them down for it",
           "rarity": "1",
-          "image": "01_draconic_staff"
+          "image": "Golden_Longsword"
+        },
+        {
+          "description": "Dual swords favored by the most degen tribes endlessly searching for the highest yields",
+          "rarity": "2",
+          "image": "Green_Dual_Swords"
+        },
+        {
+          "description": "A gold-plated staff passed down through generations now serves as a symbol of diplomacy",
+          "rarity": "1",
+          "image": "Golden_Staff"
+        },
+        {
+          "description": "Songs of old told of weapons made of unbreakable, never-melting ice, carried by elite soldiers",
+          "rarity": "4",
+          "image": "Ice_Lance"
+        },
+        {
+          "description": "Elves possess unparalleled quartz craftsmanship, through which they imbue their weapons with eternal sharpness",
+          "rarity": "8",
+          "image": "Left_Quartz_Sword"
+        },
+        {
+          "description": "Dual swords favored by the most degen tribes endlessly searching for the highest yields",
+          "rarity": "5",
+          "image": "Red Dual Swords"
+        },
+        {
+          "description": "Elves possess unparalleled quartz craftsmanship, through which they imbue their weapons with eternal sharpness",
+          "rarity": "5",
+          "image": "Right_Quartz_Sword"
+        },
+        {
+          "description": "An ominous blade that shimmers with imbued power and incantation",
+          "rarity": "3",
+          "image": "Red_Longsword"
         }
       ]
     },
