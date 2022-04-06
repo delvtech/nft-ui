@@ -11,25 +11,26 @@ const RolloutRelease: NextPage = () => (
       transparent distribution that ensures accessibility of NFTs for eligible
       community members and{" "}
       <mark>prioritizes humans over the masses of bots</mark>. A total of{" "}
-      <mark>5000 ELFs</mark> will be available to mint.
+      <mark>10,000 ELFs</mark> will be available to mint.
     </p>
     <h2>First Release</h2>
     <p>
-      The first <mark>2,000 community members</mark> to qualify will be given
+      The first <mark>4,700 community members</mark> to qualify will be given
       the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
       accessible to active Element community members only. The first eligible
-      2,000 community members can qualify by performing certain actions within
+      4,700 community members can qualify by performing certain actions within
       the ecosystem. This will be a limited release and more details will be
       released shortly.
     </p>
     <h2>Second release</h2>
     <p>
-      A second release to mint an additional <mark>2,000 ELFs</mark> will be
-      offered shortly. Details to come.
+      A second release to mint an additional <mark>3,300 ELFs</mark> will be
+      offered to <mark>Discord Community</mark> members and Github DeFi
+      <mark>Ecosystem Contributors</mark>. More details to come.
     </p>
     <h2>Third Release</h2>
     <p>
-      A final <mark>1,000 ELFs</mark> release will be available to mint. More
+      A final <mark>2,000 ELFs</mark> release will be available to mint. More
       details on this later.
     </p>
     <h2>Release and Minting Details</h2>
