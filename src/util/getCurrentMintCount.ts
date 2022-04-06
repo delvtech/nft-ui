@@ -2,11 +2,10 @@ import { getProvider } from "elf/providers";
 import { ethers } from "ethers";
 import { getAddresses } from "src/addresses";
 import { getBlockFrom } from "src/blocks";
-import { getScaledEventHistory } from "src/util/getScaledEventHistory";
 import { ElfNFT__factory } from "typechain-types";
 
 // This function should be used within NextJs getStaticProps with a TTL to cache this result
-export async function getMintHistory() {
+export async function getCurrentMintCount() {
   const provider = getProvider();
   const address = getAddresses();
 
@@ -20,7 +19,5 @@ export async function getMintHistory() {
 
   const transferEvents = await NFT.queryFilter(transferFilter, getBlockFrom());
 
-  const history = await getScaledEventHistory(transferEvents);
-
-  return history;
+  return transferEvents.length;
 }
