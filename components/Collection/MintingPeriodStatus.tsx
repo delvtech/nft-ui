@@ -14,7 +14,7 @@ export const MintingPeriodStatus = ({
   <MintingPeriodStatusContainer>
     <h1>{firstBatchMintMax - totalMints} Elves</h1>
     <Spacer size="16px" />
-    <h2>Remaining time left to delegate</h2>
+    <h2>Remaining elfs left to claim!</h2>
     <Spacer size="10px" />
     <TimerContainer>
       <Timer fontSize="inherit" targetDate={releaseDate} />

@@ -63,7 +63,7 @@ export const MintHistoryChart = ({ mintHistory }: MintHistoryChartProps) => {
 
 const ChartContainer = styled.div`
   height: 220px;
-  width: 376px;
+  width: 340px;
   margin: 10px 30px;
   padding: 5px;
 
