@@ -6,57 +6,57 @@
             {
               "description": "Blue Portal",
               "rarity": "9",
-              "image": "00_blue_portal_r10"
+              "image": "Blue_Portal"
             },
             {
               "description": "Green Portal",
               "rarity": "9",
-              "image": "00_green_portal_r10"
+              "image": "Green_Portal"
             },
             {
               "description": "Red Portal",
               "rarity": "9",
-              "image": "00_carmesi_portal_r10"
+              "image": "Red_Portal"
             },
             {
               "description": "Blood River",
               "rarity": "9",
-              "image": "00_blood_river_r10"
+              "image": "Blood_River"
             },
             {
               "description": "Good Night",
               "rarity": "9",
-              "image": "00_good_night"
+              "image": "Good_Night"
             },
             {
               "description": "Sunrise",
               "rarity": "9",
-              "image": "00_warm_morning"
+              "image": "Warm_Sunrise"
             },
             {
-              "description": "Clean Skies",
+              "description": "Clear Skies",
               "rarity": "9",
-              "image": "00_clean_clouds"
+              "image": "Clear_Skies"
             },
             {
               "description": "Blue Vapor",
               "rarity": "9",
-              "image": "00_blue_vapor"
+              "image": "Blue_Mist"
             },
             {
               "description": "Green Vapor",
               "rarity": "9",
-              "image": "00_green_vapor"
+              "image": "Green_Mist"
             },
             {
               "description": "Orange Mist",
               "rarity": "9",
-              "image": "00_carrot_vapor"
+              "image": "Orange_Mist"
             },
             {
               "description": "Purple Mist",
               "rarity": "9",
-              "image": "00_purple_vapor"
+              "image": "Purple_Mist"
             }
           ]
         },
