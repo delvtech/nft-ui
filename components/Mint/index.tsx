@@ -97,7 +97,6 @@ export const Mint = () => {
             priority
           />
         )}
-        {console.log(isWhitelistLoading, isProofLoading)}
 
         {!isMinting ? (
           <MintButton
