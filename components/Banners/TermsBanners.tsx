@@ -29,7 +29,7 @@ export const TermsBanner = () => {
       <ChildrenContainer>
         <SummaryContainer>
           <Rubik>
-            By continuing to navigate, we assume your permission to accept our{" "}
+            Continued use of this service constitutes acceptance of {" "}
             <InlineLink
               href={TOS_URL}
               target="_blank"
@@ -57,7 +57,7 @@ export const TermsBanner = () => {
           Accept Terms
         </PrimaryButton>
         <SecondaryButton onClick={() => setOpen(false)}>
-          Decline
+          Learn More
         </SecondaryButton>
       </ChildrenContainer>
       <CloseContainer>
