@@ -4,6 +4,9 @@ import moment from "moment";
 import { scale } from "./scale";
 
 export async function getScaledEventHistory(events: Event[]) {
+  if (events.length === 0) {
+    return [];
+  }
   // Get earliest event timestamp
   const first = events[0];
   const firstTimestamp = (await first.getBlock()).timestamp;
