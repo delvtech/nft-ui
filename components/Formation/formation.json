@@ -252,7 +252,7 @@
     },
 
     {
-      "title": "Eyebrows",
+      "title": "Expressions",
       "content": [
         {
           "description": "",
@@ -402,44 +402,119 @@
       "title": "Hair",
       "content": [
         {
-          "description": "",
+          "description": "Long hair tied in a bun, to combat the heat of labour. Blue in color, often worn by scholarly individuals",
           "rarity": "15",
-          "image": "hair_bun_blue"
+          "image": "Blue_Hair_Bun"
         },
         {
-          "description": "",
+          "description": "Long hair tied in a bun, to combat the heat of labour. Green in color, often worn by those who experiment with farming",
           "rarity": "15",
-          "image": "hair_bun_green"
+          "image": "Green_Hair_Bun"
         },
         {
-          "description": "",
+          "description": "Long hair worn loosely as if unconcerned with worldly matters. Blue like the depth of the Sea of Liquidity",
           "rarity": "10",
-          "image": "hair_bun_red"
+          "image": "Blue_Long_Hair"
         },
         {
-          "description": "",
-          "rarity": "20",
-          "image": "hair_bun_grey"
-        },
-        {
-          "description": "",
-          "rarity": "20",
-          "image": "hair_bun_yellow"
-        },
-        {
-          "description": "",
-          "rarity": "10",
-          "image": "hair_long_blue"
-        },
-        {
-          "description": "",
+          "description": "Unruly blue hair is characteristic of the most profound researchers in arcane types of liquidity",
           "rarity": "2",
-          "image": "hair_mohawk_green"
+          "image": "Blue_Mohawk"
         },
         {
-          "description": "",
+          "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent",
           "rarity": "3",
-          "image": "hair_pony_yellow"
+          "image": "Blue_Ponytail"
+        },
+        {
+          "description": "Long hair worn worn loosely as if unconcerned with worldly matters. Green like the spoils of a fresh harvest",
+          "rarity": "10",
+          "image": "Green_Long_Hair"
+        },
+        {
+          "description": "Elven hair that grows wild and untamed is a sign of raw magical potential",
+          "rarity": "2",
+          "image": "Green_Mohawk"
+        },
+        {
+          "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent",
+          "rarity": "3",
+          "image": "Green_Ponytail"
+        },
+        {
+          "description": "Short hair is less frivolous and more practical, showing a focus on substance over style",
+          "rarity": "5",
+          "image": "Green_Short_Hair"
+        },
+        {
+          "description": "Long hair tied in a bun, to combat the heat of labour. Grey in color, often worn by those who have a way with words",
+          "rarity": "20",
+          "image": "Grey_Hair_Bun"
+        },
+        {
+          "description": "Long hair tied in a bun, to combat the heat of labour. Red in color, often worn by those who possess great stamina",
+          "rarity": "10",
+          "image": "Red_Hair_Bun"
+        },
+        {
+          "description": "Long hair worn worn loosely as if unconcerned with worldly matters. Red is favored by those quick to action",
+          "rarity": "10",
+          "image": "Red_Long_Hair"
+        },
+        {
+          "description": "Wild red hair like the color of battle makes others wary, for good reason or not",
+          "rarity": "2",
+          "image": "Red_Mohawk"
+        },
+        {
+          "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent",
+          "rarity": "3",
+          "image": "Red_Ponytail"
+        },
+        {
+          "description": "Short hair is less frivolous and more practical, showing a focus on substance over style",
+          "rarity": "5",
+          "image": "Red_Short_Hair"
+        },
+        {
+          "description": "Long hair worn worn loosely as if unconcerned with worldly matters. White with wisdom and ancient knowledge",
+          "rarity": "10",
+          "image": "White_Long_Hair"
+        },
+        {
+          "description": "Untamed white hair channels the wisdom of the Ancients",
+          "rarity": "2",
+          "image": "White_Mohawk"
+        },
+        {
+          "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent",
+          "rarity": "3",
+          "image": "White_Ponytail"
+        },
+        {
+          "description": "Short hair is less frivolous and more practical, showing a focus on substance over style",
+          "rarity": "5",
+          "image": "White_Short_Hair"
+        },
+        {
+          "description": "Long hair worn worn loosely as if unconcerned with worldly matters. Yellow is a mark of status but also of greed",
+          "rarity": "10",
+          "image": "Yellow_Long_hair"
+        },
+        {
+          "description": "Chaotic golden locks symbolize great power over others, how it’s used remains to be seen",
+          "rarity": "2",
+          "image": "Yellow_Mohawk"
+        },
+        {
+          "description": "Styled in the latest fashion, the wearer’s care and attention to detail is apparent",
+          "rarity": "3",
+          "image": "Yellow_Ponytail"
+        },
+        {
+          "description": "Short hair is less frivolous and more practical, showing a focus on substance over style",
+          "rarity": "5",
+          "image": "Yellow_Short_Hair"
         },
         {
           "description": "",
