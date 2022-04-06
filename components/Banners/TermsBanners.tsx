@@ -29,7 +29,7 @@ export const TermsBanner = () => {
       <ChildrenContainer>
         <SummaryContainer>
           <Rubik>
-            Continued use of this service constitutes acceptance of {" "}
+            Continued use of this service constitutes acceptance of our {" "}
             <InlineLink
               href={TOS_URL}
               target="_blank"
