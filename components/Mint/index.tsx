@@ -99,26 +99,28 @@ export const Mint = () => {
           />
         )}
 
-        <MintButton
-          active={active}
-          canMint={canMint}
-          hasMinted={hasMinted}
-          openDialog={open}
-          handleMint={handleMint}
-          isLoading={isWhitelistLoading || isProofLoading}
-          isWhitelisted={isWhitelisted}
-        />
-
-        <Fade>
-          <ProgressContainer>
-            <h2>
-              <ReactTextTransition
-                text={currentContent.status}
-                springConfig={presets.gentle}
-              />
-            </h2>
-          </ProgressContainer>
-        </Fade>
+        {!isMinting ? (
+          <MintButton
+            active={active}
+            canMint={canMint}
+            hasMinted={hasMinted}
+            openDialog={open}
+            handleMint={handleMint}
+            isLoading={isWhitelistLoading || isProofLoading}
+            isWhitelisted={isWhitelisted}
+          />
+        ) : (
+          <Fade>
+            <ProgressContainer>
+              <h2>
+                <ReactTextTransition
+                  text={currentContent.status}
+                  springConfig={presets.gentle}
+                />
+              </h2>
+            </ProgressContainer>
+          </Fade>
+        )}
 
         {active && isWhitelisted && canMint && (
           <ContentWrapper>
