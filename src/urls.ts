@@ -9,9 +9,8 @@ export const COUNCIL_DOC_URL =
   "https://docs.element.fi/governance-council/council-protocol-overview";
 export const ADDRESS_SCREEN_URL =
   "https://6zqnxzsgja.execute-api.us-east-2.amazonaws.com/screen";
-const PINATA_GATEWAY = "https://element-fi.mypinata.cloud/ipfs";
-const NFT_ASSET_PATH =
-  "/bafybeibar2yqdpghqprbq6ltqszdmczff3koalgoespozhff4e6ptxe44q";
+const PINATA_GATEWAY = "https://element-fi.mypinata.cloud/ipfs/";
+const NFT_ASSET_PATH = "QmfWdY3eof7qFW4KmmPTvyHSh8J5m5pKRVb2odfmAynm5b/";
 
 export const getTokenAssetURL = (id: BigNumber) => {
   return PINATA_GATEWAY + NFT_ASSET_PATH + `/${id.toString()}.png`;

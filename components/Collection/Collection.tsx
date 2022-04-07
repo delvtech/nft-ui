@@ -3,9 +3,7 @@ import { Flex } from "common/Container/styles";
 import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
 import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
-import { useElfImage } from "elf/hooks/useElfImage";
 import { useHasMinted } from "elf/hooks/useHasMinted";
-import { useTokenIds } from "elf/hooks/useTokenIds";
 import useWeb3 from "elf/useWeb3";
 import { BigNumber } from "ethers";
 import { COLORS } from "helpers/colorPalette";
@@ -14,6 +12,7 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 import { DayCount } from "src/types";
+import { getTokenAssetURL } from "src/urls";
 import styled from "styled-components";
 import Card from "./Card";
 import { MintHistoryChart } from "./MintHistoryChart";
@@ -27,12 +26,17 @@ interface CollectionProps {
 export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
   const { active, account } = useWeb3();
   const hasMinted = useHasMinted(account);
-  const tokenIds = useTokenIds(account);
-  const firstTokenId = tokenIds[0];
+  // const tokenIds = useTokenIds(account);
+  const tokenIds = [
+    BigNumber.from(1),
+    BigNumber.from(2),
+    BigNumber.from(69),
+    BigNumber.from(155),
+    BigNumber.from(777),
+  ];
   const { push } = useRouter();
-  const { data: elfImage } = useElfImage(
-    firstTokenId ? firstTokenId.toNumber() : undefined,
-  );
+
+  const imageUrls = tokenIds.map((id) => getTokenAssetURL(id));
 
   if (!active) {
     return (
@@ -83,39 +87,36 @@ export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
         </GraphContainer>
         <ClaimElfContainer>
           <Card title="Claimed ELF">
-            {tokenIds.length !== 0 ? (
-              tokenIds.length === 1 ? (
+            {imageUrls.length !== 0 ? (
+              imageUrls.length === 1 ? (
                 <ElfContainer>
-                  {elfImage && (
-                    <Image
-                      src={elfImage}
-                      height={300}
-                      width={300}
-                      alt="Minted elf"
-                      quality={100}
-                    />
-                  )}
+                  <Image
+                    src={imageUrls[0]}
+                    height={300}
+                    width={300}
+                    alt="Minted elf"
+                    quality={100}
+                  />
                   <Spacer size="6px" />
                   <DefconZero size="16px">
-                    ELF {firstTokenId.toString()}
+                    ELF {tokenIds[0].toString()}
                   </DefconZero>
                 </ElfContainer>
               ) : (
                 <Tokens>
-                  {tokenIds.map((id: BigNumber) => (
-                    <ElfContainer key={id.toString()}>
-                      {elfImage && (
-                        <Image
-                          src={elfImage}
-                          height={200}
-                          width={200}
-                          alt="Minted elf"
-                          quality={100}
-                        />
-                      )}
+                  {imageUrls.map((url: string, i) => (
+                    <ElfContainer key={url}>
+                      <Image
+                        src={url}
+                        height={200}
+                        width={200}
+                        alt="Minted elf"
+                        quality={100}
+                      />
                       <Spacer size="6px" />
-
-                      <DefconZero size="16px">ELF {id.toString()}</DefconZero>
+                      <DefconZero size="16px">
+                        ELF {tokenIds[i].toString()}
+                      </DefconZero>
                     </ElfContainer>
                   ))}
                 </Tokens>
