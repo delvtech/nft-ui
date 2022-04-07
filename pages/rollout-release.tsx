@@ -24,14 +24,9 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>Second release</h2>
     <p>
-      A second release to mint an additional <mark>3,300 ELFs</mark> will be
-      offered to <mark>Discord Community</mark> members and Github DeFi
-      <mark>Ecosystem Contributors</mark>. More details to come.
-    </p>
-    <h2>Third Release</h2>
-    <p>
-      A final <mark>2,000 ELFs</mark> release will be available to mint. More
-      details on this later.
+      A second release to mint ELFs will be offered to{" "}
+      <mark>Discord Community</mark> members and Github DeFi{" "}
+      <mark>Ecosystem Contributors</mark>. More details to come at a later date.
     </p>
     <h2>Release and Minting Details</h2>
     <p>
