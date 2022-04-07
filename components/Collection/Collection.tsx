@@ -4,8 +4,8 @@ import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
 import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
 import { useHasMinted } from "elf/hooks/useHasMinted";
+import { useTokenIds } from "elf/hooks/useTokenIds";
 import useWeb3 from "elf/useWeb3";
-import { BigNumber } from "ethers";
 import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import Image from "next/image";
@@ -26,16 +26,8 @@ interface CollectionProps {
 export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
   const { active, account } = useWeb3();
   const hasMinted = useHasMinted(account);
-  // const tokenIds = useTokenIds(account);
-  const tokenIds = [
-    BigNumber.from(1),
-    BigNumber.from(2),
-    BigNumber.from(69),
-    BigNumber.from(155),
-    BigNumber.from(777),
-  ];
+  const tokenIds = useTokenIds(account);
   const { push } = useRouter();
-
   const imageUrls = tokenIds.map((id) => getTokenAssetURL(id));
 
   if (!active) {
