@@ -2,17 +2,17 @@ import { PrimaryButton } from "common/Button/styles";
 import { Flex } from "common/Container/styles";
 import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
+import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
 import { useElfImage } from "elf/hooks/useElfImage";
 import { useHasMinted } from "elf/hooks/useHasMinted";
 import { useTokenIds } from "elf/hooks/useTokenIds";
-import { useWalletDialog } from "elf/hooks/useWalletDialog";
 import useWeb3 from "elf/useWeb3";
 import { BigNumber } from "ethers";
 import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import { DayCount } from "src/types";
 import styled from "styled-components";
 import Card from "./Card";
@@ -26,8 +26,7 @@ interface CollectionProps {
 
 export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
   const { active, account } = useWeb3();
-  const { open, close } = useWalletDialog();
-  const hasMinted = useHasMinted();
+  const hasMinted = useHasMinted(account);
   const tokenIds = useTokenIds(account);
   const firstTokenId = tokenIds[0];
   const { push } = useRouter();
@@ -35,15 +34,7 @@ export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
     firstTokenId ? firstTokenId.toNumber() : undefined,
   );
 
-  useEffect(() => {
-    if (!active) {
-      open();
-    } else {
-      close();
-    }
-  }, [active, open, close]);
-
-  if (!hasMinted) {
+  if (!active) {
     return (
       <ContentPageContainer>
         <Flex direction="column" margin="50px">
@@ -51,12 +42,28 @@ export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
           <Spacer size="40px" />
 
           <DefconZero color="greenLight">
-            No ELF has been minted for this account.
+            <ConnectWalletButton />
           </DefconZero>
           <Spacer size="40px" />
+        </Flex>
+      </ContentPageContainer>
+    );
+  }
+
+  if (!hasMinted) {
+    return (
+      <ContentPageContainer>
+        <Flex direction="column" margin="50px">
+          <Header>The Collection</Header>
+          <Spacer size="30px" />
+          <DefconZero color="greenLight">
+            You have no ElFs in your account
+          </DefconZero>
+          <Spacer size="30px" />
           <PrimaryButton onClick={() => push("/mint")}>
-            Confirm eligibility
+            Check eligibility
           </PrimaryButton>
+          <Spacer size="30px" />
         </Flex>
       </ContentPageContainer>
     );
@@ -151,7 +158,7 @@ const GraphContainer = styled.div`
 
 const Body = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   padding: 10px;
   border-radius: 20px;
   justify-content: center;

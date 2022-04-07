@@ -43,7 +43,7 @@ export const MintButton = ({
   if (hasMinted) {
     return (
       <PrimaryButton onClick={() => push("/collection")}>
-        Elf minted click to view collection
+        View collection
       </PrimaryButton>
     );
   }
@@ -53,5 +53,5 @@ export const MintButton = ({
     return <PrimaryButton disabled>Account eligible!</PrimaryButton>;
   }
 
-  return <PrimaryButton disabled>Account not eligible for mint.</PrimaryButton>;
+  return <PrimaryButton disabled>Not eligible for mint.</PrimaryButton>;
 };

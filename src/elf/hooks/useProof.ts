@@ -34,6 +34,7 @@ export const useProof = (address: NullableAddress) => {
     {
       enabled: !!address,
       refetchOnWindowFocus: false,
+      retry: 1,
     },
   );
 };

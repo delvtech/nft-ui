@@ -38,6 +38,7 @@ export const useWhitelistStatus = (address: NullableAddress) => {
     {
       enabled: !!address,
       refetchOnWindowFocus: false,
+      retry: 1,
     },
   );
 };
