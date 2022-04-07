@@ -214,7 +214,7 @@ const ImagePlaceholder = styled.div`
 `;
 
 const ContentPageContainer = styled.div`
-  padding: 100px 0px 100px 0px;
+  padding: 100px 0px 150px 0px;
   background-color: #09282d;
   border: 3px solid ${COLORS.whiteLight};
   margin-top: 30px;

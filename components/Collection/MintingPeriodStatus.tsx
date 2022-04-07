@@ -1,6 +1,5 @@
 import { Spacer } from "common/Spacer";
 import { devices } from "helpers/devices";
-import { firstBatchMintMax } from "src/constants";
 import styled from "styled-components";
 
 interface MintingPeriodStatusProps {
@@ -11,7 +10,7 @@ export const MintingPeriodStatus = ({
   totalMints,
 }: MintingPeriodStatusProps) => (
   <MintingPeriodStatusContainer>
-    <h1>{firstBatchMintMax - totalMints} Elves</h1>
+    <h1>{totalMints} Elves</h1>
     <Spacer size="25px" />
     <h2>Total ELFs have been minted!</h2>
     <Spacer size="10px" />
