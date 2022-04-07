@@ -55,22 +55,3 @@ const MintingPeriodStatusContainer = styled.div`
     }
   }
 `;
-
-// const TimerContainer = styled.div`
-//   font-family: "Defcon Zero";
-//   font-weight: 600;
-//   font-size: 3rem;
-//   text-shadow: 0px 0px 20px rgba(20, 223, 186, 0.8);
-//   letter-spacing: 6px;
-
-//   padding: 10px;
-//   margin-top: auto;
-
-//   @media ${devices.tabletL} {
-//     font-size: 3rem;
-//   }
-
-//   @media ${devices.mobileL} {
-//     font-size: 2.25rem;
-//   }
-// `;
