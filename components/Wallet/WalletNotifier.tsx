@@ -1,8 +1,8 @@
-import { useEagerConnect } from "elf/hooks/useEagerConnect";
-import useWeb3 from "elf/useWeb3";
 import { createToastSuccess } from "helpers/createToast";
 import { WithChildren } from "helpers/types";
 import React, { useEffect } from "react";
+import { useEagerConnect } from "src/hooks/useEagerConnect";
+import useWeb3 from "src/hooks/useWeb3";
 
 // Higher order component for wallet events, mounts toast notifications.
 export const WalletNotifier = ({ children }: WithChildren) => {

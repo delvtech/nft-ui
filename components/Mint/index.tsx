@@ -1,12 +1,6 @@
 import { ContentPage } from "components/ContentPage";
 import { ContentWrapper } from "components/Entrance/styles";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
-import { useHasMinted } from "elf/hooks/useHasMinted";
-import { useMinter } from "elf/hooks/useMinter";
-import { useProof } from "elf/hooks/useProof";
-import { useWalletDialog } from "elf/hooks/useWalletDialog";
-import { useWhitelistStatus } from "elf/hooks/useWhitelistStatus";
-import useWeb3 from "elf/useWeb3";
 import {
   createToastError,
   createToastLoading,
@@ -18,6 +12,12 @@ import LoadingMintGIF from "public/assets/gif/minting_loading.gif";
 import { useMemo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import ReactTextTransition, { presets } from "react-text-transition";
+import { useHasMinted } from "src/hooks/useHasMinted";
+import { useMinter } from "src/hooks/useMinter";
+import { useProof } from "src/hooks/useProof";
+import { useWalletDialog } from "src/hooks/useWalletDialog";
+import useWeb3 from "src/hooks/useWeb3";
+import { useWhitelistStatus } from "src/hooks/useWhitelistStatus";
 import content from "./content.json";
 import { MintButton } from "./MintButton";
 

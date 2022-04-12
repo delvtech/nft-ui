@@ -1,8 +1,8 @@
-import { getProvider } from "elf/providers";
+import { ElfNFT__factory } from "contracts";
 import { ethers } from "ethers";
 import { getAddresses } from "src/addresses";
 import { getBlockFrom } from "src/blocks";
-import { ElfNFT__factory } from "typechain-types";
+import { getProvider } from "src/providers";
 
 // This function should be used within NextJs getStaticProps with a TTL to cache this result
 export async function getCurrentMintCount() {

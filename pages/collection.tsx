@@ -1,9 +1,9 @@
 import { SectionContainer } from "common/Container";
 import { Collection } from "components/Collection/Collection";
-import { getMintHistory } from "elf/elfiverse/getMintHistory";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import React from "react";
+import { getMintHistory } from "src/elfiverse/getMintHistory";
 import { DayCount } from "src/types";
 import { getCurrentMintCount } from "src/util/getCurrentMintCount";
 

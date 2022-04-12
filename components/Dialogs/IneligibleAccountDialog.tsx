@@ -1,9 +1,9 @@
 import { Dialog } from "common/Dialog";
 import { DialogTitle } from "common/Dialog/styles";
-import useAddressScreening from "elf/hooks/useAddressScreening";
-import useWeb3 from "elf/useWeb3";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import useAddressScreening from "src/hooks/useAddressScreening";
+import useWeb3 from "src/hooks/useWeb3";
 import styled from "styled-components";
 
 export const IneligibleAccountDialog = () => {
