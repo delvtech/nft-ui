@@ -1,7 +1,7 @@
 import { PrimaryButton } from "common/Button/styles";
+import { useWalletDialog } from "hooks/useWalletDialog";
+import useWeb3 from "hooks/useWeb3";
 import React from "react";
-import { useWalletDialog } from "src/hooks/useWalletDialog";
-import useWeb3 from "src/hooks/useWeb3";
 
 export const ConnectWalletButton = () => {
   const { active } = useWeb3();

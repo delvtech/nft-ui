@@ -6,8 +6,8 @@ import { Spacer } from "common/Spacer";
 import { BigNumber } from "ethers";
 import { hexStripZeros } from "ethers/lib/utils";
 import { createToastError } from "helpers/createToast";
+import useWeb3 from "hooks/useWeb3";
 import React, { useCallback, useEffect, useState } from "react";
-import useWeb3 from "src/hooks/useWeb3";
 import { NEXT_ENV } from "src/providers";
 import { chainName, getTargetChain } from "src/wallets/chains";
 

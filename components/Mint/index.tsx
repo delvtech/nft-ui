@@ -6,18 +6,18 @@ import {
   createToastLoading,
   createToastSuccess,
 } from "helpers/createToast";
+import { useHasMinted } from "hooks/useHasMinted";
+import { useMinter } from "hooks/useMinter";
+import { useProof } from "hooks/useProof";
+import { useWalletDialog } from "hooks/useWalletDialog";
+import useWeb3 from "hooks/useWeb3";
+import { useWhitelistStatus } from "hooks/useWhitelistStatus";
 import Image from "next/image";
 import MintGIF from "public/assets/gif/hero_image.gif";
 import LoadingMintGIF from "public/assets/gif/minting_loading.gif";
 import { useMemo, useRef } from "react";
 import { Fade } from "react-awesome-reveal";
 import ReactTextTransition, { presets } from "react-text-transition";
-import { useHasMinted } from "src/hooks/useHasMinted";
-import { useMinter } from "src/hooks/useMinter";
-import { useProof } from "src/hooks/useProof";
-import { useWalletDialog } from "src/hooks/useWalletDialog";
-import useWeb3 from "src/hooks/useWeb3";
-import { useWhitelistStatus } from "src/hooks/useWhitelistStatus";
 import content from "./content.json";
 import { MintButton } from "./MintButton";
 

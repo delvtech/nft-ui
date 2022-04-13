@@ -1,6 +1,6 @@
 import axios from "axios";
+import useWeb3 from "hooks/useWeb3";
 import { useQuery } from "react-query";
-import useWeb3 from "src/hooks/useWeb3";
 import { NullableAddress, ProofData, ProofDataResponse } from "src/types";
 import { ChainId } from "src/wallets/chains";
 

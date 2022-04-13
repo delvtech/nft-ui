@@ -1,8 +1,8 @@
 import { useSmartContractReadCall } from "@elementfi/react-query-typechain";
 import { ElfNFT__factory } from "contracts";
 import { BigNumber } from "ethers";
+import useWeb3 from "hooks/useWeb3";
 import { getAddresses } from "src/addresses";
-import useWeb3 from "src/hooks/useWeb3";
 import { getProvider } from "src/providers";
 
 export function useOwnerOf(tokenId: BigNumber | undefined) {
