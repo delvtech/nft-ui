@@ -34,15 +34,17 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Contracts
 
-The smart contracts assocaiated with this project can be found [here](https://github.com/element-fi/nft-contracts). The generated typechain classes have been migrated here already.
+The smart contracts assocaiated with this project can be found [here](https://github.com/element-fi/nft-contracts). The generated typechain classes have been migrated already. Any updates to the contract will require manual migration of types.
+
+Contract addresses can be found in the `src/addresses` folder. Mainnet, Goerli, and local chains are supported. Mainnet and Goerli contracts are live, but local development will require a local instance of a hardhat network running. There are some helpful scripts in the contract repo for easily deploying the contracts to a local chain.
 
 ## Github Actions
 
-We currently have two pull request actions, one for formatting (prettier) and linting (es-lint)
+Currently there are two pull request actions, one for enforcing formatting and linting rules.
 
 ### Running locally <br>
 
-[Act](https://github.com/nektos/act) can be used to simulate github actions locally. Follow the repositories quickstart guide. After installing Act you can run our actions using in the root of this project.
+[Act](https://github.com/nektos/act) can be used to simulate github actions locally. Follow the repository's quick start guide. After installing Act you can run actions locally. This command must be run in the root of this project.
 
 ```bash
 act pull_request
@@ -58,5 +60,4 @@ yarn prettier:check && yarn lint
 
 - useWeb3React
 - react-query-typechain
-- Typechain
 - Styled components
