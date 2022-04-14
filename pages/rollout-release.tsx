@@ -18,15 +18,17 @@ const RolloutRelease: NextPage = () => (
       The first <mark>4,700 community members</mark> to qualify will be given
       the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
       accessible to active Element community members only. The first eligible
-      4,700 community members can qualify by performing certain actions within
-      the ecosystem. This will be a limited release and more details will be
+      4,700 community members qualified by performing certain actions within the
+      ecosystem. This will be a limited release and more details will be
       released shortly.
     </p>
     <h2>Second release</h2>
     <p>
-      A second release to mint ELFs will be offered to{" "}
-      <mark>Discord Community</mark> members and Github DeFi{" "}
-      <mark>Ecosystem Contributors</mark>. More details to come at a later date.
+      A second release to mint 2,800 ELFs will be offered to{" "}
+      <mark>Discord Community</mark> members, Github DeFi{" "}
+      <mark>Ecosystem Contributors</mark>, and users who performed certain
+      actions within the ecosystem but didn't make it in time for the First
+      Release.
     </p>
     <h2>Release and Minting Details</h2>
     <p>
@@ -36,7 +38,11 @@ const RolloutRelease: NextPage = () => (
       platforms like OpenSea typically take a while to update the refreshed
       metadata.
     </p>
-
+    <h2>The Elven Reserve</h2>
+    <p>
+      The remaining 2,500 ELFs will be given to the Element DAO, so that the
+      DAO's governance participants can decide upon how to use the NFTs.
+    </p> 
     <h2>Non-investments</h2>
     <p>
       These ELF NFTs are not for sale. They are not investments or hold or
