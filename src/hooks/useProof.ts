@@ -2,7 +2,7 @@ import axios from "axios";
 import useWeb3 from "hooks/useWeb3";
 import { useQuery } from "react-query";
 import { NullableAddress, ProofData, ProofDataResponse } from "src/types";
-import { ChainId } from "src/wallets/chains";
+import { ChainId } from "wallets/chains";
 
 const S3_BUCKET_URI = "https://elementfi.s3.us-east-2.amazonaws.com/nft";
 

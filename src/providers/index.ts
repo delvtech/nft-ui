@@ -2,7 +2,7 @@ import { createAlchemyWeb3 } from "@alch/alchemy-web3";
 import { ExternalProvider } from "@ethersproject/providers";
 import { providers } from "ethers";
 import { memoize } from "lodash";
-import { ChainId, getTargetChain } from "src/wallets/chains";
+import { ChainId, getTargetChain } from "wallets/chains";
 
 export const ALCHEMY_GOERLI_KEY = process.env
   .NEXT_PUBLIC_GOERLI_ALCHEMY_KEY as string;

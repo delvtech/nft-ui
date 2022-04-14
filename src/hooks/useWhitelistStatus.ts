@@ -2,7 +2,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { NullableAddress } from "src/types";
 import { WHITELIST_URL } from "src/urls";
-import { ChainId, getTargetChain } from "src/wallets/chains";
+import { ChainId, getTargetChain } from "wallets/chains";
 
 type Whitelist = string[];
 

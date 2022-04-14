@@ -9,7 +9,7 @@ import { createToastError } from "helpers/createToast";
 import useWeb3 from "hooks/useWeb3";
 import React, { useCallback, useEffect, useState } from "react";
 import { NEXT_ENV } from "src/providers";
-import { chainName, getTargetChain } from "src/wallets/chains";
+import { chainName, getTargetChain } from "wallets/chains";
 
 export const SwitchNetworkDialog = () => {
   const { active, deactivate, library, chainId } = useWeb3();

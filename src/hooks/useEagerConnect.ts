@@ -1,7 +1,7 @@
 import { useWeb3React } from "@web3-react/core";
 import { useEffect, useState } from "react";
 import { isFeatureEnabled } from "src/features";
-import { injectedConnector } from "src/wallets/connectors";
+import { injectedConnector } from "wallets/connectors";
 
 export function useEagerConnect(): void {
   const { activate, active } = useWeb3React();

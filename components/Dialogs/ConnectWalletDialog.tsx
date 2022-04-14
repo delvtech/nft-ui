@@ -12,7 +12,7 @@ import React, { useCallback } from "react";
 import {
   getWalletConnectConnector,
   injectedConnector,
-} from "src/wallets/connectors";
+} from "wallets/connectors";
 
 interface WalletButtonProps {
   alt: string;
