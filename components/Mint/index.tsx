@@ -1,17 +1,17 @@
 import { ContentPage } from "components/ContentPage";
 import { ContentWrapper } from "components/Entrance/styles";
 import { MintContainer, ProgressContainer } from "components/Mint/styles";
-import { useHasMinted } from "elf/hooks/useHasMinted";
-import { useMinter } from "elf/hooks/useMinter";
-import { useProof } from "elf/hooks/useProof";
-import { useWalletDialog } from "elf/hooks/useWalletDialog";
-import { useWhitelistStatus } from "elf/hooks/useWhitelistStatus";
-import useWeb3 from "elf/useWeb3";
 import {
   createToastError,
   createToastLoading,
   createToastSuccess,
 } from "helpers/createToast";
+import { useHasMinted } from "hooks/useHasMinted";
+import { useMinter } from "hooks/useMinter";
+import { useProof } from "hooks/useProof";
+import { useWalletDialog } from "hooks/useWalletDialog";
+import useWeb3 from "hooks/useWeb3";
+import { useWhitelistStatus } from "hooks/useWhitelistStatus";
 import Image from "next/image";
 import MintGIF from "public/assets/gif/hero_image.gif";
 import LoadingMintGIF from "public/assets/gif/minting_loading.gif";

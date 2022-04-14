@@ -1,5 +1,5 @@
-import { ChainId, getTargetChain } from "elf/wallets/chains";
 import { memoize } from "lodash";
+import { ChainId, getTargetChain } from "wallets/chains";
 import devAddressList from "./dev.addresses.json";
 import goerliAddressList from "./goerli.addresses.json";
 import mainnetAddressList from "./mainnet.addresses.json";

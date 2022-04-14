@@ -1,5 +1,5 @@
 import { PrimaryButton } from "common/Button/styles";
-import useWeb3 from "elf/useWeb3";
+import useWeb3 from "hooks/useWeb3";
 import { useRouter } from "next/router";
 
 interface MintButtonProps {

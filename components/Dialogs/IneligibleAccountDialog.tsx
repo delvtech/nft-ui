@@ -1,7 +1,7 @@
 import { Dialog } from "common/Dialog";
 import { DialogTitle } from "common/Dialog/styles";
-import useAddressScreening from "elf/hooks/useAddressScreening";
-import useWeb3 from "elf/useWeb3";
+import useAddressScreening from "hooks/useAddressScreening";
+import useWeb3 from "hooks/useWeb3";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import styled from "styled-components";
