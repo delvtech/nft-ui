@@ -1,5 +1,5 @@
-import { ChainId, getTargetChain } from "elf/wallets/chains";
 import { memoize } from "lodash";
+import { ChainId, getTargetChain } from "wallets/chains";
 
 export const getBlockFrom = memoize(() => {
   const chain = getTargetChain();

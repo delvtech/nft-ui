@@ -11,7 +11,7 @@ import {
   MobileMenuContainer,
   SVGContainer,
 } from "components/Layout/Header/styles";
-import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
+import { ConnectWalletNavButton } from "components/Wallet/ConnectWalletNavButton";
 import { COLOR_WHITE } from "helpers/colorPalette";
 import React, { useState } from "react";
 import { isFeatureEnabled } from "src/features";
@@ -67,7 +67,7 @@ export const SocialLinks = () => (
 export const Header = () => {
   const [sidebarVisibility, setSidebarVisibility] = useState<boolean>(false);
 
-  const ConnectWallet = React.memo(ConnectWalletButton);
+  const ConnectWallet = React.memo(ConnectWalletNavButton);
 
   return (
     <FixedHeader>

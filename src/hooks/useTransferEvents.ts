@@ -1,17 +1,21 @@
-import { useSmartContractEvents } from "@elementfi/react-query-typechain";
-import { getProvider } from "elf/providers";
+import {
+  useSmartContractEvents,
+  UseSmartContractEventsCallOptions,
+} from "@elementfi/react-query-typechain";
+import { ElfNFT, ElfNFT__factory } from "contracts";
 import { BigNumber } from "ethers";
+import { getAddresses } from "src/addresses";
 import { getBlockFrom } from "src/blocks";
+import { getProvider } from "src/providers";
 import { NullableAddress } from "src/types";
-import { ElfNFT__factory } from "typechain-types";
-import { useAddresses } from "./useAddress";
 
 export function useTransferEvents(
   from?: NullableAddress,
   to?: NullableAddress,
   tokenId?: BigNumber,
+  options?: UseSmartContractEventsCallOptions<ElfNFT, "Transfer">,
 ) {
-  const address = useAddresses();
+  const address = getAddresses();
   const provider = getProvider();
 
   const NFT = ElfNFT__factory.connect(address.tokenContract, provider);
@@ -20,5 +24,6 @@ export function useTransferEvents(
     callArgs: [from, to, tokenId],
     enabled: !!from || !!to || !!tokenId,
     fromBlock: getBlockFrom(),
+    ...options,
   });
 }

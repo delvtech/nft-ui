@@ -2,16 +2,16 @@ import {
   useSmartContractTransaction,
   UseSmartContractTransactionOptions,
 } from "@elementfi/react-query-typechain";
-import { getProvider } from "elf/providers";
+import { Minter, Minter__factory } from "contracts";
 import { Signer } from "ethers";
-import { Minter, Minter__factory } from "typechain-types";
-import { useAddresses } from "./useAddress";
+import { getAddresses } from "src/addresses";
+import { getProvider } from "src/providers";
 
 export function useMinter(
   signer?: Signer,
   options?: UseSmartContractTransactionOptions<Minter, "mint">,
 ) {
-  const addresses = useAddresses();
+  const addresses = getAddresses();
   const provider = getProvider();
 
   const minter = Minter__factory.connect(addresses.minter, provider);

@@ -1,37 +1,34 @@
 import { SectionContainer } from "common/Container";
 import { Collection } from "components/Collection/Collection";
-import { getDelegatorHistory } from "elf/council/getDelegatorHistory";
-import { getMintHistory } from "elf/elfiverse/getMintHistory";
 import { NextPage } from "next";
 import { NextSeo } from "next-seo";
 import React from "react";
+import { getMintHistory } from "src/elfiverse/getMintHistory";
 import { DayCount } from "src/types";
+import { getCurrentMintCount } from "src/util/getCurrentMintCount";
 
 interface CollectionPageProps {
   mintHistory: Array<DayCount>;
-  delegationHistory: Array<DayCount>;
+  mintCount: number;
 }
 
 export const CollectionPage: NextPage<CollectionPageProps> = ({
   mintHistory,
-  delegationHistory,
+  mintCount,
 }) => (
   <SectionContainer padding="8rem 0">
     <NextSeo title={`Element ElfiVerse - Collection`} />
-    <Collection
-      mintHistory={mintHistory}
-      delegationHistory={delegationHistory}
-    />
+    <Collection mintHistory={mintHistory} mintCount={mintCount} />
   </SectionContainer>
 );
 
 export async function getStaticProps() {
-  const delegationHistory = await getDelegatorHistory();
+  const mintCount = await getCurrentMintCount();
   const mintHistory = await getMintHistory();
 
   return {
     props: {
-      delegationHistory,
+      mintCount,
       mintHistory,
     },
     revalidate: 60, // seconds

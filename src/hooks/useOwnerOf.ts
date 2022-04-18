@@ -1,14 +1,14 @@
 import { useSmartContractReadCall } from "@elementfi/react-query-typechain";
-import { getProvider } from "elf/providers";
-import useWeb3 from "elf/useWeb3";
+import { ElfNFT__factory } from "contracts";
 import { BigNumber } from "ethers";
-import { ElfNFT__factory } from "typechain-types";
-import { useAddresses } from "./useAddress";
+import useWeb3 from "hooks/useWeb3";
+import { getAddresses } from "src/addresses";
+import { getProvider } from "src/providers";
 
 export function useOwnerOf(tokenId: BigNumber | undefined) {
   const { chainId } = useWeb3();
 
-  const addresses = useAddresses();
+  const addresses = getAddresses();
   const provider = getProvider();
 
   const tokenContract = ElfNFT__factory.connect(
