@@ -18,17 +18,18 @@ const RolloutRelease: NextPage = () => (
       The first <mark>4,700 community members</mark> to qualify will be given
       the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
       accessible to active Element community members only. The first eligible
-      4,700 community members qualified by performing certain actions within the
-      ecosystem. This will be a limited release and more details will be
-      released shortly.
+      4,700 community members qualified by trading fixed rates, depositing their
+      assets for variable rates, or providing liquidity in the protocol. This
+      will be a limited release and more details will be released shortly.
     </p>
     <h2>Second release</h2>
     <p>
       A second release to mint 2,800 ELFs will be offered to{" "}
       <mark>Discord Community</mark> members, Github DeFi{" "}
-      <mark>Ecosystem Contributors</mark>, and users who performed certain
-      actions within the ecosystem but didn&apos;t make it in time for the First
-      Release.
+      <mark>Ecosystem Contributors</mark>, and users who traded fixed rates,
+      deposited their assets for variable rates, or provided liquidity in the
+      protocol but didn&apos;t make it in time for the First Release. This will
+      be a limited release and more details will be announced shortly.
     </p>
     <h2>Release and Minting Details</h2>
     <p>
