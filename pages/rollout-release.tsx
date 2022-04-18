@@ -15,12 +15,10 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>First Release</h2>
     <p>
-      The first <mark>4,700 community members</mark> to qualify will be given
-      the opportunity to mint on <mark> April 6th, 2022</mark>. It will be
-      accessible to active Element community members only. The first eligible
-      4,700 community members qualified by trading fixed rates, depositing their
-      assets for variable rates, or providing liquidity in the protocol. This
-      will be a limited release and more details will be released shortly.
+      The first <mark>4,700 community members</mark> qualified by trading fixed
+      rates, depositing their assets for variable rates, or providing liquidity
+      in the protocol, and were given the opportunity to mint on
+      <mark> April 6th, 2022</mark>.
     </p>
     <h2>Second release</h2>
     <p>
@@ -33,6 +31,11 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>Release and Minting Details</h2>
     <p>
+      You can learn more about the eligibility criteria all protocol users,
+      community members and ecosystem contributors in the following blog post:
+      <a href="https://mirror.xyz/0x3fcAf7DDf64E6e109B1e2A5CC17875D4a5993F39/bctuLRkf7oBL4mMJ9lPf0y0blFjBDslTUfUL0CEk1gc">
+        Element DAO - ELFI Voting Distribution
+      </a>
       After minting, you will be able to see your elf on the Elfiverse website
       immediately. You will need to connect your wallet at the top right and
       click on the My Collection button to see your revealed elf. Wallets and
