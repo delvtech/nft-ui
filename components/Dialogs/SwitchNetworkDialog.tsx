@@ -3,13 +3,13 @@ import { Flex } from "common/Container/styles";
 import { Dialog } from "common/Dialog";
 import { DialogBodyText, DialogTitle } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
-import { NEXT_ENV } from "elf/providers";
-import useWeb3 from "elf/useWeb3";
-import { chainName, getTargetChain } from "elf/wallets/chains";
 import { BigNumber } from "ethers";
 import { hexStripZeros } from "ethers/lib/utils";
 import { createToastError } from "helpers/createToast";
+import useWeb3 from "hooks/useWeb3";
 import React, { useCallback, useEffect, useState } from "react";
+import { NEXT_ENV } from "src/providers";
+import { chainName, getTargetChain } from "wallets/chains";
 
 export const SwitchNetworkDialog = () => {
   const { active, deactivate, library, chainId } = useWeb3();

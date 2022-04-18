@@ -9,6 +9,9 @@ export function useHasMinted(address?: NullableAddress) {
     ethers.constants.AddressZero,
     address,
     undefined,
+    {
+      enabled: !!address,
+    },
   );
 
   return !!mintEvents && mintEvents.length > 0;

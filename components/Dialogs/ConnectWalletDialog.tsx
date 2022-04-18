@@ -4,15 +4,15 @@ import { Flex } from "common/Container/styles";
 import { Dialog, DialogProps } from "common/Dialog";
 import { DialogBodyText, DialogTitle } from "common/Dialog/styles";
 import { Spacer } from "common/Spacer";
-import useWeb3 from "elf/useWeb3";
+import { createToastError } from "helpers/createToast";
+import { WithChildren } from "helpers/types";
+import useWeb3 from "hooks/useWeb3";
+import Image from "next/image";
+import React, { useCallback } from "react";
 import {
   getWalletConnectConnector,
   injectedConnector,
-} from "elf/wallets/connectors";
-import { createToastError } from "helpers/createToast";
-import { WithChildren } from "helpers/types";
-import Image from "next/image";
-import React, { useCallback } from "react";
+} from "wallets/connectors";
 
 interface WalletButtonProps {
   alt: string;

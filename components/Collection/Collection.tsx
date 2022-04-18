@@ -2,16 +2,15 @@ import { PrimaryButton } from "common/Button/styles";
 import { Flex } from "common/Container/styles";
 import { Spacer } from "common/Spacer";
 import DefconZero from "components/Text/DefconZero";
-import { useHasMinted } from "elf/hooks/useHasMinted";
-import { useTokenIds } from "elf/hooks/useTokenIds";
-import { useWalletDialog } from "elf/hooks/useWalletDialog";
-import useWeb3 from "elf/useWeb3";
-import { BigNumber } from "ethers";
+import { ConnectWalletButton } from "components/Wallet/ConnectWalletButton";
 import { COLORS } from "helpers/colorPalette";
 import { devices } from "helpers/devices";
+import { useHasMinted } from "hooks/useHasMinted";
+import { useTokenIds } from "hooks/useTokenIds";
+import useWeb3 from "hooks/useWeb3";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useEffect } from "react";
+import React from "react";
 import { DayCount } from "src/types";
 import { getTokenAssetURL } from "src/urls";
 import styled from "styled-components";
@@ -21,29 +20,17 @@ import { MintingPeriodStatus } from "./MintingPeriodStatus";
 
 interface CollectionProps {
   mintHistory: Array<DayCount>;
-  delegationHistory: Array<DayCount>;
+  mintCount: number;
 }
 
-export const Collection = ({
-  mintHistory,
-  delegationHistory,
-}: CollectionProps) => {
+export const Collection = ({ mintHistory, mintCount }: CollectionProps) => {
   const { active, account } = useWeb3();
-  const { open, close } = useWalletDialog();
-  const hasMinted = useHasMinted();
+  const hasMinted = useHasMinted(account);
   const tokenIds = useTokenIds(account);
-  const firstTokenId = tokenIds[0];
   const { push } = useRouter();
+  const imageUrls = tokenIds.map((id) => getTokenAssetURL(id));
 
-  useEffect(() => {
-    if (!active) {
-      open();
-    } else {
-      close();
-    }
-  }, [active, open, close]);
-
-  if (!hasMinted) {
+  if (!active) {
     return (
       <ContentPageContainer>
         <Flex direction="column" margin="50px">
@@ -51,12 +38,28 @@ export const Collection = ({
           <Spacer size="40px" />
 
           <DefconZero color="greenLight">
-            No ELF has been minted for this account.
+            <ConnectWalletButton />
           </DefconZero>
           <Spacer size="40px" />
+        </Flex>
+      </ContentPageContainer>
+    );
+  }
+
+  if (!hasMinted) {
+    return (
+      <ContentPageContainer>
+        <Flex direction="column" margin="50px">
+          <Header>The Collection</Header>
+          <Spacer size="30px" />
+          <DefconZero color="greenLight">
+            You have no ElFs in your account
+          </DefconZero>
+          <Spacer size="30px" />
           <PrimaryButton onClick={() => push("/mint")}>
-            Confirm eligibility
+            Check eligibility
           </PrimaryButton>
+          <Spacer size="30px" />
         </Flex>
       </ContentPageContainer>
     );
@@ -68,7 +71,7 @@ export const Collection = ({
       <Body>
         <GraphContainer>
           <Card title="Minting Inventory">
-            <MintingPeriodStatus totalMints={delegationHistory.length} />
+            <MintingPeriodStatus totalMints={mintCount} />
           </Card>
           <Card title="Minting History">
             <MintHistoryChart mintHistory={mintHistory} />
@@ -76,11 +79,11 @@ export const Collection = ({
         </GraphContainer>
         <ClaimElfContainer>
           <Card title="Claimed ELF">
-            {tokenIds.length !== 0 ? (
-              tokenIds.length === 1 ? (
+            {imageUrls.length !== 0 ? (
+              imageUrls.length === 1 ? (
                 <ElfContainer>
                   <Image
-                    src={getTokenAssetURL(tokenIds[0])}
+                    src={imageUrls[0]}
                     height={300}
                     width={300}
                     alt="Minted elf"
@@ -88,23 +91,24 @@ export const Collection = ({
                   />
                   <Spacer size="6px" />
                   <DefconZero size="16px">
-                    ELF {firstTokenId.toString()}
+                    ELF {tokenIds[0].toString()}
                   </DefconZero>
                 </ElfContainer>
               ) : (
                 <Tokens>
-                  {tokenIds.map((id: BigNumber) => (
-                    <ElfContainer key={id.toString()}>
+                  {imageUrls.map((url: string, i) => (
+                    <ElfContainer key={url}>
                       <Image
-                        src={getTokenAssetURL(id)}
+                        src={url}
                         height={200}
                         width={200}
                         alt="Minted elf"
                         quality={100}
                       />
                       <Spacer size="6px" />
-
-                      <DefconZero size="16px">ELF {id.toString()}</DefconZero>
+                      <DefconZero size="16px">
+                        ELF {tokenIds[i].toString()}
+                      </DefconZero>
                     </ElfContainer>
                   ))}
                 </Tokens>
@@ -147,7 +151,7 @@ const GraphContainer = styled.div`
 
 const Body = styled.div`
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   padding: 10px;
   border-radius: 20px;
   justify-content: center;
@@ -203,7 +207,7 @@ const ImagePlaceholder = styled.div`
 `;
 
 const ContentPageContainer = styled.div`
-  padding: 100px 0px 100px 0px;
+  padding: 100px 0px 150px 0px;
   background-color: #09282d;
   border: 3px solid ${COLORS.whiteLight};
   margin-top: 30px;

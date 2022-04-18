@@ -15,7 +15,7 @@ import Head from "next/head";
 import "public/assets/fonts/style.css";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "react-query";
-import { getEthereumProviderLibrary } from "src/elf/getEthereumProviderLibrary";
+import { getEthereumProviderLibrary } from "src/providers/getEthereumProviderLibrary";
 import { GlobalStyle } from "styles/globalStyles";
 
 const queryClient = new QueryClient();

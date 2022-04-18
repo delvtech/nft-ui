@@ -49,6 +49,7 @@ export const Footer = () => {
             <ExternalLink href="/rollout-release">
               The rollout release
             </ExternalLink>
+            <ExternalLink href="/rollout-release">The Collection</ExternalLink>
           </div>
           <div>
             <h4>Governance</h4>

@@ -2,8 +2,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "elf/*": ["src/elf/*"],
-      "wallets/*": ["src/elf/wallets/*"]
+      "wallets/*": ["src/wallets/*"],
+      "hooks/*": ["src/hooks/*"]
     },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
