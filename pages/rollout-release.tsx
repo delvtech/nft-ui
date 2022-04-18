@@ -27,7 +27,7 @@ const RolloutRelease: NextPage = () => (
       A second release to mint 2,800 ELFs will be offered to{" "}
       <mark>Discord Community</mark> members, Github DeFi{" "}
       <mark>Ecosystem Contributors</mark>, and users who performed certain
-      actions within the ecosystem but didn't make it in time for the First
+      actions within the ecosystem but didn&apos;t make it in time for the First
       Release.
     </p>
     <h2>Release and Minting Details</h2>
@@ -41,8 +41,8 @@ const RolloutRelease: NextPage = () => (
     <h2>The Elven Reserve</h2>
     <p>
       The remaining 2,500 ELFs will be given to the Element DAO, so that the
-      DAO's governance participants can decide upon how to use the NFTs.
-    </p> 
+      DAO&apos;s governance participants can decide upon how to use the NFTs.
+    </p>
     <h2>Non-investments</h2>
     <p>
       These ELF NFTs are not for sale. They are not investments or hold or
