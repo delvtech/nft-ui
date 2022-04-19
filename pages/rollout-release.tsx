@@ -15,9 +15,10 @@ const RolloutRelease: NextPage = () => (
     </p>
     <h2>First Release</h2>
     <p>
-      The first <mark>4,700 community members</mark> qualified by trading fixed
-      rates, depositing their assets for variable rates, or providing liquidity
-      in the protocol, and were given the opportunity to mint on
+      The first <mark>4,700 community members</mark> qualified for minting by
+      trading fixed rates, depositing their assets for variable rates, or
+      providing liquidity in the Element protocol, and were given the
+      opportunity to mint their ELFs on
       <mark> April 6th, 2022</mark>.
     </p>
     <h2>Second release</h2>
@@ -26,26 +27,30 @@ const RolloutRelease: NextPage = () => (
       <mark>Discord Community</mark> members, Github DeFi{" "}
       <mark>Ecosystem Contributors</mark>, and users who traded fixed rates,
       deposited their assets for variable rates, or provided liquidity in the
-      protocol but didn&apos;t make it in time for the First Release. This will
-      be a limited release and more details will be announced shortly.
+      Element protocol but didn&apos;t make it in time for the First Release. 
+      More details will be announced shortly.
     </p>
     <h2>Release and Minting Details</h2>
     <p>
-      You can learn more about the eligibility criteria all protocol users,
+      Everyone who claimed and delegated their Element DAO ELFI tokens before
+      the 7,500 whitelist spots were filled had the opportunity to mint an ELF.
+      You can learn more about the eligibility criteria for protocol users,
       community members and ecosystem contributors in the following blog post:
       <a href="https://mirror.xyz/0x3fcAf7DDf64E6e109B1e2A5CC17875D4a5993F39/bctuLRkf7oBL4mMJ9lPf0y0blFjBDslTUfUL0CEk1gc">
         Element DAO - ELFI Voting Distribution
       </a>
+    </p>
+    <p>
       After minting, you will be able to see your elf on the Elfiverse website
-      immediately. You will need to connect your wallet at the top right and
+      immediately. You will have to connect your wallet at the top right and
       click on the My Collection button to see your revealed elf. Wallets and
-      platforms like OpenSea typically take a while to update the refreshed
-      metadata.
+      NFT platforms typically take a while to update the refreshed metadata.
     </p>
     <h2>The Elven Reserve</h2>
     <p>
-      The remaining 2,500 ELFs will be given to the Element DAO, so that the
-      DAO&apos;s governance participants can decide upon how to use the NFTs.
+      The Element DAO will be given control over minting and distribution for
+      the remaining 2,500 ELFs, so that the DAO&apos;s governance participants
+      can decide on the usage of the NFTs.
     </p>
     <h2>Non-investments</h2>
     <p>
