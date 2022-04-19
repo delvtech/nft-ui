@@ -27,10 +27,10 @@ const RolloutRelease: NextPage = () => (
       <mark>Discord Community</mark> members, Github DeFi{" "}
       <mark>Ecosystem Contributors</mark>, and users who traded fixed rates,
       deposited their assets for variable rates, or provided liquidity in the
-      Element protocol but didn&apos;t make it in time for the First Release. 
+      Element protocol but didn&apos;t make it in time for the First Release.
       More details will be announced shortly.
     </p>
-    <h2>Release and Minting Details</h2>
+    <h2>Release Details</h2>
     <p>
       Everyone who claimed and delegated their Element DAO ELFI tokens before
       the 7,500 whitelist spots were filled had the opportunity to mint an ELF.
@@ -40,6 +40,7 @@ const RolloutRelease: NextPage = () => (
         Element DAO - ELFI Voting Distribution
       </a>
     </p>
+    <h2>Minting Details</h2>
     <p>
       After minting, you will be able to see your elf on the Elfiverse website
       immediately. You will have to connect your wallet at the top right and
