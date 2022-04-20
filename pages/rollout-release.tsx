@@ -49,8 +49,9 @@ const RolloutRelease: NextPage = () => (
     <p>
       After minting, you will be able to see your ELF on the Elfiverse website
       immediately. You will have to connect your wallet at the top right and
-      click on the ‘My Collection’ button to see your revealed ELF. Wallets and
-      NFT platforms typically take a while to update the refreshed metadata.
+      click on the &apos;My Collection&apos; button to see your revealed ELF.
+      Wallets and NFT platforms typically take a while to update the refreshed
+      metadata.
     </p>
     <h2>The Elven Reserve</h2>
     <p>
