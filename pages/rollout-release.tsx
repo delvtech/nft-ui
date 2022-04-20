@@ -41,6 +41,7 @@ const RolloutRelease: NextPage = () => (
       <a
         href="https://mirror.xyz/0x3fcAf7DDf64E6e109B1e2A5CC17875D4a5993F39/bctuLRkf7oBL4mMJ9lPf0y0blFjBDslTUfUL0CEk1gc"
         target="_blank"
+        rel="noreferrer"
       >
         Element DAO - ELFI Voting Distribution
       </a>
