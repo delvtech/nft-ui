@@ -11,7 +11,7 @@ const RolloutRelease: NextPage = () => (
       Element Protocol. The release schedule below was designed to enable a fair
       and transparent distribution that ensures accessibility of NFTs for
       eligible community members and 
-      <mark>prioritizes humans over bot armies</mark>. A total of{" "}
+      <mark> prioritizes humans over bot armies</mark>. A total of{" "}
       <mark>10,000 ELFs</mark> will be available to mint.
     </p>
     <h2>First Release</h2>
