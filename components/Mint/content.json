@@ -2,7 +2,7 @@
   "stale": {
     "title": "Check eligibility",
     "status": "",
-    "description": "You’re currently eligible to mint an ELF as a member of the Element community in this release period. To mint your own unique ELF click the minting button below and start the process when minting is live on April 6th."
+    "description": "You’re currently eligible to mint an ELF as a member of the Element community in this release period. To mint your own unique ELF click the minting button below and start the process."
   },
   "pending": {
     "title": "Mint in progress",
